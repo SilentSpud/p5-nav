@@ -1,3 +1,5 @@
+@import "./darkly";
+
 html {
   --bg-color: #121212; // #1d1d1d;
   --p5-red: #dc3545;
@@ -74,9 +76,6 @@ $td: '[role="cell"]';
       &::-webkit-scrollbar {
         width: 0 !important
       }
-      #{$tr}:nth-child(2n) {
-
-      }
     }
     #{$td}.elem {
       text-align: center;
@@ -86,11 +85,15 @@ $td: '[role="cell"]';
   #{$th} {
     user-select: none;
     font-weight: bold;
+    vertical-align: center;
     color: var(--table-heading);
     background-color: var(--table-head-bg);
     border-bottom: 1px solid var(--table-border);
     &:not(:last-child) {
       border-right: 1px solid var(--table-border);
+    }
+    &.searchbox {
+      padding: 0;
     }
     span {
       float: right;
@@ -103,28 +106,22 @@ $td: '[role="cell"]';
   #{$td} {
     border-bottom: 1px solid var(--table-border);
   }
-  .subheader {
-    text-align: center;
-    font-variant: small-caps;
-    font-weight: bold;
-  }
-  .extra {
-    display: inline;
-  }
-  .result {
-    text-align: center;
-    color: var(--table-result-text);
-  }
-  .text {
-    display: block;
-  }
-  .symbol {
-    display: none;
-  }
 }
-.unconfirmed {
-  background-color: var(--table-unconfirmed-bg);
-  color: var(--table-unconfirmed-text) !important;
+
+#personaSearch {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 10px;
+  background-color: $gray-900;
+  color: $body-color;
+  border: none;
+  &:hover {
+    background-color: var(--table-head-bg);
+  }
+  &:focus {
+    outline: none;
+    background-color: var(--table-bg);
+  }
 }
 
 // ----------- SWITCH ----------- //

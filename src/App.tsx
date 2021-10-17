@@ -1,7 +1,7 @@
 import React from "react";
+import 'regenerator-runtime/runtime';
 import { prepareTable } from "./personaTable";
 import { personaData } from "./../data/PersonaData";
-import './_darkly.scss';
 import './style.scss';
 import { Tab, Tabs } from "react-bootstrap";
 

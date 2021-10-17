@@ -1,70 +1,14 @@
 import React from "react";
-import { HeaderGroup, Row, useFlexLayout, useSortBy, useTable } from "react-table";
+import { HeaderGroup, Row, useAsyncDebounce, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
-import { DamageTypes, Weaknesses } from "./PersonaClasses";
+import { DamageTypes, personaSchema, Weaknesses } from "./PersonaClasses";
+import { Form } from "react-bootstrap";
 
-const pTableCols = () => React.useMemo(
-  () => [
-    {
-      Header: "Persona List",
-      id: "title",
-      className: "sticky",
-      columns: [
-        { Header: "Level",  accessor: "lvl",    width: 50 },
-        { Header: "Name",   accessor: "name",   width: 200 },
-        { Header: "Arcana", accessor: "arcana", width: 100 }
-      ]
-    },
-    {
-      Header: "Stats",
-      id: "stats",
-      columns: [
-        { Header: "Strength",   accessor: "strength",   width: 65 },
-        { Header: "Magic",      accessor: "magic",      width: 50 },
-        { Header: "Endurance",  accessor: "endurance",  width: 75 },
-        { Header: "Agility",    accessor: "agility",    width: 60 },
-        { Header: "Luck",       accessor: "luck",       width: 50 }
-      ]
-    },
-    {
-      Header: "Elements",
-      id: "elements",
-      columns: [
-        { Header: "Physical", accessor: "physical", sortType: sortElems, width: 70 },
-        { Header: "Gun",      accessor: "gun",      sortType: sortElems, width: 40 },
-        { Header: "Fire",     accessor: "fire",     sortType: sortElems, width: 40 },
-        { Header: "Ice",      accessor: "ice",      sortType: sortElems, width: 50 },
-        { Header: "Electric", accessor: "electric", sortType: sortElems, width: 60 },
-        { Header: "Wind",     accessor: "wind",     sortType: sortElems, width: 50 },
-        { Header: "Psychic",  accessor: "psychic",  sortType: sortElems, width: 70 },
-        { Header: "Nuclear",  accessor: "nuclear",  sortType: sortElems, width: 70 },
-        { Header: "Bless",    accessor: "bless",    sortType: sortElems, width: 70 },
-        { Header: "Curse",    accessor: "curse",    sortType: sortElems, width: 70 }
-      ]
-    }
-  ],
-  []
-);
-
-const getStatVal = (stat:string) => {
-  switch(stat) {
-    case Weaknesses.weak:
-      return 5;
-    case Weaknesses.none:
-      return 4;
-    case Weaknesses.resist:
-      return 3;
-    case Weaknesses.nullify:
-      return 2;
-    case Weaknesses.repel:
-      return 1;
-    case Weaknesses.absorb:
-      return 0;
-  }
+const sortElems = (rowA: Row, rowB: Row, columnId) => {
+  const sortOrder = [Weaknesses.weak.toString(), Weaknesses.none.toString(), Weaknesses.nullify.toString(), Weaknesses.repel.toString(), Weaknesses.absorb.toString(), Weaknesses.resist.toString()];
+  return (sortOrder.indexOf(rowA.values[columnId]) < sortOrder.indexOf(rowB.values[columnId]) ? 1 : -1);
 }
-
-const sortElems = (rowA: Row, rowB: Row, columnId) => (getStatVal(rowA.values[columnId]) < getStatVal(rowB.values[columnId]) ? 1 : -1);
 
 const pTableData = (personaList) => React.useMemo(() => {
   const pList = [];
@@ -103,28 +47,28 @@ const parseRow = (row: Row) => {
             cellClass = "elem";
             switch (cell.value) {
               case Weaknesses.resist: {
-                return <div {...cell.getCellProps({ className: ("text-warning " + cellClass)}) }>Res</div>
+                return <div {...cell.getCellProps({ className: ("text-warning " + cellClass) })}>Res</div>
               }
               case Weaknesses.repel: {
-                return <div {...cell.getCellProps({ className: ("text-danger " + cellClass)}) }>Rep</div>
+                return <div {...cell.getCellProps({ className: ("text-danger " + cellClass) })}>Rep</div>
               }
               case Weaknesses.weak: {
-                return <div {...cell.getCellProps({ className: ("text-success " + cellClass)}) }>Weak</div>
+                return <div {...cell.getCellProps({ className: ("text-success " + cellClass) })}>Weak</div>
               }
               case Weaknesses.none: {
-                return <div {...cell.getCellProps({ className: (cellClass)})}>&nbsp;</div>
+                return <div {...cell.getCellProps({ className: (cellClass) })}>&nbsp;</div>
               }
               case Weaknesses.absorb: {
-                return <div {...cell.getCellProps({ className: ("text-info " + cellClass)}) }>Abs</div>
+                return <div {...cell.getCellProps({ className: ("text-info " + cellClass) })}>Abs</div>
               }
               case Weaknesses.nullify: {
-                return <div {...cell.getCellProps({ className: ("text-light " + cellClass)}) }>Null</div>
+                return <div {...cell.getCellProps({ className: ("text-light " + cellClass) })}>Null</div>
               }
             }
           }
 
           default: {
-            return <div {...cell.getCellProps({ className: (cellClass)})}>{cell.render("Cell")}</div>
+            return <div {...cell.getCellProps({ className: (cellClass) })}>{cell.render("Cell")}</div>
           }
         }
       }
@@ -133,17 +77,34 @@ const parseRow = (row: Row) => {
   );
 }
 
-const renderHeader = (headers: HeaderGroup[]) => {
+const renderHeader = (headers: HeaderGroup[], setGlobalFilter) => {
   return headers.map((row) => (
     <div {...row.getHeaderGroupProps()}>
       {row.headers.map((cell) => {
-
-        return (<div {...cell.getHeaderProps(cell.getSortByToggleProps())}>{cell.render("Header")}<span>{
-          cell.canSort && (cell.isSorted ? cell.isSortedDesc ? <FontAwesomeIcon icon={faSortUp} /> : <FontAwesomeIcon icon={faSortDown} /> : <FontAwesomeIcon icon={faSort} />)
-        }</span></div>
-        );
+        if (cell.id == "title_0") {
+          return (<div {...cell.getHeaderProps({className: "searchbox"})}>{globalFilter(setGlobalFilter)}</div>);
+        } else {
+          return (<div {...cell.getHeaderProps(cell.getSortByToggleProps())}>{cell.render("Header")}<span>{
+            cell.canSort && (cell.isSorted ? cell.isSortedDesc ? <FontAwesomeIcon icon={faSortUp} /> : <FontAwesomeIcon icon={faSortDown} /> : <FontAwesomeIcon icon={faSort} />)
+          }</span></div>);
+        }
       })}
     </div>))
+}
+
+const globalFilter = (setGlobalFilter: (filterValue: any) => void) => {
+  const [value, setValue] = React.useState('search');
+  const form = ( <input type="search" placeholder="Search" id="personaSearch" className="text-light w-100 h-100" onChange={(key) => {
+    if (key.currentTarget.value.length == 0) {
+      setGlobalFilter(undefined);
+    }
+    else if (key.currentTarget.value != value) {
+      setValue(key.currentTarget.value);
+      setGlobalFilter(value || undefined);
+    }
+  }}></input> );
+
+  return form;
 }
 
 
@@ -153,23 +114,24 @@ export const prepareTable = (personaList) => {
     getTableBodyProps,
     headerGroups,
     rows,
+    setGlobalFilter,
     prepareRow
   } = useTable({
-    columns: pTableCols(),
+    columns: personaSchema(),
     data: pTableData(personaList),
-    initialState: { sortBy: [{id: "lvl"}] }
-    }, useSortBy, useFlexLayout);
+    initialState: { sortBy: [{ id: "lvl" }] }
+  }, useGlobalFilter, useSortBy, useFlexLayout);
   return (
-      <div {...getTableProps({className: "personas table table-dark"})}>
-        <div role="rowgroup">
-          {renderHeader(headerGroups)}
-        </div>
-        <div {...getTableBodyProps({ style: { maxWidth: '100vw' } })}>
-          {rows.map((row, i) => {
-            prepareRow(row);
-            return parseRow(row);
-          })}
-        </div>
-      </div>
+    <section {...getTableProps({ className: "personas table table-dark" })}>
+      <header role="rowgroup">
+        {renderHeader(headerGroups, setGlobalFilter)}
+      </header>
+      <main {...getTableBodyProps()}>
+        {rows.map((row, i) => {
+          prepareRow(row);
+          return parseRow(row);
+        })}
+      </main>
+    </section>
   )
 };
