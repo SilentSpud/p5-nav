@@ -66,6 +66,9 @@ const parseRow = (row: Row) => {
               }
             }
           }
+          case 'stats': {
+            cellClass = "stat";
+          }
 
           default: {
             return <div {...cell.getCellProps({ className: (cellClass) })}>{cell.render("Cell")}</div>
