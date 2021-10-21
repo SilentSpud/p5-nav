@@ -1,6 +1,6 @@
 import { SkillMap } from "./../src/PersonaClasses";
 
-export const skillMap: SkillMap = {
+const skillMap: SkillMap = {
   "Absorb Bless": {
     effect: "Absorb Bless attacks.",
     element: "passive",
@@ -4581,3 +4581,4 @@ export const skillMap: SkillMap = {
     talk: "Cavern Snakeman (Naga)"
   }
 };
+export default skillMap;

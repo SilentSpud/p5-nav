@@ -1,6 +1,6 @@
 import { PersonaData , Weaknesses } from "./../src/PersonaClasses";
 
-export const personaData: PersonaData[] = [
+const personaMap: PersonaData[] = [
 	{
 		name: "Abaddon",
     inherits: "curse",
@@ -4696,3 +4696,4 @@ export const personaData: PersonaData[] = [
     dlc: true
   }
 ];
+export default personaMap;

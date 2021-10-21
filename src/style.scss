@@ -52,37 +52,36 @@ $td: '[role="cell"]';
   border: 1px solid var(--table-border);
   color: var(--table-text);
   font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
 
-  &.personas {
-    margin-left: auto;
-    margin-right: auto;
+  &,
+  & #{$thead},
+  & #{$tbody} {
+    width: 99.5vw;
+  }
+  #{$thead} {
+    /* These styles are required for a scrollable body to align with the header properly */
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 
-    &, & #{$thead}, & #{$tbody} {
-      width: 99.5vw;
-    }
-    #{$thead} {
-      /* These styles are required for a scrollable body to align with the header properly */
-      overflow-y: auto;
-      overflow-x: hidden;
-    }
+  #{$tbody} {
+    /* These styles are required for a scrollable table body */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 83vh;
 
-    #{$tbody} {
-      /* These styles are required for a scrollable table body */
-      overflow-y: scroll;
-      overflow-x: hidden;
-      height: 83vh;
-
-      &::-webkit-scrollbar {
-        width: 0 !important
-      }
+    &::-webkit-scrollbar {
+      width: 0 !important;
     }
-    #{$td}.elem {
-      text-align: center;
-      font-family: "Fira Code", monospace;
-    }
-    #{$td}.stat {
-      font-family: "Fira Code", monospace;
-    }
+  }
+  #{$td}.elem {
+    text-align: center;
+    font-family: "Fira Code", monospace;
+  }
+  #{$td}.stat {
+    font-family: "Fira Code", monospace;
   }
   #{$th} {
     user-select: none;
@@ -110,7 +109,7 @@ $td: '[role="cell"]';
   }
 }
 
-#personaSearch {
+.search {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 10px;

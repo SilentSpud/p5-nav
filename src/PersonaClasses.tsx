@@ -1,7 +1,7 @@
 import React from "react";
 import { Row } from "react-table";
 
-export const personaSchema = () => React.useMemo(
+export const personaHeaders = () => React.useMemo(
   () => [
     {
       Header: "Persona List",

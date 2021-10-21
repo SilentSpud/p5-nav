@@ -1,4 +1,4 @@
-export const shadowList = [
+export default [
   {
     name: "Jack-o'-Lantern",
     shadow: "Crypt-dwelling Pyromaniac",
