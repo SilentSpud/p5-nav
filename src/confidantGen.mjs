@@ -8,13 +8,24 @@ import {
 import fs from "fs";
 const confidants = JSON.parse(fs.readFileSync(`data/confidant.json`));
 // Edit as needed
-const breakAtOne = true;
+const breakAtOne = false;
 const writeDataToFile = true;
 
 // Useful functions
 const parsechild = (elem) => ((elem.children.length > 0) ? elem.children[0].innerHTML : elem.innerHTML).trim();
 const parseNum = (str) => isNaN(parseFloat(str)) ? str : parseFloat(str);
 const testNum = (str) => !isNaN(parseFloat(str));
+const allCodes = {
+  story: true,
+  courage: 1,
+  charm: 1,
+  proficiency: 1,
+  trueEnding: true,
+  courage: 1,
+  kindness: 1,
+  date: "0/00",
+  knowledge: 1
+};
 const parseBr = (elem) => (elem.children.length > 0 && elem.children[0].tagName == "BR") ? elem.innerHTML.trim().replace(/<br>\n/g, "") : elem.innerHTML.trim();
 const testRank = (rankNum) => (/^([1-9](\.5)?|MAX(\(ROMANCE\))?)$/g).test(rankNum)
 const attrs = {
@@ -66,10 +77,17 @@ for (let name in confidants) {
 
           rank.questions[row.getAttribute(attrs.question)] = rowAnswers;
         }
+      } else if (rankComp.tagName == "CODE") {
+        rank.requirements = JSON.parse(rankComp.innerHTML);
+      } else if (rankComp.tagName == "P") {
+        let unlockInfo = rankComp.innerHTML;
+        console.log();
+      } else {
+        console.error(`Confidant ${name}: Unknown Element: ${rankComp.tagName}`);
+        continue;
       }
     }
 
-    console.log(rank);
     rankList[rankNum] = rank;
   }
 
@@ -81,7 +99,8 @@ for (let name in confidants) {
     link: oldConfidant.link,
     card: oldConfidant.card,
     header: oldConfidant.header,
-    benefits: oldConfidant.benefits
+    benefits: oldConfidant.benefits,
+    //questions: rankList
   }
   confidantList[name] = newConfidant;
   // stop after first for initial testing
