@@ -1,0 +1,625 @@
+{
+  "chariot": {
+    "character": "Ryuji Sakamoto",
+    "link": "data/confidants/chariot.html",
+    "card": "assets/confidants/chariot.jpg",
+    "header": "assets/confidants/header-chariot.jpg",
+    "benefits": {
+      "Baton Pass": {
+        "rank": "2",
+        "description": "Allows you to pass your turn over to other Baton Pass users after 1 More."
+      },
+      "Follow Up": {
+        "rank": "3",
+        "description": "Chance to perform a follow-up attack if Joker’s attack does not down the enemy."
+      },
+      "Punk Talk": {
+        "rank": "4",
+        "description": "Chance to step in after Shadow negotiation fails, allowing a retry."
+      },
+      "Harisen Recovery": {
+        "rank": "6",
+        "description": "Chance to cure status ailments inflicted upon party members."
+      },
+      "Insta-kill": {
+        "rank": "7",
+        "description": "Chance to instantly win a battle after a successful ambush."
+      },
+      "Endure": {
+        "rank": "8",
+        "description": "Chance to withstand an otherwise fatal attack with 1 HP remaining."
+      },
+      "Protect": {
+        "rank": "9",
+        "description": "Chance to shield Joker from an otherwise fatal attack."
+      },
+      "Second Awakening": {
+        "rank": "MAX",
+        "description": "Transforms his Persona into a mythological trickster."
+      }
+    }
+  },
+  "death": {
+    "character": "Tae Takemi",
+    "link": "data/confidants/death.html",
+    "card": "assets/confidants/death.jpg",
+    "header": "assets/confidants/header-death.jpg",
+    "benefits": {
+      "Rejuvenation": {
+        "rank": "1",
+        "description": "Increases the selection of healing items at the clinic."
+      },
+      "Sterilization": {
+        "rank": "3",
+        "description": "Adds more healing items to the clinic."
+      },
+      "Immunization": {
+        "rank": "5",
+        "description": "Adds support items to the inventory at the clinic."
+      },
+      "Discount": {
+        "rank": "7",
+        "description": "Decreases the price for all items sold at the clinic."
+      },
+      "Resuscitation": {
+        "rank": "MAX",
+        "description": "Increase the selection of revival items at the clinic."
+      }
+    }
+  },
+  "devil": {
+    "character": "Ichiko Ohya",
+    "link": "data/confidants/devil.html",
+    "card": "assets/confidants/devil.jpg",
+    "header": "assets/confidants/header-devil.jpg",
+    "benefits": {
+      "Rumor-filled Scoop": {
+        "rank": "1",
+        "description": "Lessens security level increases, and decreases security level more overnight."
+      },
+      "Shocking Scoop": {
+        "rank": "4",
+        "description": "Delivers the same effect as Rumor-filled Scoop, but to greater effect."
+      },
+      "Outrageous Scoop": {
+        "rank": "7",
+        "description": "Delivers the same effects as Rumor-filled Scoop, but to incredible effect."
+      },
+      "Legendary Scoop": {
+        "rank": "MAX",
+        "description": "Security level will not increase, and will drop to zero overnight."
+      }
+    }
+  },
+  "emperor": {
+    "character": "Yusuke Kitagawa",
+    "link": "data/confidants/emperor.html",
+    "card": "assets/confidants/emperor.jpg",
+    "header": "assets/confidants/header-emperor.jpg",
+    "benefits": {}
+  },
+  "empress": {
+    "character": "Haru Okumura",
+    "link": "data/confidants/empress.html",
+    "card": "assets/confidants/empress.jpg",
+    "header": "assets/confidants/header-empress.jpg",
+    "benefits": {
+      "Cultivation": {
+        "rank": "1",
+        "description": "Allows you to grow vegetables with Haru on the Shujin Academy rooftop."
+      },
+      "Baton Pass": {
+        "rank": "2",
+        "description": "Allows you to pass your turn over to other Baton Pass users after 1 More."
+      },
+      "Follow Up": {
+        "rank": "3",
+        "description": "Chance to perform a follow-up attack if Joker’s attack does not down the enemy.."
+      },
+      "Celebrity Talk": {
+        "rank": "4",
+        "description": "Chance to step in after Shadow negotiation fails, allowing a retry."
+      },
+      "Bumper Crop": {
+        "rank": "5",
+        "description": "Increases the total vegetable yield for a single harvest."
+      },
+      "Harisen Recovery": {
+        "rank": "6",
+        "description": "Chance to cure status ailments inflicted upon party members."
+      },
+      "Soil Improvement": {
+        "rank": "7",
+        "description": "Decreases the total amount of time it takes to cultivate vegetables."
+      },
+      "Endure": {
+        "rank": "8",
+        "description": "Chance to withstand an otherwise fatal attack with 1 HP remaining."
+      },
+      "Protect": {
+        "rank": "9",
+        "description": "Chance to shield Joker from an otherwise fatal attack."
+      },
+      "Second Awakening": {
+        "rank": "MAX",
+        "description": "Transforms her Persona into a mythological trickster."
+      }
+    }
+  },
+  "fortune": {
+    "character": "Chihaya Mifune",
+    "link": "data/confidants/fortune.html",
+    "card": "assets/confidants/fortune.jpg",
+    "header": "assets/confidants/header-fortune.jpg",
+    "benefits": {
+      "Lucky Reading": {
+        "rank": "1",
+        "description": "Temporarily increases the growth rate of a selected social stat."
+      },
+      "Money Reading": {
+        "rank": "3",
+        "description": "Temporarily increases money earned from battle."
+      },
+      "Fate Reading": {
+        "rank": "5",
+        "description": "Provides a preview of some abilities for a Confidant of your choice."
+      },
+      "Affinity Reading": {
+        "rank": "7",
+        "description": "Deepens your bond with a Confidant of your choice."
+      },
+      "Special Fate Reading": {
+        "rank": "MAX",
+        "description": "Provides a preview of all abilities for a Confidant of your choice."
+      }
+    }
+  },
+  "hanged": {
+    "character": "Munehisa Iwai",
+    "link": "data/confidants/hanged.html",
+    "card": "assets/confidants/hanged.jpg",
+    "header": "assets/confidants/header-hanged.jpg",
+    "benefits": {
+      "Starter Customization": {
+        "rank": "1",
+        "description": "Allows you to customize guns to improve their performance."
+      },
+      "Medium Customization": {
+        "rank": "3",
+        "description": "Allows you to customize mid-grade guns."
+      },
+      "Discount": {
+        "rank": "5",
+        "description": "Decreases the cost of gun customization."
+      },
+      "Expert Customization": {
+        "rank": "7",
+        "description": "Allows you to customize high-grade guns."
+      },
+      "Ace Customization": {
+        "rank": "MAX",
+        "description": "Allows you to customize special-grade guns."
+      }
+    }
+  },
+  "hermit": {
+    "character": "Futaba Sakura",
+    "link": "data/confidants/hermit.html",
+    "card": "assets/confidants/hermit.jpg",
+    "header": "assets/confidants/header-hermit.jpg",
+    "benefits": {
+      "Moral Support": {
+        "rank": "1",
+        "description": "Chance to cast Kaja or party-healing magic during battle."
+      },
+      "Mementos Scan": {
+        "rank": "2",
+        "description": "Chance to fully map the floor of Mementos when entering that floor."
+      },
+      "Position Hack": {
+        "rank": "4",
+        "description": "Chance to instantly Hold Up enemies when starting a battle."
+      },
+      "Active Support": {
+        "rank": "6",
+        "description": "Moral Support may now Charge or recover SP."
+      },
+      "Treasure Reboot": {
+        "rank": "7",
+        "description": "Chance to revive search objects in the area after battle."
+      },
+      "Emergency Shift": {
+        "rank": "9",
+        "description": "Chance to swap current party with backups when 2 or more people are KO’d."
+      },
+      "Final Guard": {
+        "rank": "MAX",
+        "description": "Chance to nullify a fatal attack to a current party member."
+      },
+      "Second Awakening": {
+        "rank": "MAX",
+        "description": "Transforms her Persona into a mythological trickster."
+      }
+    }
+  },
+  "hierophant": {
+    "character": "Sojiro Sakura",
+    "link": "data/confidants/hierophant.html",
+    "card": "assets/confidants/hierophant.jpg",
+    "header": "assets/confidants/header-hierophant.jpg",
+    "benefits": {
+      "Coffee Basics": {
+        "rank": "1",
+        "description": "Allows you to make coffee which slightly restores SP to one ally."
+      },
+      "Leblanc Curry": {
+        "rank": "4",
+        "description": "Allows you to make curry that slightly restores SP to all allies."
+      },
+      "Coffee Mastery": {
+        "rank": "6",
+        "description": "Allows you to make coffee which greatly restores SP to one ally."
+      },
+      "Curry Tips": {
+        "rank": "9",
+        "description": "Allows you to make curry that moderately restores SP to all allies."
+      },
+      "Curry Master": {
+        "rank": "MAX",
+        "description": "Allows you to make curry that greatly restores SP to all allies."
+      }
+    }
+  },
+  "lovers": {
+    "character": "Ann Takamaki",
+    "link": "data/confidants/lovers.html",
+    "card": "assets/confidants/lovers.jpg",
+    "header": "assets/confidants/header-lovers.jpg",
+    "benefits": {
+      "Baton Pass": {
+        "rank": "1",
+        "description": "Allows you to pass your turn over to other Baton Pass users after 1 More."
+      },
+      "Girl Talk": {
+        "rank": "2",
+        "description": "Chance to step in after Shadow negotiation fails with a female Shadow, allowing a retry."
+      },
+      "Follow Up": {
+        "rank": "3",
+        "description": "Chance to perform a follow-up attack if Joker’s attack does not down the enemy."
+      },
+      "Crocodile Tears": {
+        "rank": "5",
+        "description": "Chance to force enemies to ask for less during negotiations."
+      },
+      "Harisen Recovery": {
+        "rank": "6",
+        "description": "Chance to cure status ailments inflicted upon party members."
+      },
+      "Sexy Technique": {
+        "rank": "7",
+        "description": "Chance to seduce the enemy during negotiation and steer discussion."
+      },
+      "Endure": {
+        "rank": "8",
+        "description": "Chance to withstand an otherwise fatal attack with 1 HP remaining."
+      },
+      "Protect": {
+        "rank": "9",
+        "description": "Chance to shield Joker from an otherwise fatal attack."
+      },
+      "Second Awakening": {
+        "rank": "MAX",
+        "description": "Transforms her Persona into a mythological trickster."
+      }
+    }
+  },
+  "moon": {
+    "character": "Yuuki Mishima",
+    "link": "data/confidants/moon.html",
+    "card": "assets/confidants/moon.jpg",
+    "header": "assets/confidants/header-moon.jpg",
+    "benefits": {
+      "Mishima’s Support": {
+        "rank": "1",
+        "description": "Allows backup members to earn EXP."
+      },
+      "Mishima’s Enthusiasm": {
+        "rank": "3",
+        "description": "Increases EXP earned from battle."
+      },
+      "Mishima’s Desperation": {
+        "rank": "5",
+        "description": "Increases EXP earned by backup members."
+      },
+      "Phanboy": {
+        "rank": "7",
+        "description": "Greatly increases EXP earned from battle."
+      },
+      "Salvation Wish": {
+        "rank": "MAX",
+        "description": "Allows backup members to earn the same EXP as current party members.."
+      }
+    }
+  },
+  "priestess": {
+    "character": "Makoto Niijima",
+    "link": "data/confidants/priestess.html",
+    "card": "assets/confidants/priestess.jpg",
+    "header": "assets/confidants/header-priestess.jpg",
+    "benefits": {
+      "Shadow Calculus": {
+        "rank": "1",
+        "description": "Allows you to see skills and potential item drops on the analysis screen."
+      },
+      "Baton Pass": {
+        "rank": "2",
+        "description": "Allows you to pass your turn over to other Baton Pass users after 1 More."
+      },
+      "Brainiac Talk": {
+        "rank": "3",
+        "description": "Chance to step in after Shadow negotiation fails, allowing a retry."
+      },
+      "Follow Up": {
+        "rank": "4",
+        "description": "Chance to perform a follow-up attack if Joker’s attack does not down the enemy."
+      },
+      "Harisen Recovery": {
+        "rank": "6",
+        "description": "Chance to cure status ailments inflicted upon party members."
+      },
+      "Shadow Factorization": {
+        "rank": "7",
+        "description": "Allows you to see Null, Repel, and Drain when highlighting a target in battle."
+      },
+      "Endure": {
+        "rank": "8",
+        "description": "Chance to withstand an otherwise fatal attack with 1 HP remaining."
+      },
+      "Protect": {
+        "rank": "9",
+        "description": "Chance to shield Joker from an otherwise fatal attack."
+      },
+      "Second Awakening": {
+        "rank": "MAX",
+        "description": "Transforms her Persona into a mythological trickster."
+      }
+    }
+  },
+  "star": {
+    "character": "Hifumi Togo",
+    "link": "data/confidants/star.html",
+    "card": "assets/confidants/star.jpg",
+    "header": "assets/confidants/header-star.jpg",
+    "benefits": {
+      "Koma Sabaki": {
+        "rank": "1",
+        "description": "Allows you to swap current party with backup members during Joker’s turn."
+      },
+      "Uchikomi": {
+        "rank": "3",
+        "description": "Chance for a follow-up by a backup member if Joker downs an enemy."
+      },
+      "Kakoi Kuzushi": {
+        "rank": "5",
+        "description": "Allows you to attempt to escape, even when surrounded by the enemy."
+      },
+      "Narikin": {
+        "rank": "7",
+        "description": "Earn double money if a battle is won in 1 turn after a successful ambush."
+      },
+      "Touryou": {
+        "rank": "9",
+        "description": "Decreases turn delay to zero, allowing you to instantly escape battle."
+      },
+      "Togo System": {
+        "rank": "MAX",
+        "description": "Allows you to swap current party with backup members during anyone’s turn."
+      }
+    }
+  },
+  "sun": {
+    "character": "Toranosuke Yoshida",
+    "link": "data/confidants/sun.html",
+    "card": "assets/confidants/sun.jpg",
+    "header": "assets/confidants/header-sun.jpg",
+    "benefits": {
+      "Diplomacy": {
+        "rank": "2",
+        "description": "Occasionally asks for more money or items during negotiations."
+      },
+      "Fundraising": {
+        "rank": "3",
+        "description": "Allows you to ask for large amounts of money during negotiations."
+      },
+      "Manipulation": {
+        "rank": "5",
+        "description": "Occasionally raises the chances of an enemy giving you a rare item."
+      },
+      "Mind Control": {
+        "rank": "8",
+        "description": "Occasionally lets you skip negotiation when attempting to obtain a Persona."
+      },
+      "Charismatic Speech": {
+        "rank": "MAX",
+        "description": "Allows you to form contracts with higher-level Shadows."
+      }
+    }
+  },
+  "temperance": {
+    "character": "Sadayo Kawakami",
+    "link": "data/confidants/temperance.html",
+    "card": "assets/confidants/temperance.jpg",
+    "header": "assets/confidants/header-temperance.jpg",
+    "benefits": {
+      "Slack Off": {
+        "rank": "1",
+        "description": "Allows you to perform various activities in Kawakami’s class."
+      },
+      "Housekeeping": {
+        "rank": "3",
+        "description": "Allows you to request Kawakami to make coffee or do laundry for you."
+      },
+      "Free Time": {
+        "rank": "5",
+        "description": "Gain free time in other teachers’ classes with Kawakami’s help."
+      },
+      "Super Housekeeping": {
+        "rank": "7",
+        "description": "Allows you to request Kawakami to make curry or infiltration tools for you."
+      },
+      "Special Massage": {
+        "rank": "MAX",
+        "description": "Request a massage after going into the Metaverse, letting you go out at night."
+      }
+    }
+  },
+  "tower": {
+    "character": "Shinya Oda",
+    "link": "data/confidants/tower.html",
+    "card": "assets/confidants/tower.jpg",
+    "header": "assets/confidants/header-tower.jpg",
+    "benefits": {
+      "Down Shot": {
+        "rank": "1",
+        "description": "Allows you to use all rounds to down one enemy."
+      },
+      "Bullet Bail": {
+        "rank": "2",
+        "description": "Chance to enter a gun-based All-out Attack after a successful ambush."
+      },
+      "Warning Shot": {
+        "rank": "3",
+        "description": "Able to scare enemies in negotiation to make it easier to obtain a Persona."
+      },
+      "Ammo Pouch": {
+        "rank": "5",
+        "description": "Increases the maximum number of bullets you can carry."
+      },
+      "Cheap Shot": {
+        "rank": "6",
+        "description": "Decreases the total number of bullets used to carry out a Down Shot."
+      },
+      "Electric Slug": {
+        "rank": "8",
+        "description": "Increases the damage inflicted by Bullet Hell."
+      },
+      "Oda Special": {
+        "rank": "MAX",
+        "description": "Allows Joker’s gun attacks to ignore resistances and hit the enemy."
+      }
+    }
+  },
+  "faith": {
+    "character": "Kasumi Yoshizawa",
+    "link": "data/confidants/faith.html",
+    "card": "assets/confidants/faith.jpg",
+    "header": "assets/confidants/header-faith.jpg",
+    "benefits": {
+      "Tumbling": {
+        "rank": "2",
+        "description": "Allows you to avoid being surround by enemies in Palaces"
+      },
+      "Chaines Hook": {
+        "rank": "4",
+        "description": "Allows you to ambush from a distance by attacking with the grappling hook."
+      },
+      "Follow Up": {
+        "rank": "6",
+        "description": "Chance to perform a follow-up attack if Joker’s attack does not down the enemy."
+      },
+      "Fitness Talk": {
+        "rank": "6",
+        "description": "If negotiation with any kind of Shadow fails, you can try again."
+      },
+      "Harisen Recovery": {
+        "rank": "7",
+        "description": "Chance to cure status ailments inflicted upon party members."
+      },
+      "Endure": {
+        "rank": "8",
+        "description": "Chance to withstand an otherwise fatal attack with 1 HP remaining."
+      },
+      "Protect": {
+        "rank": "9",
+        "description": "Chance to shield Joker from an otherwise fatal attack."
+      },
+      "Second Awakening": {
+        "rank": "MAX",
+        "description": "Transforms Person into a mythological trickster."
+      },
+      "Second Awakening R": {
+        "rank": "ROYAL",
+        "description": "Fuse with the mythological Trickster, awakening its true power."
+      }
+    }
+  },
+  "justice": {
+    "character": "Goro Akechi",
+    "link": "data/confidants/justice.html",
+    "card": "assets/confidants/justice.jpg",
+    "header": "assets/confidants/header-justice.jpg",
+    "benefits": {
+      "Sleuthing Instinct": {
+        "rank": "2",
+        "description": "Chance to reveal one enemy affinity at the start of battle."
+      },
+      "Smooth Talk": {
+        "rank": "4",
+        "description": "If negotiation with a god-like Shadow fails, you can try again."
+      },
+      "Sleuthing Mastery": {
+        "rank": "6",
+        "description": "Chance to reveal all of one enemy’s affinities at the start of battle."
+      },
+      "Follow Up": {
+        "rank": "6",
+        "description": "Chance to perform a follow-up attack if Joker’s attack does not down the enemy."
+      },
+      "Harisen Recovery": {
+        "rank": "7",
+        "description": "Chance to cure status ailments inflicted upon party members."
+      },
+      "Endure": {
+        "rank": "MAX",
+        "description": "Chance to withstand an otherwise fatal attack with 1 HP remaining."
+      },
+      "Protect": {
+        "rank": "MAX",
+        "description": "Chance to shield Joker from an otherwise fatal attack."
+      },
+      "Second Awakening R": {
+        "rank": "ROYAL",
+        "description": "Fuse with the mythological Trickster, awakening its true power."
+      }
+    }
+  },
+  "councillor": {
+    "character": "Takuto Maruki",
+    "link": "data/confidants/councillor.html",
+    "card": "assets/confidants/councillor.jpg",
+    "header": "assets/confidants/header-councillor.jpg",
+    "benefits": {
+      "Detox X": {
+        "rank": "2",
+        "description": "When Joker is inflicted with an ailment, he may recover immediately."
+      },
+      "Flow": {
+        "rank": "3",
+        "description": "Chance to receive the effects of Charge and Concentrate at the start of battle."
+      },
+      "Mindfulness": {
+        "rank": "5",
+        "description": "Chance to restore Joker’s SP when it is low."
+      },
+      "Flow Boost": {
+        "rank": "7",
+        "description": "Raises the chance of Flow succeeding."
+      },
+      "Detox DX": {
+        "rank": "9",
+        "description": "Raises the chance of Detox X succeeding."
+      }
+    }
+  }
+}
