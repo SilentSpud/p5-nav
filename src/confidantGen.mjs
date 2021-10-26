@@ -8,7 +8,7 @@ import {
 import fs from "fs";
 const confidants = JSON.parse(fs.readFileSync(`data/confidant.json`));
 // Edit as needed
-const breakAtOne = false;
+const breakAtOne = true;
 const writeDataToFile = true;
 
 // Useful functions
@@ -37,10 +37,27 @@ const attrs = {
   end: "data-end"
 }
 
-const parseRow = (row) => {
-  const x = 5;
-}
+const parseTable = (table) => {
+  let questionList = {};
+  let rows = table.children[0].children;
+  for (let row of rows) {
+    let question = row.getAttribute(attrs.question);
+    let rowAnswers = [];
+    for (let cell of row.children) {
+      let answer = {
+        text: cell.innerHTML
+      }
+      if (cell.getAttribute(attrs.points)) answer.points = parseNum(cell.getAttribute(attrs.points));
+      if (cell.getAttribute(attrs.romance)) answer.romance = true;
+      if (cell.getAttribute(attrs.bad)) answer.bad = true;
+      if (cell.getAttribute(attrs.end)) answer.end = true;
+      rowAnswers.push(answer);
+    }
 
+    questionList[question] = rowAnswers;
+  }
+  return questionList;
+}
 let confidantList = {};
 for (let name in confidants) {
   // Setup needed variables
@@ -61,22 +78,7 @@ for (let name in confidants) {
 
     for (let rankComp of rankEl.children) {
       if (rankComp.tagName == "TABLE") {
-        let rows = rankComp.children[0].children;
-        for (let row of rows) {
-          let rowAnswers = [];
-          for (let cell of row.children) {
-            let answer = {
-              text: cell.innerHTML
-            }
-            if (cell.getAttribute(attrs.points)) answer.points = parseNum(cell.getAttribute(attrs.points));
-            if (cell.getAttribute(attrs.romance)) answer.romance = true;
-            if (cell.getAttribute(attrs.bad)) answer.bad = true;
-            if (cell.getAttribute(attrs.end)) answer.end = true;
-            rowAnswers.push(rowAnswers);
-          }
-
-          rank.questions[row.getAttribute(attrs.question)] = rowAnswers;
-        }
+        rank.questions = parseTable(rankComp);
       } else if (rankComp.tagName == "CODE") {
         rank.requirements = JSON.parse(rankComp.innerHTML);
       } else if (rankComp.tagName == "P") {
@@ -100,11 +102,10 @@ for (let name in confidants) {
     card: oldConfidant.card,
     header: oldConfidant.header,
     benefits: oldConfidant.benefits,
-    //questions: rankList
+    questions: rankList
   }
   confidantList[name] = newConfidant;
   // stop after first for initial testing
   if (breakAtOne && !writeDataToFile) break;
 }
-//console.log(confidantList);
 if (writeDataToFile) fs.writeFileSync(`data/confidant.json`, JSON.stringify(confidantList));
