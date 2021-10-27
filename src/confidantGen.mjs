@@ -106,7 +106,7 @@ for (let name in confidants) {
     card: oldConfidant.card,
     header: oldConfidant.header,
     benefits: oldConfidant.benefits,
-    questions: rankList
+    questions: oldConfidant.questions
   }
   confidantList[name] = newConfidant;
   // stop after first for initial testing
