@@ -1,32 +1,35 @@
-interface Requirements {
+export interface Requirements {
   story?: boolean;
-  courage?: number;
-  charm?: number;
-  proficiency?: number;
   trueEnding?: boolean;
-  kindness?: number;
   date?: string;
-  knowledge?: number;
+  courage?: number | "max";
+  charm?: number | "max";
+  proficiency?: number | "max";
+  kindness?: number | "max";
+  knowledge?: number | "max";
 };
-interface Benefit {
+export interface Benefit {
   rank: number | "max" | "royal";
   description: string;
 }
-interface Question {
+export interface Question {
+  [answerText: string]: Answer
+}
+export interface Answer {
   points?: number;
   romance?: boolean;
   bad?: boolean;
   end?: boolean;
 }
-interface RankMetadata extends Question {
+export interface RankMetadata {
   requirements?: Requirements;
   unlock?: string;
   romance?: boolean;
 }
 
-interface Rank {
-  [questionNumber: string]: Question;
-  meta: RankMetadata
+export interface Rank {
+  [questionNumber: string]: Question | RankMetadata;
+  meta?: RankMetadata;
 }
 
 export interface Confidant {
