@@ -1,9 +1,8 @@
 import React from "react";
-import 'regenerator-runtime/runtime';
 import personaTable from "./personaTable";
 import './style.scss';
 import { Tab, Tabs } from "react-bootstrap";
-import Confidants from "./Confidants";
+import ConfidantsInfo from "./ConfidantsInfo";
 
 export default function App(): JSX.Element {
   return (<Tabs defaultActiveKey="personas" className="mb-3">
@@ -11,7 +10,7 @@ export default function App(): JSX.Element {
       {personaTable()}
     </Tab>
     <Tab eventKey="confidants" title="Confidants">
-      <Confidants></Confidants>
+      <ConfidantsInfo></ConfidantsInfo>
     </Tab>
   </Tabs>);
 }

@@ -3,7 +3,7 @@
 // With this, you can build code for one entry and test it against the entire database before writing
 import { JSDOM } from "jsdom";
 import fs from "fs";
-const confidants = JSON.parse(fs.readFileSync(`data/confidant.json`));
+const confidants = JSON.parse(fs.readFileSync(`data/confidants.json`));
 const breakAtOne = false;
 const writeDataToFile = false;
 
