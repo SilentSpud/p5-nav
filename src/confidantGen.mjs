@@ -61,7 +61,7 @@ let confidantList = {};
 for (let name in confidants) {
   // Setup needed variables
   const oldConfidant = confidants[name];
-  const siteDom = new JSDOM(fs.readFileSync(oldConfidant.link, 'utf8').toString());
+  const siteDom = new JSDOM(fs.readFileSync(`data/confidants/${name}.html`, 'utf8').toString());
   const window = siteDom.window;
   const document = window.document;
   // Setup end
@@ -102,9 +102,6 @@ for (let name in confidants) {
   // modify structure as needed
   let newConfidant = {
     character: oldConfidant.character,
-    link: oldConfidant.link,
-    card: oldConfidant.card,
-    header: oldConfidant.header,
     benefits: oldConfidant.benefits,
     questions: oldConfidant.questions
   }
