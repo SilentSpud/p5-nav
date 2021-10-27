@@ -70,10 +70,10 @@ for (let name in confidants) {
   let newConfidant = {
     character: oldConfidant.character,
     benefits: oldConfidant.benefits,
-    questions: rankList
+    questions: oldConfidant.questions
   }
   confidantList[name] = newConfidant;
   // stop after first for initial testing
   if (breakAtOne && !writeDataToFile) break;
 }
-if (writeDataToFile) fs.writeFileSync(`data/confidant.json`, JSON.stringify(confidantList));
+if (writeDataToFile) fs.writeFileSync(`data/confidants.json`, JSON.stringify(confidantList));
