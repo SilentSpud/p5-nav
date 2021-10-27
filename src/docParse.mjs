@@ -3,17 +3,35 @@
 // With this, you can build code for one entry and test it against the entire database before writing
 import { JSDOM } from "jsdom";
 import fs from "fs";
-const QuestionList = JSON.parse(fs.readFileSync(`data/negotiation.json`));
-const breakAtOne = false;
-const writeDataToFile = false;
+//const QuestionList = JSON.parse(fs.readFileSync(`data/negotiation.json`));
+//const breakAtOne = false;
+const writeDataToFile = true;
 
 // Useful functions
 const parseNum = (str) => isNaN(parseFloat(str)) ? str : parseFloat(str);
+//const ShadowAnswer = {  };
 const { document } = (new JSDOM(fs.readFileSync(`data/negotiation.html`).toString())).window;
-let questionList = [];
+let questionList = {};
 
 
+for (let elem of document.body.children) {
+  let rows = elem.children[0].children;
+  let shadowQuestion = rows[0].children[0].innerHTML;
+  let shadowAnswers = [];
+  for (let i = 1; i < rows.length; i++) {
+    let row = rows[i];
+    let answer = {
+      text: row.children[0].innerHTML,
+      gloomy: parseNum(row.children[1].innerHTML),
+      irritable: parseNum(row.children[2].innerHTML),
+      timid: parseNum(row.children[3].innerHTML),
+      upbeat: parseNum(row.children[4].innerHTML)
+    };
 
+  shadowAnswers.push(answer);
+  }
+  questionList[shadowQuestion] = shadowAnswers;
+}
 /* 
 for (let question of QuestionList) {
   // Setup needed variables
