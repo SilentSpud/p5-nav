@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-key */
 import React from "react";
 import { HeaderGroup, Row, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
 const Icon = FontAwesomeIcon;
 
-const parseRow = (row: Row, parseFunction: Function) => {
+const parseRow = (row: Row, parseFunction) => {
   return (
     <div {...row.getRowProps()}>
       {row.cells.map((cell) => parseFunction(cell))}
@@ -41,7 +42,7 @@ const globalFilter = (setGlobalFilter: (filterValue: any) => void) => {
 }
 
 
-const prepareTable = (columnData, tableData, rowParser: Function) => {
+const prepareTable = (columnData, tableData, rowParser) => {
   const sortId = columnData[0].columns ? columnData[0].columns[0].accessor : columnData[0].accessor ?? "";
   const {
     getTableProps,

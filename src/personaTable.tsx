@@ -6,7 +6,7 @@ import { Cell } from "react-table";
 
 const personaParser = (personaList) => React.useMemo(() => {
   const pList = [];
-  for (let persona of personaList) {
+  for (const persona of personaList) {
     pList.push({
       lvl: persona.level,
       name: persona.name,
@@ -32,7 +32,7 @@ const personaParser = (personaList) => React.useMemo(() => {
 }, [personaList]);
 
 
-let cellParser = (cell: Cell) => {
+const cellParser = (cell: Cell) => {
   let cellClass = "";
   switch (cell.column.parent.id) {
     case 'elements': {
