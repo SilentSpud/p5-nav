@@ -1,7 +1,7 @@
 "use strict";
 // This file uses a "revolving door"-esque system to generate confidant data from various source html files using a mock DOM
 // With this, you can build code for one entry and test it against the entire database before writing
-import { JSDOM } from "jsdom";
+//import { JSDOM } from "jsdom";
 import fs from "fs";
 const confidants = JSON.parse(fs.readFileSync(`data/confidants.json`));
 const breakAtOne = false;
@@ -34,12 +34,12 @@ let confidantList = {};
 for (let name in confidants) {
   // Setup needed variables
   const oldConfidant = confidants[name];
-  const siteDom = new JSDOM(fs.readFileSync(`data/confidants/${name}.html`, 'utf8').toString());
+  /*const siteDom = new JSDOM(fs.readFileSync(`data/confidants/${name}.html`, 'utf8').toString());
   const window = siteDom.window;
-  const document = window.document;
+  const document = window.document;*/
   // Setup end
 
-  let rankList = {}
+  /*let rankList = {}
   let rankElems = document.body.children;
   for (let rankEl of rankElems) {
     let rankNum = parseNum(rankEl.getAttribute("data-rank"));
@@ -62,7 +62,7 @@ for (let name in confidants) {
     }
 
     rankList[rankNum] = rank;
-  }
+  }*/
 
 
 
