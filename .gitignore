@@ -31,8 +31,6 @@ node_modules
 
 # App packaged
 build/
-data/confidants
-*.sh
 
 .idea
 npm-debug.log.*
