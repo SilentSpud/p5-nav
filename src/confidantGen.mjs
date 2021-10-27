@@ -9,7 +9,7 @@ import fs from "fs";
 const confidants = JSON.parse(fs.readFileSync(`data/confidant.json`));
 // Edit as needed
 const breakAtOne = true;
-const writeDataToFile = true;
+const writeDataToFile = false;
 
 // Useful functions
 const parsechild = (elem) => ((elem.children.length > 0) ? elem.children[0].innerHTML : elem.innerHTML).trim();
@@ -42,16 +42,15 @@ const parseTable = (table) => {
   let rows = table.children[0].children;
   for (let row of rows) {
     let question = row.getAttribute(attrs.question);
-    let rowAnswers = [];
+    let rowAnswers = {};
     for (let cell of row.children) {
-      let answer = {
-        text: cell.innerHTML
-      }
+      if (cell.innerHTML==="") continue;
+      let answer = {}
       if (cell.getAttribute(attrs.points)) answer.points = parseNum(cell.getAttribute(attrs.points));
       if (cell.getAttribute(attrs.romance)) answer.romance = true;
       if (cell.getAttribute(attrs.bad)) answer.bad = true;
       if (cell.getAttribute(attrs.end)) answer.end = true;
-      rowAnswers.push(answer);
+      rowAnswers[cell.innerHTML] = answer;
     }
 
     questionList[question] = rowAnswers;
@@ -62,7 +61,7 @@ let confidantList = {};
 for (let name in confidants) {
   // Setup needed variables
   const oldConfidant = confidants[name];
-  const siteDom = new JSDOM(fs.readFileSync(oldConfidant.link, 'utf8').toString());
+  const siteDom = new JSDOM(fs.readFileSync(`data/confidants/${name}.html`, 'utf8').toString());
   const window = siteDom.window;
   const document = window.document;
   // Setup end
@@ -71,19 +70,24 @@ for (let name in confidants) {
   let rankElems = document.body.children;
   for (let rankEl of rankElems) {
     let rankNum = parseNum(rankEl.getAttribute(attrs.rankNum));
-    let rank = {
-      questions: {}
-    };
+    let rank = {};
     if (rankEl.getAttribute(attrs.romance)) rank.romance = true;
 
     for (let rankComp of rankEl.children) {
       if (rankComp.tagName == "TABLE") {
-        rank.questions = parseTable(rankComp);
+        if (rank.meta) {
+          let oldMeta = rank.meta;
+          rank = parseTable(rankComp);
+          rank.meta = oldMeta;
+        } else {
+          rank = parseTable(rankComp);
+        }
       } else if (rankComp.tagName == "CODE") {
-        rank.requirements = JSON.parse(rankComp.innerHTML);
+        rank.meta = rank.meta || {};
+        rank.meta.requirements = JSON.parse(rankComp.innerHTML);
       } else if (rankComp.tagName == "P") {
-        let unlockInfo = rankComp.innerHTML;
-        console.log();
+        rank.meta = rank.meta || {};
+        rank.meta.unlock = rankComp.innerHTML;
       } else {
         console.error(`Confidant ${name}: Unknown Element: ${rankComp.tagName}`);
         continue;
@@ -98,11 +102,8 @@ for (let name in confidants) {
   // modify structure as needed
   let newConfidant = {
     character: oldConfidant.character,
-    link: oldConfidant.link,
-    card: oldConfidant.card,
-    header: oldConfidant.header,
     benefits: oldConfidant.benefits,
-    questions: rankList
+    questions: oldConfidant.questions
   }
   confidantList[name] = newConfidant;
   // stop after first for initial testing
