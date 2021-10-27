@@ -1,8 +1,9 @@
 import React from "react";
 import confidants from "../data/confidants";
+import Confidant from "./Confidant";
 
 
-const Confidant = (): JSX.Element => {
+const Confidants = (): JSX.Element => {
   return (<div>Test: hi</div>);
 }
-export default Confidant;
+export default Confidants;

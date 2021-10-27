@@ -1,33 +1,15 @@
 "use strict";
 // This file uses a "revolving door"-esque system to generate confidant data from various source html files using a mock DOM
 // With this, you can build code for one entry and test it against the entire database before writing
-// Bear in mind, the html files were edited heavily beforehand to be easier to work with
-import {
-  JSDOM
-} from "jsdom";
+import { JSDOM } from "jsdom";
 import fs from "fs";
 const confidants = JSON.parse(fs.readFileSync(`data/confidant.json`));
-// Edit as needed
-const breakAtOne = true;
+
+const breakAtOne = false;
 const writeDataToFile = false;
 
 // Useful functions
-const parsechild = (elem) => ((elem.children.length > 0) ? elem.children[0].innerHTML : elem.innerHTML).trim();
 const parseNum = (str) => isNaN(parseFloat(str)) ? str : parseFloat(str);
-const testNum = (str) => !isNaN(parseFloat(str));
-const allCodes = {
-  story: true,
-  courage: 1,
-  charm: 1,
-  proficiency: 1,
-  trueEnding: true,
-  courage: 1,
-  kindness: 1,
-  date: "0/00",
-  knowledge: 1
-};
-const parseBr = (elem) => (elem.children.length > 0 && elem.children[0].tagName == "BR") ? elem.innerHTML.trim().replace(/<br>\n/g, "") : elem.innerHTML.trim();
-const testRank = (rankNum) => (/^([1-9](\.5)?|MAX(\(ROMANCE\))?)$/g).test(rankNum)
 const attrs = {
   rankNum: "data-rank",
   romance: "data-romance",
@@ -71,26 +53,20 @@ for (let name in confidants) {
   for (let rankEl of rankElems) {
     let rankNum = parseNum(rankEl.getAttribute(attrs.rankNum));
     let rank = {};
-    if (rankEl.getAttribute(attrs.romance)) rank.romance = true;
+    if (rankEl.getAttribute(attrs.romance)) {
+      rank.meta = {};
+      rank.meta.romance = true;
+    }
 
     for (let rankComp of rankEl.children) {
       if (rankComp.tagName == "TABLE") {
-        if (rank.meta) {
-          let oldMeta = rank.meta;
-          rank = parseTable(rankComp);
-          rank.meta = oldMeta;
-        } else {
-          rank = parseTable(rankComp);
-        }
+        Object.assign(rank, parseTable(rankComp));
       } else if (rankComp.tagName == "CODE") {
         rank.meta = rank.meta || {};
         rank.meta.requirements = JSON.parse(rankComp.innerHTML);
       } else if (rankComp.tagName == "P") {
         rank.meta = rank.meta || {};
         rank.meta.unlock = rankComp.innerHTML;
-      } else {
-        console.error(`Confidant ${name}: Unknown Element: ${rankComp.tagName}`);
-        continue;
       }
     }
 
@@ -103,7 +79,7 @@ for (let name in confidants) {
   let newConfidant = {
     character: oldConfidant.character,
     benefits: oldConfidant.benefits,
-    questions: oldConfidant.questions
+    questions: rankList
   }
   confidantList[name] = newConfidant;
   // stop after first for initial testing
