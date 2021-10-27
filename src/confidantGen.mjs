@@ -4,34 +4,25 @@
 import { JSDOM } from "jsdom";
 import fs from "fs";
 const confidants = JSON.parse(fs.readFileSync(`data/confidant.json`));
-
 const breakAtOne = false;
 const writeDataToFile = false;
 
 // Useful functions
 const parseNum = (str) => isNaN(parseFloat(str)) ? str : parseFloat(str);
-const attrs = {
-  rankNum: "data-rank",
-  romance: "data-romance",
-  question: "data-question",
-  points: "data-points",
-  bad: "data-bad",
-  end: "data-end"
-}
 
 const parseTable = (table) => {
   let questionList = {};
   let rows = table.children[0].children;
   for (let row of rows) {
-    let question = row.getAttribute(attrs.question);
+    let question = row.getAttribute("data-question");
     let rowAnswers = {};
     for (let cell of row.children) {
       if (cell.innerHTML==="") continue;
       let answer = {}
-      if (cell.getAttribute(attrs.points)) answer.points = parseNum(cell.getAttribute(attrs.points));
-      if (cell.getAttribute(attrs.romance)) answer.romance = true;
-      if (cell.getAttribute(attrs.bad)) answer.bad = true;
-      if (cell.getAttribute(attrs.end)) answer.end = true;
+      if (cell.getAttribute("data-points")) answer.points = parseNum(cell.getAttribute("data-points"));
+      if (cell.getAttribute("data-romance")) answer.romance = true;
+      if (cell.getAttribute("data-bad")) answer.bad = true;
+      if (cell.getAttribute("data-end")) answer.end = true;
       rowAnswers[cell.innerHTML] = answer;
     }
 
@@ -51,9 +42,9 @@ for (let name in confidants) {
   let rankList = {}
   let rankElems = document.body.children;
   for (let rankEl of rankElems) {
-    let rankNum = parseNum(rankEl.getAttribute(attrs.rankNum));
+    let rankNum = parseNum(rankEl.getAttribute("data-rank"));
     let rank = {};
-    if (rankEl.getAttribute(attrs.romance)) {
+    if (rankEl.getAttribute("data-romance")) {
       rank.meta = {};
       rank.meta.romance = true;
     }
