@@ -4,15 +4,15 @@
 import { JSDOM } from "jsdom";
 import fs from "fs";
 //const QuestionList = JSON.parse(fs.readFileSync(`data/negotiation.json`));
-//const breakAtOne = false;
+const breakAtOne = true;
 const writeDataToFile = true;
 
 // Useful functions
 const parseNum = (str) => isNaN(parseFloat(str)) ? str : parseFloat(str);
 //const ShadowAnswer = {  };
 const { document } = (new JSDOM(fs.readFileSync(`data/negotiation.html`).toString())).window;
+const ansList = ["text", "gloomy", "irritable", "timid", "upbeat"];
 let questionList = {};
-
 
 for (let elem of document.body.children) {
   let rows = elem.children[0].children;
@@ -22,15 +22,23 @@ for (let elem of document.body.children) {
     let row = rows[i];
     let answer = {
       text: row.children[0].innerHTML,
-      gloomy: parseNum(row.children[1].innerHTML),
-      irritable: parseNum(row.children[2].innerHTML),
-      timid: parseNum(row.children[3].innerHTML),
-      upbeat: parseNum(row.children[4].innerHTML)
     };
+    for (let ii = 1; ii < row.children.length; ii++) {
+      let cell = row.children[ii];
+      let cellName = ansList[ii];
+      let rate = parseNum(row.children[ii].innerHTML);
+      if (cell.getAttribute("data-unconfirmed")) {
+        answer[cellName] = { rate: rate, unconfirmed: true }
+      } else {
+        answer[cellName] = rate;
+      }
+    }
+    
 
   shadowAnswers.push(answer);
   }
   questionList[shadowQuestion] = shadowAnswers;
+  if (breakAtOne && !writeDataToFile) break;
 }
 /* 
 for (let question of QuestionList) {
@@ -45,6 +53,5 @@ for (let question of QuestionList) {
   }
   questionList.push(newQuestion);
   // stop after first for initial testing
-  if (breakAtOne && !writeDataToFile) break;
 }*/
 if (writeDataToFile) fs.writeFileSync(`data/negotiation.json`, JSON.stringify(questionList));

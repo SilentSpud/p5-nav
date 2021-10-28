@@ -1,11 +1,15 @@
 export interface Answer {
   text: string
-  gloomy: Reactions | number;
-  irritable: Reactions | number;
-  timid: Reactions | number;
-  upbeat: Reactions | number;
+  gloomy: Reaction | ReactionLevel | number;
+  irritable: Reaction | ReactionLevel | number;
+  timid: Reaction | ReactionLevel | number;
+  upbeat: Reaction | ReactionLevel | number;
 };
-export enum Reactions {
+export interface Reaction {
+  unconfirmed: boolean;
+  rate: ReactionLevel | number;
+}
+export enum ReactionLevel {
   Bad = 0,
   Neutral = 1,
   OK = 2,
