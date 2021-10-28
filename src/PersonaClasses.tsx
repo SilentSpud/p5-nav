@@ -78,47 +78,6 @@ export enum Weaknesses {
   absorb =  "ab"
 }
 
-
-
-// PersonaData.ts
-export interface PersonaData {
-  name: string;
-  arcana: string;
-  level: number;
-  stats: {
-    strength: number;
-    magic: number;
-    endurance: number;
-    agility: number;
-    luck: number;
-  };
-  elems: {
-    physical: Weaknesses;
-    gun: Weaknesses;
-    fire: Weaknesses;
-    ice: Weaknesses;
-    electric: Weaknesses;
-    wind: Weaknesses;
-    psychic: Weaknesses;
-    nuclear: Weaknesses;
-    bless: Weaknesses;
-    curse: Weaknesses;
-  };
-  skills: {
-    [index: string]: number;
-  };
-  personality?: string;
-  special?: boolean;
-  max?: boolean;
-  dlc?: boolean;
-  note?: string;
-  rare?: boolean;
-  inherits?: string;
-  item?: string;
-  itemr?: string;
-  trait?: string;
-}
-
 // SkillData.ts
 export interface SkillData {
   name?: string;
