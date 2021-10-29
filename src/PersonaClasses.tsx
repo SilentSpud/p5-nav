@@ -1,5 +1,6 @@
 import React from "react";
 import { Row } from "react-table";
+import { Weaknesses } from "../data/Personas"
 
 export const personaHeaders = () => React.useMemo(
   () => [
@@ -46,34 +47,7 @@ export const personaHeaders = () => React.useMemo(
 
 const sortElems = (rowA: Row, rowB: Row, columnId: string) => {
   const sortOrder = [Weaknesses.weak.toString(), Weaknesses.none.toString(), Weaknesses.nullify.toString(), Weaknesses.repel.toString(), Weaknesses.absorb.toString(), Weaknesses.resist.toString()];
-  return (sortOrder.indexOf(rowA.values[columnId]) < sortOrder.indexOf(rowB.values[columnId]) ? 1 : -1);
-}
-
-// elements with weakness stats
-export enum DamageTypes {
-  phy = "physical",
-  gun = "gun",
-  fir = "fire",
-  ice = "ice",
-  ele = "electric",
-  wnd = "wind",
-  psy = "psychic",
-  nuc = "nuclear",
-  ble = "bless",
-  cur = "curse"/*,
-  "almighty"
-  "ailment"
-  "support"
-  "passive"
-  "healing"
-  "trait";*/
-}
-// weakness stats
-export enum Weaknesses {
-  weak = "wk",
-  none = "-",
-  resist = "rs",
-  nullify = "nu",
-  repel = "rp",
-  absorb =  "ab"
+  const sortA = rowA.values[columnId], sortB = rowB.values[columnId];
+  if (sortA == sortB) return 0
+  return (sortOrder.indexOf(sortA) < sortOrder.indexOf(sortB) ? 1 : -1);
 }
