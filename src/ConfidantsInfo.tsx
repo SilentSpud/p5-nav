@@ -1,5 +1,5 @@
 import React from "react";
-import Confidants from "../data/confidants";
+import Confidants from "../data/Confidants";
 
 
 const ConfidantsInfo = (): JSX.Element => {
