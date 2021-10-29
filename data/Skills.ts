@@ -3,22 +3,22 @@ export interface SkillData {
   cost?: number;
   effect: string;
   element:
-  | "phys"
-  | "gun"
-  | "fire"
-  | "ice"
-  | "electric"
-  | "wind"
-  | "psy"
-  | "nuclear"
-  | "bless"
-  | "curse"
-  | "almighty"
-  | "ailment"
-  | "support"
-  | "passive"
-  | "healing"
-  | "trait";
+    | "phys"
+    | "gun"
+    | "fire"
+    | "ice"
+    | "electric"
+    | "wind"
+    | "psy"
+    | "nuclear"
+    | "bless"
+    | "curse"
+    | "almighty"
+    | "ailment"
+    | "support"
+    | "passive"
+    | "healing"
+    | "trait";
   personas?: {
     [name: string]: number;
   };
@@ -28,19 +28,11 @@ export interface SkillData {
   unique?: string;
   dlc?: boolean;
   note?: string;
-
-  // for display in list
-  elemDisplay?: string;
-  costDisplay?: string;
-  personaDisplay?: string;
-  talkDisplay?: string;
-  fuseDisplay?: string;
 }
 
 export interface SkillMap {
   [name: string]: SkillData;
 }
-
 
 const skillMap: SkillMap = {
   "Absorb Bless": {
@@ -261,8 +253,7 @@ const skillMap: SkillMap = {
     }
   },
   "Ambient Aid": {
-    effect:
-      "Greatly increase inflicting rate of all status effects under rainy day or special weather warning.",
+    effect: "Greatly increase inflicting rate of all status effects under rainy day or special weather warning.",
     element: "passive",
     personas: {
       "Black Ooze": 20,
@@ -302,8 +293,7 @@ const skillMap: SkillMap = {
     unique: "Necronomicon"
   },
   "Angelic Grace": {
-    effect:
-      "Double evasion against Fire/Ice/Elec/Wind/Nuke/Psy/Bless/Curse attacks.",
+    effect: "Double evasion against Fire/Ice/Elec/Wind/Nuke/Psy/Bless/Curse attacks.",
     element: "passive",
     personas: {
       Maria: 97,
@@ -389,8 +379,7 @@ const skillMap: SkillMap = {
     element: "support"
   },
   "Auto-Maraku": {
-    effect:
-      "Automatic Marakukaja at the start of battle. (Overwrites Defense Master)",
+    effect: "Automatic Marakukaja at the start of battle. (Overwrites Defense Master)",
     element: "passive",
     fuse: ["Ariadne Picaro"],
     personas: {
@@ -402,8 +391,7 @@ const skillMap: SkillMap = {
     }
   },
   "Auto-Masuku": {
-    effect:
-      "Automatic Masukukaja at the start of battle. (Overwrites Speed Master)",
+    effect: "Automatic Masukukaja at the start of battle. (Overwrites Speed Master)",
     element: "passive",
     fuse: ["Jatayu"],
     personas: {
@@ -414,8 +402,7 @@ const skillMap: SkillMap = {
     }
   },
   "Auto-Mataru": {
-    effect:
-      "Automatic Matarukaja at the start of battle. (Overwrites Attack Master)",
+    effect: "Automatic Matarukaja at the start of battle. (Overwrites Attack Master)",
     element: "passive",
     personas: {
       Asura: 78,
@@ -442,8 +429,7 @@ const skillMap: SkillMap = {
   },
   "Bad Beat": {
     cost: 21,
-    effect:
-      "Deal medium Phys damage and inflict Despair (low odds) to all foes.",
+    effect: "Deal medium Phys damage and inflict Despair (low odds) to all foes.",
     element: "phys",
     personas: { Dakini: 0, "Kin-Ki": 30 }
   },
@@ -466,8 +452,7 @@ const skillMap: SkillMap = {
   },
   "Beast Weaver": {
     cost: 20,
-    effect:
-      "Deal grave Phys damage to 1 foe and user is debuffed with Tarunda.",
+    effect: "Deal grave Phys damage to 1 foe and user is debuffed with Tarunda.",
     element: "phys",
     unique: "Ariadne",
     personas: { Ariadne: 0, "Ariadne Picaro": 0 }
@@ -488,8 +473,7 @@ const skillMap: SkillMap = {
   "Bleeding Dry Brush": {
     card: "Ring of Vanity",
     cost: 2200,
-    effect:
-      "Drains next non-Almighty attack for 1 ally, Removes innate weaknesses",
+    effect: "Drains next non-Almighty attack for 1 ally, Removes innate weaknesses",
     element: "support",
     unique: "Ring of Vanity"
   },
@@ -554,8 +538,7 @@ const skillMap: SkillMap = {
     personas: { Tsukiyomi: 0, "Tsukiyomi Picaro": 0 }
   },
   "Brain Buster": {
-    effect:
-      "Deal heavy Phys damage and inflict Brainwash (low odds) to all foes.",
+    effect: "Deal heavy Phys damage and inflict Brainwash (low odds) to all foes.",
     cost: 22,
     element: "phys",
     personas: { Mara: 76, "Tam Lin": 30, Trumpeter: 0 },
@@ -580,8 +563,7 @@ const skillMap: SkillMap = {
   },
   "Brain Shake": {
     cost: 9,
-    effect:
-      "Deal medium Phys damage and inflict Brainwash (medium odds) to 1 foe.",
+    effect: "Deal medium Phys damage and inflict Brainwash (medium odds) to 1 foe.",
     element: "phys",
     personas: { Inugami: 18, "Pale Rider": 0, Power: 0, "Tam Lin": 0 },
     talk: "Possessive Dog Ghost (Inugami)"
@@ -732,8 +714,7 @@ const skillMap: SkillMap = {
     talk: "Hunting Puss in Boots (Cait Sith)"
   },
   "Climate Decorum": {
-    effect:
-      "Greatly increase evasion under rainy day or special weather warning.",
+    effect: "Greatly increase evasion under rainy day or special weather warning.",
     element: "passive",
     personas: { Choronzon: 33, Koropokkuru: 15, Lakshmi: 71, "Nigi Mitama": 26 }
   },
@@ -794,8 +775,7 @@ const skillMap: SkillMap = {
   },
   "Cornered Fang": {
     cost: 10,
-    effect:
-      "Deal medium Phys damage to 1 foe. More powerful when being ambushed.",
+    effect: "Deal medium Phys damage to 1 foe. More powerful when being ambushed.",
     element: "phys",
     fuse: ["Shiisaa"],
     personas: { Flauros: 23, "Neko Shogun": 33, Orthrus: 24 }
@@ -834,8 +814,7 @@ const skillMap: SkillMap = {
     talk: "Funerary Warrior (Valkyrie)"
   },
   "Country Maker": {
-    effect:
-      "Scales damage dealt and received against Compendium completion rate",
+    effect: "Scales damage dealt and received against Compendium completion rate",
     element: "trait",
     unique: "Izanagi-no-Okami",
     personas: { "Izanagi-no-Okami": 0, "Izanagi-no-Okami Picaro": 0 }
@@ -1154,8 +1133,7 @@ const skillMap: SkillMap = {
   },
   "Door of Hades": {
     cost: 3200,
-    effect:
-      "Deal heavy Almighty damage to all foes with medium chance of instant kill.",
+    effect: "Deal heavy Almighty damage to all foes with medium chance of instant kill.",
     element: "almighty",
     unique: "Thanatos",
     personas: { Thanatos: 0, "Thanatos Picaro": 0 }
@@ -1271,8 +1249,7 @@ const skillMap: SkillMap = {
   },
   "Elec Wall": {
     cost: 1800,
-    effect:
-      "Create a shield on 1 ally to reduce damage of Electric attacks for 3 turns.",
+    effect: "Create a shield on 1 ally to reduce damage of Electric attacks for 3 turns.",
     element: "support",
     personas: { Ananta: 0, Apsaras: 14, Lachesis: 37, Nekomata: 21 },
     talk: "Waterside Nymph (Apsaras)"
@@ -1291,8 +1268,7 @@ const skillMap: SkillMap = {
     }
   },
   "Emergency Shift": {
-    effect:
-      "Chance to swap current party with backups when 2 or more people are KO'd.",
+    effect: "Chance to swap current party with backups when 2 or more people are KO'd.",
     element: "passive",
     unique: "Necronomicon"
   },
@@ -1497,8 +1473,7 @@ const skillMap: SkillMap = {
   },
   "Fire Wall": {
     cost: 1800,
-    effect:
-      "Create a shield on 1 ally to reduce damage of Fire attacks for 3 turns.",
+    effect: "Create a shield on 1 ally to reduce damage of Fire attacks for 3 turns.",
     element: "support",
     personas: { Atropos: 0, Koropokkuru: 13, Slime: 13 },
     talk: "Leafy Old Man (Koropokkuru)"
@@ -1528,8 +1503,7 @@ const skillMap: SkillMap = {
     personas: { Kaiwan: 37, "Kushi Mitama": 16, Principality: 32 }
   },
   "Fortified Moxy": {
-    effect:
-      "Increase critical rate when beginning battle with preemptive turn.",
+    effect: "Increase critical rate when beginning battle with preemptive turn.",
     element: "passive",
     personas: {
       Ardha: 89,
@@ -1656,14 +1630,12 @@ const skillMap: SkillMap = {
     }
   },
   "Gaia Blessing": {
-    effect:
-      "Increases chance of inflicting Burn, Freeze, and Shock by 50% for all allies",
+    effect: "Increases chance of inflicting Burn, Freeze, and Shock by 50% for all allies",
     element: "trait",
     unique: "Agnes"
   },
   "Gaia Pact": {
-    effect:
-      "Increases chance of inflicting Burn, Freeze, and Shock by 25% for all allies",
+    effect: "Increases chance of inflicting Burn, Freeze, and Shock by 25% for all allies",
     element: "trait",
     unique: "Johanna"
   },
@@ -1911,8 +1883,7 @@ const skillMap: SkillMap = {
   },
   Headbutt: {
     cost: 9,
-    effect:
-      "Deal medium Phys damage and inflict Forget (medium odds) to 1 foe.",
+    effect: "Deal medium Phys damage and inflict Forget (medium odds) to 1 foe.",
     element: "phys",
     personas: { "Black Ooze": 21, Slime: 14 }
   },
@@ -2060,8 +2031,7 @@ const skillMap: SkillMap = {
   },
   "Ice Wall": {
     cost: 1800,
-    effect:
-      "Create a shield on 1 ally to reduce damage of Ice attacks for 3 turns.",
+    effect: "Create a shield on 1 ally to reduce damage of Ice attacks for 3 turns.",
     element: "support",
     personas: {
       Apsaras: 0,
@@ -2434,8 +2404,7 @@ const skillMap: SkillMap = {
   },
   "Magatsu Mandala": {
     cost: 3000,
-    effect:
-      "Deal heavy Curse damage to all foes and inflict Confuse/Fear/Despair (medium odds).",
+    effect: "Deal heavy Curse damage to all foes and inflict Confuse/Fear/Despair (medium odds).",
     element: "curse",
     unique: "Magatsu-Izanagi",
     personas: { "Magatsu-Izanagi": 0, "Magatsu-Izanagi Picaro": 0 }
@@ -2471,8 +2440,7 @@ const skillMap: SkillMap = {
     talk: "Fire Assassin (Throne)"
   },
   "Majestic Presence": {
-    effect:
-      "Doubles effectiveness and decreases costs of Recovery skills for all allies",
+    effect: "Doubles effectiveness and decreases costs of Recovery skills for all allies",
     element: "trait",
     unique: "Diego"
   },
@@ -2995,8 +2963,7 @@ const skillMap: SkillMap = {
   },
   "Mind Slice": {
     cost: 19,
-    effect:
-      "Deal medium Phys damage and inflict Confuse (low odds) to all foes.",
+    effect: "Deal medium Phys damage and inflict Confuse (low odds) to all foes.",
     element: "phys",
     fuse: ["Mothman"],
     personas: { Garuda: 0, Rakshasa: 27 }
@@ -3109,16 +3076,14 @@ const skillMap: SkillMap = {
   },
   "Negative Pile": {
     cost: 12,
-    effect:
-      "Deal heavy Phys damage and inflict Despair (medium odds) to 1 foe.",
+    effect: "Deal heavy Phys damage and inflict Despair (medium odds) to 1 foe.",
     element: "phys",
     personas: { "Red Rider": 42 },
     talk: "Slithering Snakewoman (Lamia)"
   },
   "Neo Cadenza": {
     cost: 2400,
-    effect:
-      "Restore 50% HP of party and increase attack, defense, and evasion rate.",
+    effect: "Restore 50% HP of party and increase attack, defense, and evasion rate.",
     element: "healing",
     unique: "Orpheus F",
     personas: { "Orpheus F": 0, "Orpheus F Picaro": 0 }
@@ -3157,8 +3122,7 @@ const skillMap: SkillMap = {
   },
   "Nuke Wall": {
     cost: 1800,
-    effect:
-      "Create a shield on 1 ally to reduce damage of Nuclear attacks for 3 turns.",
+    effect: "Create a shield on 1 ally to reduce damage of Nuclear attacks for 3 turns.",
     element: "support"
   },
   "Null Bless": {
@@ -3433,8 +3397,7 @@ const skillMap: SkillMap = {
   },
   "Psy Wall": {
     cost: 1800,
-    effect:
-      "Create a shield on 1 ally to reduce damage of Psy attacks for 3 turns.",
+    effect: "Create a shield on 1 ally to reduce damage of Psy attacks for 3 turns.",
     element: "support",
     personas: { Kushinada: 0, Sarasvati: 51, Thoth: 39 },
     talk: "Unfaithful Dream-King (Oberon)"
@@ -3831,8 +3794,7 @@ const skillMap: SkillMap = {
   },
   Salvation: {
     cost: 4800,
-    effect:
-      "Fully restore HP and cure all ailments of party except for unique status.",
+    effect: "Fully restore HP and cure all ailments of party except for unique status.",
     element: "healing",
     fuse: ["Izanagi-no-Okami Picaro"],
     personas: {
@@ -3964,8 +3926,7 @@ const skillMap: SkillMap = {
   },
   "Skull Cracker": {
     cost: 10,
-    effect:
-      "Deal medium Phys damage and inflict Confuse (medium odds) to 1 foe.",
+    effect: "Deal medium Phys damage and inflict Confuse (medium odds) to 1 foe.",
     element: "phys",
     personas: { Mokoi: 10, Mothman: 0, Nue: 0, Shiisaa: 0 },
     talk: "Night Chimera (Nue)"
@@ -4282,8 +4243,7 @@ const skillMap: SkillMap = {
   Tetraja: {
     card: "CJ Maid Cafe",
     cost: 2400,
-    effect:
-      "Create shields on party to nullify one instant death attack of Bless or Curse types.",
+    effect: "Create shields on party to nullify one instant death attack of Bless or Curse types.",
     element: "support",
     personas: {
       Baal: 85,
@@ -4318,8 +4278,7 @@ const skillMap: SkillMap = {
   },
   Thermopylae: {
     cost: 3000,
-    effect:
-      "Increase party's Attack, Defense and Agility for 3 turns. Only usable if the party is being ambushed.",
+    effect: "Increase party's Attack, Defense and Agility for 3 turns. Only usable if the party is being ambushed.",
     element: "support",
     personas: { Attis: 0, Dionysus: 72, Mithra: 38 }
   },
@@ -4514,8 +4473,7 @@ const skillMap: SkillMap = {
     personas: { Odin: 86, Thor: 71 }
   },
   "Will of the Sword": {
-    effect:
-      "Charge-type effects +200% damage instead, Begins battle with Concentrate",
+    effect: "Charge-type effects +200% damage instead, Begins battle with Concentrate",
     element: "trait",
     personas: { Futsunushi: 0 }
   },
@@ -4560,8 +4518,7 @@ const skillMap: SkillMap = {
   },
   "Wind Wall": {
     cost: 1800,
-    effect:
-      "Create a shield on 1 ally to reduce damage of Wind attacks for 3 turns.",
+    effect: "Create a shield on 1 ally to reduce damage of Wind attacks for 3 turns.",
     element: "support",
     personas: {
       Apsaras: 16,
