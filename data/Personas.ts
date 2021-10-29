@@ -4,7 +4,7 @@ export enum Weaknesses {
   resist = "rs",
   nullify = "nu",
   repel = "rp",
-  absorb =  "ab"
+  absorb = "ab"
 }
 export interface PersonaData {
   name: string;
@@ -62,23 +62,23 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Eiha: 0,
       Cleave: 2,
       Sukunda: 4,
       "Dream Needle": 5,
-      "Adverse Resolve": 7,
+      "Adverse Resolve": 7
     },
     stats: {
       strength: 2,
       magic: 2,
       endurance: 2,
       agility: 3,
-      luck: 1,
+      luck: 1
     },
-    trait: "Pinch Anchor",
+    trait: "Pinch Anchor"
   },
   {
     name: "Pixie",
@@ -97,25 +97,25 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Zio: 0,
       Dia: 0,
       Patra: 3,
       Tarukaja: 5,
-      "Resist Confuse": 6,
+      "Resist Confuse": 6
     },
     stats: {
       strength: 1,
       magic: 3,
       endurance: 3,
       agility: 4,
-      luck: 2,
+      luck: 2
     },
     trait: "Static Electricity",
     personality: "Timid",
-    shadow: "Beguiling Girl",
+    shadow: "Beguiling Girl"
   },
   {
     name: "Jack-o'-Lantern",
@@ -134,25 +134,25 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Agi: 0,
       Rakunda: 0,
       "Sharp Student": 4,
       Dazzler: 5,
-      "Resist Sleep": 7,
+      "Resist Sleep": 7
     },
     stats: {
       strength: 2,
       magic: 3,
       endurance: 3,
       agility: 3,
-      luck: 2,
+      luck: 2
     },
     trait: "Thermal Conduct",
     personality: "Gloomy",
-    shadow: "Crypt-dwelling Pyromaniac",
+    shadow: "Crypt-dwelling Pyromaniac"
   },
   {
     name: "Mandrake",
@@ -171,24 +171,24 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Pulinpa: 0,
       "Energy Drop": 0,
       Lunge: 4,
-      Sukunda: 5,
+      Sukunda: 5
     },
     stats: {
       strength: 2,
       magic: 3,
       endurance: 3,
       agility: 4,
-      luck: 4,
+      luck: 4
     },
     trait: "Savior Bloodline",
     personality: "Upbeat",
-    shadow: "Gallows Flower",
+    shadow: "Gallows Flower"
   },
   {
     name: "Agathion",
@@ -207,7 +207,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Dia: 0,
@@ -215,18 +215,18 @@ const personaMap: PersonaData[] = [
       Lunge: 4,
       Rakukaja: 6,
       Zio: 7,
-      "Dodge Elec": 8,
+      "Dodge Elec": 8
     },
     stats: {
       strength: 3,
       magic: 4,
       endurance: 5,
       agility: 7,
-      luck: 3,
+      luck: 3
     },
     trait: "Rare Antibody",
     personality: "Timid",
-    shadow: "Apprentice in a Jug",
+    shadow: "Apprentice in a Jug"
   },
   {
     name: "Bicorn",
@@ -245,25 +245,25 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Lunge: 0,
       Tarunda: 0,
       Garu: 6,
       "Ice Wall": 7,
-      "Apt Pupil": 8,
+      "Apt Pupil": 8
     },
     stats: {
       strength: 5,
       magic: 3,
       endurance: 3,
       agility: 5,
-      luck: 3,
+      luck: 3
     },
     trait: "Striking Weight",
     personality: "Gloomy",
-    shadow: "Dirty Two-horned Beast",
+    shadow: "Dirty Two-horned Beast"
   },
   {
     name: "Incubus",
@@ -282,25 +282,25 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Life Drain": 0,
       "Dream Needle": 0,
       Dormina: 7,
       Tarunda: 8,
-      "Dodge Curse": 9,
+      "Dodge Curse": 9
     },
     stats: {
       strength: 4,
       magic: 6,
       endurance: 4,
       agility: 5,
-      luck: 3,
+      luck: 3
     },
     trait: "Draining Mouth",
     personality: "Timid",
-    shadow: "Bedside Brute",
+    shadow: "Bedside Brute"
   },
   {
     name: "Cait Sith",
@@ -319,7 +319,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Agi: 0,
@@ -327,18 +327,18 @@ const personaMap: PersonaData[] = [
       Tarukaja: 0,
       "Resist Sleep": 6,
       Sukukaja: 7,
-      Media: 9,
+      Media: 9
     },
     stats: {
       strength: 6,
       magic: 4,
       endurance: 4,
       agility: 5,
-      luck: 3,
+      luck: 3
     },
     trait: "Thermal Conduct",
     personality: "Upbeat",
-    shadow: "Hunting Puss in Boots",
+    shadow: "Hunting Puss in Boots"
   },
   {
     name: "Silky",
@@ -357,25 +357,25 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Dormina: 0,
       Bufu: 0,
       Dia: 7,
       Patra: 9,
-      "Sharp Student": 10,
+      "Sharp Student": 10
     },
     stats: {
       strength: 4,
       magic: 7,
       endurance: 4,
       agility: 5,
-      luck: 5,
+      luck: 5
     },
     trait: "Intense Focus",
     personality: "Gloomy",
-    shadow: "Troublesome Housemaid",
+    shadow: "Troublesome Housemaid"
   },
   {
     name: "Saki Mitama",
@@ -394,7 +394,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Bufu: 0,
@@ -402,16 +402,16 @@ const personaMap: PersonaData[] = [
       "Wind Wall": 0,
       "Growth 1": 7,
       Rakukaja: 8,
-      "Resist Dizzy": 10,
+      "Resist Dizzy": 10
     },
     stats: {
       strength: 4,
       magic: 6,
       endurance: 5,
       agility: 6,
-      luck: 4,
+      luck: 4
     },
-    trait: "Internal Hypnosis",
+    trait: "Internal Hypnosis"
   },
   {
     name: "Kelpie",
@@ -430,25 +430,25 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Garu: 0,
       Lunge: 0,
       "Resist Brainwash": 8,
       Sukukaja: 9,
-      "Terror Claw": 10,
+      "Terror Claw": 10
     },
     stats: {
       strength: 5,
       magic: 5,
       endurance: 5,
       agility: 6,
-      luck: 4,
+      luck: 4
     },
     trait: "Striking Weight",
     personality: "Upbeat",
-    shadow: "Mad Marsh Horse",
+    shadow: "Mad Marsh Horse"
   },
   {
     name: "Succubus",
@@ -467,7 +467,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Dormina: 0,
@@ -475,18 +475,18 @@ const personaMap: PersonaData[] = [
       Agi: 8,
       Dekaja: 10,
       "Sleep Boost": 11,
-      Mudo: 12,
+      Mudo: 12
     },
     stats: {
       strength: 4,
       magic: 7,
       endurance: 5,
       agility: 8,
-      luck: 4,
+      luck: 4
     },
     trait: "Foul Odor",
     personality: "Irritable",
-    shadow: "Twilight Prostitute",
+    shadow: "Twilight Prostitute"
   },
   {
     name: "Genbu",
@@ -505,7 +505,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Bufu: 0,
@@ -513,16 +513,16 @@ const personaMap: PersonaData[] = [
       Patra: 8,
       Mabufu: 10,
       "Resist Forget": 11,
-      "Defense Master": 12,
+      "Defense Master": 12
     },
     stats: {
       strength: 5,
       magic: 6,
       endurance: 7,
       agility: 6,
-      luck: 4,
+      luck: 4
     },
-    trait: "Cold-Blooded",
+    trait: "Cold-Blooded"
   },
   {
     name: "Obariyon",
@@ -541,25 +541,25 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Snap: 0,
       Sukunda: 0,
       "Lucky Punch": 9,
       "Resist Fear": 10,
-      Dekaja: 12,
+      Dekaja: 12
     },
     stats: {
       strength: 7,
       magic: 3,
       endurance: 9,
       agility: 8,
-      luck: 4,
+      luck: 4
     },
     trait: "Striking Weight",
     personality: "Irritable",
-    shadow: "Piggyback Demon",
+    shadow: "Piggyback Demon"
   },
   {
     name: "Mokoi",
@@ -578,7 +578,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Tarukaja: 0,
@@ -586,18 +586,18 @@ const personaMap: PersonaData[] = [
       "Skull Cracker": 10,
       "Marin Karin": 12,
       "Dodge Elec": 13,
-      Dekunda: 14,
+      Dekunda: 14
     },
     stats: {
       strength: 9,
       magic: 5,
       endurance: 6,
       agility: 10,
-      luck: 4,
+      luck: 4
     },
     trait: "Gloomy Child",
     personality: "Gloomy",
-    shadow: "Night-Walking Warrior",
+    shadow: "Night-Walking Warrior"
   },
   {
     name: "Koropokguru",
@@ -616,7 +616,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Makajam: 0,
@@ -625,18 +625,18 @@ const personaMap: PersonaData[] = [
       Sukunda: 12,
       "Fire Wall": 13,
       Mabufu: 14,
-      "Climate Decorum": 15,
+      "Climate Decorum": 15
     },
     stats: {
       strength: 5,
       magic: 8,
       endurance: 6,
       agility: 9,
-      luck: 6,
+      luck: 6
     },
     trait: "Foul Odor",
     personality: "Timid",
-    shadow: "Leafy Old Man",
+    shadow: "Leafy Old Man"
   },
   {
     name: "Hua Po",
@@ -655,7 +655,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Agi: 0,
@@ -663,18 +663,18 @@ const personaMap: PersonaData[] = [
       Tarunda: 11,
       "Resist Forget": 12,
       Maragi: 13,
-      "Burn Boost": 15,
+      "Burn Boost": 15
     },
     stats: {
       strength: 4,
       magic: 10,
       endurance: 4,
       agility: 8,
-      luck: 8,
+      luck: 8
     },
     trait: "Thermal Conduct",
     personality: "Upbeat",
-    shadow: "Girl of the Hanging Tree",
+    shadow: "Girl of the Hanging Tree"
   },
   {
     name: "Berith",
@@ -693,25 +693,25 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Cleave: 0,
       Rakukaja: 0,
       Tarukaja: 10,
       "Dodge Fire": 11,
-      "Power Slash": 13,
+      "Power Slash": 13
     },
     stats: {
       strength: 9,
       magic: 6,
       endurance: 8,
       agility: 8,
-      luck: 3,
+      luck: 3
     },
     trait: "Crisis Control",
     personality: "Irritable",
-    shadow: "Brutal Cavalryman",
+    shadow: "Brutal Cavalryman"
   },
   {
     name: "Angel",
@@ -730,7 +730,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Kouha: 0,
@@ -738,18 +738,18 @@ const personaMap: PersonaData[] = [
       Dia: 0,
       Baisudi: 10,
       "Dodge Curse": 11,
-      Dekunda: 12,
+      Dekunda: 12
     },
     stats: {
       strength: 6,
       magic: 9,
       endurance: 5,
       agility: 9,
-      luck: 5,
+      luck: 5
     },
     trait: "Skillful Combo",
     personality: "Irritable",
-    shadow: "Zealous Messenger",
+    shadow: "Zealous Messenger"
   },
   {
     name: "Slime",
@@ -768,25 +768,25 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Lunge: 0,
       "Evil Touch": 0,
       Tarunda: 11,
       "Fire Wall": 13,
-      Headbutt: 14,
+      Headbutt: 14
     },
     stats: {
       strength: 9,
       magic: 6,
       endurance: 11,
       agility: 6,
-      luck: 5,
+      luck: 5
     },
     trait: "Rare Antibody",
     personality: "Timid",
-    shadow: "Viscid Rotting Meat",
+    shadow: "Viscid Rotting Meat"
   },
   {
     name: "Regent",
@@ -806,7 +806,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Maragi: 0,
@@ -819,18 +819,18 @@ const personaMap: PersonaData[] = [
       Maeiha: 0,
       "Mighty Gaze": 0,
       "Skillful Technique": 0,
-      "Skillful Combo": 0,
+      "Skillful Combo": 0
     },
     stats: {
       strength: 10,
       magic: 10,
       endurance: 10,
       agility: 10,
-      luck: 10,
+      luck: 10
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)",
+    shadow: "(Treasure Demon)"
   },
   {
     name: "Orpheus F",
@@ -849,7 +849,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       "Neo Cadenza": 0,
@@ -858,17 +858,17 @@ const personaMap: PersonaData[] = [
       Endure: 0,
       Maragion: 12,
       Marakukaja: 14,
-      "Dodge Curse": 15,
+      "Dodge Curse": 15
     },
     stats: {
       strength: 8,
       magic: 9,
       endurance: 8,
       agility: 9,
-      luck: 6,
+      luck: 6
     },
     trait: "Circle of Sadness",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Koppa Tengu",
@@ -887,7 +887,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Garu: 0,
@@ -895,18 +895,18 @@ const personaMap: PersonaData[] = [
       "Growth 1": 12,
       Taunt: 13,
       "Rage Boost": 14,
-      "Wage War": 15,
+      "Wage War": 15
     },
     stats: {
       strength: 7,
       magic: 8,
       endurance: 8,
       agility: 11,
-      luck: 6,
+      luck: 6
     },
     trait: "Intense Focus",
     personality: "Upbeat",
-    shadow: "Foolish Monk",
+    shadow: "Foolish Monk"
   },
   {
     name: "Kodama",
@@ -925,7 +925,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Garu: 0,
@@ -934,18 +934,18 @@ const personaMap: PersonaData[] = [
       "Evil Touch": 13,
       Tarukaja: 14,
       "Fear Boost": 15,
-      "Resist Fear": 17,
+      "Resist Fear": 17
     },
     stats: {
       strength: 7,
       magic: 11,
       endurance: 8,
       agility: 10,
-      luck: 4,
+      luck: 4
     },
     trait: "Skillful Combo",
     personality: "Upbeat",
-    shadow: "Wavering Tree Spirit",
+    shadow: "Wavering Tree Spirit"
   },
   {
     name: "Jack Frost",
@@ -964,7 +964,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Bufu: 0,
@@ -972,18 +972,18 @@ const personaMap: PersonaData[] = [
       Baisudi: 0,
       Mabufu: 12,
       Rakunda: 13,
-      "Freeze Boost": 15,
+      "Freeze Boost": 15
     },
     stats: {
       strength: 8,
       magic: 9,
       endurance: 7,
       agility: 9,
-      luck: 7,
+      luck: 7
     },
     trait: "Frigid Bloodline",
     personality: "Timid",
-    shadow: "Mocking Snowman",
+    shadow: "Mocking Snowman"
   },
   {
     name: "Apsaras",
@@ -1002,7 +1002,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Rebellion: 0,
@@ -1010,18 +1010,18 @@ const personaMap: PersonaData[] = [
       Bufu: 0,
       Media: 13,
       "Elec Wall": 14,
-      "Wind Wall": 16,
+      "Wind Wall": 16
     },
     stats: {
       strength: 7,
       magic: 11,
       endurance: 6,
       agility: 10,
-      luck: 6,
+      luck: 6
     },
     trait: "Internal Hypnosis",
     personality: "Upbeat",
-    shadow: "Waterside Nymph",
+    shadow: "Waterside Nymph"
   },
   {
     name: "Onmoraki",
@@ -1040,7 +1040,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Eiha: 0,
@@ -1048,18 +1048,18 @@ const personaMap: PersonaData[] = [
       Agi: 13,
       "Evil Touch": 14,
       Pulinpa: 15,
-      "Confuse Boost": 17,
+      "Confuse Boost": 17
     },
     stats: {
       strength: 9,
       magic: 12,
       endurance: 7,
       agility: 10,
-      luck: 5,
+      luck: 5
     },
     trait: "Intense Focus",
     personality: "Gloomy",
-    shadow: "Corpse Bird",
+    shadow: "Corpse Bird"
   },
   {
     name: "Kushi Mitama",
@@ -1078,7 +1078,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Dia: 0,
@@ -1086,16 +1086,16 @@ const personaMap: PersonaData[] = [
       Makajam: 0,
       "Regenerate 1": 13,
       "Wind Wall": 14,
-      "Forget Boost": 16,
+      "Forget Boost": 16
     },
     stats: {
       strength: 7,
       magic: 11,
       endurance: 9,
       agility: 8,
-      luck: 8,
+      luck: 8
     },
-    trait: "Gluttonmouth",
+    trait: "Gluttonmouth"
   },
   {
     name: "Orpheus F Picaro",
@@ -1114,7 +1114,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       "Neo Cadenza": 0,
@@ -1123,17 +1123,17 @@ const personaMap: PersonaData[] = [
       Endure: 0,
       Agilao: 14,
       Marakukaja: 16,
-      "Dodge Curse": 17,
+      "Dodge Curse": 17
     },
     stats: {
       strength: 9,
       magic: 11,
       endurance: 9,
       agility: 10,
-      luck: 7,
+      luck: 7
     },
     trait: "Circle of Sadness",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Ippon-Datara",
@@ -1152,7 +1152,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Sledgehammer: 0,
@@ -1160,18 +1160,18 @@ const personaMap: PersonaData[] = [
       "Resist Dizzy": 0,
       Rampage: 15,
       "Sharp Student": 17,
-      Counter: 18,
+      Counter: 18
     },
     stats: {
       strength: 11,
       magic: 7,
       endurance: 14,
       agility: 6,
-      luck: 8,
+      luck: 8
     },
     trait: "Striking Weight",
     personality: "Upbeat",
-    shadow: "Embittered Blacksmith",
+    shadow: "Embittered Blacksmith"
   },
   {
     name: "Ame-no-Uzume",
@@ -1190,7 +1190,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mazio: 0,
@@ -1198,18 +1198,18 @@ const personaMap: PersonaData[] = [
       Media: 0,
       "Nocturnal Flash": 15,
       Baisudi: 16,
-      "Divine Grace": 18,
+      "Divine Grace": 18
     },
     stats: {
       strength: 7,
       magic: 10,
       endurance: 9,
       agility: 11,
-      luck: 9,
+      luck: 9
     },
     trait: "Electric Bloodline",
     personality: "Upbeat",
-    shadow: "Captivating Dancer",
+    shadow: "Captivating Dancer"
   },
   {
     name: "Inugami",
@@ -1228,7 +1228,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Pulinpa: 0,
@@ -1237,18 +1237,18 @@ const personaMap: PersonaData[] = [
       "Dream Needle": 15,
       "Lucky Punch": 17,
       "Brain Shake": 18,
-      "Confuse Boost": 19,
+      "Confuse Boost": 19
     },
     stats: {
       strength: 11,
       magic: 9,
       endurance: 9,
       agility: 12,
-      luck: 8,
+      luck: 8
     },
     trait: "Foul Odor",
     personality: "Timid",
-    shadow: "Possessing Dog Ghost",
+    shadow: "Possessing Dog Ghost"
   },
   {
     name: "Archangel",
@@ -1267,7 +1267,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       "Giant Slice": 0,
@@ -1275,18 +1275,18 @@ const personaMap: PersonaData[] = [
       Hama: 0,
       Rebellion: 16,
       "Power Slash": 17,
-      "Vajra Blast": 19,
+      "Vajra Blast": 19
     },
     stats: {
       strength: 11,
       magic: 9,
       endurance: 10,
       agility: 12,
-      luck: 7,
+      luck: 7
     },
     trait: "Skillful Combo",
     personality: "Irritable",
-    shadow: "Heavenly Punisher",
+    shadow: "Heavenly Punisher"
   },
   {
     name: "Shiisaa",
@@ -1305,7 +1305,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       "Double Fangs": 0,
@@ -1313,18 +1313,18 @@ const personaMap: PersonaData[] = [
       Frei: 0,
       "Dodge Curse": 16,
       Rampage: 17,
-      "Dodge Elec": 19,
+      "Dodge Elec": 19
     },
     stats: {
       strength: 10,
       magic: 11,
       endurance: 11,
       agility: 11,
-      luck: 9,
+      luck: 9
     },
     trait: "Atomic Bloodline",
     personality: "Upbeat",
-    shadow: "Rooftop Lion",
+    shadow: "Rooftop Lion"
   },
   {
     name: "Queen's Necklace",
@@ -1344,7 +1344,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Tarukaja: 0,
@@ -1357,18 +1357,18 @@ const personaMap: PersonaData[] = [
       Sukunda: 0,
       "Potent Hypnosis": 0,
       "Relief Bloodline": 0,
-      "Savior Bloodline": 0,
+      "Savior Bloodline": 0
     },
     stats: {
       strength: 15,
       magic: 15,
       endurance: 15,
       agility: 15,
-      luck: 15,
+      luck: 15
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)",
+    shadow: "(Treasure Demon)"
   },
   {
     name: "Makami",
@@ -1387,7 +1387,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Double Fangs": 0,
@@ -1396,18 +1396,18 @@ const personaMap: PersonaData[] = [
       Mafrei: 17,
       Makajam: 18,
       "Resist Despair": 19,
-      "Dodge Elec": 20,
+      "Dodge Elec": 20
     },
     stats: {
       strength: 13,
       magic: 12,
       endurance: 8,
       agility: 11,
-      luck: 8,
+      luck: 8
     },
     trait: "Skillful Technique",
     personality: "Upbeat",
-    shadow: "Hunting Wolf Spirit",
+    shadow: "Hunting Wolf Spirit"
   },
   {
     name: "Kaguya",
@@ -1426,7 +1426,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Shining Arrows": 0,
@@ -1435,17 +1435,17 @@ const personaMap: PersonaData[] = [
       "Divine Grace": 17,
       "Amrita Shower": 18,
       Diarahan: 21,
-      "Repel Phys": 22,
+      "Repel Phys": 22
     },
     stats: {
       strength: 11,
       magic: 15,
       endurance: 12,
       agility: 11,
-      luck: 6,
+      luck: 6
     },
     trait: "Inviolable Beauty",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Suzaku",
@@ -1464,7 +1464,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Frei: 0,
@@ -1473,16 +1473,16 @@ const personaMap: PersonaData[] = [
       Dekunda: 18,
       Mafrei: 19,
       "Speed Master": 20,
-      Matarunda: 21,
+      Matarunda: 21
     },
     stats: {
       strength: 9,
       magic: 12,
       endurance: 10,
       agility: 15,
-      luck: 9,
+      luck: 9
     },
-    trait: "Gluttonmouth",
+    trait: "Gluttonmouth"
   },
   {
     name: "High Pixie",
@@ -1501,7 +1501,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Garu: 0,
@@ -1509,18 +1509,18 @@ const personaMap: PersonaData[] = [
       Dormina: 0,
       Diarama: 19,
       Pulinpa: 20,
-      Magaru: 22,
+      Magaru: 22
     },
     stats: {
       strength: 8,
       magic: 14,
       endurance: 10,
       agility: 13,
-      luck: 10,
+      luck: 10
     },
     trait: "Skillful Combo",
     personality: "Irritable",
-    shadow: "Prankster Leader",
+    shadow: "Prankster Leader"
   },
   {
     name: "Eligor",
@@ -1539,7 +1539,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Maragi: 0,
@@ -1547,18 +1547,18 @@ const personaMap: PersonaData[] = [
       Tarukaja: 0,
       "Double Fangs": 18,
       Sukunda: 19,
-      "Memory Blow": 20,
+      "Memory Blow": 20
     },
     stats: {
       strength: 12,
       magic: 10,
       endurance: 13,
       agility: 10,
-      luck: 10,
+      luck: 10
     },
     trait: "Thermal Conduct",
     personality: "Irritable",
-    shadow: "War-hungry Horseman",
+    shadow: "War-hungry Horseman"
   },
   {
     name: "Sudama",
@@ -1577,7 +1577,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mapsi: 0,
@@ -1586,18 +1586,18 @@ const personaMap: PersonaData[] = [
       "Ambient Aid": 20,
       "Wind Wall": 21,
       "Apt Pupil": 22,
-      Psio: 23,
+      Psio: 23
     },
     stats: {
       strength: 9,
       magic: 14,
       endurance: 12,
       agility: 13,
-      luck: 10,
+      luck: 10
     },
     trait: "Gloomy Child",
     personality: "Timid",
-    shadow: "Noisy Mountain Spirit",
+    shadow: "Noisy Mountain Spirit"
   },
   {
     name: "Orobas",
@@ -1616,7 +1616,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Maragi: 0,
@@ -1624,18 +1624,18 @@ const personaMap: PersonaData[] = [
       Dekaja: 0,
       Marakunda: 19,
       "Fire Break": 20,
-      Makajamaon: 21,
+      Makajamaon: 21
     },
     stats: {
       strength: 11,
       magic: 14,
       endurance: 15,
       agility: 12,
-      luck: 6,
+      luck: 6
     },
     trait: "Mighty Gaze",
     personality: "Timid",
-    shadow: "Equine Sage",
+    shadow: "Equine Sage"
   },
   {
     name: "Nekomata",
@@ -1654,7 +1654,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Magaru: 0,
@@ -1663,18 +1663,18 @@ const personaMap: PersonaData[] = [
       "Hysterical Slap": 18,
       "Wind Break": 20,
       "Elec Wall": 21,
-      "Dodge Elec": 22,
+      "Dodge Elec": 22
     },
     stats: {
       strength: 13,
       magic: 10,
       endurance: 12,
       agility: 15,
-      luck: 8,
+      luck: 8
     },
     trait: "Foul Odor",
     personality: "Upbeat",
-    shadow: "Ascended Feline",
+    shadow: "Ascended Feline"
   },
   {
     name: "Matador",
@@ -1693,7 +1693,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Psi: 0,
@@ -1701,16 +1701,16 @@ const personaMap: PersonaData[] = [
       Sukukaja: 0,
       Mapsi: 18,
       "Double Shot": 20,
-      "Swift Strike": 22,
+      "Swift Strike": 22
     },
     stats: {
       strength: 11,
       magic: 13,
       endurance: 10,
       agility: 16,
-      luck: 8,
+      luck: 8
     },
-    trait: "Potent Hypnosis",
+    trait: "Potent Hypnosis"
   },
   {
     name: "Shiki-Ouji",
@@ -1729,7 +1729,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Tarukaja: 0,
@@ -1738,18 +1738,18 @@ const personaMap: PersonaData[] = [
       Mapsi: 19,
       Dekaja: 21,
       Psio: 23,
-      "Oni Kagura": 24,
+      "Oni Kagura": 24
     },
     stats: {
       strength: 16,
       magic: 14,
       endurance: 12,
       agility: 9,
-      luck: 10,
+      luck: 10
     },
     trait: "Psychic Bloodline",
     personality: "Irritable",
-    shadow: "Bringer of Misfortune",
+    shadow: "Bringer of Misfortune"
   },
   {
     name: "Black Ooze",
@@ -1768,7 +1768,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Sledgehammer: 0,
@@ -1777,18 +1777,18 @@ const personaMap: PersonaData[] = [
       "Ambient Aid": 20,
       Headbutt: 21,
       "Brain Jack": 23,
-      "Flash Bomb": 24,
+      "Flash Bomb": 24
     },
     stats: {
       strength: 15,
       magic: 7,
       endurance: 16,
       agility: 8,
-      luck: 15,
+      luck: 15
     },
     trait: "Rare Antibody",
     personality: "Irritable",
-    shadow: "Pulsing Mud",
+    shadow: "Pulsing Mud"
   },
   {
     name: "Leanan Sidhe",
@@ -1807,7 +1807,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Rakunda: 0,
@@ -1815,18 +1815,18 @@ const personaMap: PersonaData[] = [
       "Marin Karin": 20,
       Mamudo: 21,
       Mapsi: 22,
-      Eiga: 23,
+      Eiga: 23
     },
     stats: {
       strength: 9,
       magic: 17,
       endurance: 12,
       agility: 16,
-      luck: 10,
+      luck: 10
     },
     trait: "Skillful Technique",
     personality: "Irritable",
-    shadow: "Jealous Lover",
+    shadow: "Jealous Lover"
   },
   {
     name: "Flauros",
@@ -1846,7 +1846,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Giant Slice": 0,
@@ -1855,16 +1855,16 @@ const personaMap: PersonaData[] = [
       "Dodge Phys": 20,
       Rebellion: 22,
       "Cornered Fang": 23,
-      "Heat Up": 24,
+      "Heat Up": 24
     },
     stats: {
       strength: 15,
       magic: 11,
       endurance: 13,
       agility: 14,
-      luck: 11,
+      luck: 11
     },
-    trait: "Gluttonmouth",
+    trait: "Gluttonmouth"
   },
   {
     name: "Izanagi",
@@ -1883,7 +1883,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Cross Slash": 0,
@@ -1892,17 +1892,17 @@ const personaMap: PersonaData[] = [
       "Rising Slash": 21,
       "Dodge Phys": 22,
       Mazionga: 24,
-      "Growth 3": 25,
+      "Growth 3": 25
     },
     stats: {
       strength: 14,
       magic: 13,
       endurance: 13,
       agility: 14,
-      luck: 13,
+      luck: 13
     },
     trait: "God Maker",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Yaksini",
@@ -1921,7 +1921,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Hysterical Slap": 0,
@@ -1929,18 +1929,18 @@ const personaMap: PersonaData[] = [
       Counter: 0,
       "Oni Kagura": 22,
       "Attack Master": 23,
-      "Vicious Strike": 24,
+      "Vicious Strike": 24
     },
     stats: {
       strength: 14,
       magic: 11,
       endurance: 13,
       agility: 16,
-      luck: 13,
+      luck: 13
     },
     trait: "Foul Odor",
     personality: "Irritable",
-    shadow: "Human-eating Lady",
+    shadow: "Human-eating Lady"
   },
   {
     name: "Stone of Scone",
@@ -1960,7 +1960,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Agilao: 0,
@@ -1973,18 +1973,18 @@ const personaMap: PersonaData[] = [
       Eiga: 0,
       Relentless: 0,
       Gluttonmouth: 0,
-      "Intense Focus": 0,
+      "Intense Focus": 0
     },
     stats: {
       strength: 20,
       magic: 20,
       endurance: 20,
       agility: 20,
-      luck: 20,
+      luck: 20
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)",
+    shadow: "(Treasure Demon)"
   },
   {
     name: "Oni",
@@ -2003,7 +2003,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Rampage: 0,
@@ -2011,18 +2011,18 @@ const personaMap: PersonaData[] = [
       Snap: 0,
       "Giant Slice": 22,
       "Sharp Student": 23,
-      "Memory Blow": 24,
+      "Memory Blow": 24
     },
     stats: {
       strength: 19,
       magic: 9,
       endurance: 17,
       agility: 12,
-      luck: 10,
+      luck: 10
     },
     trait: "Retaliating Body",
     personality: "Upbeat",
-    shadow: "Chivalrous Guard/Chivalrous Fiend",
+    shadow: "Chivalrous Guard/Chivalrous Fiend"
   },
   {
     name: "Nue",
@@ -2041,7 +2041,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Maeiha: 0,
@@ -2050,18 +2050,18 @@ const personaMap: PersonaData[] = [
       Pulinpa: 22,
       Mamudo: 24,
       "Assault Dive": 25,
-      "Curse Boost": 26,
+      "Curse Boost": 26
     },
     stats: {
       strength: 16,
       magic: 10,
       endurance: 17,
       agility: 14,
-      luck: 10,
+      luck: 10
     },
     trait: "Mighty Gaze",
     personality: "Irritable",
-    shadow: "Night Chimera",
+    shadow: "Night Chimera"
   },
   {
     name: "Phoenix",
@@ -2080,7 +2080,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Freila: 0,
@@ -2088,16 +2088,16 @@ const personaMap: PersonaData[] = [
       Diarama: 22,
       Recarm: 23,
       "Nuke Boost": 25,
-      Mafreila: 26,
+      Mafreila: 26
     },
     stats: {
       strength: 12,
       magic: 15,
       endurance: 15,
       agility: 17,
-      luck: 11,
+      luck: 11
     },
-    trait: "Atomic Bloodline",
+    trait: "Atomic Bloodline"
   },
   {
     name: "Orthrus",
@@ -2116,7 +2116,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Agilao: 0,
@@ -2124,18 +2124,18 @@ const personaMap: PersonaData[] = [
       Maragi: 0,
       "Burn Boost": 22,
       "Cornered Fang": 24,
-      Matarukaja: 26,
+      Matarukaja: 26
     },
     stats: {
       strength: 16,
       magic: 14,
       endurance: 14,
       agility: 19,
-      luck: 7,
+      luck: 7
     },
     trait: "Thermal Conduct",
     personality: "Irritable",
-    shadow: "Twin-headed Guardian",
+    shadow: "Twin-headed Guardian"
   },
   {
     name: "Nigi Mitama",
@@ -2154,7 +2154,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Baisudi: 0,
@@ -2162,16 +2162,16 @@ const personaMap: PersonaData[] = [
       Makouha: 0,
       "Divine Grace": 24,
       "Me Patra": 25,
-      "Climate Decorum": 26,
+      "Climate Decorum": 26
     },
     stats: {
       strength: 13,
       magic: 15,
       endurance: 15,
       agility: 16,
-      luck: 14,
+      luck: 14
     },
-    trait: "Relief Bloodline",
+    trait: "Relief Bloodline"
   },
   {
     name: "Jikokuten",
@@ -2190,7 +2190,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       "Assault Dive": 0,
@@ -2199,16 +2199,16 @@ const personaMap: PersonaData[] = [
       "Kill Rush": 24,
       Counter: 25,
       Matarukaja: 27,
-      "Adverse Resolve": 28,
+      "Adverse Resolve": 28
     },
     stats: {
       strength: 18,
       magic: 11,
       endurance: 16,
       agility: 15,
-      luck: 13,
+      luck: 13
     },
-    trait: "Internal Hypnosis",
+    trait: "Internal Hypnosis"
   },
   {
     name: "Izanagi Picaro",
@@ -2227,7 +2227,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Cross Slash": 0,
@@ -2236,17 +2236,17 @@ const personaMap: PersonaData[] = [
       "Rising Slash": 24,
       "Null Phys": 25,
       Mazionga: 27,
-      "Growth 3": 28,
+      "Growth 3": 28
     },
     stats: {
       strength: 16,
       magic: 15,
       endurance: 15,
       agility: 16,
-      luck: 14,
+      luck: 14
     },
     trait: "God Maker",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Sandman",
@@ -2265,7 +2265,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Dormina: 0,
@@ -2274,18 +2274,18 @@ const personaMap: PersonaData[] = [
       Sukunda: 24,
       "Null Sleep": 26,
       Magarula: 27,
-      "Sleep Boost": 28,
+      "Sleep Boost": 28
     },
     stats: {
       strength: 11,
       magic: 13,
       endurance: 14,
       agility: 17,
-      luck: 21,
+      luck: 21
     },
     trait: "Foul Odor",
     personality: "Irritable",
-    shadow: "Envoy of Slumber",
+    shadow: "Envoy of Slumber"
   },
   {
     name: "Fuu-Ki",
@@ -2304,7 +2304,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Tetra Break": 0,
@@ -2312,18 +2312,18 @@ const personaMap: PersonaData[] = [
       Garula: 0,
       "Wind Boost": 25,
       Magarula: 26,
-      "Resist Wind": 27,
+      "Resist Wind": 27
     },
     stats: {
       strength: 14,
       magic: 17,
       endurance: 16,
       agility: 15,
-      luck: 14,
+      luck: 14
     },
     trait: "Intense Focus",
     personality: "Gloomy",
-    shadow: "Tornado Devil",
+    shadow: "Tornado Devil"
   },
   {
     name: "Sui-Ki",
@@ -2342,7 +2342,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mabufu: 0,
@@ -2351,18 +2351,18 @@ const personaMap: PersonaData[] = [
       "Null Ice": 26,
       "Wage War": 27,
       Mabufula: 28,
-      "Dodge Fire": 29,
+      "Dodge Fire": 29
     },
     stats: {
       strength: 16,
       magic: 15,
       endurance: 15,
       agility: 18,
-      luck: 15,
+      luck: 15
     },
     trait: "Frigid Bloodline",
     personality: "Gloomy",
-    shadow: "Floodbringer Demon",
+    shadow: "Floodbringer Demon"
   },
   {
     name: "Rakshasa",
@@ -2381,7 +2381,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       "Giant Slice": 0,
@@ -2390,18 +2390,18 @@ const personaMap: PersonaData[] = [
       "Regenerate 1": 26,
       "Mind Slice": 27,
       Counterstrike: 28,
-      "Adverse Resolve": 30,
+      "Adverse Resolve": 30
     },
     stats: {
       strength: 20,
       magic: 15,
       endurance: 18,
       agility: 17,
-      luck: 9,
+      luck: 9
     },
     trait: "Skillful Combo",
     personality: "Irritable",
-    shadow: "Battle Fiend",
+    shadow: "Battle Fiend"
   },
   {
     name: "Naga",
@@ -2420,7 +2420,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Power Slash": 0,
@@ -2429,18 +2429,18 @@ const personaMap: PersonaData[] = [
       "Shock Boost": 26,
       Counter: 27,
       Mazionga: 28,
-      Marakukaja: 29,
+      Marakukaja: 29
     },
     stats: {
       strength: 15,
       magic: 17,
       endurance: 15,
       agility: 17,
-      luck: 15,
+      luck: 15
     },
     trait: "Striking Weight",
     personality: "Gloomy",
-    shadow: "Cavern Snakeman",
+    shadow: "Cavern Snakeman"
   },
   {
     name: "Kaguya Picaro",
@@ -2459,7 +2459,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Shining Arrows": 0,
@@ -2468,17 +2468,17 @@ const personaMap: PersonaData[] = [
       "Divine Grace": 26,
       "Amrita Shower": 27,
       Diarahan: 30,
-      "Repel Phys": 31,
+      "Repel Phys": 31
     },
     stats: {
       strength: 17,
       magic: 20,
       endurance: 19,
       agility: 15,
-      luck: 11,
+      luck: 11
     },
     trait: "Inviolable Beauty",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Setanta",
@@ -2497,7 +2497,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Giant Slice": 0,
@@ -2505,16 +2505,16 @@ const personaMap: PersonaData[] = [
       Counter: 0,
       Charge: 27,
       Rebellion: 29,
-      "Rising Slash": 30,
+      "Rising Slash": 30
     },
     stats: {
       strength: 19,
       magic: 16,
       endurance: 18,
       agility: 13,
-      luck: 16,
+      luck: 16
     },
-    trait: "Retaliating Body",
+    trait: "Retaliating Body"
   },
   {
     name: "Koh-i-Noor",
@@ -2534,7 +2534,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Dodge Fire": 0,
@@ -2547,18 +2547,18 @@ const personaMap: PersonaData[] = [
       "Dodge Curse": 0,
       "Crisis Control": 0,
       "Bloodstained Eyes": 0,
-      "Rare Antibody": 0,
+      "Rare Antibody": 0
     },
     stats: {
       strength: 25,
       magic: 25,
       endurance: 25,
       agility: 25,
-      luck: 25,
+      luck: 25
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)",
+    shadow: "(Treasure Demon)"
   },
   {
     name: "Kin-Ki",
@@ -2577,7 +2577,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Vajra Blast": 0,
@@ -2586,18 +2586,18 @@ const personaMap: PersonaData[] = [
       "Dodge Psy": 27,
       Sledgehammer: 28,
       "Bad Beat": 30,
-      Counterstrike: 31,
+      Counterstrike: 31
     },
     stats: {
       strength: 21,
       magic: 13,
       endurance: 21,
       agility: 15,
-      luck: 12,
+      luck: 12
     },
     trait: "Retaliating Body",
     personality: "Gloomy",
-    shadow: "Demonic Warlord",
+    shadow: "Demonic Warlord"
   },
   {
     name: "Anzu",
@@ -2616,7 +2616,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Garula: 0,
@@ -2624,18 +2624,18 @@ const personaMap: PersonaData[] = [
       "Wind Break": 0,
       "Assault Dive": 27,
       Dekaja: 28,
-      "Null Forget": 29,
+      "Null Forget": 29
     },
     stats: {
       strength: 14,
       magic: 18,
       endurance: 15,
       agility: 21,
-      luck: 14,
+      luck: 14
     },
     trait: "Wind Bloodline",
     personality: "Irritable",
-    shadow: "Thief of Tablets",
+    shadow: "Thief of Tablets"
   },
   {
     name: "Orpheus",
@@ -2654,7 +2654,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Cadenza: 0,
@@ -2663,17 +2663,17 @@ const personaMap: PersonaData[] = [
       Endure: 27,
       Maragion: 29,
       Marakukaja: 30,
-      "Fire Boost": 32,
+      "Fire Boost": 32
     },
     stats: {
       strength: 17,
       magic: 17,
       endurance: 17,
       agility: 17,
-      luck: 17,
+      luck: 17
     },
     trait: "Circle of Sadness",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Take-Minakata",
@@ -2692,7 +2692,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Zionga: 0,
@@ -2701,18 +2701,18 @@ const personaMap: PersonaData[] = [
       Mazionga: 27,
       "Elec Boost": 29,
       "Swift Strike": 31,
-      "Shock Boost": 32,
+      "Shock Boost": 32
     },
     stats: {
       strength: 17,
       magic: 19,
       endurance: 18,
       agility: 16,
-      luck: 15,
+      luck: 15
     },
     trait: "Electric Bloodline",
     personality: "Gloomy",
-    shadow: "Defeated Avenger",
+    shadow: "Defeated Avenger"
   },
   {
     name: "Lamia",
@@ -2731,7 +2731,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Mudo: 0,
@@ -2740,18 +2740,18 @@ const personaMap: PersonaData[] = [
       "Ominous Words": 27,
       "Foul Breath": 28,
       Mamudo: 30,
-      "Despair Boost": 31,
+      "Despair Boost": 31
     },
     stats: {
       strength: 21,
       magic: 15,
       endurance: 18,
       agility: 19,
-      luck: 12,
+      luck: 12
     },
     trait: "Foul Odor",
     personality: "Gloomy",
-    shadow: "Slithering Snakewoman",
+    shadow: "Slithering Snakewoman"
   },
   {
     name: "Isis",
@@ -2770,7 +2770,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Makouga: 0,
@@ -2779,18 +2779,18 @@ const personaMap: PersonaData[] = [
       "Resist Despair": 27,
       Hamaon: 29,
       "Hama Boost": 30,
-      Makarakarn: 32,
+      Makarakarn: 32
     },
     stats: {
       strength: 14,
       magic: 20,
       endurance: 17,
       agility: 18,
-      luck: 16,
+      luck: 16
     },
     trait: "Savior Bloodline",
     personality: "Timid",
-    shadow: "She of Life and Death",
+    shadow: "She of Life and Death"
   },
   {
     name: "Tam Lin",
@@ -2810,7 +2810,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.absorb,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       "Assault Dive": 0,
@@ -2819,16 +2819,16 @@ const personaMap: PersonaData[] = [
       "Sharp Student": 28,
       "Brain Buster": 30,
       "Brainwash Boost": 31,
-      "Heat Up": 32,
+      "Heat Up": 32
     },
     stats: {
       strength: 21,
       magic: 16,
       endurance: 18,
       agility: 16,
-      luck: 17,
+      luck: 17
     },
-    trait: "Gluttonmouth",
+    trait: "Gluttonmouth"
   },
   {
     name: "Clotho",
@@ -2847,7 +2847,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mahama: 0,
@@ -2856,16 +2856,16 @@ const personaMap: PersonaData[] = [
       Tetraja: 28,
       Makajamaon: 30,
       "Energy Shower": 31,
-      "Invigorate 1": 33,
+      "Invigorate 1": 33
     },
     stats: {
       strength: 14,
       magic: 19,
       endurance: 18,
       agility: 20,
-      luck: 17,
+      luck: 17
     },
-    trait: "Relief Bloodline",
+    trait: "Relief Bloodline"
   },
   {
     name: "Andras",
@@ -2884,7 +2884,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Foul Breath": 0,
@@ -2892,18 +2892,18 @@ const personaMap: PersonaData[] = [
       "Evil Touch": 28,
       "Fear Boost": 29,
       Rakunda: 31,
-      "Ghastly Wail": 32,
+      "Ghastly Wail": 32
     },
     stats: {
       strength: 15,
       magic: 19,
       endurance: 19,
       agility: 21,
-      luck: 14,
+      luck: 14
     },
     trait: "Foul Odor",
     personality: "Timid",
-    shadow: "Menacing Owlman",
+    shadow: "Menacing Owlman"
   },
   {
     name: "Pisaca",
@@ -2922,7 +2922,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Dream Needle": 0,
@@ -2931,18 +2931,18 @@ const personaMap: PersonaData[] = [
       Mamudo: 29,
       "Abysmal Surge": 31,
       "Despair Boost": 32,
-      Mudoon: 33,
+      Mudoon: 33
     },
     stats: {
       strength: 19,
       magic: 21,
       endurance: 21,
       agility: 16,
-      luck: 14,
+      luck: 14
     },
     trait: "Rare Antibody",
     personality: "Gloomy",
-    shadow: "Corpse-eating Corpse",
+    shadow: "Corpse-eating Corpse"
   },
   {
     name: "Choronzon",
@@ -2961,7 +2961,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Pulinpa: 0,
@@ -2971,18 +2971,18 @@ const personaMap: PersonaData[] = [
       "Dodge Elec": 30,
       Eiga: 31,
       "Curse Boost": 32,
-      "Climate Decorum": 33,
+      "Climate Decorum": 33
     },
     stats: {
       strength: 16,
       magic: 19,
       endurance: 19,
       agility: 18,
-      luck: 19,
+      luck: 19
     },
     trait: "Draining Mouth",
     personality: "Timid",
-    shadow: "Gathering Devil",
+    shadow: "Gathering Devil"
   },
   {
     name: "Orpheus Picaro",
@@ -3001,7 +3001,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Cadenza: 0,
@@ -3010,17 +3010,17 @@ const personaMap: PersonaData[] = [
       Endure: 30,
       Agidyne: 32,
       Matarukaja: 33,
-      "Fire Boost": 35,
+      "Fire Boost": 35
     },
     stats: {
       strength: 19,
       magic: 19,
       endurance: 19,
       agility: 19,
-      luck: 18,
+      luck: 18
     },
     trait: "Circle of Sadness",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Principality",
@@ -3039,7 +3039,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Makouga: 0,
@@ -3048,16 +3048,16 @@ const personaMap: PersonaData[] = [
       Mediarama: 30,
       "Forget Boost": 32,
       "Bless Boost": 34,
-      Mabaisudi: 35,
+      Mabaisudi: 35
     },
     stats: {
       strength: 17,
       magic: 19,
       endurance: 18,
       agility: 21,
-      luck: 19,
+      luck: 19
     },
-    trait: "Blessed Bloodline",
+    trait: "Blessed Bloodline"
   },
   {
     name: "Ariadne",
@@ -3076,7 +3076,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.nullify,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Beast Weaver": 0,
@@ -3085,17 +3085,17 @@ const personaMap: PersonaData[] = [
       "Attack Master": 31,
       "Fortified Moxy": 32,
       "Evade Phys": 34,
-      Charge: 36,
+      Charge: 36
     },
     stats: {
       strength: 23,
       magic: 19,
       endurance: 20,
       agility: 17,
-      luck: 18,
+      luck: 18
     },
     trait: "Tag Team",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Orlov",
@@ -3115,7 +3115,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Maragion: 0,
@@ -3128,18 +3128,18 @@ const personaMap: PersonaData[] = [
       Maeiga: 0,
       "Heated Bloodline": 0,
       "Electric Bloodline": 0,
-      "Atomic Bloodline": 0,
+      "Atomic Bloodline": 0
     },
     stats: {
       strength: 30,
       magic: 30,
       endurance: 30,
       agility: 30,
-      luck: 30,
+      luck: 30
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)",
+    shadow: "(Treasure Demon)"
   },
   {
     name: "Neko Shogun",
@@ -3159,7 +3159,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Psio: 0,
@@ -3168,16 +3168,16 @@ const personaMap: PersonaData[] = [
       "Invigorate 1": 31,
       "Cornered Fang": 33,
       "Defense Master": 35,
-      "Fortified Moxy": 36,
+      "Fortified Moxy": 36
     },
     stats: {
       strength: 19,
       magic: 20,
       endurance: 19,
       agility: 21,
-      luck: 18,
+      luck: 18
     },
-    trait: "Pinch Anchor",
+    trait: "Pinch Anchor"
   },
   {
     name: "Ara Mitama",
@@ -3196,7 +3196,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Miracle Punch": 0,
@@ -3205,16 +3205,16 @@ const personaMap: PersonaData[] = [
       Rebellion: 31,
       Marakunda: 32,
       "Rage Boost": 34,
-      Matarukaja: 35,
+      Matarukaja: 35
     },
     stats: {
       strength: 20,
       magic: 18,
       endurance: 20,
       agility: 20,
-      luck: 19,
+      luck: 19
     },
-    trait: "Atomic Bloodline",
+    trait: "Atomic Bloodline"
   },
   {
     name: "Zouchouten",
@@ -3233,7 +3233,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Kill Rush": 0,
@@ -3242,16 +3242,16 @@ const personaMap: PersonaData[] = [
       "Sharp Student": 33,
       "Resist Fear": 34,
       "Swift Strike": 35,
-      "Attack Master": 36,
+      "Attack Master": 36
     },
     stats: {
       strength: 22,
       magic: 19,
       endurance: 24,
       agility: 18,
-      luck: 17,
+      luck: 17
     },
-    trait: "Electric Bloodline",
+    trait: "Electric Bloodline"
   },
   {
     name: "Kurama Tengu",
@@ -3270,7 +3270,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       "Double Shot": 0,
@@ -3278,18 +3278,18 @@ const personaMap: PersonaData[] = [
       Magarula: 0,
       "Wind Boost": 32,
       "Brain Jack": 34,
-      "Growth 2": 36,
+      "Growth 2": 36
     },
     stats: {
       strength: 20,
       magic: 19,
       endurance: 21,
       agility: 24,
-      luck: 16,
+      luck: 16
     },
     trait: "Skillful Combo",
     personality: "Irritable",
-    shadow: "Monk of the Valley",
+    shadow: "Monk of the Valley"
   },
   {
     name: "Lilim",
@@ -3308,7 +3308,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Bufula: 0,
@@ -3317,18 +3317,18 @@ const personaMap: PersonaData[] = [
       Masukunda: 34,
       "Dodge Bless": 35,
       "Spirit Drain": 36,
-      Mabufula: 37,
+      Mabufula: 37
     },
     stats: {
       strength: 17,
       magic: 23,
       endurance: 18,
       agility: 25,
-      luck: 20,
+      luck: 20
     },
     trait: "Cold-Blooded",
     personality: "Gloomy",
-    shadow: "Woman Who Brings Ruin",
+    shadow: "Woman Who Brings Ruin"
   },
   {
     name: "Decarabia",
@@ -3347,7 +3347,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.none,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Agilao: 0,
@@ -3356,18 +3356,18 @@ const personaMap: PersonaData[] = [
       "Fire Boost": 35,
       Agidyne: 36,
       "Null Fire": 37,
-      Megidola: 38,
+      Megidola: 38
     },
     stats: {
       strength: 21,
       magic: 23,
       endurance: 19,
       agility: 22,
-      luck: 18,
+      luck: 18
     },
     trait: "Heated Bloodline",
     personality: "Gloomy",
-    shadow: "Vicious Pentagram",
+    shadow: "Vicious Pentagram"
   },
   {
     name: "Mothman",
@@ -3386,7 +3386,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Skull Cracker": 0,
@@ -3395,18 +3395,18 @@ const personaMap: PersonaData[] = [
       Tentarafoo: 35,
       "Ambient Aid": 36,
       Makajamaon: 37,
-      Ziodyne: 38,
+      Ziodyne: 38
     },
     stats: {
       strength: 21,
       magic: 24,
       endurance: 16,
       agility: 24,
-      luck: 21,
+      luck: 21
     },
     trait: "Static Electricity",
     personality: "Timid",
-    shadow: "Vampire Moth",
+    shadow: "Vampire Moth"
   },
   {
     name: "Mithra",
@@ -3425,7 +3425,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Kouga: 0,
@@ -3434,16 +3434,16 @@ const personaMap: PersonaData[] = [
       Makouga: 34,
       Dekunda: 35,
       "Bless Boost": 36,
-      Thermopylae: 38,
+      Thermopylae: 38
     },
     stats: {
       strength: 19,
       magic: 26,
       endurance: 19,
       agility: 24,
-      luck: 18,
+      luck: 18
     },
-    trait: "Blessed Bloodline",
+    trait: "Blessed Bloodline"
   },
   {
     name: "Thunderbird",
@@ -3462,7 +3462,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Mazionga: 0,
@@ -3471,18 +3471,18 @@ const personaMap: PersonaData[] = [
       Rebellion: 35,
       Ziodyne: 37,
       "Elec Boost": 38,
-      Maziodyne: 39,
+      Maziodyne: 39
     },
     stats: {
       strength: 17,
       magic: 24,
       endurance: 24,
       agility: 26,
-      luck: 18,
+      luck: 18
     },
     trait: "Electric Bloodline",
     personality: "Upbeat",
-    shadow: "Storm-Invoking Ptarmigan",
+    shadow: "Storm-Invoking Ptarmigan"
   },
   {
     name: "Anubis",
@@ -3501,7 +3501,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Hamaon: 0,
@@ -3509,18 +3509,18 @@ const personaMap: PersonaData[] = [
       Makouga: 0,
       Maeiga: 36,
       Dekunda: 37,
-      "Resist Bless": 38,
+      "Resist Bless": 38
     },
     stats: {
       strength: 19,
       magic: 24,
       endurance: 22,
       agility: 21,
-      luck: 23,
+      luck: 23
     },
     trait: "Deathly Illness",
     personality: "Gloomy",
-    shadow: "Bearer of the Scales",
+    shadow: "Bearer of the Scales"
   },
   {
     name: "Lachesis",
@@ -3539,7 +3539,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mabaisudi: 0,
@@ -3548,16 +3548,16 @@ const personaMap: PersonaData[] = [
       Marakukaja: 36,
       "Elec Wall": 37,
       Mabufula: 39,
-      "Ice Boost": 41,
+      "Ice Boost": 41
     },
     stats: {
       strength: 18,
       magic: 26,
       endurance: 22,
       agility: 25,
-      luck: 21,
+      luck: 21
     },
-    trait: "Internal Hypnosis",
+    trait: "Internal Hypnosis"
   },
   {
     name: "Emperor's Amulet",
@@ -3577,7 +3577,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Agidyne: 0,
@@ -3590,18 +3590,18 @@ const personaMap: PersonaData[] = [
       Eigaon: 0,
       "Frigid Bloodline": 0,
       "Wind Bloodline": 0,
-      "Psychic Bloodline": 0,
+      "Psychic Bloodline": 0
     },
     stats: {
       strength: 35,
       magic: 35,
       endurance: 35,
       agility: 35,
-      luck: 35,
+      luck: 35
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)",
+    shadow: "(Treasure Demon)"
   },
   {
     name: "Arahabaki",
@@ -3620,7 +3620,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.resist,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Makarakarn: 0,
@@ -3628,18 +3628,18 @@ const personaMap: PersonaData[] = [
       "Null Brainwash": 0,
       "Spirit Drain": 37,
       "Flash Bomb": 38,
-      "Defense Master": 39,
+      "Defense Master": 39
     },
     stats: {
       strength: 21,
       magic: 23,
       endurance: 22,
       agility: 24,
-      luck: 22,
+      luck: 22
     },
     trait: "Immunity",
     personality: "Gloomy",
-    shadow: "Awakened God",
+    shadow: "Awakened God"
   },
   {
     name: "Thoth",
@@ -3658,7 +3658,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.nullify,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Taunt: 0,
@@ -3667,18 +3667,18 @@ const personaMap: PersonaData[] = [
       Megido: 37,
       "Psy Wall": 39,
       Concentrate: 40,
-      "Growth 2": 42,
+      "Growth 2": 42
     },
     stats: {
       strength: 21,
       magic: 28,
       endurance: 21,
       agility: 24,
-      luck: 21,
+      luck: 21
     },
     trait: "Skillful Technique",
     personality: "Gloomy",
-    shadow: "Chanting Baboon",
+    shadow: "Chanting Baboon"
   },
   {
     name: "Kaiwan",
@@ -3697,7 +3697,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Makajam: 0,
@@ -3706,18 +3706,18 @@ const personaMap: PersonaData[] = [
       "Speed Master": 38,
       Makajamaon: 39,
       Psiodyne: 40,
-      Marakunda: 41,
+      Marakunda: 41
     },
     stats: {
       strength: 23,
       magic: 26,
       endurance: 24,
       agility: 22,
-      luck: 20,
+      luck: 20
     },
     trait: "Psychic Bloodline",
     personality: "Timid",
-    shadow: "Wishless Star",
+    shadow: "Wishless Star"
   },
   {
     name: "Hell Biker",
@@ -3737,7 +3737,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mudoon: 0,
@@ -3746,16 +3746,16 @@ const personaMap: PersonaData[] = [
       Tentarafoo: 38,
       "Fire Boost": 39,
       Maragion: 40,
-      Mamudoon: 41,
+      Mamudoon: 41
     },
     stats: {
       strength: 23,
       magic: 24,
       endurance: 24,
       agility: 30,
-      luck: 17,
+      luck: 17
     },
-    trait: "Internal Hypnosis",
+    trait: "Internal Hypnosis"
   },
   {
     name: "Belphegor",
@@ -3774,7 +3774,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.none,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       Mabufula: 0,
@@ -3782,18 +3782,18 @@ const personaMap: PersonaData[] = [
       "Null Rage": 38,
       "Dodge Fire": 39,
       Bufudyne: 41,
-      Concentrate: 42,
+      Concentrate: 42
     },
     stats: {
       strength: 25,
       magic: 27,
       endurance: 24,
       agility: 23,
-      luck: 19,
+      luck: 19
     },
     trait: "Intense Focus",
     personality: "Irritable",
-    shadow: "Ambassador of Filth",
+    shadow: "Ambassador of Filth"
   },
   {
     name: "White Rider",
@@ -3812,7 +3812,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       "Triple Down": 0,
@@ -3822,16 +3822,16 @@ const personaMap: PersonaData[] = [
       Maeiga: 41,
       Masukukaja: 42,
       "Foul Breath": 43,
-      "Ailment Boost": 44,
+      "Ailment Boost": 44
     },
     stats: {
       strength: 22,
       magic: 21,
       endurance: 26,
       agility: 27,
-      luck: 25,
+      luck: 25
     },
-    trait: "Bloodstained Eyes",
+    trait: "Bloodstained Eyes"
   },
   {
     name: "Legion",
@@ -3850,7 +3850,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Bloodbath: 0,
@@ -3859,18 +3859,18 @@ const personaMap: PersonaData[] = [
       "Foul Breath": 39,
       "Tetra Break": 40,
       "Null Dizzy": 42,
-      Eigaon: 45,
+      Eigaon: 45
     },
     stats: {
       strength: 24,
       magic: 24,
       endurance: 30,
       agility: 23,
-      luck: 20,
+      luck: 20
     },
     trait: "Draining Mouth",
     personality: "Upbeat",
-    shadow: "Fused Ghost",
+    shadow: "Fused Ghost"
   },
   {
     name: "Unicorn",
@@ -3889,7 +3889,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       "Assault Dive": 0,
@@ -3898,18 +3898,18 @@ const personaMap: PersonaData[] = [
       Samarecarm: 41,
       "Swift Strike": 42,
       Kougaon: 43,
-      Hamaon: 44,
+      Hamaon: 44
     },
     stats: {
       strength: 20,
       magic: 27,
       endurance: 25,
       agility: 28,
-      luck: 24,
+      luck: 24
     },
     trait: "Blessed Bloodline",
     personality: "Timid",
-    shadow: "Expressionless Beast",
+    shadow: "Expressionless Beast"
   },
   {
     name: "Mithras",
@@ -3928,7 +3928,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.nullify,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Tentarafoo: 0,
@@ -3937,18 +3937,18 @@ const personaMap: PersonaData[] = [
       "Tetra Break": 41,
       "Nuke Break": 42,
       Mabaisudi: 43,
-      Freidyne: 45,
+      Freidyne: 45
     },
     stats: {
       strength: 27,
       magic: 25,
       endurance: 27,
       agility: 25,
-      luck: 20,
+      luck: 20
     },
     trait: "Skillful Technique",
     personality: "Gloomy",
-    shadow: "Dark Sun",
+    shadow: "Dark Sun"
   },
   {
     name: "Atropos",
@@ -3967,7 +3967,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mazionga: 0,
@@ -3976,16 +3976,16 @@ const personaMap: PersonaData[] = [
       Mediarama: 41,
       "Elec Boost": 42,
       Ziodyne: 44,
-      Concentrate: 45,
+      Concentrate: 45
     },
     stats: {
       strength: 23,
       magic: 30,
       endurance: 22,
       agility: 27,
-      luck: 22,
+      luck: 22
     },
-    trait: "Mighty Gaze",
+    trait: "Mighty Gaze"
   },
   {
     name: "Kikuri-Hime",
@@ -4004,7 +4004,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Lullaby: 0,
@@ -4012,18 +4012,18 @@ const personaMap: PersonaData[] = [
       "Energy Drop": 0,
       Mediarama: 41,
       Tetraja: 43,
-      "Divine Grace": 45,
+      "Divine Grace": 45
     },
     stats: {
       strength: 22,
       magic: 31,
       endurance: 24,
       agility: 28,
-      luck: 22,
+      luck: 22
     },
     trait: "Relief Bloodline",
     personality: "Gloomy",
-    shadow: "Mountain Girl",
+    shadow: "Mountain Girl"
   },
   {
     name: "Hope Diamond",
@@ -4043,7 +4043,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Auto-Mataru": 0,
@@ -4056,18 +4056,18 @@ const personaMap: PersonaData[] = [
       "Fast Heal": 0,
       "Internal Hypnosis": 0,
       "Striking Weight": 0,
-      "Retaliating Body": 0,
+      "Retaliating Body": 0
     },
     stats: {
       strength: 40,
       magic: 40,
       endurance: 40,
       agility: 40,
-      luck: 40,
+      luck: 40
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)",
+    shadow: "(Treasure Demon)"
   },
   {
     name: "Hariti",
@@ -4086,7 +4086,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Zionga: 0,
@@ -4096,16 +4096,16 @@ const personaMap: PersonaData[] = [
       "Nocturnal Flash": 42,
       Mediarama: 44,
       "Dizzy Boost": 45,
-      "Spirit Drain": 46,
+      "Spirit Drain": 46
     },
     stats: {
       strength: 21,
       magic: 32,
       endurance: 24,
       agility: 23,
-      luck: 27,
+      luck: 27
     },
-    trait: "Electric Bloodline",
+    trait: "Electric Bloodline"
   },
   {
     name: "Daisoujou",
@@ -4124,7 +4124,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       "Spirit Drain": 0,
@@ -4133,16 +4133,16 @@ const personaMap: PersonaData[] = [
       "Bless Boost": 42,
       Diarahan: 43,
       "Me Patra": 44,
-      "Null Rage": 45,
+      "Null Rage": 45
     },
     stats: {
       strength: 21,
       magic: 33,
       endurance: 24,
       agility: 24,
-      luck: 25,
+      luck: 25
     },
-    trait: "Draining Mouth",
+    trait: "Draining Mouth"
   },
   {
     name: "Red Rider",
@@ -4161,7 +4161,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Rising Slash": 0,
@@ -4170,16 +4170,16 @@ const personaMap: PersonaData[] = [
       "Negative Pile": 42,
       "Despair Boost": 44,
       "Ominous Words": 45,
-      "Last Stand": 46,
+      "Last Stand": 46
     },
     stats: {
       strength: 26,
       magic: 27,
       endurance: 25,
       agility: 29,
-      luck: 23,
+      luck: 23
     },
-    trait: "Ailment Hunter",
+    trait: "Ailment Hunter"
   },
   {
     name: "Power",
@@ -4198,7 +4198,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Hamaon: 0,
@@ -4207,18 +4207,18 @@ const personaMap: PersonaData[] = [
       Makouga: 43,
       "Bless Boost": 44,
       Masukukaja: 45,
-      "Null Curse": 46,
+      "Null Curse": 46
     },
     stats: {
       strength: 30,
       magic: 26,
       endurance: 28,
       agility: 25,
-      luck: 21,
+      luck: 21
     },
     trait: "Internal Hypnosis",
     personality: "Irritable",
-    shadow: "Divine Warrior",
+    shadow: "Divine Warrior"
   },
   {
     name: "Ariadne Picaro",
@@ -4237,7 +4237,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.nullify,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Beast Weaver": 0,
@@ -4246,17 +4246,17 @@ const personaMap: PersonaData[] = [
       "Auto-Mataru": 43,
       "Heat Up": 44,
       "Evade Phys": 46,
-      Charge: 48,
+      Charge: 48
     },
     stats: {
       strength: 36,
       magic: 23,
       endurance: 29,
       agility: 24,
-      luck: 21,
+      luck: 21
     },
     trait: "Tag Team",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Ose",
@@ -4275,7 +4275,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Oni Kagura": 0,
@@ -4283,18 +4283,18 @@ const personaMap: PersonaData[] = [
       Charge: 0,
       "Tempest Slash": 43,
       Matarukaja: 45,
-      "Heat Wave": 47,
+      "Heat Wave": 47
     },
     stats: {
       strength: 32,
       magic: 24,
       endurance: 25,
       agility: 31,
-      luck: 21,
+      luck: 21
     },
     trait: "Retaliating Body",
     personality: "Upbeat",
-    shadow: "Cruel Leopard",
+    shadow: "Cruel Leopard"
   },
   {
     name: "Kushinada",
@@ -4313,7 +4313,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.repel,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Hysterical Slap": 0,
@@ -4323,18 +4323,18 @@ const personaMap: PersonaData[] = [
       "Null Confuse": 45,
       "Wind Wall": 46,
       "Amrita Shower": 47,
-      "Null Ice": 48,
+      "Null Ice": 48
     },
     stats: {
       strength: 24,
       magic: 30,
       endurance: 26,
       agility: 28,
-      luck: 25,
+      luck: 25
     },
     trait: "Savior Bloodline",
     personality: "Upbeat",
-    shadow: "Lamenting Sacrifice",
+    shadow: "Lamenting Sacrifice"
   },
   {
     name: "Kumbhanda",
@@ -4353,7 +4353,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Magarula: 0,
@@ -4362,18 +4362,18 @@ const personaMap: PersonaData[] = [
       "Tempest Slash": 43,
       Dekaja: 45,
       "Fear Boost": 46,
-      Revolution: 47,
+      Revolution: 47
     },
     stats: {
       strength: 25,
       magic: 30,
       endurance: 25,
       agility: 27,
-      luck: 26,
+      luck: 26
     },
     trait: "Rare Antibody",
     personality: "Irritable",
-    shadow: "Life-Draining Spirit",
+    shadow: "Life-Draining Spirit"
   },
   {
     name: "Hecatoncheires",
@@ -4392,7 +4392,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Swift Strike": 0,
@@ -4401,16 +4401,16 @@ const personaMap: PersonaData[] = [
       Endure: 43,
       Rebellion: 45,
       "Fortified Moxy": 46,
-      "Gattling Blows": 49,
+      "Gattling Blows": 49
     },
     stats: {
       strength: 35,
       magic: 22,
       endurance: 27,
       agility: 23,
-      luck: 26,
+      luck: 26
     },
-    trait: "Gluttonmouth",
+    trait: "Gluttonmouth"
   },
   {
     name: "Yurlungur",
@@ -4429,7 +4429,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Brain Jack": 0,
@@ -4438,16 +4438,16 @@ const personaMap: PersonaData[] = [
       Revolution: 45,
       "Elec Break": 46,
       "Tetra Break": 48,
-      "Elec Boost": 49,
+      "Elec Boost": 49
     },
     stats: {
       strength: 26,
       magic: 29,
       endurance: 30,
       agility: 27,
-      luck: 24,
+      luck: 24
     },
-    trait: "Mouth of Savoring",
+    trait: "Mouth of Savoring"
   },
   {
     name: "Queen Mab",
@@ -4466,7 +4466,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mazionga: 0,
@@ -4475,18 +4475,18 @@ const personaMap: PersonaData[] = [
       Matarunda: 44,
       "Makara Break": 46,
       Agidyne: 47,
-      Concentrate: 48,
+      Concentrate: 48
     },
     stats: {
       strength: 23,
       magic: 35,
       endurance: 26,
       agility: 30,
-      luck: 22,
+      luck: 22
     },
     trait: "Static Electricity",
     personality: "Gloomy",
-    shadow: "Midnight Queen",
+    shadow: "Midnight Queen"
   },
   {
     name: "Girimehkala",
@@ -4505,7 +4505,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Mudoon: 0,
@@ -4513,18 +4513,18 @@ const personaMap: PersonaData[] = [
       Deathbound: 0,
       Agidyne: 45,
       "Wage War": 47,
-      "Repel Phys": 50,
+      "Repel Phys": 50
     },
     stats: {
       strength: 32,
       magic: 24,
       endurance: 32,
       agility: 29,
-      luck: 19,
+      luck: 19
     },
     trait: "Cursed Bloodline",
     personality: "Gloomy",
-    shadow: "Rebellious Elephant",
+    shadow: "Rebellious Elephant"
   },
   {
     name: "Magatsu-Izanagi",
@@ -4543,7 +4543,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Magatsu Mandala": 0,
@@ -4552,17 +4552,17 @@ const personaMap: PersonaData[] = [
       Maziodyne: 45,
       Bloodbath: 46,
       "Attack Master": 48,
-      "Heat Riser": 50,
+      "Heat Riser": 50
     },
     stats: {
       strength: 37,
       magic: 35,
       endurance: 32,
       agility: 25,
-      luck: 10,
+      luck: 10
     },
     trait: "Hollow Jester",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Valkyrie",
@@ -4581,7 +4581,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Rising Slash": 0,
@@ -4589,18 +4589,18 @@ const personaMap: PersonaData[] = [
       "Attack Master": 45,
       Deathbound: 46,
       Matarukaja: 47,
-      "Dodge Phys": 49,
+      "Dodge Phys": 49
     },
     stats: {
       strength: 33,
       magic: 24,
       endurance: 28,
       agility: 29,
-      luck: 25,
+      luck: 25
     },
     trait: "Skillful Combo",
     personality: "Irritable",
-    shadow: "Funerary Warrior",
+    shadow: "Funerary Warrior"
   },
   {
     name: "Ananta",
@@ -4619,7 +4619,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mafreila: 0,
@@ -4629,16 +4629,16 @@ const personaMap: PersonaData[] = [
       "Growth 2": 47,
       Marakukaja: 48,
       Freidyne: 49,
-      "Nuke Boost": 50,
+      "Nuke Boost": 50
     },
     stats: {
       strength: 26,
       magic: 30,
       endurance: 31,
       agility: 27,
-      luck: 25,
+      luck: 25
     },
-    trait: "Atomic Bloodline",
+    trait: "Atomic Bloodline"
   },
   {
     name: "Pazuzu",
@@ -4657,7 +4657,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Maeiga: 0,
@@ -4666,16 +4666,16 @@ const personaMap: PersonaData[] = [
       "Ambient Aid": 47,
       "Evil Smile": 48,
       "Stagnant Air": 49,
-      Eigaon: 50,
+      Eigaon: 50
     },
     stats: {
       strength: 29,
       magic: 33,
       endurance: 27,
       agility: 26,
-      luck: 27,
+      luck: 27
     },
-    trait: "Cursed Bloodline",
+    trait: "Cursed Bloodline"
   },
   {
     name: "Byakko",
@@ -4694,7 +4694,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       "Swift Strike": 0,
@@ -4704,16 +4704,16 @@ const personaMap: PersonaData[] = [
       "Ice Break": 48,
       "Evade Fire": 49,
       "Null Rage": 50,
-      Bufudyne: 51,
+      Bufudyne: 51
     },
     stats: {
       strength: 35,
       magic: 28,
       endurance: 30,
       agility: 32,
-      luck: 17,
+      luck: 17
     },
-    trait: "Retaliating Body",
+    trait: "Retaliating Body"
   },
   {
     name: "Athena",
@@ -4732,7 +4732,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Akasha Arts": 0,
@@ -4742,17 +4742,17 @@ const personaMap: PersonaData[] = [
       Matarukaja: 48,
       "Auto-Maraku": 50,
       Samarecarm: 51,
-      "Megaton Raid": 52,
+      "Megaton Raid": 52
     },
     stats: {
       strength: 33,
       magic: 27,
       endurance: 29,
       agility: 29,
-      luck: 27,
+      luck: 27
     },
     trait: "Grace of the Olive",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Fortuna",
@@ -4771,7 +4771,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Magarula: 0,
@@ -4780,16 +4780,16 @@ const personaMap: PersonaData[] = [
       Garudyne: 47,
       "Touch n' Go": 49,
       "Amrita Drop": 50,
-      "Evade Elec": 51,
+      "Evade Elec": 51
     },
     stats: {
       strength: 23,
       magic: 32,
       endurance: 29,
       agility: 34,
-      luck: 27,
+      luck: 27
     },
-    trait: "Wind Bloodline",
+    trait: "Wind Bloodline"
   },
   {
     name: "Horus",
@@ -4808,7 +4808,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.repel,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Megidola: 0,
@@ -4817,16 +4817,16 @@ const personaMap: PersonaData[] = [
       "Flash Bomb": 49,
       Masukukaja: 50,
       Hamaon: 51,
-      "Hama Boost": 52,
+      "Hama Boost": 52
     },
     stats: {
       strength: 30,
       magic: 32,
       endurance: 29,
       agility: 35,
-      luck: 22,
+      luck: 22
     },
-    trait: "Potent Hypnosis",
+    trait: "Potent Hypnosis"
   },
   {
     name: "Magatsu-Izanagi Picaro",
@@ -4845,7 +4845,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Magatsu Mandala": 0,
@@ -4854,17 +4854,17 @@ const personaMap: PersonaData[] = [
       Magarudyne: 49,
       Bloodbath: 50,
       "Speed Master": 52,
-      "Heat Riser": 54,
+      "Heat Riser": 54
     },
     stats: {
       strength: 40,
       magic: 38,
       endurance: 35,
       agility: 27,
-      luck: 11,
+      luck: 11
     },
     trait: "Hollow Jester",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Rangda",
@@ -4883,7 +4883,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Swift Strike": 0,
@@ -4891,18 +4891,18 @@ const personaMap: PersonaData[] = [
       Counterstrike: 0,
       Eigaon: 49,
       Matarunda: 51,
-      Mudoon: 53,
+      Mudoon: 53
     },
     stats: {
       strength: 28,
       magic: 34,
       endurance: 30,
       agility: 33,
-      luck: 26,
+      luck: 26
     },
     trait: "Cursed Bloodline",
     personality: "Gloomy",
-    shadow: "Dancing Witch",
+    shadow: "Dancing Witch"
   },
   {
     name: "Narcissus",
@@ -4921,7 +4921,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Dazzler: 0,
@@ -4930,18 +4930,18 @@ const personaMap: PersonaData[] = [
       "Growth 3": 50,
       "Dizzy Boost": 51,
       Mediarama: 52,
-      "Ambient Aid": 53,
+      "Ambient Aid": 53
     },
     stats: {
       strength: 27,
       magic: 31,
       endurance: 29,
       agility: 33,
-      luck: 31,
+      luck: 31
     },
     trait: "Gluttonmouth",
     personality: "Timid",
-    shadow: "Self-Infatuated Star",
+    shadow: "Self-Infatuated Star"
   },
   {
     name: "Koumokuten",
@@ -4960,7 +4960,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Assault Dive": 0,
@@ -4969,16 +4969,16 @@ const personaMap: PersonaData[] = [
       "Attack Master": 51,
       "Ice Wall": 52,
       "Enduring Soul": 54,
-      "Deadly Fury": 55,
+      "Deadly Fury": 55
     },
     stats: {
       strength: 37,
       magic: 29,
       endurance: 34,
       agility: 29,
-      luck: 25,
+      luck: 25
     },
-    trait: "Gluttonmouth",
+    trait: "Gluttonmouth"
   },
   {
     name: "Bugs",
@@ -4998,7 +4998,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Miracle Punch": 0,
@@ -5007,18 +5007,18 @@ const personaMap: PersonaData[] = [
       "Auto-Mataru": 51,
       "Triple Down": 52,
       "Evade Phys": 54,
-      "Fast Heal": 55,
+      "Fast Heal": 55
     },
     stats: {
       strength: 35,
       magic: 33,
       endurance: 30,
       agility: 32,
-      luck: 24,
+      luck: 24
     },
     trait: "Potent Hypnosis",
     personality: "Irritable",
-    shadow: "Killer Teddy Bear",
+    shadow: "Killer Teddy Bear"
   },
   {
     name: "Tsukiyomi",
@@ -5037,7 +5037,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.resist,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       "Abyssal Wings": 0,
@@ -5046,17 +5046,17 @@ const personaMap: PersonaData[] = [
       "Life Drain": 0,
       "Curse Amp": 53,
       "Vorpal Blade": 55,
-      "Arms Master": 56,
+      "Arms Master": 56
     },
     stats: {
       strength: 38,
       magic: 32,
       endurance: 33,
       agility: 37,
-      luck: 17,
+      luck: 17
     },
     trait: "Bolstering Force",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Athena Picaro",
@@ -5075,7 +5075,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Akasha Arts": 0,
@@ -5085,17 +5085,17 @@ const personaMap: PersonaData[] = [
       Marakukaja: 52,
       "Auto-Mataru": 54,
       Samarecarm: 55,
-      "Megaton Raid": 56,
+      "Megaton Raid": 56
     },
     stats: {
       strength: 35,
       magic: 30,
       endurance: 31,
       agility: 32,
-      luck: 29,
+      luck: 29
     },
     trait: "Grace of the Olive",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Sarasvati",
@@ -5114,7 +5114,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mediarama: 0,
@@ -5123,18 +5123,18 @@ const personaMap: PersonaData[] = [
       "Psy Wall": 51,
       Dekaja: 52,
       Matarunda: 53,
-      Diarahan: 54,
+      Diarahan: 54
     },
     stats: {
       strength: 30,
       magic: 35,
       endurance: 32,
       agility: 33,
-      luck: 27,
+      luck: 27
     },
     trait: "Relief Bloodline",
     personality: "Timid",
-    shadow: "Strumming Veena Player",
+    shadow: "Strumming Veena Player"
   },
   {
     name: "Dakini",
@@ -5153,7 +5153,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Bad Beat": 0,
@@ -5162,18 +5162,18 @@ const personaMap: PersonaData[] = [
       "High Counter": 52,
       Deathbound: 53,
       Rebellion: 54,
-      Charge: 55,
+      Charge: 55
     },
     stats: {
       strength: 34,
       magic: 32,
       endurance: 34,
       agility: 28,
-      luck: 29,
+      luck: 29
     },
     trait: "Skillful Combo",
     personality: "Upbeat",
-    shadow: "Blood-thirsty Demoness",
+    shadow: "Blood-thirsty Demoness"
   },
   {
     name: "Crystal Skull",
@@ -5193,7 +5193,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Maragidyne: 0,
@@ -5206,18 +5206,18 @@ const personaMap: PersonaData[] = [
       Maeigaon: 0,
       "Foul Stench": 0,
       "Ailment Hunter": 0,
-      "Cursed Bloodline": 0,
+      "Cursed Bloodline": 0
     },
     stats: {
       strength: 50,
       magic: 50,
       endurance: 50,
       agility: 50,
-      luck: 50,
+      luck: 50
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)",
+    shadow: "(Treasure Demon)"
   },
   {
     name: "Seth",
@@ -5237,7 +5237,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       "One-shot Kill": 0,
@@ -5245,16 +5245,16 @@ const personaMap: PersonaData[] = [
       Masukukaja: 0,
       "Gun Amp": 53,
       "Fire Break": 54,
-      "Fortify Spirit": 56,
+      "Fortify Spirit": 56
     },
     stats: {
       strength: 32,
       magic: 35,
       endurance: 30,
       agility: 35,
-      luck: 28,
+      luck: 28
     },
-    trait: "Potent Hypnosis",
+    trait: "Potent Hypnosis"
   },
   {
     name: "Jatayu",
@@ -5273,7 +5273,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Garudyne: 0,
@@ -5282,18 +5282,18 @@ const personaMap: PersonaData[] = [
       "Dizzy Boost": 52,
       "Wind Amp": 54,
       Magarudyne: 55,
-      "Speed Master": 57,
+      "Speed Master": 57
     },
     stats: {
       strength: 31,
       magic: 34,
       endurance: 29,
       agility: 36,
-      luck: 30,
+      luck: 30
     },
     trait: "Wind Bloodline",
     personality: "Upbeat",
-    shadow: "Arrogant Vulture",
+    shadow: "Arrogant Vulture"
   },
   {
     name: "Norn",
@@ -5312,7 +5312,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Ziodyne: 0,
@@ -5321,18 +5321,18 @@ const personaMap: PersonaData[] = [
       Diarahan: 54,
       "Amrita Drop": 55,
       Tetraja: 56,
-      Samarecarm: 57,
+      Samarecarm: 57
     },
     stats: {
       strength: 30,
       magic: 38,
       endurance: 33,
       agility: 34,
-      luck: 28,
+      luck: 28
     },
     trait: "Intense Focus",
     personality: "Upbeat",
-    shadow: "Final Measerer",
+    shadow: "Final Measerer"
   },
   {
     name: "Mishaguji",
@@ -5351,7 +5351,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.absorb,
+      curse: Weaknesses.absorb
     },
     skills: {
       "Regenerate 3": 0,
@@ -5360,16 +5360,16 @@ const personaMap: PersonaData[] = [
       "One-shot Kill": 54,
       Endure: 55,
       Deathbound: 56,
-      "Ailment Boost": 57,
+      "Ailment Boost": 57
     },
     stats: {
       strength: 32,
       magic: 32,
       endurance: 32,
       agility: 32,
-      luck: 35,
+      luck: 35
     },
-    trait: "Ailment Hunter",
+    trait: "Ailment Hunter"
   },
   {
     name: "Garuda",
@@ -5388,7 +5388,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.repel,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Garudyne: 0,
@@ -5397,18 +5397,18 @@ const personaMap: PersonaData[] = [
       Masukukaja: 54,
       "Evade Elec": 55,
       Magarudyne: 57,
-      "Wind Amp": 59,
+      "Wind Amp": 59
     },
     stats: {
       strength: 30,
       magic: 36,
       endurance: 29,
       agility: 39,
-      luck: 29,
+      luck: 29
     },
     trait: "Wind Bloodline",
     personality: "Upbeat",
-    shadow: "Raging Bird God",
+    shadow: "Raging Bird God"
   },
   {
     name: "Barong",
@@ -5427,7 +5427,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Ziodyne: 0,
@@ -5435,18 +5435,18 @@ const personaMap: PersonaData[] = [
       "Invigorate 2": 0,
       "Elec Break": 54,
       "Null Elec": 55,
-      Maziodyne: 57,
+      Maziodyne: 57
     },
     stats: {
       strength: 33,
       magic: 35,
       endurance: 33,
       agility: 37,
-      luck: 25,
+      luck: 25
     },
     trait: "Blessed Bloodline",
     personality: "Upbeat",
-    shadow: "Dancing Lion",
+    shadow: "Dancing Lion"
   },
   {
     name: "Skadi",
@@ -5465,7 +5465,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Deadly Fury": 0,
@@ -5474,18 +5474,18 @@ const personaMap: PersonaData[] = [
       "Ghastly Wail": 54,
       Mabufudyne: 56,
       Maeigaon: 57,
-      "Spirit Drain": 58,
+      "Spirit Drain": 58
     },
     stats: {
       strength: 33,
       magic: 39,
       endurance: 32,
       agility: 34,
-      luck: 28,
+      luck: 28
     },
     trait: "Bloodstained Eyes",
     personality: "Timid",
-    shadow: "Quaking Lady of Shadow",
+    shadow: "Quaking Lady of Shadow"
   },
   {
     name: "Ganesha",
@@ -5504,7 +5504,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Miracle Punch": 0,
@@ -5513,18 +5513,18 @@ const personaMap: PersonaData[] = [
       Tetraja: 55,
       "Resist Psy": 56,
       Masukunda: 57,
-      Charge: 60,
+      Charge: 60
     },
     stats: {
       strength: 39,
       magic: 31,
       endurance: 37,
       agility: 33,
-      luck: 26,
+      luck: 26
     },
     trait: "Gluttonmouth",
     personality: "Upbeat",
-    shadow: "Auspicious Pachyderm",
+    shadow: "Auspicious Pachyderm"
   },
   {
     name: "Pale Rider",
@@ -5543,7 +5543,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       "Abysmal Surge": 0,
@@ -5552,16 +5552,16 @@ const personaMap: PersonaData[] = [
       "Curse Boost": 55,
       Megidola: 56,
       "Evade Bless": 58,
-      Deathbound: 59,
+      Deathbound: 59
     },
     stats: {
       strength: 32,
       magic: 37,
       endurance: 33,
       agility: 40,
-      luck: 27,
+      luck: 27
     },
-    trait: "Foul Stench",
+    trait: "Foul Stench"
   },
   {
     name: "Okuninushi",
@@ -5580,7 +5580,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mapsio: 0,
@@ -5589,16 +5589,16 @@ const personaMap: PersonaData[] = [
       "Psy Boost": 55,
       "Psy Break": 56,
       "Evade Nuke": 57,
-      "Heat Wave": 59,
+      "Heat Wave": 59
     },
     stats: {
       strength: 39,
       magic: 35,
       endurance: 33,
       agility: 32,
-      luck: 30,
+      luck: 30
     },
-    trait: "Psychic Bloodline",
+    trait: "Psychic Bloodline"
   },
   {
     name: "Tsukiyomi Picaro",
@@ -5617,7 +5617,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.resist,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       "Abyssal Wings": 0,
@@ -5626,17 +5626,17 @@ const personaMap: PersonaData[] = [
       "Spirit Drain": 0,
       "Curse Amp": 58,
       "Vorpal Blade": 60,
-      "Spell Master": 61,
+      "Spell Master": 61
     },
     stats: {
       strength: 41,
       magic: 35,
       endurance: 36,
       agility: 40,
-      luck: 20,
+      luck: 20
     },
     trait: "Bolstering Force",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Raja Naga",
@@ -5655,7 +5655,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Ziodyne: 0,
@@ -5664,16 +5664,16 @@ const personaMap: PersonaData[] = [
       "Shock Boost": 57,
       Makarakarn: 58,
       Maziodyne: 59,
-      "Evade Wind": 60,
+      "Evade Wind": 60
     },
     stats: {
       strength: 33,
       magic: 37,
       endurance: 36,
       agility: 35,
-      luck: 31,
+      luck: 31
     },
-    trait: "Electric Bloodline",
+    trait: "Electric Bloodline"
   },
   {
     name: "Cerberus",
@@ -5692,7 +5692,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Agidyne: 0,
@@ -5700,18 +5700,18 @@ const personaMap: PersonaData[] = [
       Rebellion: 56,
       "High Counter": 57,
       Maragidyne: 58,
-      "Enduring Soul": 60,
+      "Enduring Soul": 60
     },
     stats: {
       strength: 39,
       magic: 35,
       endurance: 32,
       agility: 39,
-      luck: 27,
+      luck: 27
     },
     trait: "Heated Bloodline",
     personality: "Irritable",
-    shadow: "Guard Dog of Hades",
+    shadow: "Guard Dog of Hades"
   },
   {
     name: "Asterius",
@@ -5730,7 +5730,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Titanomachia: 0,
@@ -5739,17 +5739,17 @@ const personaMap: PersonaData[] = [
       "Auto-Mataru": 57,
       "Fire Amp": 59,
       Tetrakarn: 60,
-      Gigantomachia: 62,
+      Gigantomachia: 62
     },
     stats: {
       strength: 43,
       magic: 43,
       endurance: 32,
       agility: 32,
-      luck: 25,
+      luck: 25
     },
     trait: "Frenzied Bull",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Titania",
@@ -5768,7 +5768,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.resist,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Freidyne: 0,
@@ -5776,18 +5776,18 @@ const personaMap: PersonaData[] = [
       Lullaby: 0,
       Concentrate: 59,
       "Nuke Amp": 60,
-      Mediarahan: 61,
+      Mediarahan: 61
     },
     stats: {
       strength: 32,
       magic: 40,
       endurance: 35,
       agility: 38,
-      luck: 30,
+      luck: 30
     },
     trait: "Foul Stench",
     personality: "Timid",
-    shadow: "Scandalous Queen",
+    shadow: "Scandalous Queen"
   },
   {
     name: "Parvati",
@@ -5806,7 +5806,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Diarama: 0,
@@ -5815,18 +5815,18 @@ const personaMap: PersonaData[] = [
       "Energy Shower": 57,
       Diarahan: 58,
       Mapsiodyne: 59,
-      "Null Ice": 61,
+      "Null Ice": 61
     },
     stats: {
       strength: 33,
       magic: 39,
       endurance: 33,
       agility: 39,
-      luck: 31,
+      luck: 31
     },
     trait: "Skillful Technique",
     personality: "Timid",
-    shadow: "Destructive Beauty",
+    shadow: "Destructive Beauty"
   },
   {
     name: "Yatagarasu",
@@ -5845,7 +5845,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Agidyne: 0,
@@ -5854,16 +5854,16 @@ const personaMap: PersonaData[] = [
       Mediarahan: 59,
       "Last Stand": 60,
       "Wind Break": 61,
-      "Null Wind": 64,
+      "Null Wind": 64
     },
     stats: {
       strength: 35,
       magic: 41,
       endurance: 30,
       agility: 40,
-      luck: 32,
+      luck: 32
     },
-    trait: "Potent Hypnosis",
+    trait: "Potent Hypnosis"
   },
   {
     name: "Melchizedek",
@@ -5882,7 +5882,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.absorb,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Megaton Raid": 0,
@@ -5891,18 +5891,18 @@ const personaMap: PersonaData[] = [
       Revolution: 60,
       Mahamaon: 62,
       Matarukaja: 63,
-      "God's Hand": 65,
+      "God's Hand": 65
     },
     stats: {
       strength: 37,
       magic: 32,
       endurance: 40,
       agility: 39,
-      luck: 33,
+      luck: 33
     },
     trait: "Deathly Illness",
     personality: "Irritable",
-    shadow: "Pagan Savior",
+    shadow: "Pagan Savior"
   },
   {
     name: "Baphomet",
@@ -5921,7 +5921,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Agidyne: 0,
@@ -5930,18 +5930,18 @@ const personaMap: PersonaData[] = [
       Bufudyne: 59,
       Ziodyne: 61,
       "Shock Boost": 62,
-      "Freeze Boost": 63,
+      "Freeze Boost": 63
     },
     stats: {
       strength: 34,
       magic: 42,
       endurance: 36,
       agility: 38,
-      luck: 31,
+      luck: 31
     },
     trait: "Thermal Conduct",
     personality: "Timid",
-    shadow: "Heretic Goat",
+    shadow: "Heretic Goat"
   },
   {
     name: "Trumpeter",
@@ -5961,7 +5961,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.repel,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Mafreidyne: 0,
@@ -5970,16 +5970,16 @@ const personaMap: PersonaData[] = [
       "Fortify Spirit": 61,
       "Gun Amp": 62,
       "Life Aid": 63,
-      Debilitate: 65,
+      Debilitate: 65
     },
     stats: {
       strength: 33,
       magic: 42,
       endurance: 40,
       agility: 38,
-      luck: 31,
+      luck: 31
     },
-    trait: "Relentless",
+    trait: "Relentless"
   },
   {
     name: "Black Rider",
@@ -5998,7 +5998,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Mamudoon: 0,
@@ -6007,16 +6007,16 @@ const personaMap: PersonaData[] = [
       "Ambient Aid": 60,
       Bloodbath: 61,
       "Ghastly Wail": 63,
-      Megidola: 64,
+      Megidola: 64
     },
     stats: {
       strength: 36,
       magic: 42,
       endurance: 34,
       agility: 42,
-      luck: 30,
+      luck: 30
     },
-    trait: "Gloomy Child",
+    trait: "Gloomy Child"
   },
   {
     name: "Orichalcum",
@@ -6036,7 +6036,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Inferno: 0,
@@ -6049,18 +6049,18 @@ const personaMap: PersonaData[] = [
       "Demonic Decree": 0,
       Immunity: 0,
       "Mouth of Savoring": 0,
-      "Blessed Bloodline": 0,
+      "Blessed Bloodline": 0
     },
     stats: {
       strength: 60,
       magic: 60,
       endurance: 60,
       agility: 60,
-      luck: 60,
+      luck: 60
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)",
+    shadow: "(Treasure Demon)"
   },
   {
     name: "Moloch",
@@ -6079,7 +6079,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.absorb,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Agidyne: 0,
@@ -6088,18 +6088,18 @@ const personaMap: PersonaData[] = [
       Maragidyne: 62,
       "Ghastly Wail": 63,
       "Absorb Fire": 64,
-      "Fire Amp": 65,
+      "Fire Amp": 65
     },
     stats: {
       strength: 32,
       magic: 45,
       endurance: 42,
       agility: 31,
-      luck: 37,
+      luck: 37
     },
     trait: "Immunity",
     personality: "Upbeat",
-    shadow: "Sacrificial Pyrekeeper",
+    shadow: "Sacrificial Pyrekeeper"
   },
   {
     name: "Lilith",
@@ -6118,7 +6118,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.repel,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Mabufudyne: 0,
@@ -6127,18 +6127,18 @@ const personaMap: PersonaData[] = [
       Mafreidyne: 62,
       "Spirit Drain": 63,
       "Freeze Boost": 64,
-      "Nuke Amp": 65,
+      "Nuke Amp": 65
     },
     stats: {
       strength: 33,
       magic: 43,
       endurance: 37,
       agility: 39,
-      luck: 35,
+      luck: 35
     },
     trait: "Mighty Gaze",
     personality: "Timid",
-    shadow: "Harlot of Desire",
+    shadow: "Harlot of Desire"
   },
   {
     name: "King Frost",
@@ -6157,7 +6157,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Bufudyne: 0,
@@ -6166,18 +6166,18 @@ const personaMap: PersonaData[] = [
       "Freeze Boost": 62,
       Mabufudyne: 64,
       Concentrate: 65,
-      "Ice Amp": 67,
+      "Ice Amp": 67
     },
     stats: {
       strength: 40,
       magic: 44,
       endurance: 43,
       agility: 29,
-      luck: 34,
+      luck: 34
     },
     trait: "Frigid Bloodline",
     personality: "Upbeat",
-    shadow: "Monarch of Snow",
+    shadow: "Monarch of Snow"
   },
   {
     name: "Asterius Picaro",
@@ -6196,7 +6196,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Titanomachia: 0,
@@ -6205,17 +6205,17 @@ const personaMap: PersonaData[] = [
       "Auto-Masuku": 63,
       "Fire Amp": 65,
       Makarakarn: 66,
-      Gigantomachia: 68,
+      Gigantomachia: 68
     },
     stats: {
       strength: 46,
       magic: 46,
       endurance: 36,
       agility: 36,
-      luck: 29,
+      luck: 29
     },
     trait: "Frenzied Bull",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Seiryu",
@@ -6234,7 +6234,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Bufudyne: 0,
@@ -6243,16 +6243,16 @@ const personaMap: PersonaData[] = [
       "Repel Nuke": 63,
       Mabufudyne: 65,
       "Amrita Drop": 66,
-      Makarakarn: 67,
+      Makarakarn: 67
     },
     stats: {
       strength: 38,
       magic: 41,
       endurance: 43,
       agility: 37,
-      luck: 34,
+      luck: 34
     },
-    trait: "Relentless",
+    trait: "Relentless"
   },
   {
     name: "Chernobog",
@@ -6271,7 +6271,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.absorb,
+      curse: Weaknesses.absorb
     },
     skills: {
       Mudoon: 0,
@@ -6280,18 +6280,18 @@ const personaMap: PersonaData[] = [
       "Foul Breath": 63,
       Deathbound: 64,
       "Fear Boost": 66,
-      "Brave Blade": 67,
+      "Brave Blade": 67
     },
     stats: {
       strength: 40,
       magic: 37,
       endurance: 39,
       agility: 38,
-      luck: 39,
+      luck: 39
     },
     trait: "Crisis Control",
     personality: "Gloomy",
-    shadow: "The Black Avenger",
+    shadow: "The Black Avenger"
   },
   {
     name: "Kali",
@@ -6310,7 +6310,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.repel,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       "Heat Wave": 0,
@@ -6319,18 +6319,18 @@ const personaMap: PersonaData[] = [
       Charge: 65,
       "High Counter": 66,
       "Repel Psy": 67,
-      "Vorpal Blade": 68,
+      "Vorpal Blade": 68
     },
     stats: {
       strength: 43,
       magic: 41,
       endurance: 39,
       agility: 39,
-      luck: 34,
+      luck: 34
     },
     trait: "Relentless",
     personality: "Irritable",
-    shadow: "The Blackened Fury",
+    shadow: "The Blackened Fury"
   },
   {
     name: "Forneus",
@@ -6349,7 +6349,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Psiodyne: 0,
@@ -6358,18 +6358,18 @@ const personaMap: PersonaData[] = [
       "Survival Trick": 65,
       "Stagnant Air": 66,
       Mapsiodyne: 67,
-      "Evade Psy": 68,
+      "Evade Psy": 68
     },
     stats: {
       strength: 41,
       magic: 39,
       endurance: 40,
       agility: 42,
-      luck: 34,
+      luck: 34
     },
     trait: "Bloodstained Eyes",
     personality: "Timid",
-    shadow: "Rhetorician of the Sea",
+    shadow: "Rhetorician of the Sea"
   },
   {
     name: "Yamata-no-Orochi",
@@ -6388,7 +6388,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       "One-shot Kill": 0,
@@ -6396,18 +6396,18 @@ const personaMap: PersonaData[] = [
       "Freeze Boost": 0,
       "Absorb Ice": 66,
       "Ice Amp": 67,
-      "Diamond Dust": 69,
+      "Diamond Dust": 69
     },
     stats: {
       strength: 44,
       magic: 38,
       endurance: 48,
       agility: 36,
-      luck: 33,
+      luck: 33
     },
     trait: "Cold-Blooded",
     personality: "Gloomy",
-    shadow: "Drunken Serpents",
+    shadow: "Drunken Serpents"
   },
   {
     name: "Thor",
@@ -6426,7 +6426,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Ziodyne: 0,
@@ -6435,18 +6435,18 @@ const personaMap: PersonaData[] = [
       "Elec Amp": 66,
       Maziodyne: 67,
       "Heat Up": 68,
-      "Wild Thunder": 71,
+      "Wild Thunder": 71
     },
     stats: {
       strength: 44,
       magic: 39,
       endurance: 43,
       agility: 38,
-      luck: 35,
+      luck: 35
     },
     trait: "Intense Focus",
     personality: "Upbeat",
-    shadow: "Thunder Emperor",
+    shadow: "Thunder Emperor"
   },
   {
     name: "Hanuman",
@@ -6465,7 +6465,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Tempest Slash": 0,
@@ -6473,18 +6473,18 @@ const personaMap: PersonaData[] = [
       Revolution: 0,
       Deathbound: 65,
       "Tetra Break": 67,
-      "Regenerate 3": 69,
+      "Regenerate 3": 69
     },
     stats: {
       strength: 43,
       magic: 38,
       endurance: 40,
       agility: 40,
-      luck: 38,
+      luck: 38
     },
     trait: "Potent Hypnosis",
     personality: "Upbeat",
-    shadow: "Nimble Monkey King",
+    shadow: "Nimble Monkey King"
   },
   {
     name: "Thanatos",
@@ -6503,7 +6503,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       "Door of Hades": 0,
@@ -6512,17 +6512,17 @@ const personaMap: PersonaData[] = [
       "Curse Amp": 66,
       "One-shot Kill": 68,
       "Fortified Moxy": 69,
-      "Enduring Soul": 70,
+      "Enduring Soul": 70
     },
     stats: {
       strength: 43,
       magic: 49,
       endurance: 41,
       agility: 38,
-      luck: 31,
+      luck: 31
     },
     trait: "Iron Heart",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Atavaka",
@@ -6541,7 +6541,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Maragidyne: 0,
@@ -6550,18 +6550,18 @@ const personaMap: PersonaData[] = [
       "High Counter": 67,
       Samarecarm: 68,
       "Brave Blade": 70,
-      "Attack Master": 71,
+      "Attack Master": 71
     },
     stats: {
       strength: 51,
       magic: 36,
       endurance: 43,
       agility: 38,
-      luck: 34,
+      luck: 34
     },
     trait: "Savior Bloodline",
     personality: "Irritable",
-    shadow: "Infuriated Wisdom King",
+    shadow: "Infuriated Wisdom King"
   },
   {
     name: "Quetzalcoatl",
@@ -6580,7 +6580,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Magarula: 0,
@@ -6589,16 +6589,16 @@ const personaMap: PersonaData[] = [
       "Growth 3": 68,
       "Regenerate 3": 69,
       Magarudyne: 70,
-      "Wind Amp": 71,
+      "Wind Amp": 71
     },
     stats: {
       strength: 41,
       magic: 46,
       endurance: 41,
       agility: 43,
-      luck: 34,
+      luck: 34
     },
-    trait: "Wind Bloodline",
+    trait: "Wind Bloodline"
   },
   {
     name: "Oberon",
@@ -6617,7 +6617,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Ziodyne: 0,
@@ -6627,18 +6627,18 @@ const personaMap: PersonaData[] = [
       "Myriad Slashes": 69,
       "Evade Nuke": 70,
       Samarecarm: 71,
-      "Elec Amp": 72,
+      "Elec Amp": 72
     },
     stats: {
       strength: 40,
       magic: 45,
       endurance: 42,
       agility: 43,
-      luck: 35,
+      luck: 35
     },
     trait: "Static Electricity",
     personality: "Irritable",
-    shadow: "Unfaithful Dream-King",
+    shadow: "Unfaithful Dream-King"
   },
   {
     name: "Black Frost",
@@ -6658,7 +6658,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.nullify,
       bless: Weaknesses.none,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       Mabufudyne: 0,
@@ -6667,16 +6667,16 @@ const personaMap: PersonaData[] = [
       "Ice Amp": 68,
       "Freeze Boost": 70,
       "Repel Fire": 71,
-      "Diamond Dust": 72,
+      "Diamond Dust": 72
     },
     stats: {
       strength: 44,
       magic: 46,
       endurance: 41,
       agility: 42,
-      luck: 35,
+      luck: 35
     },
-    trait: "Frigid Bloodline",
+    trait: "Frigid Bloodline"
   },
   {
     name: "Bishamonten",
@@ -6695,7 +6695,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Freidyne: 0,
@@ -6704,16 +6704,16 @@ const personaMap: PersonaData[] = [
       Mafreidyne: 69,
       "Nuke Amp": 71,
       Tetrakarn: 72,
-      "God's Hand": 73,
+      "God's Hand": 73
     },
     stats: {
       strength: 51,
       magic: 37,
       endurance: 42,
       agility: 44,
-      luck: 34,
+      luck: 34
     },
-    trait: "Savior Bloodline",
+    trait: "Savior Bloodline"
   },
   {
     name: "Vasuki",
@@ -6733,7 +6733,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Mahamaon: 0,
@@ -6742,16 +6742,16 @@ const personaMap: PersonaData[] = [
       "Trigger Happy": 70,
       Makarakarn: 71,
       "Brainwash Boost": 72,
-      "Null Curse": 73,
+      "Null Curse": 73
     },
     stats: {
       strength: 42,
       magic: 45,
       endurance: 44,
       agility: 42,
-      luck: 38,
+      luck: 38
     },
-    trait: "Foul Stench",
+    trait: "Foul Stench"
   },
   {
     name: "Dominion",
@@ -6770,7 +6770,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.repel,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       Makajamaon: 0,
@@ -6779,18 +6779,18 @@ const personaMap: PersonaData[] = [
       Makougaon: 70,
       "Hama Boost": 71,
       Mahamaon: 72,
-      "Evade Curse": 74,
+      "Evade Curse": 74
     },
     stats: {
       strength: 42,
       magic: 45,
       endurance: 43,
       agility: 44,
-      luck: 37,
+      luck: 37
     },
     trait: "Blessed Bloodline",
     personality: "Timid",
-    shadow: "Merciless Inquisitor",
+    shadow: "Merciless Inquisitor"
   },
   {
     name: "Thanatos Picaro",
@@ -6809,7 +6809,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       "Door of Hades": 0,
@@ -6818,17 +6818,17 @@ const personaMap: PersonaData[] = [
       "Mudo Boost": 70,
       "One-shot Kill": 72,
       "Adverse Resolve": 73,
-      "Enduring Soul": 74,
+      "Enduring Soul": 74
     },
     stats: {
       strength: 45,
       magic: 51,
       endurance: 43,
       agility: 40,
-      luck: 35,
+      luck: 35
     },
     trait: "Iron Heart",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Lakshmi",
@@ -6847,7 +6847,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Lullaby: 0,
@@ -6856,17 +6856,17 @@ const personaMap: PersonaData[] = [
       Mediarahan: 70,
       "Climate Decorum": 71,
       "Amrita Shower": 72,
-      "Life Aid": 74,
+      "Life Aid": 74
     },
     stats: {
       strength: 39,
       magic: 49,
       endurance: 41,
       agility: 47,
-      luck: 38,
+      luck: 38
     },
     trait: "Wealth of Lotus",
-    max: true,
+    max: true
   },
   {
     name: "Loa",
@@ -6885,7 +6885,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.weak,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mamudoon: 0,
@@ -6894,19 +6894,19 @@ const personaMap: PersonaData[] = [
       Maeigaon: 72,
       "Absorb Curse": 73,
       "Spirit Drain": 74,
-      "Fortify Spirit": 75,
+      "Fortify Spirit": 75
     },
     stats: {
       strength: 42,
       magic: 47,
       endurance: 43,
       agility: 46,
-      luck: 39,
+      luck: 39
     },
     trait: "Draining Mouth",
     note: "Only available after 1/12",
     personality: "Upbeat",
-    shadow: "Dream-Dwelling Skull",
+    shadow: "Dream-Dwelling Skull"
   },
   {
     name: "Byakhee",
@@ -6925,7 +6925,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Agidyne: 0,
@@ -6934,19 +6934,19 @@ const personaMap: PersonaData[] = [
       Maragidyne: 72,
       "Ailment Boost": 73,
       "Fire Break": 74,
-      "Heat Riser": 75,
+      "Heat Riser": 75
     },
     stats: {
       strength: 42,
       magic: 49,
       endurance: 43,
       agility: 51,
-      luck: 32,
+      luck: 32
     },
     trait: "Heated Bloodline",
     note: "Only available after 1/12",
     personality: "Gloomy",
-    shadow: "Evil Synthetic Organism",
+    shadow: "Evil Synthetic Organism"
   },
   {
     name: "Dionysus",
@@ -6965,7 +6965,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Maziodyne: 0,
@@ -6974,18 +6974,18 @@ const personaMap: PersonaData[] = [
       Thermopylae: 72,
       "Ailment Boost": 73,
       "Amrita Shower": 75,
-      Debilitate: 76,
+      Debilitate: 76
     },
     stats: {
       strength: 42,
       magic: 48,
       endurance: 44,
       agility: 42,
-      luck: 44,
+      luck: 44
     },
     trait: "Pinch Anchor",
     personality: "Upbeat",
-    shadow: "Hedonistic Braggart",
+    shadow: "Hedonistic Braggart"
   },
   {
     name: "Throne",
@@ -7004,7 +7004,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.repel,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Agidyne: 0,
@@ -7013,18 +7013,18 @@ const personaMap: PersonaData[] = [
       "Fire Amp": 74,
       Makougaon: 75,
       "Invigorate 3": 76,
-      Inferno: 78,
+      Inferno: 78
     },
     stats: {
       strength: 42,
       magic: 49,
       endurance: 43,
       agility: 46,
-      luck: 43,
+      luck: 43
     },
     trait: "Crisis Control",
     personality: "Gloomy",
-    shadow: "Fire Assassin",
+    shadow: "Fire Assassin"
   },
   {
     name: "Mot",
@@ -7043,7 +7043,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       Megidola: 0,
@@ -7051,18 +7051,18 @@ const personaMap: PersonaData[] = [
       Maeigaon: 0,
       Concentrate: 74,
       Megidolaon: 76,
-      "Repel Elec": 77,
+      "Repel Elec": 77
     },
     stats: {
       strength: 43,
       magic: 51,
       endurance: 48,
       agility: 42,
-      luck: 39,
+      luck: 39
     },
     trait: "Mighty Gaze",
     personality: "Gloomy",
-    shadow: "Coffin-borne God",
+    shadow: "Coffin-borne God"
   },
   {
     name: "Mara",
@@ -7081,7 +7081,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.repel,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Mapsiodyne: 0,
@@ -7090,18 +7090,18 @@ const personaMap: PersonaData[] = [
       Charge: 74,
       "Brain Buster": 76,
       "Psy Amp": 77,
-      "Psycho Force": 78,
+      "Psycho Force": 78
     },
     stats: {
       strength: 51,
       magic: 43,
       endurance: 43,
       agility: 45,
-      luck: 44,
+      luck: 44
     },
     trait: "Mighty Gaze",
     personality: "Timid",
-    shadow: "Throbbing King of Desire",
+    shadow: "Throbbing King of Desire"
   },
   {
     name: "Macabre",
@@ -7120,7 +7120,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Death Scythe": 0,
@@ -7129,19 +7129,19 @@ const personaMap: PersonaData[] = [
       "Auto-Masuku": 74,
       "Ghastly Wail": 75,
       "Myriad Slashes": 76,
-      "Ali Dance": 78,
+      "Ali Dance": 78
     },
     stats: {
       strength: 48,
       magic: 49,
       endurance: 42,
       agility: 48,
-      luck: 39,
+      luck: 39
     },
     trait: "Ailment Hunter",
     note: "Only available after 1/12",
     personality: "Gloomy",
-    shadow: "Dancer of Death",
+    shadow: "Dancer of Death"
   },
   {
     name: "Nebiros",
@@ -7160,7 +7160,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.resist,
+      curse: Weaknesses.resist
     },
     skills: {
       "Marin Karin": 0,
@@ -7169,18 +7169,18 @@ const personaMap: PersonaData[] = [
       "Brain Jack": 76,
       "Brainwash Boost": 77,
       Megidolaon: 78,
-      "Null Bless": 80,
+      "Null Bless": 80
     },
     stats: {
       strength: 45,
       magic: 52,
       endurance: 44,
       agility: 46,
-      luck: 42,
+      luck: 42
     },
     trait: "Psychic Bloodline",
     personality: "Timid",
-    shadow: "Wandering Reviver",
+    shadow: "Wandering Reviver"
   },
   {
     name: "Chimera",
@@ -7199,7 +7199,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Maragidyne: 0,
@@ -7208,19 +7208,19 @@ const personaMap: PersonaData[] = [
       Marakunda: 76,
       "Fire Amp": 77,
       Mabufudyne: 78,
-      "Ice Amp": 79,
+      "Ice Amp": 79
     },
     stats: {
       strength: 51,
       magic: 40,
       endurance: 42,
       agility: 48,
-      luck: 48,
+      luck: 48
     },
     trait: "Foul Stench",
     note: "Only available after 1/12",
     personality: "Upbeat",
-    shadow: "Deformed Lion God",
+    shadow: "Deformed Lion God"
   },
   {
     name: "Sandalphon",
@@ -7239,7 +7239,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.repel,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Mahamaon: 0,
@@ -7248,17 +7248,17 @@ const personaMap: PersonaData[] = [
       "Angelic Grace": 77,
       "Repel Curse": 78,
       "Sword Dance": 79,
-      Megidolaon: 81,
+      Megidolaon: 81
     },
     stats: {
       strength: 46,
       magic: 51,
       endurance: 49,
       agility: 48,
-      luck: 38,
+      luck: 38
     },
     trait: "Omen",
-    max: true,
+    max: true
   },
   {
     name: "Abaddon",
@@ -7277,7 +7277,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.absorb,
+      curse: Weaknesses.absorb
     },
     skills: {
       Mabufudyne: 0,
@@ -7286,18 +7286,18 @@ const personaMap: PersonaData[] = [
       "Flash Bomb": 78,
       "Ailment Boost": 79,
       "Absorb Phys": 80,
-      Gigantomachia: 81,
+      Gigantomachia: 81
     },
     stats: {
       strength: 51,
       magic: 42,
       endurance: 58,
       agility: 38,
-      luck: 43,
+      luck: 43
     },
     trait: "Mouth of Savoring",
     personality: "Irritable",
-    shadow: "Abyssal King of Avarice",
+    shadow: "Abyssal King of Avarice"
   },
   {
     name: "Raoul",
@@ -7316,7 +7316,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Phantom Show": 0,
@@ -7326,17 +7326,17 @@ const personaMap: PersonaData[] = [
       "Heat Riser": 79,
       "Curse Amp": 80,
       Concentrate: 81,
-      "Life Aid": 82,
+      "Life Aid": 82
     },
     stats: {
       strength: 47,
       magic: 49,
       endurance: 43,
       agility: 54,
-      luck: 42,
+      luck: 42
     },
     trait: "Hazy Presence",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Kohryu",
@@ -7356,7 +7356,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Psycho Force": 0,
@@ -7365,17 +7365,17 @@ const personaMap: PersonaData[] = [
       "Life Aid": 78,
       Concentrate: 79,
       "Psy Amp": 80,
-      "Spell Master": 82,
+      "Spell Master": 82
     },
     stats: {
       strength: 43,
       magic: 51,
       endurance: 50,
       agility: 53,
-      luck: 38,
+      luck: 38
     },
     trait: "Universal Law",
-    max: true,
+    max: true
   },
   {
     name: "Cu Chulainn",
@@ -7394,7 +7394,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "High Counter": 0,
@@ -7403,18 +7403,18 @@ const personaMap: PersonaData[] = [
       Matarukaja: 78,
       "Brave Blade": 79,
       Charge: 80,
-      "Apt Pupil": 81,
+      "Apt Pupil": 81
     },
     stats: {
       strength: 55,
       magic: 44,
       endurance: 46,
       agility: 48,
-      luck: 42,
+      luck: 42
     },
     trait: "Potent Hypnosis",
     personality: "Irritable",
-    shadow: "Brave Spear-Bearer",
+    shadow: "Brave Spear-Bearer"
   },
   {
     name: "Asura",
@@ -7434,7 +7434,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.weak,
       nuclear: Weaknesses.repel,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Atomic Flare": 0,
@@ -7443,17 +7443,17 @@ const personaMap: PersonaData[] = [
       "Auto-Mataru": 78,
       Mafreidyne: 79,
       "High Counter": 80,
-      "Unshaken Will": 81,
+      "Unshaken Will": 81
     },
     stats: {
       strength: 52,
       magic: 48,
       endurance: 51,
       agility: 49,
-      luck: 35,
+      luck: 35
     },
     trait: "Atomic Hellscape",
-    max: true,
+    max: true
   },
   {
     name: "Scathach",
@@ -7472,7 +7472,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Mabufudyne: 0,
@@ -7481,18 +7481,18 @@ const personaMap: PersonaData[] = [
       "Freeze Boost": 78,
       Matarukaja: 79,
       "Vorpal Blade": 81,
-      "Attack Master": 82,
+      "Attack Master": 82
     },
     stats: {
       strength: 48,
       magic: 52,
       endurance: 46,
       agility: 48,
-      luck: 44,
+      luck: 44
     },
     trait: "Skillful Technique",
     personality: "Upbeat",
-    shadow: "The Shadowed One",
+    shadow: "The Shadowed One"
   },
   {
     name: "Gabriel",
@@ -7511,7 +7511,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.none,
       bless: Weaknesses.absorb,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Maziodyne: 0,
@@ -7521,16 +7521,16 @@ const personaMap: PersonaData[] = [
       "Evade Curse": 80,
       "Touch n' Go": 81,
       "Ice Amp": 82,
-      Salvation: 83,
+      Salvation: 83
     },
     stats: {
       strength: 43,
       magic: 51,
       endurance: 48,
       agility: 54,
-      luck: 42,
+      luck: 42
     },
-    trait: "Relentless",
+    trait: "Relentless"
   },
   {
     name: "Raphael",
@@ -7549,7 +7549,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Sword Dance": 0,
@@ -7558,16 +7558,16 @@ const personaMap: PersonaData[] = [
       "Heat Riser": 80,
       "Growth 3": 81,
       "Adverse Resolve": 82,
-      "Arms Master": 83,
+      "Arms Master": 83
     },
     stats: {
       strength: 57,
       magic: 45,
       endurance: 49,
       agility: 55,
-      luck: 35,
+      luck: 35
     },
-    trait: "Pinch Anchor",
+    trait: "Pinch Anchor"
   },
   {
     name: "Izanagi-no-Okami",
@@ -7587,7 +7587,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Myriad Truths": 0,
@@ -7597,17 +7597,17 @@ const personaMap: PersonaData[] = [
       "Heat Riser": 82,
       "Heat Up": 83,
       Salvation: 84,
-      "Almighty Boost": 85,
+      "Almighty Boost": 85
     },
     stats: {
       strength: 52,
       magic: 56,
       endurance: 46,
       agility: 48,
-      luck: 45,
+      luck: 45
     },
     trait: "Country Maker",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Zaou-Gongen",
@@ -7626,7 +7626,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Maragidyne: 0,
@@ -7635,17 +7635,17 @@ const personaMap: PersonaData[] = [
       "Evade Phys": 82,
       "Enduring Soul": 83,
       "Gun Amp": 84,
-      "Blazing Hell": 86,
+      "Blazing Hell": 86
     },
     stats: {
       strength: 57,
       magic: 45,
       endurance: 50,
       agility: 56,
-      luck: 39,
+      luck: 39
     },
     trait: "Undying Fury",
-    max: true,
+    max: true
   },
   {
     name: "Vohu Manah",
@@ -7664,7 +7664,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.absorb,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Divine Judgement": 0,
@@ -7673,17 +7673,17 @@ const personaMap: PersonaData[] = [
       "Absorb Bless": 82,
       "Fortify Spirit": 83,
       "Invigorate 3": 84,
-      Salvation: 85,
+      Salvation: 85
     },
     stats: {
       strength: 46,
       magic: 59,
       endurance: 45,
       agility: 56,
-      luck: 41,
+      luck: 41
     },
     trait: "Positive Thoughts",
-    max: true,
+    max: true
   },
   {
     name: "Sraosha",
@@ -7703,7 +7703,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.repel,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Kougaon: 0,
@@ -7712,16 +7712,16 @@ const personaMap: PersonaData[] = [
       Makougaon: 81,
       "Angelic Grace": 83,
       "Amrita Shower": 84,
-      Debilitate: 85,
+      Debilitate: 85
     },
     stats: {
       strength: 47,
       magic: 56,
       endurance: 45,
       agility: 56,
-      luck: 43,
+      luck: 43
     },
-    trait: "Blessed Bloodline",
+    trait: "Blessed Bloodline"
   },
   {
     name: "Messiah",
@@ -7740,7 +7740,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.repel,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Oratorio: 0,
@@ -7750,17 +7750,17 @@ const personaMap: PersonaData[] = [
       "Enduring Soul": 83,
       "Invigorate 3": 84,
       "Absorb Phys": 85,
-      "Almighty Boost": 87,
+      "Almighty Boost": 87
     },
     stats: {
       strength: 50,
       magic: 50,
       endurance: 50,
       agility: 50,
-      luck: 50,
+      luck: 50
     },
     trait: "Hallowed Spirit",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Uriel",
@@ -7779,7 +7779,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.absorb,
       bless: Weaknesses.repel,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Deathbound: 0,
@@ -7788,16 +7788,16 @@ const personaMap: PersonaData[] = [
       "Repel Nuke": 83,
       Megidolaon: 84,
       "Angelic Grace": 85,
-      "Spell Master": 86,
+      "Spell Master": 86
     },
     stats: {
       strength: 50,
       magic: 54,
       endurance: 49,
       agility: 55,
-      luck: 42,
+      luck: 42
     },
-    trait: "Mouth of Savoring",
+    trait: "Mouth of Savoring"
   },
   {
     name: "Alilat",
@@ -7816,7 +7816,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       "Diamond Dust": 0,
@@ -7826,19 +7826,19 @@ const personaMap: PersonaData[] = [
       Concentrate: 83,
       "Auto-Maraku": 85,
       "Ice Amp": 86,
-      "Ice Age": 87,
+      "Ice Age": 87
     },
     stats: {
       strength: 45,
       magic: 54,
       endurance: 57,
       agility: 49,
-      luck: 45,
+      luck: 45
     },
     trait: "Frigid Bloodline",
     note: "Only available after 1/12",
     personality: "Timid",
-    shadow: "Decadent False God",
+    shadow: "Decadent False God"
   },
   {
     name: "Shiva",
@@ -7858,7 +7858,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.absorb,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Psycho Force": 0,
@@ -7867,16 +7867,16 @@ const personaMap: PersonaData[] = [
       "Riot Gun": 85,
       Megidolaon: 86,
       "Auto-Mataru": 87,
-      "Psycho Blast": 88,
+      "Psycho Blast": 88
     },
     stats: {
       strength: 55,
       magic: 54,
       endurance: 53,
       agility: 53,
-      luck: 38,
+      luck: 38
     },
-    trait: "Psychic Bloodline",
+    trait: "Psychic Bloodline"
   },
   {
     name: "Belial",
@@ -7895,7 +7895,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Eigaon: 0,
@@ -7904,16 +7904,16 @@ const personaMap: PersonaData[] = [
       Maeigaon: 84,
       "Fear Boost": 85,
       Mamudoon: 86,
-      "Demonic Decree": 88,
+      "Demonic Decree": 88
     },
     stats: {
       strength: 52,
       magic: 53,
       endurance: 51,
       agility: 48,
-      luck: 49,
+      luck: 49
     },
-    trait: "Bloodstained Eyes",
+    trait: "Bloodstained Eyes"
   },
   {
     name: "Baal",
@@ -7932,7 +7932,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.resist,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Panta Rhei": 0,
@@ -7941,18 +7941,18 @@ const personaMap: PersonaData[] = [
       Ayamur: 84,
       Tetraja: 85,
       Charge: 86,
-      "Vacuum Wave": 87,
+      "Vacuum Wave": 87
     },
     stats: {
       strength: 54,
       magic: 58,
       endurance: 53,
       agility: 47,
-      luck: 41,
+      luck: 41
     },
     trait: "Wind Bloodline",
     personality: "Upbeat",
-    shadow: "Reviled Dictator",
+    shadow: "Reviled Dictator"
   },
   {
     name: "Attis",
@@ -7971,7 +7971,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Maragidyne: 0,
@@ -7980,17 +7980,17 @@ const personaMap: PersonaData[] = [
       "Enduring Soul": 84,
       Samarecarm: 85,
       "Absorb Curse": 86,
-      "Blazing Hell": 88,
+      "Blazing Hell": 88
     },
     stats: {
       strength: 49,
       magic: 50,
       endurance: 48,
       agility: 54,
-      luck: 52,
+      luck: 52
     },
     trait: "Vitality of the Tree",
-    max: true,
+    max: true
   },
   {
     name: "Vishnu",
@@ -8009,7 +8009,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Megidolaon: 0,
@@ -8019,17 +8019,17 @@ const personaMap: PersonaData[] = [
       Concentrate: 86,
       "Repel Fire": 87,
       "Wind Amp": 88,
-      "Riot Gun": 90,
+      "Riot Gun": 90
     },
     stats: {
       strength: 56,
       magic: 51,
       endurance: 49,
       agility: 57,
-      luck: 43,
+      luck: 43
     },
     trait: "Vahana's Wings",
-    max: true,
+    max: true
   },
   {
     name: "Surt",
@@ -8048,7 +8048,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Blazing Hell": 0,
@@ -8057,16 +8057,16 @@ const personaMap: PersonaData[] = [
       "Fire Amp": 84,
       Marakunda: 85,
       "Evade Ice": 86,
-      Gigantomachia: 88,
+      Gigantomachia: 88
     },
     stats: {
       strength: 55,
       magic: 54,
       endurance: 51,
       agility: 50,
-      luck: 46,
+      luck: 46
     },
-    trait: "Heated Bloodline",
+    trait: "Heated Bloodline"
   },
   {
     name: "Cybele",
@@ -8085,7 +8085,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Samarecarm: 0,
@@ -8094,17 +8094,17 @@ const personaMap: PersonaData[] = [
       "Amrita Shower": 84,
       "Auto-Maraku": 86,
       "Absorb Bless": 87,
-      Salvation: 89,
+      Salvation: 89
     },
     stats: {
       strength: 44,
       magic: 57,
       endurance: 49,
       agility: 51,
-      luck: 55,
+      luck: 55
     },
     trait: "Linked Bloodline",
-    max: true,
+    max: true
   },
   {
     name: "Alice",
@@ -8124,7 +8124,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.weak,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       Mamudoon: 0,
@@ -8133,17 +8133,17 @@ const personaMap: PersonaData[] = [
       "Die For Me!": 85,
       Megidolaon: 86,
       Concentrate: 87,
-      "Survival Trick": 88,
+      "Survival Trick": 88
     },
     stats: {
       strength: 45,
       magic: 61,
       endurance: 49,
       agility: 54,
-      luck: 47,
+      luck: 47
     },
     trait: "Just Die",
-    max: true,
+    max: true
   },
   {
     name: "Siegfried",
@@ -8162,7 +8162,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Brave Blade": 0,
@@ -8171,16 +8171,16 @@ const personaMap: PersonaData[] = [
       Charge: 85,
       "Apt Pupil": 87,
       "Vorpal Blade": 89,
-      "Auto-Mataru": 90,
+      "Auto-Mataru": 90
     },
     stats: {
       strength: 61,
       magic: 43,
       endurance: 55,
       agility: 55,
-      luck: 45,
+      luck: 45
     },
-    trait: "Retaliating Body",
+    trait: "Retaliating Body"
   },
   {
     name: "Odin",
@@ -8199,7 +8199,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.repel,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       "Thunder Reign": 0,
@@ -8208,17 +8208,17 @@ const personaMap: PersonaData[] = [
       "Wild Thunder": 86,
       Concentrate: 87,
       "Fast Heal": 88,
-      "Elec Amp": 89,
+      "Elec Amp": 89
     },
     stats: {
       strength: 53,
       magic: 58,
       endurance: 54,
       agility: 52,
-      luck: 42,
+      luck: 42
     },
     trait: "Bargain Bolts",
-    max: true,
+    max: true
   },
   {
     name: "Hastur",
@@ -8237,7 +8237,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Vacuum Wave": 0,
@@ -8246,19 +8246,19 @@ const personaMap: PersonaData[] = [
       "Abyssal Eye": 86,
       "Wind Amp": 87,
       "Spirit Drain": 88,
-      "Repel Wind": 89,
+      "Repel Wind": 89
     },
     stats: {
       strength: 51,
       magic: 59,
       endurance: 52,
       agility: 56,
-      luck: 41,
+      luck: 41
     },
     trait: "Mouth of Savoring",
     note: "Only available after 1/12",
     personality: "Irritable",
-    shadow: "Warped Abyss",
+    shadow: "Warped Abyss"
   },
   {
     name: "Ardha",
@@ -8278,7 +8278,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "God's Hand": 0,
@@ -8287,17 +8287,17 @@ const personaMap: PersonaData[] = [
       Agneyastra: 87,
       "Auto-Masuku": 88,
       "Fortified Moxy": 89,
-      Salvation: 90,
+      Salvation: 90
     },
     stats: {
       strength: 54,
       magic: 56,
       endurance: 55,
       agility: 54,
-      luck: 40,
+      luck: 40
     },
     trait: "Naranari",
-    max: true,
+    max: true
   },
   {
     name: "Mother Harlot",
@@ -8316,7 +8316,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       Mabufudyne: 0,
@@ -8325,17 +8325,17 @@ const personaMap: PersonaData[] = [
       "Ice Age": 86,
       "Ice Amp": 87,
       "Repel Bless": 88,
-      Debilitate: 90,
+      Debilitate: 90
     },
     stats: {
       strength: 55,
       magic: 54,
       endurance: 48,
       agility: 50,
-      luck: 55,
+      luck: 55
     },
     trait: "Ghost Nest",
-    max: true,
+    max: true
   },
   {
     name: "Ishtar",
@@ -8354,7 +8354,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Mediarahan: 0,
@@ -8363,17 +8363,17 @@ const personaMap: PersonaData[] = [
       "Insta-Heal": 87,
       Maziodyne: 88,
       "Spell Master": 89,
-      Salvation: 90,
+      Salvation: 90
     },
     stats: {
       strength: 48,
       magic: 59,
       endurance: 49,
       agility: 58,
-      luck: 48,
+      luck: 48
     },
     trait: "Grace of Mother",
-    max: true,
+    max: true
   },
   {
     name: "Futsunushi",
@@ -8392,7 +8392,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Myriad Slashes": 0,
@@ -8402,17 +8402,17 @@ const personaMap: PersonaData[] = [
       "Brave Blade": 89,
       "Regenerate 3": 90,
       "Firm Stance": 91,
-      "Auto-Maraku": 92,
+      "Auto-Maraku": 92
     },
     stats: {
       strength: 60,
       magic: 58,
       endurance: 55,
       agility: 52,
-      luck: 40,
+      luck: 40
     },
     trait: "Will of the Sword",
-    max: true,
+    max: true
   },
   {
     name: "Fafnir",
@@ -8431,7 +8431,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.absorb,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Gigantomachia: 0,
@@ -8440,19 +8440,19 @@ const personaMap: PersonaData[] = [
       "Atomic Flare": 88,
       "Nuke Amp": 90,
       Debilitate: 91,
-      "Absorb Nuke": 92,
+      "Absorb Nuke": 92
     },
     stats: {
       strength: 61,
       magic: 55,
       endurance: 58,
       agility: 48,
-      luck: 43,
+      luck: 43
     },
     trait: "Ailment Hunter",
     note: "Only available after 1/12",
     personality: "Irritable",
-    shadow: "Evil Voracious Dragon",
+    shadow: "Evil Voracious Dragon"
   },
   {
     name: "Yoshitsune",
@@ -8472,7 +8472,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.repel,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Brave Blade": 0,
@@ -8481,16 +8481,16 @@ const personaMap: PersonaData[] = [
       "Last Stand": 89,
       "Fast Heal": 90,
       "Elec Amp": 92,
-      "Hassou Tobi": 94,
+      "Hassou Tobi": 94
     },
     stats: {
       strength: 63,
       magic: 52,
       endurance: 50,
       agility: 54,
-      luck: 49,
+      luck: 49
     },
-    trait: "Retaliating Body",
+    trait: "Retaliating Body"
   },
   {
     name: "Michael",
@@ -8510,7 +8510,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.repel,
-      curse: Weaknesses.nullify,
+      curse: Weaknesses.nullify
     },
     skills: {
       "Divine Judgement": 0,
@@ -8519,16 +8519,16 @@ const personaMap: PersonaData[] = [
       "Sword Dance": 89,
       Mahamaon: 90,
       Megidolaon: 91,
-      "Cosmic Flare": 92,
+      "Cosmic Flare": 92
     },
     stats: {
       strength: 57,
       magic: 54,
       endurance: 55,
       agility: 56,
-      luck: 46,
+      luck: 46
     },
-    trait: "Potent Hypnosis",
+    trait: "Potent Hypnosis"
   },
   {
     name: "Beelzebub",
@@ -8547,7 +8547,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       Maeigaon: 0,
@@ -8557,17 +8557,17 @@ const personaMap: PersonaData[] = [
       Concentrate: 89,
       "Demonic Decree": 90,
       "Repel Ice": 91,
-      Megidolaon: 92,
+      Megidolaon: 92
     },
     stats: {
       strength: 55,
       magic: 61,
       endurance: 54,
       agility: 56,
-      luck: 42,
+      luck: 42
     },
     trait: "Mother's Lament",
-    max: true,
+    max: true
   },
   {
     name: "Chi You",
@@ -8587,7 +8587,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.nullify,
       nuclear: Weaknesses.weak,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Psycho Force": 0,
@@ -8596,16 +8596,16 @@ const personaMap: PersonaData[] = [
       "Fortify Spirit": 90,
       "Psycho Blast": 91,
       "Absorb Psy": 92,
-      Concentrate: 94,
+      Concentrate: 94
     },
     stats: {
       strength: 56,
       magic: 57,
       endurance: 54,
       agility: 53,
-      luck: 51,
+      luck: 51
     },
-    trait: "Chi You's Blessing",
+    trait: "Chi You's Blessing"
   },
   {
     name: "Izanagi-no-Okami Picaro",
@@ -8625,7 +8625,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Myriad Truths": 0,
@@ -8635,17 +8635,17 @@ const personaMap: PersonaData[] = [
       Debilitate: 91,
       "Enduring Soul": 92,
       Salvation: 93,
-      "Almighty Boost": 94,
+      "Almighty Boost": 94
     },
     stats: {
       strength: 54,
       magic: 61,
       endurance: 56,
       agility: 58,
-      luck: 45,
+      luck: 45
     },
     trait: "Country Maker",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Ongyo-Ki",
@@ -8665,7 +8665,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.repel,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       "Myriad Slashes": 0,
@@ -8674,17 +8674,17 @@ const personaMap: PersonaData[] = [
       "Arms Master": 91,
       "Regenerate 3": 92,
       "Firm Stance": 93,
-      Agneyastra: 95,
+      Agneyastra: 95
     },
     stats: {
       strength: 56,
       magic: 53,
       endurance: 57,
       agility: 59,
-      luck: 49,
+      luck: 49
     },
     trait: "Demon's Bite",
-    max: true,
+    max: true
   },
   {
     name: "Metatron",
@@ -8704,7 +8704,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.absorb,
       nuclear: Weaknesses.absorb,
       bless: Weaknesses.none,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Mahamaon: 0,
@@ -8714,16 +8714,16 @@ const personaMap: PersonaData[] = [
       "Hama Boost": 92,
       Concentrate: 93,
       "Bless Amp": 94,
-      "Divine Judgement": 95,
+      "Divine Judgement": 95
     },
     stats: {
       strength: 54,
       magic: 61,
       endurance: 60,
       agility: 57,
-      luck: 42,
+      luck: 42
     },
-    trait: "Martyr's Gift",
+    trait: "Martyr's Gift"
   },
   {
     name: "Messiah Picaro",
@@ -8742,7 +8742,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.repel,
-      curse: Weaknesses.weak,
+      curse: Weaknesses.weak
     },
     skills: {
       Oratorio: 0,
@@ -8752,17 +8752,17 @@ const personaMap: PersonaData[] = [
       "Enduring Soul": 92,
       "Life Aid": 93,
       "Firm Stance": 94,
-      "Almighty Boost": 96,
+      "Almighty Boost": 96
     },
     stats: {
       strength: 56,
       magic: 56,
       endurance: 55,
       agility: 55,
-      luck: 55,
+      luck: 55
     },
     trait: "Hallowed Spirit",
-    dlc: true,
+    dlc: true
   },
   {
     name: "Mada",
@@ -8781,7 +8781,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.nullify,
       bless: Weaknesses.none,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       Inferno: 0,
@@ -8791,17 +8791,17 @@ const personaMap: PersonaData[] = [
       "Blazing Hell": 92,
       "Amrita Shower": 93,
       "Enduring Soul": 95,
-      "Spell Master": 96,
+      "Spell Master": 96
     },
     stats: {
       strength: 55,
       magic: 54,
       endurance: 61,
       agility: 59,
-      luck: 48,
+      luck: 48
     },
     trait: "Drunken Passion",
-    max: true,
+    max: true
   },
   {
     name: "Satan",
@@ -8820,7 +8820,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.none,
-      curse: Weaknesses.repel,
+      curse: Weaknesses.repel
     },
     skills: {
       "Diamond Dust": 0,
@@ -8830,17 +8830,17 @@ const personaMap: PersonaData[] = [
       "Invigorate 3": 95,
       "Fortify Spirit": 96,
       Concentrate: 97,
-      "Absorb Ice": 98,
+      "Absorb Ice": 98
     },
     stats: {
       strength: 62,
       magic: 59,
       endurance: 55,
       agility: 52,
-      luck: 55,
+      luck: 55
     },
     trait: "Cocytus",
-    max: true,
+    max: true
   },
   {
     name: "Maria",
@@ -8859,7 +8859,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.absorb,
-      curse: Weaknesses.none,
+      curse: Weaknesses.none
     },
     skills: {
       "Invigorate 3": 0,
@@ -8868,17 +8868,17 @@ const personaMap: PersonaData[] = [
       "Heat Riser": 94,
       "Holy Embrace": 96,
       "Angelic Grace": 97,
-      "Holy Whisper": 98,
+      "Holy Whisper": 98
     },
     stats: {
       strength: 52,
       magic: 66,
       endurance: 53,
       agility: 54,
-      luck: 61,
+      luck: 61
     },
     trait: "Ave Maria",
-    max: true,
+    max: true
   },
   {
     name: "Lucifer",
@@ -8898,7 +8898,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.none,
       nuclear: Weaknesses.none,
       bless: Weaknesses.weak,
-      curse: Weaknesses.absorb,
+      curse: Weaknesses.absorb
     },
     skills: {
       Gigantomachia: 0,
@@ -8908,17 +8908,17 @@ const personaMap: PersonaData[] = [
       "Heat Riser": 96,
       "Repel Bless": 97,
       "Insta-Heal": 98,
-      "Absorb Phys": 99,
+      "Absorb Phys": 99
     },
     stats: {
       strength: 61,
       magic: 59,
       endurance: 59,
       agility: 56,
-      luck: 51,
+      luck: 51
     },
     trait: "Allure of Wisdom",
-    max: true,
+    max: true
   },
   {
     name: "Satanael",
@@ -8938,7 +8938,7 @@ const personaMap: PersonaData[] = [
       psychic: Weaknesses.resist,
       nuclear: Weaknesses.resist,
       bless: Weaknesses.nullify,
-      curse: Weaknesses.absorb,
+      curse: Weaknesses.absorb
     },
     skills: {
       Maeigaon: 0,
@@ -8948,17 +8948,17 @@ const personaMap: PersonaData[] = [
       "Black Viper": 96,
       "Heat Riser": 97,
       "Tyrant's Mind": 98,
-      "Victory Cry": 99,
+      "Victory Cry": 99
     },
     stats: {
       strength: 63,
       magic: 60,
       endurance: 57,
       agility: 56,
-      luck: 56,
+      luck: 56
     },
     trait: "Pagan Allure",
-    note: "Only available on NG+",
-  },
+    note: "Only available on NG+"
+  }
 ];
 export default personaMap;
