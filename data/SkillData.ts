@@ -1,4 +1,46 @@
-import { SkillMap } from "./../src/PersonaClasses";
+export interface SkillData {
+  name?: string;
+  cost?: number;
+  effect: string;
+  element:
+  | "phys"
+  | "gun"
+  | "fire"
+  | "ice"
+  | "electric"
+  | "wind"
+  | "psy"
+  | "nuclear"
+  | "bless"
+  | "curse"
+  | "almighty"
+  | "ailment"
+  | "support"
+  | "passive"
+  | "healing"
+  | "trait";
+  personas?: {
+    [name: string]: number;
+  };
+  talk?: string;
+  fuse?: string | string[];
+  card?: string;
+  unique?: string;
+  dlc?: boolean;
+  note?: string;
+
+  // for display in list
+  elemDisplay?: string;
+  costDisplay?: string;
+  personaDisplay?: string;
+  talkDisplay?: string;
+  fuseDisplay?: string;
+}
+
+export interface SkillMap {
+  [name: string]: SkillData;
+}
+
 
 const skillMap: SkillMap = {
   "Absorb Bless": {
