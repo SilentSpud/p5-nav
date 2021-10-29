@@ -1,7 +1,7 @@
 import React from "react";
 import { personaHeaders, Weaknesses } from "./PersonaClasses";
 import prepareTable from "./tableMaker";
-import personaMap from './../data/PersonaData';
+import personaMap from './../data/Personas';
 import { Cell } from "react-table";
 
 const personaParser = (personaList) => React.useMemo(() => {
