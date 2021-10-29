@@ -96,7 +96,7 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "What about them?": {},
-          "And then you punched him?": {}
+          "And then you punched him?": {},
         },
         "3": {
           "Do you want to go back?": {
@@ -124,7 +124,7 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Want to train with us?": {},
-          "It's nice to meet you.": {}
+          "It's nice to meet you.": {},
         },
         "2": {
           "Calm down, Ryuji.": {
@@ -133,15 +133,15 @@ const Confidants: ConfidantList = {
           "Just endure it.": {
             points: 2
           },
-          "I'll shut them up.": {}
+          "I'll shut them up.": {},
         },
         followup: {
           "I can't exactly blame you.": {
             points: 2
           },
           "Violence is not the answer.": {},
-          "Yeah, that'd be best.": {}
-        }
+          "Yeah, that'd be best.": {},
+        },
       },
       "4": {
         "1": {
@@ -149,7 +149,7 @@ const Confidants: ConfidantList = {
           "Are you worried about him?": {
             points: 2
           },
-          "Just leave him be.": {}
+          "Just leave him be.": {},
         },
         "2": {
           "But you're doing great.": {
@@ -179,7 +179,7 @@ const Confidants: ConfidantList = {
           "Do you want to rejoin?": {
             points: 2
           },
-          "You're done with them, right?": {}
+          "You're done with them, right?": {},
         },
         "3": {
           "So he's short?": {
@@ -194,8 +194,8 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "I haven't agreed to anything.": {},
-          "Fine, but you're buying ramen.": {}
-        }
+          "Fine, but you're buying ramen.": {},
+        },
       },
       "6": {
         "1": {
@@ -224,15 +224,15 @@ const Confidants: ConfidantList = {
           "More or less.": {
             points: 3
           },
-          "Not in the slightest.": {}
+          "Not in the slightest.": {},
         },
         "4": {
           "I don't get it.": {},
-          "Can you explain that?": {}
+          "Can you explain that?": {},
         },
         "5": {
           "...Huh?": {},
-          "I really don't understand.": {}
+          "I really don't understand.": {},
         },
         followup: {
           "Sounds like you two were close.": {},
@@ -262,13 +262,13 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "It's out of our hands.": {},
-          "We'll use force if we have to.": {}
-        }
+          "We'll use force if we have to.": {},
+        },
       },
       "8": {
         "1": {
           "What if they start fighting?": {},
-          "I doubt they'll believe you.": {}
+          "I doubt they'll believe you.": {},
         },
         "2": {
           "Things turned out for the best.": {
@@ -299,8 +299,8 @@ const Confidants: ConfidantList = {
           "So. Closed case?": {
             points: 2
           },
-          "We make a good team too.": {}
-        }
+          "We make a good team too.": {},
+        },
       },
       "9": {
         "1": {
@@ -335,7 +335,7 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Be more specific.": {},
-          "And where is this place?": {}
+          "And where is this place?": {},
         },
         followup: {
           "Congratulations.": {
@@ -358,10 +358,10 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "You're welcome.": {},
-          "It's all because of you.": {}
-        }
-      }
-    }
+          "It's all because of you.": {},
+        },
+      },
+    },
   },
   councillor: {
     character: "Takuto Maruki",
@@ -401,7 +401,7 @@ const Confidants: ConfidantList = {
         "2": {
           "It's in the past.": {},
           "I'm doing okay now.": {},
-          "So much for privacy.": {}
+          "So much for privacy.": {},
         },
         "3": {
           "But it sounds right.": {
@@ -410,20 +410,20 @@ const Confidants: ConfidantList = {
           "Yep.": {
             points: 2
           },
-          "Kinda creeping me out here.": {}
+          "Kinda creeping me out here.": {},
         },
         "4": {
           "So... what?": {},
           "I'll need more details.": {},
-          "Uh...": {}
+          "Uh...": {},
         },
         "5": {
           "Well, okay.": {
             points: 2
           },
           "Better make it worth it.": {},
-          "Why me, though?": {}
-        }
+          "Why me, though?": {},
+        },
       },
       "3": {
         "1": {
@@ -442,12 +442,12 @@ const Confidants: ConfidantList = {
           "Yeah, for our deal.": {
             points: 2
           },
-          "I forgot.": {}
+          "I forgot.": {},
         },
         "3": {
           "When someone betrays me.": {},
           "When I lie.": {},
-          "When I get punched.": {}
+          "When I get punched.": {},
         },
         "4": {
           "That one seems necessary": {
@@ -471,13 +471,13 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "So you're actually working?": {},
-          "Getting to your research now?": {}
-        }
+          "Getting to your research now?": {},
+        },
       },
       "4": {
         "1": {
           "Where's this coming from?": {},
-          "What are you talking about?": {}
+          "What are you talking about?": {},
         },
         "2": {
           "I know, right...?": {
@@ -499,7 +499,7 @@ const Confidants: ConfidantList = {
         },
         "4": {
           "......": {},
-          "Are you okay?": {}
+          "Are you okay?": {},
         },
         "5": {
           "That's a grand plan.": {
@@ -523,8 +523,8 @@ const Confidants: ConfidantList = {
           "It's part of our deal, so...": {
             points: 2
           },
-          "I'm struggling, to be honest.": {}
-        }
+          "I'm struggling, to be honest.": {},
+        },
       },
       "5": {
         "1": {
@@ -539,7 +539,7 @@ const Confidants: ConfidantList = {
         "2": {
           "The one-cookie container.": {},
           "The ten-cookie container.": {},
-          "It was a tie.": {}
+          "It was a tie.": {},
         },
         "3": {
           "I never considered that.": {},
@@ -557,14 +557,14 @@ const Confidants: ConfidantList = {
           "Hey, as long as it tastes good.": {
             points: 2
           },
-          "It's a little scary.": {}
+          "It's a little scary.": {},
         },
         "5": {
           'Not "truth" exactly...': {},
           "I guess so.": {
             points: 2
           },
-          "I don't know.": {}
+          "I don't know.": {},
         },
         followup: {
           "I really don't mind.": {
@@ -593,11 +593,11 @@ const Confidants: ConfidantList = {
           "It's a deal.": {
             points: 2
           },
-          "I'm not up for this...": {}
+          "I'm not up for this...": {},
         },
         "3": {
           "Isn't that enough?": {},
-          "You need more than that?": {}
+          "You need more than that?": {},
         },
         "4": {
           "So what CAN we do?": {},
@@ -608,12 +608,12 @@ const Confidants: ConfidantList = {
         },
         "5": {
           "All hearts share some things.": {},
-          "What if they're connected?": {}
+          "What if they're connected?": {},
         },
         "6": {
           "Calm down.": {},
           "Where's this coming from?": {},
-          "Cognitive pscience?": {}
+          "Cognitive pscience?": {},
         },
         followup: {
           "Calm down.": {
@@ -622,8 +622,8 @@ const Confidants: ConfidantList = {
           "What's going on?": {
             points: 2
           },
-          "Heavy breathing? Pervert.": {}
-        }
+          "Heavy breathing? Pervert.": {},
+        },
       },
       "7": {
         "1": {
@@ -676,7 +676,7 @@ const Confidants: ConfidantList = {
           "What do you mean?": {
             points: 3
           },
-          "Thanks, but I should get going.": {}
+          "Thanks, but I should get going.": {},
         },
         "2": {
           "Ooh, really?": {
@@ -726,20 +726,20 @@ const Confidants: ConfidantList = {
         "7": {
           "She's a girlfriend of yours?": {},
           "Who's Rumi?": {},
-          "Should I leave you two to talk?": {}
+          "Should I leave you two to talk?": {},
         },
         followup: {
           "He's a good friend.": {
             points: 2
           },
           "Learn some independence.": {},
-          "You'll get the tab next time.": {}
-        }
+          "You'll get the tab next time.": {},
+        },
       },
       "9": {
         "1": {
           "Yeah.": {},
-          "Kind of.": {}
+          "Kind of.": {},
         },
         "2": {
           "Kind of sad...": {
@@ -806,14 +806,14 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "We're on a date.": {},
-          "I know my rights.": {}
+          "I know my rights.": {},
         },
         "2": {
           "I agree.": {
             points: 2
           },
           "Harassment?": {},
-          "The Plague?": {}
+          "The Plague?": {},
         },
         meta: {
           requirements: {
@@ -833,11 +833,11 @@ const Confidants: ConfidantList = {
       "3": {
         "1": {
           "What was that about?": {},
-          "Was that an emergency?": {}
+          "Was that an emergency?": {},
         },
         "2": {
           "A medical error?": {},
-          "What do you mean?": {}
+          "What do you mean?": {},
         },
         "3": {
           "I don't mind.": {
@@ -853,8 +853,8 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "I don't think I did...": {},
-          "Have you?": {}
-        }
+          "Have you?": {},
+        },
       },
       "4": {
         "1": {
@@ -879,17 +879,17 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "But she ended up okay.": {},
-          "Punish me more.": {}
-        }
+          "Punish me more.": {},
+        },
       },
       "5": {
         "1": {
           "They trust you.": {},
-          "Was it really your fault?": {}
+          "Was it really your fault?": {},
         },
         "2": {
           "I had no idea.": {},
-          "It's not too late.": {}
+          "It's not too late.": {},
         },
         "3": {
           "That's good.": {
@@ -898,25 +898,25 @@ const Confidants: ConfidantList = {
           "When will it be done?": {
             points: 2
           },
-          "... “Probably”?": {}
+          "... “Probably”?": {},
         },
         followup: {
           "About Miwa-chan?": {
             points: 2
           },
           "About Oyamada?": {},
-          "About Crawford-Ende's?": {}
-        }
+          "About Crawford-Ende's?": {},
+        },
       },
       "6": {
         "1": {
           "Well, someone's popular.": {},
           "You seem annoyed.": {},
-          "Did something happen?": {}
+          "Did something happen?": {},
         },
         "2": {
           "Having fun?": {},
-          "You ARE a genius.": {}
+          "You ARE a genius.": {},
         },
         "3": {
           "You're a masochist.": {},
@@ -952,7 +952,7 @@ const Confidants: ConfidantList = {
         "2": {
           "Don't lose hope.": {},
           "Let's ask for details.": {},
-          "......": {}
+          "......": {},
         },
         "3": {
           "Just rest for today.": {
@@ -961,7 +961,7 @@ const Confidants: ConfidantList = {
           "Anything I can do?": {
             points: 2
           },
-          "Let's retaliate.": {}
+          "Let's retaliate.": {},
         },
         "4": {
           "It was inevitable.": {},
@@ -976,7 +976,7 @@ const Confidants: ConfidantList = {
       "8": {
         "1": {
           "Miwa-chan is alive.": {},
-          "Oyamada lied to you.": {}
+          "Oyamada lied to you.": {},
         },
         "2": {
           "You should hurry.": {
@@ -1024,7 +1024,7 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "That's troubling.": {},
-          "And your patients?": {}
+          "And your patients?": {},
         },
         "3": {
           "I wanted to see you.": {
@@ -1048,20 +1048,20 @@ const Confidants: ConfidantList = {
             points: 3,
             romance: true
           },
-          "That sounds good.": {}
+          "That sounds good.": {},
         },
         followup: {
           "It's true love.": {},
           "So did you.": {
             points: 2
           },
-          "I've always loved you.": {}
-        }
+          "I've always loved you.": {},
+        },
       },
       "7.5": {
         "1": {
           "What about Miwa-chan?": {},
-          "You OK with this?": {}
+          "You OK with this?": {},
         },
         "2": {
           "Don't give up.": {},
@@ -1072,15 +1072,20 @@ const Confidants: ConfidantList = {
         },
         "3": {
           "You gonna run away?": {},
-          "And your patients?": {}
+          "And your patients?": {},
         },
         "4": {
           "What's his full name?": {},
-          "Tell me about him.": {}
+          "Tell me about him.": {},
         },
         "5": {
           "I won't do anything.": {},
-          "It's for my research.": {}
+          "It's for my research.": {},
+        },
+        meta: {
+          requirements: {
+            charm: 4,
+          },
         },
         meta: {
           requirements: {
@@ -1091,14 +1096,14 @@ const Confidants: ConfidantList = {
       max: {
         "1": {
           "Uh, what?": {},
-          "Is that a joke?": {}
+          "Is that a joke?": {},
         },
         "2": {
           "It's a coincidence.": {},
           "I wonder...": {
             points: 2
           },
-          "So what if it's true?": {}
+          "So what if it's true?": {},
         },
         "3": {
           "What kind?": {
@@ -1139,8 +1144,8 @@ const Confidants: ConfidantList = {
         followup: {
           Thanks: {},
           "Sounds like a good time.": {},
-          "Doing what?": {}
-        }
+          "Doing what?": {},
+        },
       },
       "2": {
         "1": {
@@ -1152,15 +1157,15 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "Worth...?": {},
-          "What about their justice?": {}
+          "What about their justice?": {},
         },
         "3": {
           "I like the atmosphere.": {},
           "It's for the article.": {
             points: 2
           },
-          "Tell me about that incident.": {}
-        }
+          "Tell me about that incident.": {},
+        },
       },
       "3": {
         "1": {
@@ -1172,11 +1177,11 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "What's the difference?": {},
-          "I'm sure you are.": {}
+          "I'm sure you are.": {},
         },
         "3": {
           "Why not change careers?": {},
-          "Maybe you should quit.": {}
+          "Maybe you should quit.": {},
         },
         "4": {
           "What was she accused of?": {},
@@ -1189,7 +1194,7 @@ const Confidants: ConfidantList = {
       "4": {
         "1": {
           "What's this about?": {},
-          "She hasn't done anything wrong.": {}
+          "She hasn't done anything wrong.": {},
         },
         "2": {
           "Of course we are.": {
@@ -1202,7 +1207,7 @@ const Confidants: ConfidantList = {
         "3": {
           "Our movie is about to start.": {},
           "That's enough.": {},
-          "We're dating. Seriously.": {}
+          "We're dating. Seriously.": {},
         },
         followup: {
           "Leave it to me.": {
@@ -1211,22 +1216,22 @@ const Confidants: ConfidantList = {
           "That was our deal.": {
             points: 2
           },
-          "Anything for my girlfriend.": {}
-        }
+          "Anything for my girlfriend.": {},
+        },
       },
       "5": {
         "1": {
           "Because of your investigation?": {},
           "Because of your incident?": {},
-          "Are you sure we're the same?": {}
+          "Are you sure we're the same?": {},
         },
         "2": {
           "I'm curious.": {},
-          "You can trust me.": {}
+          "You can trust me.": {},
         },
         "3": {
           "What was the cause of death?": {},
-          "Who killed him?": {}
+          "Who killed him?": {},
         },
         "4": {
           "That sounds like defamation.": {
@@ -1235,33 +1240,33 @@ const Confidants: ConfidantList = {
           "That's unforgivable.": {
             points: 3
           },
-          "How's your search going?": {}
+          "How's your search going?": {},
         },
         followup: {
           "I don't mind.": {
             points: 2
           },
           "As long as I'm compensated.": {},
-          "I did the same to you.": {}
-        }
+          "I did the same to you.": {},
+        },
       },
       "6": {
         "1": {
           "Did something bad happen?": {},
-          "Having trouble at work?": {}
+          "Having trouble at work?": {},
         },
         "2": {
           "He must not like you.": {
             points: 2
           },
-          "Did he find out?": {}
+          "Did he find out?": {},
         },
         "3": {
           "Do you have evidence of that?": {},
           "You should trust in her.": {
             points: 2
           },
-          "You might be right.": {}
+          "You might be right.": {},
         },
         "4": {
           "That's the spirit": {
@@ -1270,7 +1275,7 @@ const Confidants: ConfidantList = {
           "You're a great journalist.": {
             points: 2
           },
-          "What about your quota?": {}
+          "What about your quota?": {},
         },
         followup: {
           "Glad to hear that.": {},
@@ -1283,7 +1288,7 @@ const Confidants: ConfidantList = {
       "7": {
         "1": {
           "What was that about?": {},
-          "Could it be...?": {}
+          "Could it be...?": {},
         },
         "2": {
           "Calm down.": {
@@ -1309,21 +1314,21 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Sounds tough.": {},
-          "Don't strain yourself.": {}
-        }
+          "Don't strain yourself.": {},
+        },
       },
       "8": {
         "1": {
           "He reflected on his actions.": {},
-          "Aren't you happy?": {}
+          "Aren't you happy?": {},
         },
         "2": {
           "Did I? Can't remember.": {},
-          "Uh, nope.": {}
+          "Uh, nope.": {},
         },
         "3": {
           "I'm glad to hear that.": {},
-          "Thank god.": {}
+          "Thank god.": {},
         },
         "4": {
           "That's not like you.": {
@@ -1343,13 +1348,13 @@ const Confidants: ConfidantList = {
           "Be careful.": {
             points: 2
           },
-          "Grab a souvenir for me.": {}
-        }
+          "Grab a souvenir for me.": {},
+        },
       },
       "9": {
         "1": {
           "Are you OK?": {},
-          "Did you learn the truth?": {}
+          "Did you learn the truth?": {},
         },
         "2": {
           "What are you going to do?": {},
@@ -1364,11 +1369,11 @@ const Confidants: ConfidantList = {
           "I want to help.": {
             points: 3
           },
-          "I need those articles.": {}
+          "I need those articles.": {},
         },
         "4": {
           "Of course not.": {},
-          "No way.": {}
+          "No way.": {},
         },
         "5": {
           "I took it seriously.": {
@@ -1382,7 +1387,7 @@ const Confidants: ConfidantList = {
           "I love you, Ichiko.": {
             romance: true
           },
-          "I'm just kidding.": {}
+          "I'm just kidding.": {},
         },
         followup: {
           "I wanted to hear your voice.": {
@@ -1391,8 +1396,8 @@ const Confidants: ConfidantList = {
           "Please don't dump me.": {
             points: 2
           },
-          "IloveyouIloveyouIloveyou.": {}
-        }
+          "IloveyouIloveyouIloveyou.": {},
+        },
       },
       "7.5": {
         "1": {
@@ -1400,12 +1405,12 @@ const Confidants: ConfidantList = {
           "You seem tired.": {
             points: 2
           },
-          "So... I have a pet cat...": {}
+          "So... I have a pet cat...": {},
         },
         "2": {
           "What's the chief's name?": {},
-          "Tell me more about him.": {}
-        }
+          "Tell me more about him.": {},
+        },
       },
       max: {
         "1": {
@@ -1415,7 +1420,7 @@ const Confidants: ConfidantList = {
           "Is that entertainment?": {
             points: 3
           },
-          "You don't need my info?": {}
+          "You don't need my info?": {},
         },
         "2": {
           "I'm glad to hear that.": {
@@ -1428,7 +1433,7 @@ const Confidants: ConfidantList = {
         "3": {
           "So you knew all along?": {},
           "It's just a coincidence.": {},
-          "Lala's the real phantom thief.": {}
+          "Lala's the real phantom thief.": {},
         },
         "4": {
           "It's up to you.": {
@@ -1469,7 +1474,7 @@ const Confidants: ConfidantList = {
           "It's enigmatic.": {
             points: 2
           },
-          "...What is it?": {}
+          "...What is it?": {},
         },
         "2": {
           "I can't wait.": {
@@ -1478,15 +1483,15 @@ const Confidants: ConfidantList = {
           "I hope you're right.": {
             points: 3
           },
-          "Will people like it?": {}
+          "Will people like it?": {},
         },
         followup: {
           "You're already doing enough.": {
             points: 2
           },
           "I'm looking forward to it.": {},
-          "Will you really?": {}
-        }
+          "Will you really?": {},
+        },
       },
       "3": {
         "1": {
@@ -1499,7 +1504,7 @@ const Confidants: ConfidantList = {
         "2": {
           "Stop exaggerating.": {},
           "This is just the beginning.": {},
-          "Stand up.": {}
+          "Stand up.": {},
         },
         "3": {
           "You're really giving up?": {
@@ -1508,7 +1513,7 @@ const Confidants: ConfidantList = {
           "This isn't like you.": {
             points: 3
           },
-          "Stand up, Ysuke.": {}
+          "Stand up, Ysuke.": {},
         },
         "4": {
           "How exactly?": {
@@ -1523,8 +1528,8 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "You're taking this too far.": {},
-          "That's all?": {}
-        }
+          "That's all?": {},
+        },
       },
       "4": {
         "1": {
@@ -1543,15 +1548,15 @@ const Confidants: ConfidantList = {
           "Maybe you should train more.": {
             points: 2
           },
-          "You have a wild imagination.": {}
+          "You have a wild imagination.": {},
         },
         followup: {
           "Don't get discouraged.": {
             points: 2
           },
           "Just keep drawing.": {},
-          "You lack love yourself.": {}
-        }
+          "You lack love yourself.": {},
+        },
       },
       "5": {
         "1": {
@@ -1588,15 +1593,15 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Why are we here again?": {},
-          "Are you going in?": {}
+          "Are you going in?": {},
         },
         "2": {
           "We should get it fixed.": {},
-          "Let's force it open.": {}
+          "Let's force it open.": {},
         },
         "3": {
           "Are you OK?": {},
-          "You're not looking so good.": {}
+          "You're not looking so good.": {},
         },
         "4": {
           "Maybe he was sympathetic.": {
@@ -1619,8 +1624,8 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "He seems reliable.": {},
-          "I'm not sure.": {}
-        }
+          "I'm not sure.": {},
+        },
       },
       "7": {
         "1": {
@@ -1628,13 +1633,13 @@ const Confidants: ConfidantList = {
           "What do you mean?": {
             points: 2
           },
-          "Handsome...?": {}
+          "Handsome...?": {},
         },
         "2": {
           "The truth is within you.": {
             points: 3
           },
-          "Money is important.": {}
+          "Money is important.": {},
         },
         followup: {
           "Calm down.": {
@@ -1643,8 +1648,8 @@ const Confidants: ConfidantList = {
           "It's not a crime to enjoy sushi.": {
             points: 2
           },
-          "Let's go again sometime.": {}
-        }
+          "Let's go again sometime.": {},
+        },
       },
       "8": {
         "1": {
@@ -1683,21 +1688,21 @@ const Confidants: ConfidantList = {
           "That's a great idea.": {
             points: 2
           },
-          "It won't be easy.": {}
-        }
+          "It won't be easy.": {},
+        },
       },
       max: {
         "1": {
           "It turned out well.": {},
-          "So you added hope?": {}
+          "So you added hope?": {},
         },
         "2": {
           "You provoked Yusuke on purpose?": {},
-          "Are you scheming something?": {}
+          "Are you scheming something?": {},
         },
         "3": {
           "“He”?": {},
-          "Do you mean Madarame?": {}
+          "Do you mean Madarame?": {},
         },
         "4": {
           "He was a good man deep down.": {
@@ -1710,10 +1715,10 @@ const Confidants: ConfidantList = {
         "5": {
           "Yeah...": {},
           "You're stranger, Yusuke.": {},
-          "Are you sure about this?": {}
-        }
-      }
-    }
+          "Are you sure about this?": {},
+        },
+      },
+    },
   },
   empress: {
     character: "Haru Okumura",
@@ -1837,7 +1842,7 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "“I'm afraid of flying.”": {},
-          "“We should break up.”": {}
+          "“We should break up.”": {},
         },
         "3": {
           "I have.": {
@@ -1855,8 +1860,8 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "Sounds like a hassle.": {},
-          "Which friend?": {}
-        }
+          "Which friend?": {},
+        },
       },
       "4": {
         "1": {
@@ -1963,7 +1968,7 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "That's a surprise.": {},
-          "I could've guessed that.": {}
+          "I could've guessed that.": {},
         },
         "3": {
           "You might be right.": {},
@@ -1976,7 +1981,7 @@ const Confidants: ConfidantList = {
         },
         "4": {
           "You don't need to apologize.": {},
-          "That guy is horrible.": {}
+          "That guy is horrible.": {},
         },
         "5": {
           "You're not powerless.": {},
@@ -1991,14 +1996,14 @@ const Confidants: ConfidantList = {
           "Let him say what he wants.": {
             points: 3
           },
-          "Wanna run away together?": {}
-        }
+          "Wanna run away together?": {},
+        },
       },
       "7": {
         "1": {
           "You look exhausted.": {},
           "Don't overwork yourself.": {},
-          "Let's go see the nurse.": {}
+          "Let's go see the nurse.": {},
         },
         "2": {
           "That sounds really tough...": {
@@ -2042,7 +2047,7 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "The planters?": {},
-          "That beetle over there?": {}
+          "That beetle over there?": {},
         },
         "2": {
           "It'll help him understand you.": {
@@ -2080,7 +2085,7 @@ const Confidants: ConfidantList = {
         "1": {
           "Don't forget to breathe.": {},
           "Believe in yourself.": {},
-          "I'm here for you, Haru.": {}
+          "I'm here for you, Haru.": {},
         },
         "2": {
           "I'm sure you'll do great.": {
@@ -2100,7 +2105,7 @@ const Confidants: ConfidantList = {
           "You did amazing.": {
             points: 3
           },
-          "Do I get a reward?": {}
+          "Do I get a reward?": {},
         },
         "4": {
           "He saw us as good friends.": {},
@@ -2142,7 +2147,7 @@ const Confidants: ConfidantList = {
         "3": {
           "If you want.": {},
           "Probably not.": {},
-          "It's hard work, you know.": {}
+          "It's hard work, you know.": {},
         },
         "4": {
           "I'm glad too.": {
@@ -2217,29 +2222,29 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "You doing okay?": {},
-          "Lucky for me...": {}
+          "Lucky for me...": {},
         },
         "3": {
           "I see.": {},
-          "So now...?": {}
+          "So now...?": {},
         },
         "4": {
           "No problem.": {},
           "You sure?": {},
-          "Uh, romantically?": {}
+          "Uh, romantically?": {},
         },
         "5": {
           "Leave it to me.": {},
           "Let's give it a try.": {},
-          "Then follow my lead.": {}
+          "Then follow my lead.": {},
         },
         followup: {
           "Impressive.": {
             points: 2
           },
           "Gotta push through it.": {},
-          "You did eat eventually, right?": {}
-        }
+          "You did eat eventually, right?": {},
+        },
       },
       "3": {
         "1": {
@@ -2256,7 +2261,7 @@ const Confidants: ConfidantList = {
           "It looks delicious.": {
             points: 2
           },
-          "Let's see if it's good...": {}
+          "Let's see if it's good...": {},
         },
         "3": {
           "Is that all for you?": {
@@ -2265,27 +2270,27 @@ const Confidants: ConfidantList = {
           "That seems a little much.": {
             points: 2
           },
-          "What IS that?": {}
+          "What IS that?": {},
         },
         "4": {
           "This tastes like...": {},
           "It's definitely unique.": {
             points: 2
           },
-          "It's... greeeaaat...": {}
+          "It's... greeeaaat...": {},
         },
         "5": {
           "Not exactly.": {},
-          "Is there a third option...?": {}
+          "Is there a third option...?": {},
         },
         "6": {
           "Calm down.": {},
-          "You're going to get it now?": {}
+          "You're going to get it now?": {},
         },
         "7": {
           "This works fine as is.": {},
           "I'm enjoying this.": {},
-          "Let's just eat.": {}
+          "Let's just eat.": {},
         },
         "8": {
           "You could try again sometime?": {
@@ -2300,8 +2305,8 @@ const Confidants: ConfidantList = {
         },
         "9": {
           "That sounds right.": {},
-          "Maybe...": {}
-        }
+          "Maybe...": {},
+        },
       },
       "4": {
         "1": {
@@ -2309,7 +2314,7 @@ const Confidants: ConfidantList = {
           "You're looking to buy?": {
             points: 2
           },
-          "I have enough glasses.": {}
+          "I have enough glasses.": {},
         },
         "2": {
           "A pretty modern look.": {
@@ -2322,7 +2327,7 @@ const Confidants: ConfidantList = {
         },
         "3": {
           "Do they suit your dad, though? =0": {},
-          "I'm not so sure...": {}
+          "I'm not so sure...": {},
         },
         "4": {
           "Of course.": {
@@ -2331,35 +2336,35 @@ const Confidants: ConfidantList = {
           "Let's keep going.": {
             points: 2
           },
-          "Sure, whatever.": {}
+          "Sure, whatever.": {},
         },
         "5": {
           "Trust your instincts.": {},
-          "Don't overthink it.": {}
+          "Don't overthink it.": {},
         },
         "6": {
           "Good choice.": {
             points: 2
           },
-          "I'm sure he'll love it.": {}
+          "I'm sure he'll love it.": {},
         },
         "7": {
           "It's part of our deal.": {},
           "Not a problem at all.": {},
-          "I expect compensation.": {}
+          "I expect compensation.": {},
         },
         "8": {
           "Everyone deals with that.": {
             points: 2
           },
-          "That's your slump talking.": {}
+          "That's your slump talking.": {},
         },
         "9": {
           "Good luck.": {},
           "We'll work at it together.": {
             points: 2
           },
-          "No rush, though.": {}
+          "No rush, though.": {},
         },
         followup: {
           "I'm glad to hear that.": {
@@ -2368,8 +2373,8 @@ const Confidants: ConfidantList = {
           "You should be more confident.": {
             points: 2
           },
-          "Of course he is.": {}
-        }
+          "Of course he is.": {},
+        },
       },
       "5": {
         "1": {
@@ -2377,11 +2382,11 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Not at all.": {},
-          "What are you scheming?": {}
+          "What are you scheming?": {},
         },
         "2": {
           "This seems kind of sudden.": {},
-          "If I'm just watching...": {}
+          "If I'm just watching...": {},
         },
         "3": {
           "It's a good idea.": {
@@ -2390,12 +2395,12 @@ const Confidants: ConfidantList = {
           "Go ahead. I'll watch.": {
             points: 3
           },
-          "Maybe stick to gymnastics.": {}
+          "Maybe stick to gymnastics.": {},
         },
         "4": {
           "Don't give up.": {},
           "Just don't lose hope.": {},
-          "You can beat this, right?": {}
+          "You can beat this, right?": {},
         },
         "5": {
           "Congratulations.": {
@@ -2418,7 +2423,7 @@ const Confidants: ConfidantList = {
         },
         "7": {
           "Nicely done.": {},
-          "It's not over yet.": {}
+          "It's not over yet.": {},
         },
         followup: {
           "Swimming.": {
@@ -2436,44 +2441,44 @@ const Confidants: ConfidantList = {
         "1": {
           "It wasn't on purpose.": {},
           "What could you have done?": {},
-          "At least you realize it now.": {}
+          "At least you realize it now.": {},
         },
         "2": {
           "Don't beat yourself up.": {},
           "What'll you do now?": {},
-          "Calm down.": {}
+          "Calm down.": {},
         },
         "3": {
           "You two were close, then.": {},
           "Those must be good memories.": {},
-          "All for ice cream, huh?": {}
+          "All for ice cream, huh?": {},
         },
         "4": {
           "... That IS genius.": {},
-          "How old was she again?": {}
+          "How old was she again?": {},
         },
         "5": {
           "She cared about you.": {},
-          "Sounds like tough training.": {}
+          "Sounds like tough training.": {},
         },
         "6": {
           "Why?": {},
-          "I can imagine.": {}
+          "I can imagine.": {},
         },
         "7": {
           "It must have been hard.": {},
           "What about Kasumi's feelings?": {},
-          "Sounds like running away.": {}
+          "Sounds like running away.": {},
         },
         "8": {
           "You have to accept it.": {},
           "Try not to think about it.": {},
-          "So what happens now?": {}
+          "So what happens now?": {},
         },
         "9": {
           "I will.": {},
           "I can manage that.": {},
-          "If it's part of the deal.": {}
+          "If it's part of the deal.": {},
         },
         meta: {
           requirements: {
@@ -2494,29 +2499,29 @@ const Confidants: ConfidantList = {
         "1": {
           "Maybe.": {},
           "Who Knows?": {},
-          "Were you frustrated?": {}
+          "Were you frustrated?": {},
         },
         "2": {
           "Is she scary?": {},
-          "Is she strict?": {}
+          "Is she strict?": {},
         },
         "3": {
           "You okay?": {
             points: 3
           },
           "That was a big sigh.": {},
-          "She's a real taskmaster.": {}
+          "She's a real taskmaster.": {},
         },
         "4": {
           "That isn't true.": {
             points: 3
           },
           "You need more confidence.": {},
-          "That's just a mental block.": {}
+          "That's just a mental block.": {},
         },
         "5": {
           "It'll be like a duet.": {},
-          "You'll become stronger.": {}
+          "You'll become stronger.": {},
         },
         "6": {
           "Of course.": {
@@ -2543,11 +2548,11 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "Watch her from a distance.": {},
-          "Slowly walk away.": {}
+          "Slowly walk away.": {},
         },
         "2": {
           "Look at yourself.": {},
-          "You're just standing out.": {}
+          "You're just standing out.": {},
         },
         "3": {
           "Try to stay positive.": {
@@ -2562,11 +2567,11 @@ const Confidants: ConfidantList = {
         },
         "4": {
           "What is it?": {},
-          "......": {}
+          "......": {},
         },
         "5": {
           "You started it.": {},
-          "What, I can't look at you?": {}
+          "What, I can't look at you?": {},
         },
         "6": {
           "It looks great.": {
@@ -2581,11 +2586,11 @@ const Confidants: ConfidantList = {
         },
         "7": {
           "Did I help?": {},
-          "You found your answer?": {}
+          "You found your answer?": {},
         },
         "8": {
           "I see...": {},
-          "So that's how it was.": {}
+          "So that's how it was.": {},
         },
         "9": {
           "That's how it should be.": {
@@ -2627,7 +2632,7 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "Vaguely...": {},
-          "What about it?": {}
+          "What about it?": {},
         },
         "4": {
           "I know you did.": {
@@ -2649,7 +2654,7 @@ const Confidants: ConfidantList = {
         },
         "6": {
           "What?": {},
-          "In luh?": {}
+          "In luh?": {},
         },
         "7": {
           "Let's stay friends, okay?": {},
@@ -2681,26 +2686,26 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "Should I hang up...?": {},
-          "That's just how it is.": {}
-        }
+          "That's just how it is.": {},
+        },
       },
       max: {
         "1": {
           "You look radiant today.": {},
-          "Now I'm getting nervous.": {}
+          "Now I'm getting nervous.": {},
         },
         "2": {
           "It's all Sumire.": {},
-          "Just watch.": {}
+          "Just watch.": {},
         },
         "3": {
           "Calm down.": {},
-          "Don't rush it.": {}
+          "Don't rush it.": {},
         },
         "4": {
           "You must be happy.": {},
           "I'm so relieved.": {},
-          "It's only natural, Sumire.": {}
+          "It's only natural, Sumire.": {},
         },
         "5": {
           "And that is...?": {
@@ -2715,12 +2720,12 @@ const Confidants: ConfidantList = {
         },
         "6": {
           "And there's more to come.": {},
-          "You were amazing out there.": {}
+          "You were amazing out there.": {},
         },
         "7": {
           "I'll stop if you want.": {},
           "I feel the same way.": {},
-          "I don't want to let you go.": {}
+          "I don't want to let you go.": {},
         },
         meta: {
           romance: true
@@ -2789,7 +2794,7 @@ const Confidants: ConfidantList = {
           "Change her boss's heart.": {
             bad: true
           },
-          "Encourage her.": {}
+          "Encourage her.": {},
         },
         "2": {
           "Hrahhh!": {
@@ -2811,8 +2816,8 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "And if I am?": {},
-          "Are you stalking me?": {}
-        }
+          "Are you stalking me?": {},
+        },
       },
       "3": {
         "1": {
@@ -2835,13 +2840,13 @@ const Confidants: ConfidantList = {
         },
         "3": {
           "I'm not, sorry.": {},
-          "Who knows...?": {}
-        }
+          "Who knows...?": {},
+        },
       },
       "4": {
         "1": {
           "You're only realizing that now?": {},
-          "Do you want to test it again?": {}
+          "Do you want to test it again?": {},
         },
         "2": {
           "Strengthen your will.": {
@@ -2854,23 +2859,23 @@ const Confidants: ConfidantList = {
         },
         "3": {
           "Tell me more.": {},
-          "That sounds so peaceful.": {}
+          "That sounds so peaceful.": {},
         },
         "4": {
           "...The chairman?": {},
-          "I'm not sure I follow.": {}
+          "I'm not sure I follow.": {},
         },
         "5": {
           "I think it'll work.": {},
-          "It all depends on you.": {}
+          "It all depends on you.": {},
         },
         followup: {
           "I'm glad to hear that.": {},
           "I didn't do much.": {
             points: 2
           },
-          "Tell me more about your home.": {}
-        }
+          "Tell me more about your home.": {},
+        },
       },
       "5": {
         "1": {
@@ -2884,27 +2889,27 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "But what?": {},
-          "Did you spend it all?": {}
+          "Did you spend it all?": {},
         },
         "3": {
           "Who was he?": {},
           "Maiden?": {},
-          "Are you in trouble?": {}
-        }
+          "Are you in trouble?": {},
+        },
       },
       "6": {
         "1": {
           "I like fortune-telling.": {},
           "She's really cool.": {},
-          "I'm doing research for school.": {}
+          "I'm doing research for school.": {},
         },
         "2": {
           "...Maiden of Relief?": {},
-          "This has to be a joke.": {}
+          "This has to be a joke.": {},
         },
         "3": {
           "This guy's sketchy.": {},
-          "Leave her alone.": {}
+          "Leave her alone.": {},
         },
         "4": {
           "What's a Maiden of Relief?": {},
@@ -2918,8 +2923,8 @@ const Confidants: ConfidantList = {
           "Be honest with yourself.": {
             points: 2
           },
-          "We'll work on it together.": {}
-        }
+          "We'll work on it together.": {},
+        },
       },
       "7": {
         "1": {
@@ -2938,8 +2943,8 @@ const Confidants: ConfidantList = {
           "Be careful.": {
             points: 2
           },
-          "So the Maiden's taking action.": {}
-        }
+          "So the Maiden's taking action.": {},
+        },
       },
       "8": {
         "1": {
@@ -2972,13 +2977,13 @@ const Confidants: ConfidantList = {
           "It was all your own will.": {
             points: 2
           },
-          "I knew it would happen.": {}
-        }
+          "I knew it would happen.": {},
+        },
       },
       "9": {
         "1": {
           "You really don't understand.": {},
-          "Listen to what Chihaya's saying.": {}
+          "Listen to what Chihaya's saying.": {},
         },
         "2": {
           "Do you regret what you did?": {},
@@ -3000,27 +3005,27 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Oh, you didn't mean it...?": {},
-          ".....": {}
-        }
+          ".....": {},
+        },
       },
       "7.5": {
         "1": {
           "How so?": {},
-          "What have you found?": {}
+          "What have you found?": {},
         },
         "2": {
           "Tell me his name.": {},
-          "What's Fukurai's first name?": {}
+          "What's Fukurai's first name?": {},
         },
         "3": {
           "I can't tell you.": {},
-          "Don't worry about it.": {}
-        }
+          "Don't worry about it.": {},
+        },
       },
       max: {
         "1": {
           "You've never been here?": {},
-          "It wasn't that far away.": {}
+          "It wasn't that far away.": {},
         },
         "2": {
           "I support you.": {
@@ -3033,16 +3038,16 @@ const Confidants: ConfidantList = {
         "3": {
           "I wonder if you're right...": {},
           "So what if I am the Trickster?": {},
-          "You're pretty sharp.": {}
+          "You're pretty sharp.": {},
         },
         "4": {
           "It's not a problem.": {},
           "Are you worried about me?": {},
-          "What does it mean?": {}
+          "What does it mean?": {},
         },
         "5": {
           "Thank you, Chihaya.": {},
-          "That's really reassuring.": {}
+          "That's really reassuring.": {},
         },
         "6": {
           "I don't care about that.": {
@@ -3054,7 +3059,10 @@ const Confidants: ConfidantList = {
         },
         "7": {
           "I was hoping you'd say that.": {},
-          "I don't want to go home.": {}
+          "I don't want to go home.": {},
+        },
+        meta: {
+          romance: true,
         },
         meta: {
           romance: true
@@ -3108,11 +3116,11 @@ const Confidants: ConfidantList = {
       "2": {
         "1": {
           "Maybe I should call him.": {},
-          "... Iwai seems sick.": {}
+          "... Iwai seems sick.": {},
         },
         "2": {
           "Nothing in particular.": {},
-          "I was daydreaming, sorry.": {}
+          "I was daydreaming, sorry.": {},
         },
         "3": {
           "Who was that guy?": {},
@@ -3127,7 +3135,7 @@ const Confidants: ConfidantList = {
       "3": {
         "1": {
           "I know how it feels.": {},
-          "Is it seriously that hard?": {}
+          "Is it seriously that hard?": {},
         },
         "2": {
           "I always knew you were a thug.": {
@@ -3147,23 +3155,23 @@ const Confidants: ConfidantList = {
         },
         "4": {
           "Is that one of your customers?": {},
-          "Why are you being so mean?": {}
-        }
+          "Why are you being so mean?": {},
+        },
       },
       "4": {
         "1": {
           "Iwai.": {},
           "I can't tell you.": {},
-          "It's none of your business.": {}
+          "It's none of your business.": {},
         },
         "2": {
           "What was that about?": {},
           "So that was Tsuda?": {},
-          "What did he mean, “sell” him?": {}
+          "What did he mean, “sell” him?": {},
         },
         "3": {
           "Hong Kong mafia.": {},
-          "A 100 million yen deal.": {}
+          "A 100 million yen deal.": {},
         },
         "4": {
           "Give it your all.": {},
@@ -3179,20 +3187,20 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Is that a threat?": {},
-          "What's the issue?": {}
-        }
+          "What's the issue?": {},
+        },
       },
       "5": {
         "1": {
           "Why not?": {},
-          "You shouldn't lie to your son.": {}
+          "You shouldn't lie to your son.": {},
         },
         "2": {
           "You're so kind, Iwai.": {},
           "You're pathetic.": {
             points: 3
           },
-          "You should call the cops.": {}
+          "You should call the cops.": {},
         },
         "3": {
           "That's right.": {
@@ -3208,17 +3216,17 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Is it really all for Kaoru?": {},
-          "Well, you got this.": {}
-        }
+          "Well, you got this.": {},
+        },
       },
       "6": {
         "1": {
           "Why would he say that?": {},
-          "No, nothing even close.": {}
+          "No, nothing even close.": {},
         },
         "2": {
           "He definitely does.": {},
-          "You should ask him.": {}
+          "You should ask him.": {},
         },
         "3": {
           "Our futures.": {
@@ -3247,8 +3255,8 @@ const Confidants: ConfidantList = {
           "All I did was listen to him.": {
             points: 2
           },
-          "It's part of the job.": {}
-        }
+          "It's part of the job.": {},
+        },
       },
       "7": {
         "1": {
@@ -3271,15 +3279,15 @@ const Confidants: ConfidantList = {
         },
         "3": {
           "Is Tsuda seriously dangerous?": {},
-          "Are you going alone?": {}
+          "Are you going alone?": {},
         },
         followup: {
           "Bring it on.": {
             points: 2
           },
           "I'm worried...": {},
-          "So what's our first move?": {}
-        }
+          "So what's our first move?": {},
+        },
       },
       "8": {
         "1": {
@@ -3287,7 +3295,7 @@ const Confidants: ConfidantList = {
           "I dunno.": {
             points: 2
           },
-          "He's matured.": {}
+          "He's matured.": {},
         },
         "2": {
           "I'm back, baby.": {
@@ -3305,8 +3313,8 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "You worry too much.": {},
-          "Now let's catch him off-guard.": {}
-        }
+          "Now let's catch him off-guard.": {},
+        },
       },
       "9": {
         "1": {
@@ -3320,15 +3328,15 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "Who's Masa?": {},
-          "Will Karou be OK?": {}
+          "Will Karou be OK?": {},
         },
         "3": {
           "We should hurry.": {},
-          "Let's close up shop.": {}
+          "Let's close up shop.": {},
         },
         "4": {
           "What's your goal here, Masa?": {},
-          "Cut the bullshit.": {}
+          "Cut the bullshit.": {},
         },
         "5": {
           "Tell him the truth.": {
@@ -3356,8 +3364,8 @@ const Confidants: ConfidantList = {
           "Gecko bonds go beyond blood.": {
             points: 2
           },
-          "Why not newts?": {}
-        }
+          "Why not newts?": {},
+        },
       },
       "7.5": {
         "1": {
@@ -3367,7 +3375,7 @@ const Confidants: ConfidantList = {
           "I did it all for Iwai.": {
             points: 3
           },
-          "Actually, it's been fun.": {}
+          "Actually, it's been fun.": {},
         },
         "2": {
           "I will.": {
@@ -3376,11 +3384,16 @@ const Confidants: ConfidantList = {
           "I want to help you.": {
             points: 2
           },
-          "I can't.": {}
+          "I can't.": {},
         },
         "3": {
           "What's his full name?": {},
-          "Tell me his name.": {}
+          "Tell me his name.": {},
+        },
+        meta: {
+          requirements: {
+            courage: "max",
+          },
         },
         meta: {
           requirements: {
@@ -3396,11 +3409,11 @@ const Confidants: ConfidantList = {
           "Kaoru won't lose.": {
             points: 3
           },
-          "Iwai's kind of slow.": {}
+          "Iwai's kind of slow.": {},
         },
         "2": {
           "I couldn't leave him.": {},
-          "It was for the special menu.": {}
+          "It was for the special menu.": {},
         },
         "3": {
           "It's a coincidence.": {},
@@ -3463,11 +3476,11 @@ const Confidants: ConfidantList = {
           "Want me to help?": {
             points: 2
           },
-          "I don't know.": {}
+          "I don't know.": {},
         },
         "3": {
           "Sounds good to me.": {},
-          "Can you tell me again?": {}
+          "Can you tell me again?": {},
         },
         meta: {
           requirements: {
@@ -3479,8 +3492,8 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "I'm not sure.": {},
-          "Why not ask him directly?": {}
-        }
+          "Why not ask him directly?": {},
+        },
       },
       "3": {
         "1": {
@@ -3497,7 +3510,7 @@ const Confidants: ConfidantList = {
           "You're the one who appeared.": {
             points: 2
           },
-          "You need to be more careful.": {}
+          "You need to be more careful.": {},
         },
         followup: {
           "It'll only get tougher.": {},
@@ -3515,11 +3528,11 @@ const Confidants: ConfidantList = {
           "Let's do this together.": {
             points: 3
           },
-          "If you want.": {}
+          "If you want.": {},
         },
         "2": {
           "No, you're talented.": {},
-          "I bet they were just surprised.": {}
+          "I bet they were just surprised.": {},
         },
         "3": {
           "Not at all.": {
@@ -3545,7 +3558,7 @@ const Confidants: ConfidantList = {
       "5": {
         "1": {
           "He's in my class.": {},
-          "Friend might be a bit much.": {}
+          "Friend might be a bit much.": {},
         },
         "2": {
           "I think you're right.": {
@@ -3570,8 +3583,8 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "That's nothing special.": {},
-          "Ding! Level up!": {}
-        }
+          "Ding! Level up!": {},
+        },
       },
       "6": {
         "1": {
@@ -3581,26 +3594,26 @@ const Confidants: ConfidantList = {
           "That must have been a shock.": {
             points: 3
           },
-          "How did you react?": {}
+          "How did you react?": {},
         },
         "2": {
           "You didn't know any better.": {
             points: 2
           },
           "Did you apologize to her?": {},
-          "Sounds like it was her fault.": {}
+          "Sounds like it was her fault.": {},
         },
         "3": {
           "Understood.": {},
-          "Someone's pushy today.": {}
+          "Someone's pushy today.": {},
         },
         followup: {
           "Are you running away again?": {
             points: 2
           },
           "Let's calm down first.": {},
-          "I'm right here with you.": {}
-        }
+          "I'm right here with you.": {},
+        },
       },
       "7": {
         "1": {
@@ -3610,7 +3623,7 @@ const Confidants: ConfidantList = {
           "We have to put a stop to this.": {
             points: 2
           },
-          "Strange... how?": {}
+          "Strange... how?": {},
         },
         "2": {
           "I'll do it, for you.": {
@@ -3643,11 +3656,11 @@ const Confidants: ConfidantList = {
           "You're making me blush...": {
             points: 2
           },
-          "Do I get a reward?": {}
+          "Do I get a reward?": {},
         },
         "3": {
           "Fine by me.": {},
-          "That's all?": {}
+          "That's all?": {},
         },
         followup: {
           "Congrats.": {
@@ -3684,7 +3697,7 @@ const Confidants: ConfidantList = {
           "No way.": {
             points: 2
           },
-          "You're giving up?": {}
+          "You're giving up?": {},
         },
         "4": {
           "Because we're teammates.": {
@@ -3697,7 +3710,7 @@ const Confidants: ConfidantList = {
         "5": {
           "I would like that / If that's OK with you.": {},
           "Um, Hello? / Is something wrong?": {},
-          "Earth to Futaba? / Are you still alive?": {}
+          "Earth to Futaba? / Are you still alive?": {},
         },
         followup: {
           "Instant yakisoba.": {},
@@ -3711,21 +3724,21 @@ const Confidants: ConfidantList = {
         "1": {
           "What are you talking about?": {},
           "Don't worry about it.": {},
-          "...Pardoned?": {}
+          "...Pardoned?": {},
         },
         "2": {
           "Mission complete.": {},
           "Nice job, Futaba.": {},
-          "You did great.": {}
+          "You did great.": {},
         },
         "3": {
           "I know.": {},
           "I don't mind.": {},
-          "I like being close.": {}
+          "I like being close.": {},
         },
         "4": {
           "What's wrong.": {},
-          "Come closer.": {}
+          "Come closer.": {},
         },
         "5": {
           "Take your time.": {
@@ -3749,11 +3762,11 @@ const Confidants: ConfidantList = {
         "7": {
           "I honor my promises.": {},
           "Just keep it cheap.": {},
-          "You remember that?": {}
+          "You remember that?": {},
         },
         "8": {
           "I'm counting on you.": {},
-          "That's a lot of pressure.": {}
+          "That's a lot of pressure.": {},
         },
         "9": {
           "You already have that right.": {
@@ -3816,28 +3829,28 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Hitting on girls.": {},
-          "No idea.": {}
+          "No idea.": {},
         },
         "2": {
           "Who was he?": {},
           "That guy seemed suspicious.": {
             points: 2
           },
-          "Who's the “her” he mentioned?": {}
+          "Who's the “her” he mentioned?": {},
         },
         "3": {
           "I want the ladies to love me.": {
             points: 2
           },
-          "I don't care about that stuff.": {}
+          "I don't care about that stuff.": {},
         },
         followup: {
           "Got it.": {
             points: 2
           },
           "Give me a break.": {},
-          "Why'd you call my cell?": {}
-        }
+          "Why'd you call my cell?": {},
+        },
       },
       "3": {
         "1": {
@@ -3845,14 +3858,14 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Coarse.": {},
-          "Anything goes.": {}
+          "Anything goes.": {},
         },
         "2": {
           "Is it a date?": {},
           "Is it trouble??": {
             points: 2
           },
-          "You don't want my help anymore?": {}
+          "You don't want my help anymore?": {},
         },
         followup: {
           "I'm ready to work.": {
@@ -3870,22 +3883,22 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "That sounds tough...": {},
-          "It all tastes the same to me.": {}
+          "It all tastes the same to me.": {},
         },
         "2": {
           "Run for help": {},
           "Call Sojiro's phone": {
             points: 3
           },
-          "Kick the man out": {}
+          "Kick the man out": {},
         },
         followup: {
           "Understood.": {
             points: 2
           },
           "I'm kind of nervous...": {},
-          "I'll kick him out.": {}
-        }
+          "I'll kick him out.": {},
+        },
       },
       "5": {
         "1": {
@@ -3904,14 +3917,14 @@ const Confidants: ConfidantList = {
           "She wasn't normal, huh?": {
             points: 3
           },
-          "So that's why you're a bachelor?": {}
+          "So that's why you're a bachelor?": {},
         },
         "3": {
           "It really paid off in the end.": {
             points: 2
           },
           "Almost brings a tear to my eye.": {},
-          "So much history...": {}
+          "So much history...": {},
         },
         meta: {
           requirements: {
@@ -3923,8 +3936,8 @@ const Confidants: ConfidantList = {
           "She needs a balanced diet.": {
             points: 2
           },
-          "There's always instant noodles.": {}
-        }
+          "There's always instant noodles.": {},
+        },
       },
       "6": {
         "1": {
@@ -3947,7 +3960,7 @@ const Confidants: ConfidantList = {
           "Saving Futaba was no mistake.": {
             points: 2
           },
-          "Just cut your ties with him.": {}
+          "Just cut your ties with him.": {},
         },
         followup: {
           "Is she okay?": {},
@@ -3963,17 +3976,17 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "That's not true.": {},
-          "They're still delicious.": {}
+          "They're still delicious.": {},
         },
         "2": {
           "Are you alright?": {},
           "Have you calmed down?": {},
-          "Do you want to talk?": {}
+          "Do you want to talk?": {},
         },
         "3": {
           "Let's talk to him.": {},
           "You should tell him that.": {},
-          "You guys are one awkward duo.": {}
+          "You guys are one awkward duo.": {},
         },
         meta: {
           requirements: {
@@ -3996,15 +4009,15 @@ const Confidants: ConfidantList = {
           "Something with curry.": {
             points: 3
           },
-          "I can't decide!": {}
+          "I can't decide!": {},
         },
         "2": {
           "I didn't do anything wrong.": {},
           "I was just protecting Futaba.": {
             points: 3
           },
-          "Sorry.": {}
-        }
+          "Sorry.": {},
+        },
       },
       "9": {
         "1": {
@@ -4040,7 +4053,7 @@ const Confidants: ConfidantList = {
         "1": {
           "For what?": {},
           "Mass?": {},
-          "I'm not interested.": {}
+          "I'm not interested.": {},
         },
         "2": {
           "Good for you.": {
@@ -4095,11 +4108,11 @@ const Confidants: ConfidantList = {
           "You always seem so busy.": {
             points: 2
           },
-          "Do you have no friends?": {}
+          "Do you have no friends?": {},
         },
         "2": {
           "Is that your win?": {},
-          "Not bad.": {}
+          "Not bad.": {},
         },
         "3": {
           "Shoot very carefully.": {
@@ -4111,7 +4124,7 @@ const Confidants: ConfidantList = {
         },
         "4": {
           "You used your right hand.": {},
-          "...Aren't you left-handed?": {}
+          "...Aren't you left-handed?": {},
         },
         "5": {
           "Maybe i'll be a detective.": {
@@ -4135,7 +4148,7 @@ const Confidants: ConfidantList = {
       "3": {
         "1": {
           "Got a sweet tooth, huh?": {},
-          "Come here often?": {}
+          "Come here often?": {},
         },
         "2": {
           "Should've figured.": {
@@ -4144,20 +4157,20 @@ const Confidants: ConfidantList = {
           "Your life must be so hard.": {
             points: 2
           },
-          "I can shoo them away...": {}
+          "I can shoo them away...": {},
         },
         "3": {
           "You've done nothing wrong.": {},
-          "Why the rush?": {}
+          "Why the rush?": {},
         },
         "4": {
           "How about we find out?": {},
-          "Come here a sec.": {}
+          "Come here a sec.": {},
         },
         "5": {
           "You looked great.": {},
           "It was a necessary evil.": {},
-          "I should've taken a picture.": {}
+          "I should've taken a picture.": {},
         },
         meta: {
           requirements: {
@@ -4169,13 +4182,13 @@ const Confidants: ConfidantList = {
           "Wasn't it fun?": {
             points: 2
           },
-          "I can always dress you up again.": {}
-        }
+          "I can always dress you up again.": {},
+        },
       },
       "4": {
         "1": {
           "What kind of place is this?": {},
-          "This looks shady...": {}
+          "This looks shady...": {},
         },
         "2": {
           "Do they have coffee?": {
@@ -4193,18 +4206,18 @@ const Confidants: ConfidantList = {
           "Anything's fine by me.": {
             points: 2
           },
-          "An ice-cold beer for me.": {}
+          "An ice-cold beer for me.": {},
         },
         "4": {
           "It's a great place.": {
             points: 2
           },
-          "I feel a bit nervous.": {}
+          "I feel a bit nervous.": {},
         },
         "5": {
           "A run-down cafe.": {},
           "A shop with great coffee.": {},
-          "I live there, actually.": {}
+          "I live there, actually.": {},
         },
         "6": {
           "Pretty frequently.": {
@@ -4222,20 +4235,20 @@ const Confidants: ConfidantList = {
           "I kinda get it.": {
             points: 2
           },
-          "You really are having fun.": {}
-        }
+          "You really are having fun.": {},
+        },
       },
       "5": {
         "1": {
           "All the time.": {},
           "I'm not great at them.": {},
-          "Have you played any?": {}
+          "Have you played any?": {},
         },
         "2": {
           "Are you used to gunplay?": {
             points: 2
           },
-          "You took that seriously, huh.": {}
+          "You took that seriously, huh.": {},
         },
         "3": {
           "You wanted to be a hero?": {
@@ -4244,12 +4257,12 @@ const Confidants: ConfidantList = {
           "Very interesting.": {
             points: 2
           },
-          "Hard to imagine.": {}
+          "Hard to imagine.": {},
         },
         "4": {
           "Sticking to your justice.": {},
           "Doing what people want.": {},
-          "Neither, really.": {}
+          "Neither, really.": {},
         },
         followup: {
           "You did fine.": {
@@ -4335,11 +4348,11 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "The psychotic breakdowns.": {},
-          "What're you getting at?": {}
+          "What're you getting at?": {},
         },
         "3": {
           "I've made up my mind.": {},
-          "I won't miss my shot.": {}
+          "I won't miss my shot.": {},
         },
         "4": {
           "It's thanks to you.": {
@@ -4351,12 +4364,12 @@ const Confidants: ConfidantList = {
         },
         "5": {
           "But we're teammates now.": {},
-          "Wnat to join us?": {}
+          "Wnat to join us?": {},
         },
         "6": {
           "I'll think about it.": {},
           "I'm not doing that.": {},
-          "You're my rival.": {}
+          "You're my rival.": {},
         },
         meta: {
           requirements: {
@@ -4374,32 +4387,32 @@ const Confidants: ConfidantList = {
       "8": {
         "1": {
           "What'd you want to discuss?": {},
-          "Why are we in Mementos?": {}
+          "Why are we in Mementos?": {},
         },
         "2": {
           "I thought you meant in pool.": {},
           "You want to fight?": {},
-          "But why, though?": {}
+          "But why, though?": {},
         },
         "3": {
           "All right.": {},
-          "Let's do this.": {}
+          "Let's do this.": {},
         },
         "4": {
           "Are you satisfied?": {},
           "Was that all you got?": {},
-          "Do you want to keep going?": {}
+          "Do you want to keep going?": {},
         },
         "5": {
           "I'd say the same for you.": {},
-          "The feeling mutual.": {}
+          "The feeling mutual.": {},
         },
         "6": {
           "I definitely wouldn't lose.": {
             points: 3
           },
           "I don't know.": {},
-          "Probably.": {}
+          "Probably.": {},
         },
         "7": {
           "Same here.": {},
@@ -4409,8 +4422,8 @@ const Confidants: ConfidantList = {
         },
         "8": {
           "I accept.": {},
-          "Let me think about it.": {}
-        }
+          "Let me think about it.": {},
+        },
       },
       "9": {
         meta: {
@@ -4525,22 +4538,22 @@ const Confidants: ConfidantList = {
       "3": {
         "1": {
           "How's that?": {},
-          "You're amazing.": {}
+          "You're amazing.": {},
         },
         "2": {
           "What kind of stuff...?": {},
           "That's your training...?": {},
-          "I don't get it.": {}
+          "I don't get it.": {},
         },
         "3": {
           "You're stupid.": {},
           "You're an airhead.": {},
-          "You're... unique.": {}
+          "You're... unique.": {},
         },
         "4": {
           "You're a hard worker.": {},
           "That response was annoying.": {},
-          "Can we stop yet?": {}
+          "Can we stop yet?": {},
         },
         "5": {
           "I like you.": {
@@ -4556,11 +4569,11 @@ const Confidants: ConfidantList = {
         "6": {
           "Listen to me.": {},
           "This won't help your heart.": {},
-          "You're a genius...": {}
+          "You're a genius...": {},
         },
         "7": {
           "You're right.": {},
-          "You finally get it.": {}
+          "You finally get it.": {},
         },
         "8": {
           "That's odd.": {
@@ -4581,8 +4594,8 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "You're so self-conscious.": {},
-          "Was she a child model?": {}
-        }
+          "Was she a child model?": {},
+        },
       },
       "4": {
         "1": {
@@ -4601,7 +4614,7 @@ const Confidants: ConfidantList = {
           "That's hilarious.": {
             points: 3
           },
-          "Was she right?": {}
+          "Was she right?": {},
         },
         "3": {
           "Tell me.": {
@@ -4610,7 +4623,7 @@ const Confidants: ConfidantList = {
           "I'm afraid to know.": {
             points: 2
           },
-          "...Who?": {}
+          "...Who?": {},
         },
         "4": {
           "Good idea.": {
@@ -4654,16 +4667,16 @@ const Confidants: ConfidantList = {
           "It had grace.": {
             points: 2
           },
-          "She'd be a great Phantom Thief.": {}
+          "She'd be a great Phantom Thief.": {},
         },
         "4": {
           "So how do you do it?": {},
-          "Tell me more.": {}
+          "Tell me more.": {},
         },
         "5": {
           "I figured that much.": {},
-          "I mean, that's why it's “fake.”": {}
-        }
+          "I mean, that's why it's “fake.”": {},
+        },
       },
       "6": {
         "1": {
@@ -4678,11 +4691,11 @@ const Confidants: ConfidantList = {
         "2": {
           "How so?": {},
           "Was she working hard?": {},
-          "Was she in pain?": {}
+          "Was she in pain?": {},
         },
         "3": {
           "You're not weak.": {},
-          "It's because you're kind.": {}
+          "It's because you're kind.": {},
         },
         "4": {
           "Comfort her.": {
@@ -4702,8 +4715,8 @@ const Confidants: ConfidantList = {
           "I'll cheer you on.": {
             points: 2
           },
-          "You gonna be okay?": {}
-        }
+          "You gonna be okay?": {},
+        },
       },
       "7": {
         "1": {
@@ -4714,26 +4727,26 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "So she could show you up.": {},
-          "Because you're a natural beauty.": {}
+          "Because you're a natural beauty.": {},
         },
         "3": {
           "Cheer up.": {},
-          "Please don't cry.": {}
+          "Please don't cry.": {},
         },
         "4": {
           "You already are one.": {},
           "Go get ‘em, tiger.": {
             points: 2
           },
-          "What about your action movies...?": {}
+          "What about your action movies...?": {},
         },
         followup: {
           "You got this.": {
             points: 2
           },
           "Don't strain yourself.": {},
-          "Trying to be like Mika?": {}
-        }
+          "Trying to be like Mika?": {},
+        },
       },
       "8": {
         "1": {
@@ -4758,7 +4771,7 @@ const Confidants: ConfidantList = {
         },
         "3": {
           "Good advice.": {},
-          "You're so dumb, Ryuji...": {}
+          "You're so dumb, Ryuji...": {},
         },
         "4": {
           "She'll be happy to hear that.": {
@@ -4782,11 +4795,11 @@ const Confidants: ConfidantList = {
         "1": {
           "It's dangerous up here.": {},
           "Step away from the ledge.": {},
-          "Why did you want to come here?": {}
+          "Why did you want to come here?": {},
         },
         "2": {
           "And?": {},
-          "She's gone, isn't she?": {}
+          "She's gone, isn't she?": {},
         },
         "3": {
           "Hang in there.": {
@@ -4806,7 +4819,7 @@ const Confidants: ConfidantList = {
         },
         "5": {
           "You said “I love you.”": {},
-          "I didn't hear you.": {}
+          "I didn't hear you.": {},
         },
         followup: {
           "Of course.": {
@@ -4815,8 +4828,8 @@ const Confidants: ConfidantList = {
           "I'm yours forever.": {
             points: 2
           },
-          "That's up to you.": {}
-        }
+          "That's up to you.": {},
+        },
       },
       max: {
         "1": {
@@ -4843,7 +4856,7 @@ const Confidants: ConfidantList = {
         },
         "3": {
           "What's wrong?": {},
-          "It's just the two of us.": {}
+          "It's just the two of us.": {},
         },
         "4": {
           "Of course.": {
@@ -4855,15 +4868,18 @@ const Confidants: ConfidantList = {
         },
         "5": {
           "I will.": {},
-          "I already am.": {}
+          "I already am.": {},
         },
         "6": {
           "Of course.": {},
-          "I should be asking you that.": {}
+          "I should be asking you that.": {},
         },
         "7": {
           "Couples?": {},
-          "Just Once?": {}
+          "Just Once?": {},
+        },
+        meta: {
+          romance: true,
         },
         meta: {
           romance: true
@@ -4899,14 +4915,14 @@ const Confidants: ConfidantList = {
       "2": {
         "1": {
           "I don't understand.": {},
-          "...Phan-Site?": {}
+          "...Phan-Site?": {},
         },
         "2": {
           "You've done good, kid.": {
             points: 3
           },
           "That sounds pretty tough.": {},
-          "Is this really necessary?": {}
+          "Is this really necessary?": {},
         },
         "3": {
           "Uh, strategic... what?": {},
@@ -4922,8 +4938,8 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Calm down.": {},
-          "All-nighters can mess you up.": {}
-        }
+          "All-nighters can mess you up.": {},
+        },
       },
       "3": {
         "1": {
@@ -4949,7 +4965,7 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Don't overwork yourself.": {},
-          "I can't trust anyone anymore...": {}
+          "I can't trust anyone anymore...": {},
         },
         followup: {
           "Of course.": {
@@ -4978,12 +4994,12 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "That sounds like a scam.": {},
-          "Stop this at once.": {}
+          "Stop this at once.": {},
         },
         "3": {
           "You're right.": {},
           "Of course it would.": {},
-          "Maybe we can keep it.": {}
+          "Maybe we can keep it.": {},
         },
         followup: {
           "Yup.": {
@@ -5010,15 +5026,15 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Are you sure that's necessary?": {},
-          "Don't do anything stupid.": {}
+          "Don't do anything stupid.": {},
         },
         followup: {
           "All right.": {
             points: 2
           },
           "I expect great things.": {},
-          "... Did something happen.": {}
-        }
+          "... Did something happen.": {},
+        },
       },
       "6": {
         "1": {
@@ -5035,11 +5051,11 @@ const Confidants: ConfidantList = {
           "Rumors are wrong all the time...": {
             points: 2
           },
-          "It's none of your business.": {}
+          "It's none of your business.": {},
         },
         "3": {
           "Why?": {},
-          "I didn't ask for that.": {}
+          "I didn't ask for that.": {},
         },
         "4": {
           "Is that right...?": {},
@@ -5051,11 +5067,11 @@ const Confidants: ConfidantList = {
       "7": {
         "1": {
           "I don't wanna change his heart.": {},
-          "Let's cancel the request.": {}
+          "Let's cancel the request.": {},
         },
         "2": {
           "Stop worrying about fame.": {},
-          "You still care about fame?": {}
+          "You still care about fame?": {},
         },
         "3": {
           "I'm sure there is.": {
@@ -5084,7 +5100,7 @@ const Confidants: ConfidantList = {
           "You should run too.": {
             points: 2
           },
-          "What are you going to do?": {}
+          "What are you going to do?": {},
         },
         "2": {
           "You're just gonna take that?": {
@@ -5130,25 +5146,25 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "Something like that.": {},
-          "Exactly.": {}
+          "Exactly.": {},
         },
         "3": {
           "Don't use our real names.": {},
           "This came out of nowhere.": {},
-          "I can't wait to watch it.": {}
+          "I can't wait to watch it.": {},
         },
         "4": {
           "Meh.": {},
           "What about a parfait instead?": {},
-          "I'm feeling steak, actually.": {}
+          "I'm feeling steak, actually.": {},
         },
         followup: {
           "The sparkle in your eye.": {
             points: 2
           },
           ".....": {},
-          "Your hair?": {}
-        }
+          "Your hair?": {},
+        },
       },
       "6.5": {
         "1": {
@@ -5158,7 +5174,7 @@ const Confidants: ConfidantList = {
           "You're so reliable.": {
             points: 3
           },
-          "Chill out, dude.": {}
+          "Chill out, dude.": {},
         },
         "2": {
           "Sounds pretty twisted.": {
@@ -5172,30 +5188,30 @@ const Confidants: ConfidantList = {
         "3": {
           "Fun...?": {},
           "This isn't like you.": {},
-          "You're worrying me.": {}
+          "You're worrying me.": {},
         },
         "4": {
           "We very well might.": {},
-          "Are you feeling guilty?": {}
+          "Are you feeling guilty?": {},
         },
         "5": {
           "Let's go.": {},
-          "This is the only way...": {}
+          "This is the only way...": {},
         },
         "6": {
           "You're riding our coattails.": {},
-          "Would that really satisfy you?": {}
+          "Would that really satisfy you?": {},
         },
         "7": {
           "Do it yourself.": {},
           "We're leaving.": {},
-          "There's no need.": {}
-        }
+          "There's no need.": {},
+        },
       },
       max: {
         "1": {
           "Did you find your answer?": {},
-          "Were you scared stiff?": {}
+          "Were you scared stiff?": {},
         },
         "2": {
           "That was courageous.": {
@@ -5208,15 +5224,15 @@ const Confidants: ConfidantList = {
         "3": {
           "I didn't do anything.": {},
           "Nobody stole your heart.": {},
-          "You changed yourself.": {}
+          "You changed yourself.": {},
         },
         "4": {
           "I'm sure you will.": {},
           "Make it a bestseller.": {},
-          "You have to write it first.": {}
-        }
-      }
-    }
+          "You have to write it first.": {},
+        },
+      },
+    },
   },
   priestess: {
     character: "Makoto Niijima",
@@ -5283,7 +5299,7 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Have you ever been here?": {},
-          "Stay close to me.": {}
+          "Stay close to me.": {},
         },
         "2": {
           "You should have known better.": {
@@ -5292,19 +5308,19 @@ const Confidants: ConfidantList = {
           "That was dangerous.": {
             points: 3
           },
-          "You get flustered easily, huh?": {}
+          "You get flustered easily, huh?": {},
         },
         "3": {
           "Why is it called a salon?": {},
-          "What kind of place is that?": {}
+          "What kind of place is that?": {},
         },
         followup: {
           "Couldn't agree more.": {
             points: 2
           },
           "He just wouldn't give up.": {},
-          "Let's actually go in next time.": {}
-        }
+          "Let's actually go in next time.": {},
+        },
       },
       "3": {
         "1": {
@@ -5312,7 +5328,7 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "So what if we were together?": {},
-          "It's none of your business.": {}
+          "It's none of your business.": {},
         },
         "2": {
           "Don't let it get to you.": {
@@ -5321,15 +5337,15 @@ const Confidants: ConfidantList = {
           "You can change.": {
             points: 3
           },
-          "Beep boop.": {}
+          "Beep boop.": {},
         },
         followup: {
           "Sounds like you two get along.": {
             points: 2
           },
           "Buchimaru-kun?": {},
-          "Okay, calm down.": {}
-        }
+          "Okay, calm down.": {},
+        },
       },
       "4": {
         "1": {
@@ -5337,16 +5353,16 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Is Thieves work distracting you?": {},
-          "I'm sure you did better than me.": {}
+          "I'm sure you did better than me.": {},
         },
         "2": {
           "Eiko?": {},
-          "...Who?": {}
+          "...Who?": {},
         },
         "3": {
           "Don't you have goals?": {},
           "What about college?": {},
-          "What do you mean?": {}
+          "What do you mean?": {},
         },
         "4": {
           "Why do you use it?": {
@@ -5355,7 +5371,7 @@ const Confidants: ConfidantList = {
           "That's adorable.": {
             points: 2
           },
-          "You're not very ladylike...": {}
+          "You're not very ladylike...": {},
         },
         "5": {
           "Do you still want to pursue it?": {},
@@ -5407,12 +5423,12 @@ const Confidants: ConfidantList = {
         "2": {
           "Don't be so pushy.": {},
           "Back off.": {},
-          "Here, have my number instead.": {}
+          "Here, have my number instead.": {},
         },
         "3": {
           "No, you're being considerate.": {},
           "You worry too much.": {},
-          "Probably a little.": {}
+          "Probably a little.": {},
         },
         meta: {
           requirements: {
@@ -5424,22 +5440,22 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "You're allowed to ignore him.": {},
-          "Fire the same thing back.": {}
-        }
+          "Fire the same thing back.": {},
+        },
       },
       "7": {
         "1": {
           "Do you think he likes you?": {},
-          "Does Eiko know about this?": {}
+          "Does Eiko know about this?": {},
         },
         "2": {
           "Probably a little.": {},
           "You watch too many soap operas.": {},
-          "He's definitely suspicious.": {}
+          "He's definitely suspicious.": {},
         },
         "3": {
           "Who was their leader?": {},
-          "What gang was it?": {}
+          "What gang was it?": {},
         },
         "4": {
           "That's a horrible story.": {
@@ -5495,7 +5511,7 @@ const Confidants: ConfidantList = {
           "That's how he ropes you in.": {
             points: 2
           },
-          "I'm not sure.": {}
+          "I'm not sure.": {},
         },
         "2": {
           "Absolutely.": {
@@ -5534,7 +5550,7 @@ const Confidants: ConfidantList = {
           "That was the right move.": {
             points: 2
           },
-          "You really smacked her.": {}
+          "You really smacked her.": {},
         },
         "4": {
           "I'm a regular here.": {
@@ -5561,7 +5577,7 @@ const Confidants: ConfidantList = {
             points: 3,
             romance: true
           },
-          "That's not what I meant.": {}
+          "That's not what I meant.": {},
         },
         followup: {
           "I'd do anything for you.": {
@@ -5579,21 +5595,21 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Your slap worked wonders.": {},
-          "I'm so relieved.": {}
+          "I'm so relieved.": {},
         },
         "2": {
           "Are you stressing over exams?": {
             points: 2
           },
           "Back to studying?": {},
-          "For your sister?": {}
+          "For your sister?": {},
         },
         "3": {
           "Police commissioner?": {},
           "That sounds difficult.": {
             points: 2
           },
-          "Why did you choose that?": {}
+          "Why did you choose that?": {},
         },
         "4": {
           "What an admirable goal.": {
@@ -5615,7 +5631,10 @@ const Confidants: ConfidantList = {
         },
         "6": {
           "What's wrong?": {},
-          "Do you want to study?": {}
+          "Do you want to study?": {},
+        },
+        meta: {
+          romance: true,
         },
         meta: {
           romance: true
@@ -5676,11 +5695,11 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "I like that attitude change.": {},
-          "It's a bit scary.": {}
+          "It's a bit scary.": {},
         },
         "2": {
           "Have confidence in yourself.": {},
-          "Don't worry about them.": {}
+          "Don't worry about them.": {},
         },
         "3": {
           "When is it coming out?": {},
@@ -5696,22 +5715,22 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "No, I didn't.": {},
-          "That's quite the headline.": {}
+          "That's quite the headline.": {},
         },
         "2": {
           "You don't enjoy it?": {},
           "Having a difficult time?": {
             points: 2
           },
-          "You should just decline.": {}
+          "You should just decline.": {},
         },
         followup: {
           "Bring it on.": {
             points: 2
           },
           "Don't worry about it.": {},
-          "This is part of our deal too.": {}
-        }
+          "This is part of our deal too.": {},
+        },
       },
       "4": {
         "1": {
@@ -5728,7 +5747,7 @@ const Confidants: ConfidantList = {
           "They're cool.": {
             points: 2
           },
-          "Never heard of them.": {}
+          "Never heard of them.": {},
         },
         followup: {
           "I'd love to.": {
@@ -5746,22 +5765,22 @@ const Confidants: ConfidantList = {
           "She's scary.": {
             points: 2
           },
-          "Accomplish things?": {}
+          "Accomplish things?": {},
         },
         "2": {
           "You don't like the attention?": {},
           "You should stop then.": {
             points: 2
           },
-          "Have you told your mother?": {}
+          "Have you told your mother?": {},
         },
         followup: {
           "No worries.": {},
           "You've got a lot to deal with...": {
             points: 2
           },
-          "Why do you have to apologize?": {}
-        }
+          "Why do you have to apologize?": {},
+        },
       },
       "6": {
         "1": {
@@ -5769,7 +5788,7 @@ const Confidants: ConfidantList = {
           "Is that frustrating?": {
             points: 2
           },
-          "The media is scary.": {}
+          "The media is scary.": {},
         },
         "2": {
           "Do you still like shogi?": {
@@ -5785,8 +5804,8 @@ const Confidants: ConfidantList = {
           "You're imagining things.": {
             points: 2
           },
-          "Confess your sins, my child.": {}
-        }
+          "Confess your sins, my child.": {},
+        },
       },
       "7": {
         "1": {
@@ -5805,8 +5824,8 @@ const Confidants: ConfidantList = {
           "I believe in you.": {
             points: 3
           },
-          "Idols are cool too.": {}
-        }
+          "Idols are cool too.": {},
+        },
       },
       "8": {
         "1": {
@@ -5820,15 +5839,15 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "Lose what?": {},
-          "What're you talking about?": {}
+          "What're you talking about?": {},
         },
         followup: {
           "I support it.": {
             points: 2
           },
           "You should really rethink this.": {},
-          "It's certainly admirable.": {}
-        }
+          "It's certainly admirable.": {},
+        },
       },
       "9": {
         "1": {
@@ -5836,7 +5855,7 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "Do you feel confident?": {},
-          "You can do it.": {}
+          "You can do it.": {},
         },
         "2": {
           "It was a good effort.": {},
@@ -5857,7 +5876,7 @@ const Confidants: ConfidantList = {
           "I want us to date.": {
             romance: true
           },
-          "We'll be friends forever.": {}
+          "We'll be friends forever.": {},
         },
         followup: {
           "Anything for you.": {
@@ -5874,22 +5893,27 @@ const Confidants: ConfidantList = {
       "7.5": {
         "1": {
           "What do you mean?": {},
-          "I don't understand.": {}
+          "I don't understand.": {},
         },
         "2": {
           "That won't work.": {
             points: 2
           },
           "That's a great strategy.": {},
-          "Do you intend to lose?": {}
+          "Do you intend to lose?": {},
         },
         "3": {
           "Let's make her reconsider.": {},
-          "Let's do something about it.": {}
+          "Let's do something about it.": {},
         },
         "4": {
           "What's your mother's name?": {},
-          "Tell me her name.": {}
+          "Tell me her name.": {},
+        },
+        meta: {
+          requirements: {
+            knowledge: "max",
+          },
         },
         meta: {
           requirements: {
@@ -5911,20 +5935,23 @@ const Confidants: ConfidantList = {
         },
         "2": {
           "You can do it.": {},
-          "That's reassuring.": {}
+          "That's reassuring.": {},
         },
         "3": {
           "So you know.": {},
           "What do you mean?": {},
-          "We do.": {}
+          "We do.": {},
         },
         "4": {
           "Thank you.": {},
-          "That's reassuring.": {}
+          "That's reassuring.": {},
         },
         "5": {
           "What's wrong?": {},
-          "Are you nervous?": {}
+          "Are you nervous?": {},
+        },
+        meta: {
+          romance: true,
         },
         meta: {
           romance: true
@@ -5978,7 +6005,7 @@ const Confidants: ConfidantList = {
           "I want to improve my speech.": {
             points: 2
           },
-          "I'm not sure...": {}
+          "I'm not sure...": {},
         },
         "2": {
           "One with conviction.": {
@@ -5994,7 +6021,7 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "I knew that already.": {},
-          "What I want to accomplish?": {}
+          "What I want to accomplish?": {},
         },
         followup: {
           "It was helpful.": {
@@ -6009,7 +6036,7 @@ const Confidants: ConfidantList = {
       "3": {
         "1": {
           "Yes, Mr. Yoshida told me.": {},
-          "No, and I don't care.": {}
+          "No, and I don't care.": {},
         },
         "2": {
           "His message.": {
@@ -6018,7 +6045,7 @@ const Confidants: ConfidantList = {
           "No His speaking skills.": {
             points: 2
           },
-          "It's hard to say.": {}
+          "It's hard to say.": {},
         },
         followup: {
           "I will.": {},
@@ -6032,22 +6059,22 @@ const Confidants: ConfidantList = {
         "1": {
           "Stop interrupting him.": {},
           "You're annoying the audience.": {},
-          "Just shut up and listen.": {}
+          "Just shut up and listen.": {},
         },
         "2": {
           "Yep.": {},
-          "What do you think?": {}
+          "What do you think?": {},
         },
         "3": {
           "The ex-convict has a point.": {},
           "Listen to what he has to say.": {},
-          "So what if he's No-Good Tora?": {}
+          "So what if he's No-Good Tora?": {},
         },
         "4": {
           "I couldn't help myself.": {
             points: 2
           },
-          "I just spoke the truth.": {}
+          "I just spoke the truth.": {},
         },
         followup: {
           "I will.": {
@@ -6105,18 +6132,18 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "That's a sweet deal.": {},
-          "I wasn't paying attention.": {}
+          "I wasn't paying attention.": {},
         },
         "2": {
           "He's not No-Good Tora.": {},
           "Call him Mr. Yoshida.": {},
-          "He'll get elected this time.": {}
+          "He'll get elected this time.": {},
         },
         "3": {
           "That's not for you to decide.": {},
           "Maybe...": {},
-          "I still believe in him.": {}
-        }
+          "I still believe in him.": {},
+        },
       },
       "8": {
         "1": {
@@ -6131,12 +6158,12 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "Clear your name.": {},
-          "Get elected.": {}
+          "Get elected.": {},
         },
         "3": {
           "What good would that do?": {},
           "So what if you're right?": {},
-          "......": {}
+          "......": {},
         },
         followup: {
           "I'll never foget that.": {
@@ -6145,8 +6172,8 @@ const Confidants: ConfidantList = {
           "It's tougher than it seems.": {
             points: 2
           },
-          "......": {}
-        }
+          "......": {},
+        },
       },
       "9": {
         "1": {
@@ -6163,8 +6190,8 @@ const Confidants: ConfidantList = {
           "You had a change of heart.": {
             points: 2
           },
-          "......": {}
-        }
+          "......": {},
+        },
       },
       max: {
         "1": {
@@ -6229,23 +6256,23 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "I feel nothing.": {},
-          "I'll tell your boss.": {}
+          "I'll tell your boss.": {},
         },
         "2": {
           "I can't say I wasn't...": {},
           "Absolutely not!": {
             points: 2
           },
-          "What kind of weird things?": {}
+          "What kind of weird things?": {},
         },
         "3": {
           "You need money?": {},
-          "What's it for?": {}
+          "What's it for?": {},
         },
         "4": {
           "Are you scolding me?": {},
           "This is all for you.": {},
-          "I requested you.": {}
+          "I requested you.": {},
         },
         followup: {
           "You have the wrong number": {},
@@ -6263,44 +6290,44 @@ const Confidants: ConfidantList = {
           "Do some real cooking.": {
             points: 2
           },
-          "Can I have a different maid.": {}
+          "Can I have a different maid.": {},
         },
         "2": {
           "I was curious.": {},
           "So I could slack off in class.": {},
-          "I wanted to see you.": {}
+          "I wanted to see you.": {},
         },
         "3": {
           "Your sister's bills, right?": {},
           "I'll request you more often.": {
             points: 3
           },
-          "You're really blunt.": {}
+          "You're really blunt.": {},
         },
         "4": {
           "You have it rough.": {},
           "Are they expensive?": {},
-          "Don't overdo it.": {}
+          "Don't overdo it.": {},
         },
         followup: {
           "Thanks.": {
             points: 2
           },
           "I'll work hard at it.": {},
-          "You're not in character.": {}
-        }
+          "You're not in character.": {},
+        },
       },
       "4": {
         "1": {
           "That would be great.": {},
-          "What are you scheming?": {}
+          "What are you scheming?": {},
         },
         "2": {
           "How rude.": {
             points: 2
           },
           "No surprise there.": {},
-          "How old ARE you?": {}
+          "How old ARE you?": {},
         },
         "3": {
           "Yes, you do.": {
@@ -6314,8 +6341,8 @@ const Confidants: ConfidantList = {
         "4": {
           "I already knew that.": {},
           "Why did you lie to me?": {},
-          "You're a bad teacher.": {}
-        }
+          "You're a bad teacher.": {},
+        },
       },
       "5": {
         "1": {
@@ -6339,16 +6366,16 @@ const Confidants: ConfidantList = {
         "3": {
           "It's not your fault.": {},
           "It was bad luck.": {},
-          "It's no one's fault.": {}
+          "It's no one's fault.": {},
         },
         "4": {
           "You OK with that?": {},
-          "Guardians, huh...": {}
+          "Guardians, huh...": {},
         },
         "5": {
           "It's too late now.": {},
           "What about our deal?": {},
-          "I want see you again.": {}
+          "I want see you again.": {},
         },
         followup: {
           "Curry is all I eat.": {},
@@ -6364,7 +6391,7 @@ const Confidants: ConfidantList = {
           "Want to rest a bit?": {
             points: 2
           },
-          "Give me back my money.": {}
+          "Give me back my money.": {},
         },
         "2": {
           "Are you all right?": {
@@ -6379,7 +6406,7 @@ const Confidants: ConfidantList = {
         },
         "3": {
           "Are you OK?": {},
-          "Don't overdo it.": {}
+          "Don't overdo it.": {},
         },
         followup: {
           "I'll be fine.": {},
@@ -6409,8 +6436,8 @@ const Confidants: ConfidantList = {
         "3": {
           "That's the wrong choice.": {},
           "Isn't there another way?": {},
-          "Just rest for now.": {}
-        }
+          "Just rest for now.": {},
+        },
       },
       "8": {
         "1": {
@@ -6427,16 +6454,16 @@ const Confidants: ConfidantList = {
           "If that's what you decided.": {
             points: 3
           },
-          "I need my teacher.": {}
+          "I need my teacher.": {},
         },
         "3": {
           "Try to remember": {},
           "That's your answer.": {},
-          "Take a look at yourself.": {}
+          "Take a look at yourself.": {},
         },
         "4": {
           "Are you going to give up?": {},
-          "Mistakes can be fixed.": {}
+          "Mistakes can be fixed.": {},
         },
         "5": {
           "Be confident in your answer.": {
@@ -6475,7 +6502,7 @@ const Confidants: ConfidantList = {
             points: 3
           },
           "You may be right.": {},
-          "Aren't you old already...?": {}
+          "Aren't you old already...?": {},
         },
         "2": {
           "What a bummer.": {
@@ -6514,40 +6541,40 @@ const Confidants: ConfidantList = {
       "8.5": {
         "1": {
           "We're talking here.": {},
-          "You know it, lady.": {}
+          "You know it, lady.": {},
         },
         "2": {
           "You can't give up.": {},
-          "But you were so determined.": {}
+          "But you were so determined.": {},
         },
         "3": {
           "What are their names again?": {},
-          "I need their names.": {}
-        }
+          "I need their names.": {},
+        },
       },
       max: {
         "1": {
           "...Really?": {},
           "I see.": {},
-          "That's too bad...": {}
+          "That's too bad...": {},
         },
         "2": {
           "It doesn't matter.": {},
-          "That's the best part.": {}
+          "That's the best part.": {},
         },
         "3": {
           "We won't get caught.": {},
           "Don't worry about it.": {},
-          "You're so responsible.": {}
+          "You're so responsible.": {},
         },
         "4": {
           "What are you talking about?": {},
-          "When did you realize?": {}
+          "When did you realize?": {},
         },
         "5": {
           "You got me.": {},
           "You have no proof.": {},
-          "...So what if I am?": {}
+          "...So what if I am?": {},
         },
         "6": {
           "That sounds promising.": {
@@ -6629,14 +6656,14 @@ const Confidants: ConfidantList = {
           "Don't compare me to you.": {
             points: 3
           },
-          "Praise would be encouraging.": {}
+          "Praise would be encouraging.": {},
         },
         "2": {
           "Let's go.": {},
           "What a rude employee.": {
             points: 2
           },
-          "Something bothering you?": {}
+          "Something bothering you?": {},
         },
         "3": {
           "Are they strong?": {},
@@ -6667,32 +6694,32 @@ const Confidants: ConfidantList = {
         "1": {
           "Did something happen?": {},
           "Let's go eat.": {},
-          "Are you fasting?": {}
+          "Are you fasting?": {},
         },
         "2": {
           "OK.": {},
           "I'm not down with that.": {},
-          "Let me think about it.": {}
+          "Let me think about it.": {},
         },
         "3": {
           "Are they bullying you?": {},
           "Sounds like fun?": {},
-          "You shouldn't waste food.": {}
+          "You shouldn't waste food.": {},
         },
         "4": {
           "That's the spirit.": {
             points: 2
           },
           "Want to learn martial arts?": {},
-          "You really love your mom.": {}
+          "You really love your mom.": {},
         },
         followup: {
           "Sure.": {
             points: 2
           },
           "If our schedules line up.": {},
-          "Any food requests?": {}
-        }
+          "Any food requests?": {},
+        },
       },
       "4": {
         "1": {
@@ -6707,8 +6734,8 @@ const Confidants: ConfidantList = {
           "Get your revenge.": {
             points: 2
           },
-          "Pros are amazing, huh?": {}
-        }
+          "Pros are amazing, huh?": {},
+        },
       },
       "5": {
         "1": {
@@ -6725,7 +6752,7 @@ const Confidants: ConfidantList = {
           "I'm sure you can do it.": {
             points: 2
           },
-          "Don't get so worked up.": {}
+          "Don't get so worked up.": {},
         },
         "3": {
           "Are you going to give up?": {
@@ -6749,11 +6776,11 @@ const Confidants: ConfidantList = {
         "1": {
           "I can pay for myself.": {},
           "If you insist.": {},
-          "Do you have enough?": {}
+          "Do you have enough?": {},
         },
         "2": {
           "You should return the money.": {},
-          "You're acting like one.": {}
+          "You're acting like one.": {},
         },
         "3": {
           "That's good.": {
@@ -6768,35 +6795,35 @@ const Confidants: ConfidantList = {
           "Not at all.": {
             points: 3
           },
-          "I'm worried about you.": {}
+          "I'm worried about you.": {},
         },
         followup: {
           "Of course I won't.": {
             points: 2
           },
           "That's up to you.": {},
-          "I'm your big brother, right?": {}
-        }
+          "I'm your big brother, right?": {},
+        },
       },
       "7": {
         "1": {
           "I haven't done anything.": {},
           "Calm down.": {},
-          "Bad influence?": {}
+          "Bad influence?": {},
         },
         "2": {
           "Take it easy on him.": {},
-          "Think about his feelings.": {}
+          "Think about his feelings.": {},
         },
         "3": {
           "Bring it on, lady.": {},
           "I haven't done anything.": {},
-          "That wouldn't be good.": {}
+          "That wouldn't be good.": {},
         },
         "4": {
           "What's your mom's name?": {},
-          "Tell me about your mom.": {}
-        }
+          "Tell me about your mom.": {},
+        },
       },
       "8": {
         "1": {
@@ -6819,7 +6846,7 @@ const Confidants: ConfidantList = {
         },
         "3": {
           "Is that too much for you?": {},
-          "Way to step up.": {}
+          "Way to step up.": {},
         },
         "4": {
           "Let's save her.": {
@@ -6856,7 +6883,7 @@ const Confidants: ConfidantList = {
             points: 2
           },
           "He's too lazy to practice.": {},
-          "I wouldn't know...": {}
+          "I wouldn't know...": {},
         },
         followup: {
           "Your wish came true.": {
