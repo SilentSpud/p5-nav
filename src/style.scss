@@ -1,18 +1,16 @@
 html {
-  --bg-color: #121212; // #1d1d1d;
+  --bg-color: #121212;
   --p5-red: #dc3545;
   --headings: #dedede;
   --text: #e6e6e6;
   --table-heading: #dedede;
   --table-head-bg: #2a2a2a;
   --table-text: #e6e6e6;
-  --table-result-text: #e6e6e6;
-  --table-unconfirmed-text: #e6e6e6;
   --table-unconfirmed-bg: rgba(182, 76, 87, 0.705);
-  --table-border: #383838; //#dedede;
-  --table-bg: #121212; //#1d1d1d;
+  --table-border: #383838;
+  --table-bg: #121212;
   --hr-line: #2e2e2e;
-  --form-bg: #2e2e2e; //#121212;//#1d1d1d;
+  --form-bg: #2e2e2e;
   --form-border: #383838;
   --form-text: #e6e6e6;
 }
@@ -61,13 +59,11 @@ $td: '[role="cell"]';
     width: 99.5vw;
   }
   #{$thead} {
-    /* These styles are required for a scrollable body to align with the header properly */
     overflow-y: auto;
     overflow-x: hidden;
   }
 
   #{$tbody} {
-    /* These styles are required for a scrollable table body */
     overflow-y: scroll;
     overflow-x: hidden;
     height: 83vh;

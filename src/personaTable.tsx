@@ -1,12 +1,12 @@
 import React from "react";
-import { personaHeaders, Weaknesses } from "./PersonaClasses";
+import personaMap, { Weaknesses } from "../data/Personas"
+import { personaHeaders } from "./PersonaClasses";
 import prepareTable from "./tableMaker";
-import personaMap from './../data/Personas';
 import { Cell } from "react-table";
 
-const personaParser = (personaList) => React.useMemo(() => {
+const personaParser = () => React.useMemo(() => {
   const pList = [];
-  for (const persona of personaList) {
+  for (const persona of personaMap) {
     pList.push({
       lvl: persona.level,
       name: persona.name,
@@ -29,45 +29,31 @@ const personaParser = (personaList) => React.useMemo(() => {
     });
   }
   return pList;
-}, [personaList]);
+}, []);
 
 
 const cellParser = (cell: Cell) => {
-  let cellClass = "";
   switch (cell.column.parent.id) {
     case 'elements': {
-      cellClass = "elem";
       switch (cell.value) {
-        case Weaknesses.resist: {
-          return <div {...cell.getCellProps({ className: ("text-warning " + cellClass) })}>Res</div>
-        }
-        case Weaknesses.repel: {
-          return <div {...cell.getCellProps({ className: ("text-danger " + cellClass) })}>Rep</div>
-        }
-        case Weaknesses.weak: {
-          return <div {...cell.getCellProps({ className: ("text-success " + cellClass) })}>Weak</div>
-        }
-        case Weaknesses.none: {
-          return <div {...cell.getCellProps({ className: (cellClass) })}>&nbsp;</div>
-        }
-        case Weaknesses.absorb: {
-          return <div {...cell.getCellProps({ className: ("text-info " + cellClass) })}>Abs</div>
-        }
-        case Weaknesses.nullify: {
-          return <div {...cell.getCellProps({ className: ("text-light " + cellClass) })}>Null</div>
-        }
+        case Weaknesses.resist: return <div {...cell.getCellProps({ className: ("text-warning elem") })}>Res</div>;
+        case Weaknesses.repel: return <div {...cell.getCellProps({ className: ("text-danger elem") })}>Rep</div>;
+        case Weaknesses.weak: return <div {...cell.getCellProps({ className: ("text-success elem") })}>Weak</div>;
+        case Weaknesses.none: return <div {...cell.getCellProps({ className: ("elem") })}>&nbsp;</div>;
+        case Weaknesses.absorb: return <div {...cell.getCellProps({ className: ("text-info elem") })}>Abs</div>;
+        case Weaknesses.nullify: return <div {...cell.getCellProps({ className: ("text-light elem") })}>Null</div>;
       }
     }
     case 'stats': {
-      cellClass = "stat";
+      return <div {...cell.getCellProps({ className: "stats" })}>{cell.render("Cell")}</div>
     }
 
     default: {
-      return <div {...cell.getCellProps({ className: (cellClass) })}>{cell.render("Cell")}</div>
+      return <div {...cell.getCellProps()}>{cell.render("Cell")}</div>
     }
   }
 }
 const makeTable = () => {
-  return prepareTable(personaHeaders(), personaParser(personaMap), cellParser);
+  return prepareTable(personaHeaders(), personaParser(), cellParser);
 }
 export default makeTable;
