@@ -10,7 +10,9 @@ const personaParser = () => React.useMemo(() => {
     pList.push({
       lvl: persona.level,
       name: persona.name,
+      shadow: persona.shadow,
       arcana: persona.arcana,
+      personality: persona.personality,
       strength: persona.stats.strength,
       magic: persona.stats.magic,
       endurance: persona.stats.endurance,

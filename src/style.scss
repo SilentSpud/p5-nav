@@ -79,6 +79,10 @@ $td: '[role="cell"]';
   #{$td}.stat {
     font-family: "Fira Code", monospace;
   }
+  #{$td}:first-child {
+    text-align: center;
+    font-family: "Fira Code", monospace;
+  }
   #{$th} {
     user-select: none;
     font-weight: bold;

@@ -9,36 +9,38 @@ export const personaHeaders = () => React.useMemo(
       id: "title",
       className: "sticky",
       columns: [
-        { Header: "Level",  accessor: "lvl",    width: 50 },
-        { Header: "Name",   accessor: "name",   width: 200 },
-        { Header: "Arcana", accessor: "arcana", width: 100 }
+        { Header: "Lvl",  accessor: "lvl",    width: 30 },
+        { Header: "Name",   accessor: "name",   width: 150 },
+        { Header: "Shadow",   accessor: "shadow",   width: 150 },
+        { Header: "Arcana", accessor: "arcana", width: 70 },
+        { Header: "Personality", accessor: "personality", width: 70 }
       ]
     },
     {
       Header: "Stats",
       id: "stats",
       columns: [
-        { Header: "Strength",   accessor: "strength",   width: 65 },
+        { Header: "Strength",   accessor: "strength",   width: 60 },
         { Header: "Magic",      accessor: "magic",      width: 50 },
-        { Header: "Endurance",  accessor: "endurance",  width: 75 },
-        { Header: "Agility",    accessor: "agility",    width: 60 },
-        { Header: "Luck",       accessor: "luck",       width: 50 }
+        { Header: "Endurance",  accessor: "endurance",  width: 65 },
+        { Header: "Agility",    accessor: "agility",    width: 55 },
+        { Header: "Luck",       accessor: "luck",       width: 40 }
       ]
     },
     {
       Header: "Elements",
       id: "elements",
       columns: [
-        { Header: "Physical", accessor: "physical", sortType: sortElems, width: 70 },
+        { Header: "Physical", accessor: "physical", sortType: sortElems, width: 55 },
         { Header: "Gun",      accessor: "gun",      sortType: sortElems, width: 40 },
         { Header: "Fire",     accessor: "fire",     sortType: sortElems, width: 40 },
-        { Header: "Ice",      accessor: "ice",      sortType: sortElems, width: 50 },
-        { Header: "Electric", accessor: "electric", sortType: sortElems, width: 60 },
-        { Header: "Wind",     accessor: "wind",     sortType: sortElems, width: 50 },
-        { Header: "Psychic",  accessor: "psychic",  sortType: sortElems, width: 70 },
-        { Header: "Nuclear",  accessor: "nuclear",  sortType: sortElems, width: 70 },
-        { Header: "Bless",    accessor: "bless",    sortType: sortElems, width: 70 },
-        { Header: "Curse",    accessor: "curse",    sortType: sortElems, width: 70 }
+        { Header: "Ice",      accessor: "ice",      sortType: sortElems, width: 40 },
+        { Header: "Electric", accessor: "electric", sortType: sortElems, width: 55 },
+        { Header: "Wind",     accessor: "wind",     sortType: sortElems, width: 40 },
+        { Header: "Psychic",  accessor: "psychic",  sortType: sortElems, width: 50 },
+        { Header: "Nuclear",  accessor: "nuclear",  sortType: sortElems, width: 55 },
+        { Header: "Bless",    accessor: "bless",    sortType: sortElems, width: 45 },
+        { Header: "Curse",    accessor: "curse",    sortType: sortElems, width: 45 }
       ]
     }
   ],
