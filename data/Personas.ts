@@ -6,6 +6,24 @@ export enum Weaknesses {
   repel = "rp",
   absorb = "ab"
 }
+export enum DamageTypes {
+  phy = "physical",
+  gun = "gun",
+  fir = "fire",
+  ice = "ice",
+  ele = "electric",
+  wnd = "wind",
+  psy = "psychic",
+  nuc = "nuclear",
+  ble = "bless",
+  cur = "curse",
+  alm = "almighty",
+  ail = "ailment",
+  sup = "support",
+  pas = "passive",
+  hea = "healing",
+  tra = "trait"
+}
 export interface PersonaData {
   name: string;
   arcana: string;
