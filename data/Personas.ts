@@ -848,7 +848,7 @@ const personaMap: PersonaData[] = [
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)"
+    shadow: "Treasure Demon"
   },
   {
     name: "Orpheus F",
@@ -1386,7 +1386,7 @@ const personaMap: PersonaData[] = [
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)"
+    shadow: "Treasure Demon"
   },
   {
     name: "Makami",
@@ -2002,7 +2002,7 @@ const personaMap: PersonaData[] = [
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)"
+    shadow: "Treasure Demon"
   },
   {
     name: "Oni",
@@ -2040,7 +2040,7 @@ const personaMap: PersonaData[] = [
     },
     trait: "Retaliating Body",
     personality: "Upbeat",
-    shadow: "Chivalrous Guard/Chivalrous Fiend"
+    shadow: "Chivalrous Guard/Fiend"
   },
   {
     name: "Nue",
@@ -2576,7 +2576,7 @@ const personaMap: PersonaData[] = [
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)"
+    shadow: "Treasure Demon"
   },
   {
     name: "Kin-Ki",
@@ -3157,7 +3157,7 @@ const personaMap: PersonaData[] = [
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)"
+    shadow: "Treasure Demon"
   },
   {
     name: "Neko Shogun",
@@ -3619,7 +3619,7 @@ const personaMap: PersonaData[] = [
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)"
+    shadow: "Treasure Demon"
   },
   {
     name: "Arahabaki",
@@ -4085,7 +4085,7 @@ const personaMap: PersonaData[] = [
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)"
+    shadow: "Treasure Demon"
   },
   {
     name: "Hariti",
@@ -5235,7 +5235,7 @@ const personaMap: PersonaData[] = [
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)"
+    shadow: "Treasure Demon"
   },
   {
     name: "Seth",
@@ -6078,7 +6078,7 @@ const personaMap: PersonaData[] = [
     },
     trait: "Ultimate Vessel",
     personality: "None",
-    shadow: "(Treasure Demon)"
+    shadow: "Treasure Demon"
   },
   {
     name: "Moloch",
