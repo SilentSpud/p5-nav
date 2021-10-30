@@ -1,7 +1,7 @@
 import React from "react";
-import personaMap, { Weaknesses } from "../data/Personas"
+import personaMap, { Weaknesses } from "../../data/Personas"
 import { personaHeaders } from "./PersonaClasses";
-import prepareTable from "./tableMaker";
+import prepareTable from "../tableMaker";
 import { Cell } from "react-table";
 
 const personaParser = () => React.useMemo(() => {
@@ -55,7 +55,7 @@ const cellParser = (cell: Cell) => {
     }
   }
 }
-const makeTable = () => {
+const makeTable = (): JSX.Element => {
   return prepareTable(personaHeaders(), personaParser(), cellParser);
 }
 export default makeTable;

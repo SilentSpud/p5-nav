@@ -1,5 +1,5 @@
 import React from "react";
-import personaTable from "./personaTable";
+import personaTable from "./personas/personaTable";
 import './style.scss';
 import { Tab, Tabs } from "react-bootstrap";
 import ConfidantsInfo from "./ConfidantsInfo";

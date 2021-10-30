@@ -107,6 +107,11 @@ $td: '[role="cell"]';
   #{$td} {
     border-bottom: 1px solid var(--table-border);
   }
+
+  #{$tr}:hover #{$td} {
+    background-color: var(--form-border);
+    cursor: pointer;
+  }
 }
 
 .search {
