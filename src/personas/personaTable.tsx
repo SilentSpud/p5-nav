@@ -1,8 +1,9 @@
 import React from "react";
-import personaMap, { Weaknesses } from "../../data/Personas"
+import personaMap, { Weaknesses } from "../data/Personas"
 import { personaHeaders } from "./PersonaTableConfig";
 import prepareTable from "../tableMaker";
 import { Cell } from "react-table";
+import PersonaPopup from "./PersonaPopup";
 
 const personaParser = () => React.useMemo(() => {
   const pList = [];
@@ -55,7 +56,16 @@ const cellParser = (cell: Cell) => {
     }
   }
 }
+
+const showPopup = (evt) => {
+  const targetPersona = evt.currentTarget.querySelector("div[role=\"cell\"]:nth-child(2)").innerText ?? "";
+
+  console.log(targetPersona);
+}
+
+
 const makeTable = (): JSX.Element => {
-  return prepareTable(personaHeaders(), personaParser(), cellParser);
+  const columns = personaHeaders(), data = personaParser(), rowHandler = cellParser, clickHandler = showPopup;
+  return prepareTable({ columns, data, rowHandler, clickHandler });
 }
 export default makeTable;

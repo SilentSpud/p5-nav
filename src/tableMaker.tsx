@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
 const Icon = FontAwesomeIcon;
 
-const parseRow = (row: Row, parseFunction, i: number) => {
+const parseRow = (row: Row, parseFunction, i: number, clickHandler) => {
   return (
-    <div key={i} {...row.getRowProps()}>
+    <div key={i} {...row.getRowProps()} onClick={clickHandler}>
       {row.cells.map((cell) => parseFunction(cell))}
     </div>
   );
@@ -34,8 +34,8 @@ const searchForm = (setGlobalFilter: (filterValue) => void) => (
 );
 
 
-const prepareTable = (columnData, tableData, rowParser) => {
-  const sortId = columnData[0]?.columns[0]?.accessor ?? columnData[0]?.accessor ?? "";
+const prepareTable = ({ columns, data, rowHandler, clickHandler } ) => {
+  const sortId = columns[0]?.columns[0]?.accessor ?? columns[0]?.accessor ?? "";
   const {
     getTableProps,
     getTableBodyProps,
@@ -44,8 +44,8 @@ const prepareTable = (columnData, tableData, rowParser) => {
     setGlobalFilter,
     prepareRow
   } = useTable({
-    columns: columnData,
-    data: tableData,
+    columns: columns,
+    data: data,
     initialState: { sortBy: [{ id: sortId }] }
   }, useGlobalFilter, useSortBy, useFlexLayout);
   return <section {...getTableProps({ className: "table table-dark" })}>
@@ -55,7 +55,7 @@ const prepareTable = (columnData, tableData, rowParser) => {
     <main {...getTableBodyProps()}>
       {rows.map((row, i) => {
         prepareRow(row);
-        return parseRow(row, rowParser, i);
+        return parseRow(row, rowHandler, i, clickHandler);
       })}
     </main>
   </section>
