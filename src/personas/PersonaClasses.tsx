@@ -1,6 +1,6 @@
 import React from "react";
 import { Row } from "react-table";
-import { Weaknesses } from "../data/Personas"
+import { Weaknesses } from "../../data/Personas"
 
 export const personaHeaders = () => React.useMemo(
   () => [
