@@ -1,6 +1,6 @@
 import React from "react";
 import personaMap, { Weaknesses } from "../../data/Personas"
-import { personaHeaders } from "./PersonaClasses";
+import { personaHeaders } from "./PersonaTableConfig";
 import prepareTable from "../tableMaker";
 import { Cell } from "react-table";
 
