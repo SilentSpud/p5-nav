@@ -1,7 +1,7 @@
 import React from "react";
 import './style.scss';
-import NavRouter from "./Router";
+import Routes from "./route";
 
 export default function App(): JSX.Element {
-  return (<NavRouter/>);
+  return (<Routes />);
 }
