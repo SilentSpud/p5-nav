@@ -19,7 +19,7 @@ const NavSwitch = (params) => (
   </Switch>
 )
 
-const Routes = (params) => (
+export const Routes = (params) => (
   <Router {...params}>
     <Nav variant="tabs" className="bg-dark" navbar={true} justify={true}>
       <NavLink to="/personas">Personas</NavLink>
@@ -31,4 +31,3 @@ const Routes = (params) => (
     <NavSwitch />
   </Router>
 );
-export default Routes;
