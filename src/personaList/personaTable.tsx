@@ -1,13 +1,13 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import personaMap, { Weaknesses } from "../data/Personas"
-import { personaHeaders } from "./PersonaTableConfig";
+import { Personas, WeaknessLevels as Weaknesses } from "../data"
+import { personaHeaders } from "./personaTableConfig";
 import prepareTable from "../tableMaker";
 import { Cell, Row } from "react-table";
 
 const personaParser = () => React.useMemo(() => {
   const pList = [];
-  for (const persona of personaMap) {
+  for (const persona of Personas) {
     pList.push({
       lvl: persona.level,
       name: persona.name,
@@ -57,7 +57,7 @@ const cellParser = (cell: Cell) => {
   }
 }
 
-const makeTable = (): JSX.Element => {
+export const makeTable = (): JSX.Element => {
   const columns = personaHeaders(), data = personaParser();
   const history = useHistory();
   const clickHandler = (evt) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderGroup, Row, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
+import { HeaderGroup, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
 const Icon = FontAwesomeIcon;

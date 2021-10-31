@@ -1,18 +1,17 @@
 import React from "react";
 import { Row } from "react-table";
-import { Weaknesses } from "../data/Personas"
+import { WeaknessLevels as Weaknesses } from "../data"
 
 export const personaHeaders = () => React.useMemo(
   () => [
     {
       Header: "Persona List",
       id: "title",
-      className: "sticky",
       columns: [
         { Header: "Lvl",  accessor: "lvl",    width: 30 },
         { Header: "Name",   accessor: "name",   width: 150 },
-        { Header: "Shadow",   accessor: "shadow",   width: 150 },
         { Header: "Arcana", accessor: "arcana", width: 70 },
+        { Header: "Shadow",   accessor: "shadow",   width: 150 },
         { Header: "Personality", accessor: "personality", width: 70 }
       ]
     },
