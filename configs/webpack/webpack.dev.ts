@@ -19,7 +19,10 @@ const config: webpack.Configuration = webpackMerge(baseConfig, {
     port: 5000,
     static: paths.build,
     compress: true,
-    open: true
+    historyApiFallback: true,
+    client: {
+      progress: true,
+    },
   }
 });
 

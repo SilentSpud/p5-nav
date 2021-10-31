@@ -16,28 +16,6 @@ html {
 }
 @import "./darkly";
 
-// ----------- LINKS ----------- //
-a {
-  color: var(--p5-red);
-  font-weight: normal;
-}
-a:hover {
-  color: var(--p5-red);
-  font-weight: normal;
-}
-a:active {
-  color: var(--p5-red);
-  font-weight: normal;
-}
-a:focus {
-  color: var(--p5-red);
-  font-weight: bold;
-}
-a:visited {
-  color: var(--p5-red);
-  font-weight: normal;
-}
-
 // ----------- TABLES ----------- //
 $table: '[role="table"]';
 $thead: '[role="rowgroup"]:first-child';

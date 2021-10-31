@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
 import personaMap, { Weaknesses } from "../data/Personas"
 import { personaHeaders } from "./PersonaTableConfig";
 import prepareTable from "../tableMaker";
