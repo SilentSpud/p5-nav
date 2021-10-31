@@ -1,9 +1,9 @@
 import React from "react";
-import personaTable from "./personas/personaTable";
+import personaTable from "./personaList/personaTable";
 import './style.scss';
 import { Tab, Tabs } from "react-bootstrap";
-import ConfidantsInfo from "./ConfidantsInfo";
-import PersonaPopup from "./personas/PersonaPopup";
+import ConfidantsInfo from "./confidants/ConfidantsInfo";
+import PersonaPopup from "./personaList/PersonaPopup";
 
 export default function App(): JSX.Element {
   return (<Tabs defaultActiveKey="personas" className="mb-3">
