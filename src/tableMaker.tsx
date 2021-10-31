@@ -4,14 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
 const Icon = FontAwesomeIcon;
 
-const parseRow = (row: Row, parseFunction, i: number, clickHandler) => {
-  return (
-    <div key={i} {...row.getRowProps()} onClick={clickHandler}>
-      {row.cells.map((cell) => parseFunction(cell))}
-    </div>
-  );
-}
-
 const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue) => void) => {
   return headers.map((row, i) => (
     <div key={i} {...row.getHeaderGroupProps()}>
@@ -34,20 +26,9 @@ const searchForm = (setGlobalFilter: (filterValue) => void) => (
 );
 
 
-const prepareTable = ({ columns, data, rowHandler, clickHandler } ) => {
+const prepareTable = ({ columns, data, rowParser } ) => {
   const sortId = columns[0]?.columns[0]?.accessor ?? columns[0]?.accessor ?? "";
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    setGlobalFilter,
-    prepareRow
-  } = useTable({
-    columns: columns,
-    data: data,
-    initialState: { sortBy: [{ id: sortId }] }
-  }, useGlobalFilter, useSortBy, useFlexLayout);
+  const { getTableProps, getTableBodyProps, headerGroups, rows, setGlobalFilter, prepareRow } = useTable({ columns: columns, data: data, initialState: { sortBy: [{ id: sortId }] } }, useGlobalFilter, useSortBy, useFlexLayout);
   return <section {...getTableProps({ className: "table table-dark" })}>
     <header role="rowgroup">
       {renderHeader(headerGroups, setGlobalFilter)}
@@ -55,7 +36,7 @@ const prepareTable = ({ columns, data, rowHandler, clickHandler } ) => {
     <main {...getTableBodyProps()}>
       {rows.map((row, i) => {
         prepareRow(row);
-        return parseRow(row, rowHandler, i, clickHandler);
+        return rowParser(row, i);
       })}
     </main>
   </section>

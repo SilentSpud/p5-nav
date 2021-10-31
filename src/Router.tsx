@@ -21,37 +21,17 @@ const NavRouter = (params) => {
       </Navbar>
 
       <Switch>
-        <Route path="/personas">
-          {personaTable()}
-        </Route>
+        <Route path="/personas" component={personaTable} />
         <Route path="/persona/:id" />
-        <Route path="/skills">
-
-        </Route>
+        <Route path="/skills" />
         <Route path="/skill/:id" />
-        <Route path="/negotiations">
-
-        </Route>
+        <Route path="/negotiations" />
         <Route path="/negotiation/:id" />
-        <Route path="/confidants">
-
-        </Route>
+        <Route path="/confidants" />
         <Route path="/confidant/:id" />
-        <Route path="/questions">
-
-        </Route>
+        <Route path="/questions" />
       </Switch>
     </Router>
   );
 };
 export default NavRouter;
-
-/*<Tabs defaultActiveKey="personas" className="mb-3">
-    <Tab eventKey="personas" title="Personas">
-      {personaTable()}
-      <PersonaPopup></PersonaPopup>
-    </Tab>
-    <Tab eventKey="confidants" title="Confidants">
-      <ConfidantsInfo></ConfidantsInfo>
-    </Tab>
-  </Tabs>*/

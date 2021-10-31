@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams
-} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import personaMap, { Weaknesses } from "../data/Personas"
 import { personaHeaders } from "./PersonaTableConfig";
 import prepareTable from "../tableMaker";
-import { Cell } from "react-table";
-import PersonaPopup from "./PersonaPopup";
+import { Cell, Row } from "react-table";
 
 const personaParser = () => React.useMemo(() => {
   const pList = [];
@@ -64,15 +57,21 @@ const cellParser = (cell: Cell) => {
   }
 }
 
-const showPopup = (evt) => {
-  const targetPersona = evt.currentTarget.querySelector("div[role=\"cell\"]:nth-child(2)").innerText ?? "";
-
-  console.log(targetPersona);
-}
-
-
 const makeTable = (): JSX.Element => {
-  const columns = personaHeaders(), data = personaParser(), rowHandler = cellParser, clickHandler = showPopup;
-  return prepareTable({ columns, data, rowHandler, clickHandler });
+  const columns = personaHeaders(), data = personaParser();
+  const history = useHistory();
+  const clickHandler = (evt) => {
+
+    const targetPersona = evt.currentTarget.querySelector("div[role=\"cell\"]:nth-child(2)").innerText ?? "";
+    history.push(`/persona/${targetPersona}`);
+  };
+  const rowParser = (row: Row, i: number) => {
+    return (
+      <div key={i} {...row.getRowProps()} onClick={clickHandler}>
+        {row.cells.map((cell) => cellParser(cell))}
+      </div>
+    );
+  }
+  return prepareTable({ columns, data, rowParser });
 }
 export default makeTable;
