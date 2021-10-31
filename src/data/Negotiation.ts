@@ -19,7 +19,7 @@ export interface NegotiationList {
   [question: string]: NegotiationAnswer[];
 }
 
-const Negotiations: NegotiationList = {
+export const Negotiations: NegotiationList = {
   "A bad rep spreads like wildfire. If I were you, I'd quit all this nonsense. What's the point?": [
     {
       text: "You're right.",
@@ -7429,4 +7429,3 @@ const Negotiations: NegotiationList = {
     }
   ]
 };
-export default Negotiations;

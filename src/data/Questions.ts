@@ -6,7 +6,7 @@ export interface QuestionList {
   [date: string]: Question[];
 }
 
-const classQuestions: QuestionList = {
+export const ClassroomQuestions: QuestionList = {
   "4/12": [
     {
       question: "Tell me what the Devil’s Dictionary defines as the Hider factor in the progress of the human race.",
@@ -540,4 +540,3 @@ const classQuestions: QuestionList = {
     }
   ]
 };
-export default classQuestions;

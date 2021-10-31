@@ -44,7 +44,7 @@ export interface Confidant {
 export interface ConfidantList {
   [name: string]: Confidant;
 }
-const Confidants: ConfidantList = {
+export const Confidants: ConfidantList = {
   chariot: {
     character: "Ryuji Sakamoto",
     benefits: {
@@ -6896,4 +6896,3 @@ const Confidants: ConfidantList = {
     }
   }
 };
-export default Confidants;

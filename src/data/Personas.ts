@@ -8979,4 +8979,3 @@ export const Personas: PersonaData[] = [
     note: "Only available on NG+"
   }
 ];
-export default Personas;

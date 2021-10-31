@@ -34,7 +34,7 @@ export interface SkillMap {
   [name: string]: SkillData;
 }
 
-const skillMap: SkillMap = {
+export const Skills: SkillMap = {
   "Absorb Bless": {
     effect: "Absorb Bless attacks.",
     element: "passive",
@@ -4580,4 +4580,3 @@ const skillMap: SkillMap = {
     talk: "Cavern Snakeman (Naga)"
   }
 };
-export default skillMap;
