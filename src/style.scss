@@ -1,19 +1,26 @@
-html {
-  --bg-color: #121212;
-  --p5-red: #dc3545;
-  --headings: #dedede;
-  --text: #e6e6e6;
-  --table-heading: #dedede;
-  --table-head-bg: #2a2a2a;
-  --table-text: #e6e6e6;
-  --table-unconfirmed-bg: rgba(182, 76, 87, 0.705);
-  --table-border: #383838;
-  --table-bg: #121212;
-  --hr-line: #2e2e2e;
-  --form-bg: #2e2e2e;
-  --form-border: #383838;
-  --form-text: #e6e6e6;
-}
+@import "../node_modules/@fontsource/fira-code/scss/mixins.scss";
+
+$p5-red: #dc3545;
+$p5-red-dark: #a3001e;
+$p5-red-light: #ff6b70;
+$p5-red-fade: rgba(182, 76, 87, 0.705);
+$headings: #dedede;
+$text: #e6e6e6;
+$table-heading: #dedede;
+$table-head-bg: #2a2a2a;
+$table-text: #e6e6e6;
+$table-border: #383838;
+$table-bg: #121212;
+$hr-line: #2e2e2e;
+$form-bg: #2e2e2e;
+$form-border: #383838;
+$form-text: #e6e6e6;
+
+
+$nav-link-color: $p5-red-light !default;
+$nav-link-hover-color: $p5-red !default;
+$nav-tabs-link-active-color: $p5-red !default;
+
 @import "./darkly";
 
 // ----------- TABLES ----------- //
@@ -23,19 +30,22 @@ $tbody: '[role="rowgroup"]:nth-child(2)';
 $tr: '[role="row"]';
 $th: '[role="columnheader"]';
 $td: '[role="cell"]';
+
 #{$table} {
-  background-color: var(--table-bg);
-  border: 1px solid var(--table-border);
-  color: var(--table-text);
+  background-color: $table-bg;
+  color: $table-text;
   font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 
   &,
   & #{$thead},
   & #{$tbody} {
-    width: 99.5vw;
+    width: 100vw;
+    padding: 0;
   }
+
   #{$thead} {
     overflow-y: auto;
     overflow-x: hidden;
@@ -44,50 +54,52 @@ $td: '[role="cell"]';
   #{$tbody} {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 83vh;
+    height: calc(100vh - 120px);
 
     &::-webkit-scrollbar {
       width: 0 !important;
     }
   }
-  #{$td}.elem {
+
+  #{$td}.elem, #{$td}:first-child {
     text-align: center;
-    font-family: "Fira Code", monospace;
+    &, #{$td}.stat {
+      font-family: "Fira CodeVariable", "Fira Code", monospace;
+    }
   }
-  #{$td}.stat {
-    font-family: "Fira Code", monospace;
-  }
-  #{$td}:first-child {
-    text-align: center;
-    font-family: "Fira Code", monospace;
-  }
+
   #{$th} {
     user-select: none;
     font-weight: bold;
     vertical-align: center;
-    color: var(--table-heading);
-    background-color: var(--table-head-bg);
-    border-bottom: 1px solid var(--table-border);
+    color: $table-heading;
+    background-color: $table-head-bg;
+    border-bottom: 1px solid $table-border;
+
     &:not(:last-child) {
-      border-right: 1px solid var(--table-border);
+      border-right: 1px solid $table-border;
     }
+
     &.searchbox {
       padding: 0;
     }
-    span {
+
+    svg {
       float: right;
+      vertical-align: middle;
     }
   }
 
   #{$tr}:nth-child(2) #{$th} {
     text-align: center;
   }
+
   #{$td} {
-    border-bottom: 1px solid var(--table-border);
+    border-bottom: 1px solid $table-border;
   }
 
   #{$tr}:hover #{$td} {
-    background-color: var(--form-border);
+    background-color: $form-border;
     cursor: pointer;
   }
 }
@@ -99,11 +111,13 @@ $td: '[role="cell"]';
   background-color: $gray-900;
   color: $body-color;
   border: none;
+
   &:hover {
-    background-color: var(--table-head-bg);
+    background-color: $table-head-bg;
   }
+
   &:focus {
     outline: none;
-    background-color: var(--table-bg);
+    background-color: $table-bg;
   }
 }
