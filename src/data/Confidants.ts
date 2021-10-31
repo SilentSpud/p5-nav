@@ -1,4 +1,4 @@
-export interface Requirements {
+export interface ConfidantLevelRequirements {
   story?: boolean;
   trueEnding?: boolean;
   date?: string;
@@ -8,37 +8,37 @@ export interface Requirements {
   kindness?: number | "max";
   knowledge?: number | "max";
 }
-export interface Benefit {
+export interface ConfidantBenefit {
   rank: number | "max" | "royal";
   description: string;
 }
-export interface Question {
-  [answerText: string]: Answer;
+export interface ConfidantQuestion {
+  [answerText: string]: ConfidantAnswer;
 }
-export interface Answer {
+export interface ConfidantAnswer {
   points?: number;
   romance?: boolean;
   bad?: boolean;
   end?: boolean;
 }
 export interface RankMetadata {
-  requirements?: Requirements;
+  requirements?: ConfidantLevelRequirements;
   unlock?: string;
   romance?: boolean;
 }
 
-export interface Rank {
-  [questionNumber: string]: Question | RankMetadata;
+export interface ConfidantRank {
+  [questionNumber: string]: ConfidantQuestion | RankMetadata;
   meta?: RankMetadata;
 }
 
 export interface Confidant {
   character: string;
   benefits: {
-    [name: string]: Benefit;
+    [name: string]: ConfidantBenefit;
   };
   questions: {
-    [rank: string]: Rank;
+    [rank: string]: ConfidantRank;
   };
 }
 export interface ConfidantList {

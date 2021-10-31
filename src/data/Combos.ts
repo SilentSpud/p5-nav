@@ -355,10 +355,3 @@ export const DlcPersonas = [
   ["Izanagi-no-Okami", "Izanagi-no-Okami Picaro"],
   ["Raoul"]
 ];
-export default {
-  rarePersonas: RarePersonas,
-  rareCombos: RareCombos,
-  arcanaCombos: ArcanaCombos,
-  specialCombos: SpecialCombos,
-  dlcPersonas: DlcPersonas
-};
