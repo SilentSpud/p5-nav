@@ -57,12 +57,11 @@ const cellParser = (cell: Cell) => {
   }
 }
 
-export const makeTable = (): JSX.Element => {
+export const personaList = (): JSX.Element => {
   const columns = personaHeaders(), data = personaParser();
   const history = useHistory();
-  const clickHandler = (evt) => {
-
-    const targetPersona = evt.currentTarget.querySelector("div[role=\"cell\"]:nth-child(2)").innerText ?? "";
+  const clickHandler = (evt: React.MouseEvent<HTMLDivElement>) => {
+    const targetPersona = evt.currentTarget.querySelector<HTMLElement>("div[role=\"cell\"]:nth-child(2)").innerText ?? "";
     history.push(`/persona/${targetPersona}`);
   };
   const rowParser = (row: Row, i: number) => {
@@ -74,4 +73,4 @@ export const makeTable = (): JSX.Element => {
   }
   return prepareTable({ columns, data, rowParser });
 }
-export default makeTable;
+export default personaList;
