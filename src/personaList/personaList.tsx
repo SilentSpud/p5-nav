@@ -39,12 +39,12 @@ const cellParser = (cell: Cell) => {
   switch (cell.column.parent.id) {
     case 'elements': {
       switch (cell.value) {
-        case Weaknesses.resist: return <div {...cell.getCellProps({ className: ("text-warning elem") })}>Res</div>;
-        case Weaknesses.repel: return <div {...cell.getCellProps({ className: ("text-danger elem") })}>Rep</div>;
-        case Weaknesses.weak: return <div {...cell.getCellProps({ className: ("text-success elem") })}>Weak</div>;
-        case Weaknesses.none: return <div {...cell.getCellProps({ className: ("elem") })}>&nbsp;</div>;
-        case Weaknesses.absorb: return <div {...cell.getCellProps({ className: ("text-info elem") })}>Abs</div>;
-        case Weaknesses.nullify: return <div {...cell.getCellProps({ className: ("text-light elem") })}>Null</div>;
+        case Weaknesses.resist: return <div {...cell.getCellProps({ className: "text-warning elem" })}>Res</div>;
+        case Weaknesses.repel: return <div {...cell.getCellProps({ className: "text-danger elem" })}>Rep</div>;
+        case Weaknesses.weak: return <div {...cell.getCellProps({ className: "text-success elem" })}>Weak</div>;
+        case Weaknesses.none: return <div {...cell.getCellProps({ className: "elem" })}>&nbsp;</div>;
+        case Weaknesses.absorb: return <div {...cell.getCellProps({ className: "text-info elem" })}>Abs</div>;
+        case Weaknesses.nullify: return <div {...cell.getCellProps({ className: "text-light elem" })}>Null</div>;
       }
     }
     case 'stats': {
@@ -62,7 +62,7 @@ export const personaList = (): JSX.Element => {
   const history = useHistory();
   const clickHandler = (evt: React.MouseEvent<HTMLDivElement>) => {
     const targetPersona = evt.currentTarget.querySelector<HTMLElement>("div[role=\"cell\"]:nth-child(2)").innerText ?? "";
-    history.push(`/persona/${targetPersona}`);
+    history.push(`/persona/${encodeURIComponent(targetPersona)}`);
   };
   const rowParser = (row: Row, i: number) => {
     return (
