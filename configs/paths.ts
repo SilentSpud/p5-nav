@@ -2,8 +2,7 @@ import path from "path";
 import fs from "fs";
 
 const appDirectory = fs.realpathSync(process.cwd());
-const resolveApp = (relativePath: string) =>
-  path.resolve(appDirectory, relativePath);
+const resolveApp = (relativePath: string) => path.resolve(appDirectory, relativePath);
 
 const paths = {
   nodeModules: resolveApp("node_modules"),
@@ -13,7 +12,7 @@ const paths = {
   types: resolveApp("node_modules/@types"),
   appTypes: resolveApp("src/@types"),
   publicPath: "/",
-  resolveModules: [resolveApp("src"), "node_modules"]
+  resolveModules: [resolveApp("src"), "node_modules"],
 };
 
 export default paths;

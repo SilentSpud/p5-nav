@@ -12,19 +12,19 @@ module.exports = function (api) {
           firefox: "60",
           chrome: "67",
           safari: "11.1",
-          ie: "11"
-        }
-      }
-    ]
+          ie: "11",
+        },
+      },
+    ],
   ];
   const plugins = [
     ["@babel/plugin-proposal-decorators", { decoratorsBeforeExport: true }],
     ["@babel/plugin-proposal-class-properties"],
     ["@babel/transform-runtime"],
-    ["transform-class-properties"]
+    ["transform-class-properties"],
   ];
   return {
     presets,
-    plugins
+    plugins,
   };
 };

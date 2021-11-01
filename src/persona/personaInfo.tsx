@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { getPersona, WeaknessLevels as Weaknesses } from "../data";
-
+import { getPersona } from "../data";
 
 /* interface PersonaData {
   name: string;
@@ -49,9 +48,18 @@ export const personaInfo = (props) => {
   return (
     <table>
       <tbody>
-        <tr><td>Name:</td><td>{Persona.name}</td></tr>
-        <tr><td>Arcana:</td><td>{Persona.arcana}</td></tr>
-        <tr><td>Level:</td><td>{Persona.level}</td></tr>
+        <tr>
+          <td>Name:</td>
+          <td>{Persona.name}</td>
+        </tr>
+        <tr>
+          <td>Arcana:</td>
+          <td>{Persona.arcana}</td>
+        </tr>
+        <tr>
+          <td>Level:</td>
+          <td>{Persona.level}</td>
+        </tr>
       </tbody>
     </table>
   );

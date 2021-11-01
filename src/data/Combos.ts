@@ -7,7 +7,7 @@ export const RarePersonas = [
   "Orlov",
   "Emperor's Amulet",
   "Hope Diamond",
-  "Orichalcum"
+  "Orichalcum",
 ];
 
 export const RareCombos = {
@@ -34,7 +34,7 @@ export const RareCombos = {
   judgement: [-1, -1, -1, -1, +1, -1, +1, -1, +1],
   faith: [+1, +1, +1, -1, +1, -1, +1, +1, +2],
   councillor: [+1, +1, +1, +1, +1, -1, +1, +1, +1],
-  world: [+1, +1, +1, +1, +1, +1, +1, +1, +1]
+  world: [+1, +1, +1, +1, +1, +1, +1, +1, +1],
 };
 
 export const ArcanaCombos = [
@@ -310,7 +310,7 @@ export const ArcanaCombos = [
   { source: ["Faith", "Faith"], result: "Faith" },
   { source: ["Faith", "Councillor"], result: "Priestess" },
   { source: ["Councillor", "Councillor"], result: "Councillor" },
-  { source: ["World", "World"], result: "World" }
+  { source: ["World", "World"], result: "World" },
 ];
 
 export const SpecialCombos = [
@@ -337,7 +337,7 @@ export const SpecialCombos = [
   { result: "Tam Lin", sources: ["Cait Sith", "High Pixie", "Leanan Sidhe"] },
   { result: "Trumpeter", sources: ["White Rider", "Red Rider", "Black Rider", "Pale Rider"] },
   { result: "Vasuki", sources: ["Naga", "Ananta", "Raja Naga"] },
-  { result: "Yoshitsune", sources: ["Shiki-Ouji", "Arahabaki", "Okuninushi", "Yatagarasu", "Futsunushi"] }
+  { result: "Yoshitsune", sources: ["Shiki-Ouji", "Arahabaki", "Okuninushi", "Yatagarasu", "Futsunushi"] },
 ];
 
 export const DlcPersonas = [
@@ -353,5 +353,5 @@ export const DlcPersonas = [
   ["Orpheus F", "Orpheus F Picaro"],
   ["Athena", "Athena Picaro"],
   ["Izanagi-no-Okami", "Izanagi-no-Okami Picaro"],
-  ["Raoul"]
+  ["Raoul"],
 ];

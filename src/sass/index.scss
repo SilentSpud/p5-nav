@@ -16,7 +16,6 @@ $form-bg: #2e2e2e;
 $form-border: #383838;
 $form-text: #e6e6e6;
 
-
 $nav-link-color: $p5-red-light !default;
 $nav-link-hover-color: $p5-red !default;
 $nav-tabs-link-active-color: $p5-red !default;
@@ -61,9 +60,11 @@ $td: '[role="cell"]';
     }
   }
 
-  #{$td}.elem, #{$td}:first-child {
+  #{$td}.elem,
+  #{$td}:first-child {
     text-align: center;
-    &, #{$td}.stat {
+    &,
+    #{$td}.stat {
       font-family: "Fira CodeVariable", "Fira Code", monospace;
     }
   }
@@ -103,7 +104,9 @@ $td: '[role="cell"]';
   }
 }
 
-#{$th}, .nav-link, #{$td} {
+#{$th},
+.nav-link,
+#{$td} {
   user-select: none;
 }
 

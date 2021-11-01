@@ -5,7 +5,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import personaInfo from "../persona";
 import personaTable from "../personaList";
 
-const NavLink = (params) => <LinkContainer to={params.to}><Nav.Link>{params.children}</Nav.Link></LinkContainer>;
+const NavLink = (params) => (
+  <LinkContainer to={params.to}>
+    <Nav.Link>{params.children}</Nav.Link>
+  </LinkContainer>
+);
 const NavSwitch = (params) => (
   <Switch {...params}>
     <Route path="/personas" component={personaTable} />
@@ -18,7 +22,7 @@ const NavSwitch = (params) => (
     <Route path="/confidant/:id" />
     <Route path="/questions" />
   </Switch>
-)
+);
 
 export const Routes = (params) => (
   <Router {...params}>

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   UseColumnOrderInstanceProps,
   UseColumnOrderState,
@@ -45,16 +47,13 @@ import {
   UseSortByHooks,
   UseSortByInstanceProps,
   UseSortByOptions,
-  UseSortByState
-} from 'react-table'
+  UseSortByState,
+} from "react-table";
 
-declare module 'react-table' {
+declare module "react-table" {
   // take this file as-is, or comment out the sections that don't apply to your plugin configuration
 
-  export interface TableOptions<D extends Record<string, unknown>>
-    extends UseGlobalFiltersOptions<D>,
-      UseSortByOptions<D>,
-      Record<string, any> {}
+  export interface TableOptions<D extends Record<string, unknown>> extends UseGlobalFiltersOptions<D>, UseSortByOptions<D>, Record<string, any> {}
 
   export interface Hooks<D extends Record<string, unknown> = Record<string, unknown>>
     extends UseExpandedHooks<D>,
@@ -99,9 +98,7 @@ declare module 'react-table' {
       UseSortByColumnProps<D>,
       Record<string, any> {}
 
-  export interface Cell<D extends Record<string, unknown> = Record<string, unknown>, V = any>
-    extends UseGroupByCellProps<D>,
-      UseRowStateCellProps<D> {}
+  export interface Cell<D extends Record<string, unknown> = Record<string, unknown>, V = any> extends UseGroupByCellProps<D>, UseRowStateCellProps<D> {}
 
   export interface Row<D extends Record<string, unknown> = Record<string, unknown>>
     extends UseExpandedRowProps<D>,

@@ -1,2 +1,2 @@
-import { personaInfo } from './personaInfo';
+import { personaInfo } from "./personaInfo";
 export default personaInfo;
