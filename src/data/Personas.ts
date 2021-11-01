@@ -62,6 +62,13 @@ export interface PersonaData {
   alarm?: string;
   trait?: string;
 }
+
+export const getPersona = (id: string): PersonaData => {
+  for (let p of Personas) {
+    if (p.name = id) return p;
+  }
+}
+
 export const Personas: PersonaData[] = [
   {
     name: "Arsene",
