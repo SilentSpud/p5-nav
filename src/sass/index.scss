@@ -69,7 +69,6 @@ $td: '[role="cell"]';
   }
 
   #{$th} {
-    user-select: none;
     font-weight: bold;
     vertical-align: center;
     color: $table-heading;
@@ -102,6 +101,10 @@ $td: '[role="cell"]';
     background-color: $form-border;
     cursor: pointer;
   }
+}
+
+#{$th}, .nav-link, #{$td} {
+  user-select: none;
 }
 
 .search {
