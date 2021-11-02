@@ -3,28 +3,31 @@ import { Table } from "react-bootstrap";
 import { NegotiationList, NegotiationReaction as Reaction, NegotiationReactions as Reactions, Negotiations } from "../data";
 
 const Answer = (props: { value: Reaction | Reactions }) => {
-  let ansVal, ansUnk = false;
+  let ansVal,
+    ansUnknown = false;
   switch (typeof props.value) {
     case "number":
       ansVal = props.value;
       break;
     case "object":
       ansVal = props.value.rate;
-      ansUnk = props.value.unconfirmed ?? false;
+      ansUnknown = props.value.unconfirmed ?? false;
       break;
     default:
       console.log(props.value);
       return null;
   }
   switch (ansVal) {
-    case Reactions.Bad: return <td className={`${ansUnk ? 'unconfirmed' : ''}`}>Bad</td>
-    case Reactions.Neutral: return <td className={`${ansUnk ? 'unconfirmed' : ''}`}></td>
-    case Reactions.OK: return <td className={`${ansUnk ? 'unconfirmed' : ''}`}>Ok</td>
-    case Reactions.Good: return <td className={`${ansUnk ? 'unconfirmed' : ''}`}>Good</td>
+    case Reactions.Bad:
+      return <td className={`${ansUnknown ? "unconfirmed" : ""}`}>Bad</td>;
+    case Reactions.Neutral:
+      return <td className={`${ansUnknown ? "unconfirmed" : ""}`}></td>;
+    case Reactions.OK:
+      return <td className={`${ansUnknown ? "unconfirmed" : ""}`}>Ok</td>;
+    case Reactions.Good:
+      return <td className={`${ansUnknown ? "unconfirmed" : ""}`}>Good</td>;
   }
-
-
-}
+};
 
 const parseQuestions = (questionList: NegotiationList) => {
   const tableList = [];
@@ -59,9 +62,9 @@ const parseQuestions = (questionList: NegotiationList) => {
     tNum++;
   }
   return tableList;
-}
+};
 
 export const NegotiationInfo = () => {
   const questions = parseQuestions(Negotiations);
   return <div className="questionlist">{questions}</div>;
-}
+};
