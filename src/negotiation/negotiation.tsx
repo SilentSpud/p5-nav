@@ -2,17 +2,6 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { NegotiationList, NegotiationReaction as Reaction, NegotiationReactions as Reactions, Negotiations } from "../data";
 
-/*export interface NegotiationReaction {
-  unconfirmed?: boolean;
-  rate: NegotiationReactions;
-}
-export enum NegotiationReactions {
-  Bad = 0,
-  Neutral = 1,
-  OK = 2,
-  Good = 3,
-}*/
-
 const Answer = (props: { value: Reaction | Reactions }) => {
   let ansVal, ansUnk = false;
   switch (typeof props.value) {

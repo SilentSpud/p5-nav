@@ -63,9 +63,6 @@ $td: '[role="cell"]';
       width: 0 !important;
     }
   }
-  .unconfirmed {
-    background-color: $p5-red-fade;
-  }
 
   #{$td}.elem,
   #{$td}:first-child {
@@ -115,6 +112,10 @@ $td: '[role="cell"]';
 .nav-link,
 #{$td} {
   user-select: none;
+}
+
+td.unconfirmed {
+  background-color: $p5-red-fade;
 }
 
 .questionlist table {
