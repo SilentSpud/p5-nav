@@ -6,28 +6,24 @@ import paths from "../paths";
 
 const config: webpack.Configuration = {
   entry: {
-    app: paths.src
+    app: paths.src,
   },
-  
+
   target: "web",
   output: {
     filename: "[name].js",
     path: path.join(paths.build, paths.publicPath),
     publicPath: paths.publicPath,
-    hashFunction: "sha256"
+    hashFunction: "sha256",
   },
   resolve: {
-    extensions: [".wasm", ".ts", ".tsx", ".mjs", ".cjs", ".js", ".json"]
+    extensions: [".wasm", ".ts", ".tsx", ".mjs", ".cjs", ".js", ".json"],
   },
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.tsx?$/,
@@ -36,36 +32,33 @@ const config: webpack.Configuration = {
           {
             loader: "ts-loader",
             options: {
-              transpileOnly: true
-            }
-          }
+              transpileOnly: true,
+            },
+          },
         ],
-        exclude: paths.nodeModules
+        exclude: paths.nodeModules,
       },
       {
         test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader"
-        ]
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'url-loader',
+        loader: "url-loader",
         options: {
-          limit: 10000
-        }
+          limit: 10000,
+        },
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-        type: 'asset/resource',
-      }
-    ]
+        type: "asset/resource",
+      },
+    ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "src/index.html" }), new ForkTsCheckerWebpackPlugin()],
+  plugins: [new HtmlWebpackPlugin({ template: "src/index.html", favicon: "src/assets/favicon.ico" }), new ForkTsCheckerWebpackPlugin()],
   optimization: {
     removeAvailableModules: true,
-    removeEmptyChunks: true
+    removeEmptyChunks: true,
   },
   stats: {
     cached: false,
@@ -78,8 +71,8 @@ const config: webpack.Configuration = {
     modules: false,
     reasons: false,
     timings: true,
-    version: false
-  }
+    version: false,
+  },
 };
 
 export default config;

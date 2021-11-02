@@ -4,17 +4,17 @@ module.exports = {
     ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
     sourceType: "module", // Allows for the use of imports
     ecmaFeatures: {
-      jsx: true // Allows for the parsing of JSX
-    }
+      jsx: true, // Allows for the parsing of JSX
+    },
   },
   env: {
     browser: true,
-    jest: true // Because eslint does not know test framework codes.
+    jest: true, // Because eslint does not know test framework codes.
   },
   settings: {
     react: {
-      version: "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
-    }
+      version: "detect", // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
   },
   extends: [
     "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
@@ -24,5 +24,5 @@ module.exports = {
   rules: {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
-  }
+  },
 };

@@ -8,14 +8,10 @@
       "type": "pwa-node",
       "request": "launch",
       "name": "Launch Program",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
+      "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}\\src\\personaTable.tsx",
       "preLaunchTask": "tsc: build - tsconfig.json",
-      "outFiles": [
-        "${workspaceFolder}/build/**/*.js"
-      ]
+      "outFiles": ["${workspaceFolder}/build/**/*.js"]
     }
   ]
 }
