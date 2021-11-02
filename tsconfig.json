@@ -8,6 +8,7 @@
     "noResolve": false,
     "noImplicitAny": false,
     "removeComments": false,
+    "skipLibCheck": true,
     "sourceMap": true,
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
