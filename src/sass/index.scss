@@ -3,7 +3,6 @@
 $p5-red: #dc3545;
 $p5-red-dark: #a3001e;
 $p5-red-light: #ff6b70;
-$p5-red-fade: rgba(182, 76, 87, 0.705);
 $headings: #dedede;
 $text: #e6e6e6;
 $table-heading: #dedede;
@@ -114,24 +113,16 @@ $td: '[role="cell"]';
   user-select: none;
 }
 
-td.unconfirmed {
-  background-color: $p5-red-fade;
-}
-
 .questionlist table {
+  width: 50%;
+  float: left;
   th:first-child {
     width: 80%;
   }
-  th:nth-child(2),
-  th:nth-child(3),
-  th:nth-child(4),
-  th:nth-child(5) {
+  th:nth-child(n + 2) {
     width: 5%;
   }
-  td:nth-child(2),
-  td:nth-child(3),
-  td:nth-child(4),
-  td:nth-child(5) {
+  th:not(:first-child), td:not(:first-child) {
     text-align: center;
   }
 }

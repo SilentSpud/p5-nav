@@ -19,13 +19,13 @@ const Answer = (props: { value: Reaction | Reactions }) => {
   }
   switch (ansVal) {
     case Reactions.Bad:
-      return <td className={`${ansUnknown ? "unconfirmed" : ""}`}>Bad</td>;
+      return <td>Bad{ansUnknown ? "?" : ""}</td>;
     case Reactions.Neutral:
-      return <td className={`${ansUnknown ? "unconfirmed" : ""}`}></td>;
+      return <td>{ansUnknown ? "?" : ""}</td>;
     case Reactions.OK:
-      return <td className={`${ansUnknown ? "unconfirmed" : ""}`}>Ok</td>;
+      return <td>Ok{ansUnknown ? "?" : ""}</td>;
     case Reactions.Good:
-      return <td className={`${ansUnknown ? "unconfirmed" : ""}`}>Good</td>;
+      return <td>Good{ansUnknown ? "?" : ""}</td>;
   }
 };
 
