@@ -3,7 +3,6 @@
 $p5-red: #dc3545;
 $p5-red-dark: #a3001e;
 $p5-red-light: #ff6b70;
-$p5-red-fade: rgba(182, 76, 87, 0.705);
 $headings: #dedede;
 $text: #e6e6e6;
 $table-heading: #dedede;
@@ -22,6 +21,11 @@ $nav-tabs-link-active-color: $p5-red !default;
 
 @import "./darkly";
 
+.content {
+  height: calc(100vh - 45px);
+  overflow-y: scroll;
+}
+
 // ----------- TABLES ----------- //
 $table: '[role="table"]';
 $thead: '[role="rowgroup"]:first-child';
@@ -31,7 +35,6 @@ $th: '[role="columnheader"]';
 $td: '[role="cell"]';
 
 #{$table} {
-  background-color: $table-bg;
   color: $table-text;
   font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
   margin-left: 0;
@@ -108,6 +111,20 @@ $td: '[role="cell"]';
 .nav-link,
 #{$td} {
   user-select: none;
+}
+
+.questionlist table {
+  width: 50%;
+  float: left;
+  th:first-child {
+    width: 80%;
+  }
+  th:nth-child(n + 2) {
+    width: 5%;
+  }
+  th:not(:first-child), td:not(:first-child) {
+    text-align: center;
+  }
 }
 
 .search {
