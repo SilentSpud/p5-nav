@@ -65,7 +65,7 @@ export interface PersonaData {
 
 export const getPersona = (id: string): PersonaData => {
   for (const p of Personas) {
-    if ((p.name == id)) return p;
+    if (p.name == id) return p;
   }
 };
 

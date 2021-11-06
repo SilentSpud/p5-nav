@@ -122,7 +122,8 @@ $td: '[role="cell"]';
   th:nth-child(n + 2) {
     width: 5%;
   }
-  th:not(:first-child), td:not(:first-child) {
+  th:not(:first-child),
+  td:not(:first-child) {
     text-align: center;
   }
 }
