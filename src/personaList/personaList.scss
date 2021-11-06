@@ -1,0 +1,40 @@
+@import "../sass/variables";
+
+section[role="table"].personas {
+  header, main {
+    width: 100vw;
+    padding: 0;
+  }
+
+  div[role="row"]:hover div[role="cell"] {
+    background-color: $form-border;
+    cursor: pointer;
+  }
+
+  header {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  main {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 120px);
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+  }
+
+  div[role="cell"].elem,
+  div[role="cell"]:first-child {
+    text-align: center;
+    &, div[role="cell"].stat {
+      font-family: "Fira CodeVariable", "Fira Code", monospace;
+    }
+  }
+
+  div[role="row"]:nth-child(2) div[role="columnheader"] {
+    text-align: center;
+  }
+}
