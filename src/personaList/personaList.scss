@@ -1,7 +1,8 @@
 @import "../sass/variables";
 
 section[role="table"].personas {
-  header, main {
+  header,
+  main {
     width: 100vw;
     padding: 0;
   }
@@ -26,10 +27,12 @@ section[role="table"].personas {
     }
   }
 
-  div[role="cell"].elem,
-  div[role="cell"]:first-child {
+  div[role="cell"]:first-child,
+  .elem {
     text-align: center;
-    &, div[role="cell"].stat {
+
+    &,
+    .stat {
       font-family: "Fira CodeVariable", "Fira Code", monospace;
     }
   }
