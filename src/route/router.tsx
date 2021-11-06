@@ -2,6 +2,7 @@ import React from "react";
 import { Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Calendar from "../calendar";
 import NegotiationInfo from "../negotiation";
 import personaInfo from "../persona";
 import personaTable from "../personaList";
@@ -18,11 +19,11 @@ const NavSwitch = (params) => (
       <Route path="/persona/:id" component={personaInfo} />
       <Route path="/skills" />
       <Route path="/skill/:id" />
-      <Route path="/negotiations" component={NegotiationInfo} />
-      <Route path="/negotiation/:id" />
+      <Route path="/calendar" component={Calendar} />
       <Route path="/confidants" />
       <Route path="/confidant/:id" />
-      <Route path="/questions" />
+      <Route path="/negotiations" component={NegotiationInfo} />
+      <Route path="/negotiation/:id" />
     </Switch>
   </div>
 );
@@ -32,9 +33,9 @@ export const Routes = (params) => (
     <Nav variant="tabs" className="bg-dark" navbar={true} justify={true}>
       <NavLink to="/personas">Personas</NavLink>
       <NavLink to="/skills">Skills</NavLink>
-      <NavLink to="/negotiations">Negotiation Questions</NavLink>
+      <NavLink to="/calendar">Calendar</NavLink>
       <NavLink to="/confidants">Confidants</NavLink>
-      <NavLink to="/questions">Classroom Questions</NavLink>
+      <NavLink to="/negotiations">Negotiation Questions</NavLink>
     </Nav>
     <NavSwitch />
   </Router>
