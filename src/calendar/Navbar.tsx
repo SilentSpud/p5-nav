@@ -1,16 +1,17 @@
 import React from "react";
-import { format, addMonths, subMonths, isSameDay } from "date-fns";
 import { useMonthlyCalendar } from "@zach.codes/react-calendar";
 import { Nav } from "react-bootstrap";
 
+const monthList = ["January", "February", "", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
 export const Navbar = () => {
   const { currentMonth, onCurrentMonthChange } = useMonthlyCalendar();
-  const isFirstMonth = isSameDay(currentMonth, new Date("2016-04-01T06:00:00.000Z"));
-  const isLastMonth = isSameDay(currentMonth, new Date("2016-12-01T07:00:00.000Z"));
+  const isFirstMonth = currentMonth.getMonth() === 3;
+  const isLastMonth = currentMonth.getMonth() === 1;
 
   const parseNavClick = (evt: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if (evt.currentTarget.classList.contains("prev")) onCurrentMonthChange(subMonths(currentMonth, 1));
-    else if (evt.currentTarget.classList.contains("next")) onCurrentMonthChange(addMonths(currentMonth, 1));
+    if (evt.currentTarget.classList.contains("prev")) onCurrentMonthChange((currentMonth.setMonth(currentMonth.getMonth() - 1), currentMonth));
+    else if (evt.currentTarget.classList.contains("next")) onCurrentMonthChange((currentMonth.setMonth(currentMonth.getMonth() + 1), currentMonth));
   };
 
   return (
@@ -22,7 +23,7 @@ export const Navbar = () => {
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="current" disabled>
-          {format(currentMonth, "LLLL")}
+          {monthList[currentMonth.getMonth()]}
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
