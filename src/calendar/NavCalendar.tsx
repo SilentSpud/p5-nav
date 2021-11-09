@@ -1,21 +1,10 @@
 /* eslint-disable react/prop-types */
 import React, { useContext } from "react";
-import { format, addMonths, subMonths, isSameDay } from 'date-fns';
+import { format, isSameDay } from 'date-fns';
 import { handleOmittedDays, useMonthlyCalendar } from '@zach.codes/react-calendar';
-import { Col, Container, Nav, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import "./calendar.scss";
 
-export const CalendarNav = () => {
-  const { currentMonth, onCurrentMonthChange } = useMonthlyCalendar();
-
-  return (
-    <Nav variant="tabs" className="bg-dark" navbar={true} justify={true} defaultActiveKey="current">
-      <Nav.Item><Nav.Link onClick={() => onCurrentMonthChange(subMonths(currentMonth, 1))}>Previous</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link eventKey="current" disabled>{format(currentMonth, 'LLLL')}</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link onClick={() => onCurrentMonthChange(addMonths(currentMonth, 1))}>Next</Nav.Link></Nav.Item>
-    </Nav>
-  );
-};
 
 const DayEvents = React.createContext({ day: new Date(), events: [] });
 export const useEvents = () => useContext(DayEvents);
