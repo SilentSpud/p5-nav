@@ -1,0 +1,61 @@
+@import "../sass/variables";
+$calendar-size: calc($content-size - 42px);
+$head-size: calc($calendar-size * 0.05);
+$row-size: calc($calendar-size * 0.19);
+
+.calendar {
+  height: $calendar-size;
+
+  .header,
+  .header .col {
+    height: $head-size;
+  }
+  .week,
+  .week .col {
+    height: $row-size;
+    .col {
+      height: $row-size;
+    }
+  }
+  .col {
+    border: 1px solid #333;
+    overflow: scroll;
+  }
+}
+
+section[role="table"].personas {
+  header,
+  main {
+    width: 100vw;
+    padding: 0;
+  }
+
+  div[role="row"]:hover div[role="cell"] {
+    background-color: $form-border;
+    cursor: pointer;
+  }
+
+  main {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 120px);
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+  }
+
+  div[role="cell"]:first-child,
+  .elem {
+    text-align: center;
+
+    &,
+    .stat {
+      font-family: "Fira CodeVariable", "Fira Code", monospace;
+    }
+  }
+
+  div[role="row"]:nth-child(2) div[role="columnheader"] {
+    text-align: center;
+  }
+}
