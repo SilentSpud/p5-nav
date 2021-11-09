@@ -1,4 +1,4 @@
-@import "../sass/variables";
+@import "../sass/overrides";
 $calendar-size: calc($content-size - 42px);
 $head-size: calc($calendar-size * 0.05);
 $row-size: calc($calendar-size * 0.19);

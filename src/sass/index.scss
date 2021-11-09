@@ -1,6 +1,7 @@
 @import "@fontsource/fira-code/scss/mixins";
-@import "./variables";
+@import "./overrides";
 @import "./darkly";
+@import "bootstrap/scss/bootstrap";
 
 .content {
   height: calc(100vh - 45px);
