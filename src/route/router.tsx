@@ -1,22 +1,24 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch as Routes, Route } from "react-router-dom";
+
+// Route imports
 import Calendar from "../calendar";
 import NegotiationInfo from "../negotiation";
-import personaInfo from "../persona";
-import personaTable from "../personaList";
+import PersonaInfo from "../persona";
+import PersonaTable from "../personaList";
 
-const NavLink = (params) => (
-  <LinkContainer to={params.to}>
-    <Nav.Link>{params.children}</Nav.Link>
+const NavLink = ({ to, children }: { to: string; children: React.ReactNode | React.ReactNode[]}) => (
+  <LinkContainer to={to}>
+    <Nav.Link>{children}</Nav.Link>
   </LinkContainer>
 );
-const NavSwitch = (params) => (
-  <div className={"content"}>
-    <Switch {...params}>
-      <Route path="/personas" component={personaTable} />
-      <Route path="/persona/:id" component={personaInfo} />
+const NavSwitch = () => (
+  <div className="content">
+    <Routes>
+      <Route path="/personas" component={PersonaTable} />
+      <Route path="/persona/:id" component={PersonaInfo} />
       <Route path="/skills" />
       <Route path="/skill/:id" />
       <Route path="/calendar" component={Calendar} />
@@ -24,13 +26,13 @@ const NavSwitch = (params) => (
       <Route path="/confidant/:id" />
       <Route path="/negotiations" component={NegotiationInfo} />
       <Route path="/negotiation/:id" />
-    </Switch>
+    </Routes>
   </div>
 );
 
-export const Routes = (params) => (
-  <Router {...params}>
-    <Nav variant="tabs" className="bg-dark" navbar={true} justify={true}>
+export const NavRoutes = () => (
+  <Router>
+    <Nav variant="tabs" className="bg-dark" navbar justify>
       <NavLink to="/personas">Personas</NavLink>
       <NavLink to="/skills">Skills</NavLink>
       <NavLink to="/calendar">Calendar</NavLink>
