@@ -1,17 +1,22 @@
-/* eslint-disable react/prop-types */
 import React, { useContext } from "react";
 import { format, isSameDay } from "date-fns";
-import { handleOmittedDays, useMonthlyCalendar } from "@zach.codes/react-calendar";
 import { Col, Container, Row } from "react-bootstrap";
 import "./calendar.scss";
+import { processPadding, useMonthlyCalendar } from "./CalendarController";
 
 const DayEvents = React.createContext({ day: new Date(), events: [] });
 export const useEvents = () => useContext(DayEvents);
 
-export const Week = ({ days, children, events }) => (
+interface EventItem {
+  title: string;
+  date: Date;
+}
+const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+export const Week = ({ days, children, events }: { days: (Date | 0)[]; events: EventItem[]; children: any | any[] }) => (
   <Row className="week">
-    {days.map((day, dayIndex) => {
-      if (typeof day != "object") {
+    {days.map((day: Date | 0, dayIndex: number) => {
+      if (day === 0) {
         return <Col key={dayIndex}></Col>;
       }
       return (
@@ -25,13 +30,12 @@ export const Week = ({ days, children, events }) => (
   </Row>
 );
 
-export const Month = ({ events, children }) => {
-  const { days, locale } = useMonthlyCalendar();
-  const { headings, daysToRender, padding } = handleOmittedDays({ days, locale });
+export const Month = ({ events, children }: { events: EventItem[]; children: any | any[] }) => {
+  const { days } = useMonthlyCalendar();
+  const daysToRender = processPadding(days);
   const weeks = [];
-  const allDays = padding.concat(daysToRender);
-  for (let i = 0; i < allDays.length; i += 7) {
-    let thisWeek = allDays.slice(i, i + 7);
+  for (let i = 0; i < daysToRender.length; i += 7) {
+    let thisWeek = daysToRender.slice(i, i + 7);
     // pad the week if needed
     if (thisWeek.length < 7) {
       thisWeek = thisWeek.concat([0, 0, 0, 0, 0, 0, 0]).slice(0, 7);
@@ -41,8 +45,8 @@ export const Month = ({ events, children }) => {
   return (
     <Container fluid className="calendar">
       <Row className="header">
-        {headings.map((day) => (
-          <Col key={day.day}>{day.label}</Col>
+        {daysOfTheWeek.map((day, i) => (
+          <Col key={i}>{day}</Col>
         ))}
       </Row>
       {weeks.map((week, weekIndex) => (
@@ -54,7 +58,7 @@ export const Month = ({ events, children }) => {
   );
 };
 
-export const Day = ({ renderDay }) => {
+export const Day = ({ renderDay }: { renderDay: (events: EventItem[]) => JSX.Element[] }) => {
   const { locale } = useMonthlyCalendar();
   const { day, events } = useEvents();
   const dayNumber = format(day, "d", { locale });
