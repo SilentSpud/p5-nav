@@ -16,7 +16,7 @@ export const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState<Date>(startOfMonth(StartDate));
 
   return (
-    <MonthlyCalendar currentMonth={currentMonth} onCurrentMonthChange={(date) => setCurrentMonth(date)}>
+    <MonthlyCalendar currentMonth={currentMonth} onMonthChange={(date) => setCurrentMonth(date)}>
       <Navbar />
       <Month events={[]}>
         <Day renderDay={(data: EventItem[]) => data.map((item: EventItem, index) => <Event key={index} title={item.title} date={item.date} />)} />

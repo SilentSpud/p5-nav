@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { format, isSameDay } from "date-fns";
+import React, { ReactNode, useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./calendar.scss";
 import { processPadding, useMonthlyCalendar } from "./CalendarController";
@@ -13,7 +12,12 @@ interface EventItem {
 }
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-export const Week = ({ days, children, events }: { days: (Date | 0)[]; events: EventItem[]; children: any | any[] }) => (
+const isSameDay = (a: Date, b: Date) => (
+  // only check the month and day since the years don't overlap
+  a.getMonth() === b.getMonth() ? a.getDate() === b.getDate() ? true : false : false
+);
+
+export const Week = ({ days, children, events }: { days: (Date | 0)[]; events: EventItem[]; children: ReactNode | ReactNode[] }) => (
   <Row className="week">
     {days.map((day: Date | 0, dayIndex: number) => {
       if (day === 0) {
@@ -30,7 +34,7 @@ export const Week = ({ days, children, events }: { days: (Date | 0)[]; events: E
   </Row>
 );
 
-export const Month = ({ events, children }: { events: EventItem[]; children: any | any[] }) => {
+export const Month = ({ events, children }: { events: EventItem[]; children: ReactNode | ReactNode[] }) => {
   const { days } = useMonthlyCalendar();
   const daysToRender = processPadding(days);
   const weeks = [];
@@ -59,15 +63,14 @@ export const Month = ({ events, children }: { events: EventItem[]; children: any
 };
 
 export const Day = ({ renderDay }: { renderDay: (events: EventItem[]) => JSX.Element[] }) => {
-  const { locale } = useMonthlyCalendar();
   const { day, events } = useEvents();
-  const dayNumber = format(day, "d", { locale });
+  const dayNumber = day.getDate();
 
   return (
     <div>
       <div>
         <div>{dayNumber}</div>
-        <div>{format(day, "EEEE", { locale })}</div>
+        <div>{daysOfTheWeek[day.getDay()]}</div>
       </div>
       <ul>{renderDay(events)}</ul>
     </div>
@@ -78,7 +81,7 @@ export const Event = ({ title, date }: { title: string; date: Date }) => (
   <li>
     <div>
       <h3>{title}</h3>
-      <p>{format(date, "k:mm")}</p>
+      <p>time of day: {date}</p>
     </div>
   </li>
 );

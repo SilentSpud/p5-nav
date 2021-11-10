@@ -5,11 +5,11 @@ import { Nav } from "react-bootstrap";
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 export const Navbar = () => {
-  const { currentMonth, onCurrentMonthChange } = useMonthlyCalendar();
+  const { currentMonth, onMonthChange } = useMonthlyCalendar();
 
   const parseNavClick = (evt: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if (evt.currentTarget.classList.contains("prev")) onCurrentMonthChange((currentMonth.setMonth(currentMonth.getMonth() - 1), currentMonth));
-    else if (evt.currentTarget.classList.contains("next")) onCurrentMonthChange((currentMonth.setMonth(currentMonth.getMonth() + 1), currentMonth));
+    if (evt.currentTarget.classList.contains("prev")) onMonthChange((currentMonth.setMonth(currentMonth.getMonth() - 1), currentMonth));
+    else if (evt.currentTarget.classList.contains("next")) onMonthChange((currentMonth.setMonth(currentMonth.getMonth() + 1), currentMonth));
   };
 
   return (
