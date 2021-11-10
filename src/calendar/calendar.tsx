@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import { startOfMonth, parseISO } from "date-fns";
-import { MonthlyCalendar } from "@zach.codes/react-calendar";
-import { Day, Event, Month } from "./NavCalendar";
+import { startOfMonth } from "date-fns";
+import { Day, Event, Month } from "./CalendarBody";
 import Navbar from "./Navbar";
 import "./calendar.scss";
+import { MonthlyCalendar } from "./CalendarController";
 
-const StartDate = parseISO("2016-04-09");
+const StartDate = new Date(2016, 4, 9);
 
-const demoEvents = [
-  { title: "Call John", date: StartDate },
-  { title: "Call John", date: StartDate },
-  { title: "Meeting with Bob", date: StartDate },
-];
+type EventItem = {
+  title: string;
+  date: Date;
+};
 
 export const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState<Date>(startOfMonth(StartDate));
@@ -19,8 +18,8 @@ export const Calendar = () => {
   return (
     <MonthlyCalendar currentMonth={currentMonth} onCurrentMonthChange={(date) => setCurrentMonth(date)}>
       <Navbar />
-      <Month events={demoEvents}>
-        <Day renderDay={(data) => data.map((item: { title: string; date: Date }, index) => <Event key={index} title={item.title} date={item.date} />)} />
+      <Month events={[]}>
+        <Day renderDay={(data: EventItem[]) => data.map((item: EventItem, index) => <Event key={index} title={item.title} date={item.date} />)} />
       </Month>
     </MonthlyCalendar>
   );
