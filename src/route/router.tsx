@@ -4,7 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { BrowserRouter as Router, Switch as Routes, Route } from "react-router-dom";
 
 // Route imports
-import Calendar from "../calendar";
+import EventCalendar from "../calendar";
 import NegotiationInfo from "../negotiation";
 import PersonaInfo from "../persona";
 import PersonaTable from "../personaList";
@@ -21,7 +21,7 @@ const NavSwitch = () => (
       <Route path="/persona/:id" component={PersonaInfo} />
       <Route path="/skills" />
       <Route path="/skill/:id" />
-      <Route path="/calendar" component={Calendar} />
+      <Route path="/calendar" component={EventCalendar} />
       <Route path="/confidants" />
       <Route path="/confidant/:id" />
       <Route path="/negotiations" component={NegotiationInfo} />
