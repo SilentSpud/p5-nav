@@ -10,9 +10,7 @@ export const ClassPopup = (questions: Question[]) => (
         <Card key={index} border="light">
           <Card.Header>{question.question}</Card.Header>
           <Card.Body>
-            {question.answer.map((answer, i) => (
-              <Card.Text key={i}>{answer}</Card.Text>
-            ))}
+            <Card.Text>{question.answer}</Card.Text>
           </Card.Body>
         </Card>
       ))}
