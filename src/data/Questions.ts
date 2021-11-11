@@ -169,7 +169,7 @@ export const ClassroomQuestions: QuestionList = {
   ],
   "6/13": [
     {
-      question: "What color do you think it turns (when washing your hair with copper)",
+      question: "What color do you think it turns?",
       answer: "Green",
     },
   ],
@@ -199,7 +199,7 @@ export const ClassroomQuestions: QuestionList = {
   ],
   "6/29": [
     {
-      question: "What do you think it says on the back of this (Shogi) piece?",
+      question: "What do you think it says on the back of this piece?",
       answer: "Gold",
     },
   ],
@@ -353,7 +353,7 @@ export const ClassroomQuestions: QuestionList = {
   ],
   "10/6": [
     {
-      question: "Now, do you know who invented this instrument? (Guillotine)",
+      question: "Now, do you know who invented this instrument?",
       answer: "Joseph-Ignace Guillotine",
     },
   ],
@@ -441,13 +441,13 @@ export const ClassroomQuestions: QuestionList = {
   ],
   "11/14": [
     {
-      question: "Tell me why that is? (Sun rising over Mt. Fuji)",
+      question: "Tell me why that is?",
       answer: "Because of high altitude",
     },
   ],
   "11/15": [
     {
-      question: "He was to be paraded through the city and punished in a very particular way. How was he punished? (Nezumi Kozo)",
+      question: "He was to be paraded through the city and punished in a very particular way. How was he punished?",
       answer: "His head was put on display",
     },
   ],
@@ -525,7 +525,7 @@ export const ClassroomQuestions: QuestionList = {
   ],
   "1/24": [
     {
-      question: "What does that mean when describing a person? (Sweet)",
+      question: "What does that mean when describing a person?",
       answer: "Kind-hearted",
     },
     {

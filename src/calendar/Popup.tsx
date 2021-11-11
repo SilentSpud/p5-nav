@@ -3,7 +3,7 @@ import { Card, Popover } from "react-bootstrap";
 import { Question } from "../data";
 
 export const ClassPopup = (questions: Question[]) => (
-  <Popover>
+  <Popover className="bg-primary">
     <Popover.Header as="h3">Classroom Questions</Popover.Header>
     <Popover.Body>
       {questions.map((question, index) => (

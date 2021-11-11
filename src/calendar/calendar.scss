@@ -34,6 +34,7 @@ $row-size: calc($calendar-size * 0.19);
   .num {
     user-select: none;
     font-family: "Fira CodeVariable", "Fira Code", monospace;
+    margin-bottom: 10px;
   }
   .vstack {
     div {
@@ -42,6 +43,9 @@ $row-size: calc($calendar-size * 0.19);
       cursor: pointer;
     }
   }
+}
+.popover {
+  max-width: 50vw;
 }
 .content .nav-link {
   font-size: 14pt;
