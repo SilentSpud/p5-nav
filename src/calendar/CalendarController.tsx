@@ -1,5 +1,6 @@
 import React, { createContext, ReactNode, useContext } from "react";
 import { eachDayOfInterval, endOfMonth, startOfMonth } from "date-fns";
+import { Question } from "../data";
 
 type CalendarState = {
   days: Date[];
@@ -7,14 +8,6 @@ type CalendarState = {
   events: EventItem[];
   onMonthChange: (date: Date) => void;
 };
-export type EventItem = {
-  title: string;
-  date: Date;
-  theme: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
-};
-
-const calendarContext = createContext<CalendarState>({} as CalendarState);
-export const useCalendar = (): CalendarState => useContext(calendarContext);
 
 type CalendarProps = {
   children: ReactNode | ReactNode[];
@@ -22,6 +15,16 @@ type CalendarProps = {
   events: EventItem[];
   onMonthChange: (date: Date) => void;
 };
+
+export type EventItem = {
+  title: string;
+  date: Date;
+  type: "class" | "dailies";
+  questions?: Question[];
+};
+
+const calendarContext = createContext<CalendarState>({} as CalendarState);
+export const useCalendar = (): CalendarState => useContext(calendarContext);
 
 export const Calendar = ({ month, onMonthChange, children, events }: CalendarProps) => {
   const monthStart = startOfMonth(month);

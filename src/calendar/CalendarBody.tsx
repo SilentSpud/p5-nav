@@ -1,7 +1,8 @@
 import React, { ReactNode, useContext } from "react";
-import { Col, Container, Row, Stack } from "react-bootstrap";
+import { Col, Container, OverlayTrigger, Row, Stack } from "react-bootstrap";
 import { EventItem, padDates, useCalendar } from "./CalendarController";
 import "./calendar.scss";
+import { ClassPopup } from "./Popup";
 
 const DayEvents = React.createContext({} as { day: Date; events: EventItem[] });
 export const useEvents = () => useContext(DayEvents);
@@ -64,11 +65,26 @@ export const Day = () => {
       <div className="num">{dayNumber}</div>
       <Stack direction="vertical" gap={3}>
         {events.map((item, index) => (
-          <Event key={index} title={item.title} date={item.date} theme={item.theme} />
+          <Event key={index} event={item} />
         ))}
       </Stack>
     </div>
   );
 };
 
-export const Event = ({ title, theme }: { title: string; date: Date; theme: string }) => <div className={`bg-${theme ? theme : "primary"}`}>{title}</div>;
+export const Event = ({ event }: { event: EventItem }) => {
+  let popover: JSX.Element;
+  let eventClass = "bg-dark";
+  switch (event.type) {
+    case "class": {
+      eventClass = "bg-primary";
+      popover = ClassPopup(event.questions);
+      break;
+    }
+  }
+  return (
+    <OverlayTrigger trigger={["click", "focus"]} placement="auto" overlay={popover} rootClose>
+      <div className={eventClass}>{event.title}</div>
+    </OverlayTrigger>
+  );
+};

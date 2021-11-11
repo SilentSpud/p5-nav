@@ -11,11 +11,11 @@ const loadQuestions = () =>
   useMemo(() => {
     const questions: EventItem[] = [];
     for (const day in ClassroomQuestions) {
-      const qs = ClassroomQuestions[day];
       const event: EventItem = {
-        title: `Classroom Questions: ${qs.length}`,
+        title: "Classroom Questions",
         date: parseYear(day),
-        theme: "primary",
+        type: "class",
+        questions: ClassroomQuestions[day],
       };
       questions.push(event);
     }
