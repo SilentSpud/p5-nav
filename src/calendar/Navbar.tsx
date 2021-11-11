@@ -1,6 +1,9 @@
 import React from "react";
 import { useCalendar } from "./CalendarController";
 import { Nav } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+const Icon = FontAwesomeIcon;
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -16,7 +19,7 @@ export const Navbar = () => {
     <Nav variant="tabs" className="bg-dark" navbar={true} justify={true} defaultActiveKey="current">
       <Nav.Item>
         <Nav.Link className="prev" disabled={month.getMonth() === 3} onClick={parseNavClick}>
-          Previous
+          <Icon icon={faAngleLeft} /> Previous
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
@@ -26,7 +29,7 @@ export const Navbar = () => {
       </Nav.Item>
       <Nav.Item>
         <Nav.Link className="next" disabled={month.getMonth() === 2} onClick={parseNavClick}>
-          Next
+          Next <Icon icon={faAngleRight} />
         </Nav.Link>
       </Nav.Item>
     </Nav>

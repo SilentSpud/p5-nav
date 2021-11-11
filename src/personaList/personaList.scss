@@ -1,6 +1,11 @@
 @import "../sass/overrides";
 
 section[role="table"].personas {
+  color: $table-text;
+  font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
   header,
   main {
     width: 100vw;
@@ -39,5 +44,78 @@ section[role="table"].personas {
 
   div[role="row"]:nth-child(2) div[role="columnheader"] {
     text-align: center;
+  }
+
+  div[role="columnheader"] {
+    font-weight: bold;
+    vertical-align: center;
+    color: $table-heading;
+    background-color: $table-head-bg;
+    border-bottom: 1px solid $table-border;
+
+    &:not(:last-child) {
+      border-right: 1px solid $table-border;
+    }
+
+    &.searchbox {
+      padding: 0;
+    }
+
+    span {
+      float: right;
+      vertical-align: middle;
+    }
+  }
+
+  div[role="row"]:nth-child(2) div[role="columnheader"] {
+    text-align: center;
+  }
+
+  div[role="cell"] {
+    border-bottom: 1px solid $table-border;
+  }
+
+  div[role="row"]:hover div[role="cell"] {
+    background-color: $form-border;
+    cursor: pointer;
+  }
+}
+
+div[role="columnheader"],
+.nav-link,
+div[role="cell"] {
+  user-select: none;
+}
+
+.questionlist table {
+  width: 50%;
+  float: left;
+  th:first-child {
+    width: 80%;
+  }
+  th:nth-child(n + 2) {
+    width: 5%;
+  }
+  th:not(:first-child),
+  td:not(:first-child) {
+    text-align: center;
+  }
+}
+
+.search {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 10px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: $table-head-bg;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $table-bg;
   }
 }

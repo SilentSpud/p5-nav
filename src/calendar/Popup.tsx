@@ -7,7 +7,7 @@ export const ClassPopup = (questions: Question[]) => (
     <Popover.Header as="h3">Classroom Questions</Popover.Header>
     <Popover.Body>
       {questions.map((question, index) => (
-        <Card key={index} border="light">
+        <Card key={index} border="primary">
           <Card.Header>{question.question}</Card.Header>
           <Card.Body>
             <Card.Text>{question.answer}</Card.Text>

@@ -19,7 +19,7 @@ type CalendarProps = {
 export type EventItem = {
   title: string;
   date: Date;
-  type: "class" | "dailies";
+  type: "class";
   questions?: Question[];
 };
 
