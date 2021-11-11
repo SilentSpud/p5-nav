@@ -1,9 +1,9 @@
 import React, { ReactNode, useContext } from "react";
 import { Col, Container, Row, Stack } from "react-bootstrap";
-import { padDates, useCalendar } from "./CalendarController";
+import { EventItem, padDates, useCalendar } from "./CalendarController";
 import "./calendar.scss";
 
-const DayEvents = React.createContext({ day: new Date(), events: [] });
+const DayEvents = React.createContext({} as { day: Date, events: EventItem[] });
 export const useEvents = () => useContext(DayEvents);
 
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -64,11 +64,11 @@ export const Day = () => {
       <div className="num">{dayNumber}</div>
       <Stack direction="vertical" gap={3}>
         {events.map((item, index) => (
-          <Event key={index} title={item.title} date={item.date} />
+          <Event key={index} title={item.title} date={item.date} theme={item.theme} />
         ))}
       </Stack>
     </div>
   );
 };
 
-export const Event = ({ title }: { title: string; date: Date }) => <div className="bg-dark border">{title}</div>;
+export const Event = ({ title, theme }: { title: string; date: Date; theme: string; }) => <div className={`bg-${theme ? theme : "primary"}`}>{title}</div>;
