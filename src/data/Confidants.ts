@@ -33,19 +33,15 @@ export interface ConfidantRank {
 }
 
 export interface Confidant {
+  name?: string;
   character: string;
-  benefits: {
-    [name: string]: ConfidantBenefit;
-  };
-  questions: {
-    [rank: string]: ConfidantRank;
-  };
+  benefits: { [name: string]: ConfidantBenefit };
+  questions: { [rank: string]: ConfidantRank };
 }
-export interface ConfidantList {
-  [name: string]: Confidant;
-}
-export const Confidants: ConfidantList = {
-  chariot: {
+
+export const Confidants: Confidant[] = [
+  {
+    name: "chariot",
     character: "Ryuji Sakamoto",
     benefits: {
       "Baton Pass": {
@@ -363,7 +359,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  councillor: {
+  ,
+  {
+    name: "councillor",
     character: "Takuto Maruki",
     benefits: {
       "Detox X": {
@@ -762,7 +760,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  death: {
+  ,
+  {
+    name: "death",
     character: "Tae Takemi",
     benefits: {
       Rejuvenation: {
@@ -1114,7 +1114,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  devil: {
+  ,
+  {
+    name: "devil",
     character: "Ichiko Ohya",
     benefits: {
       "Rumor-filled Scoop": {
@@ -1444,7 +1446,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  emperor: {
+  ,
+  {
+    name: "emperor",
     character: "Yusuke Kitagawa",
     benefits: {},
     questions: {
@@ -1715,7 +1719,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  empress: {
+  ,
+  {
+    name: "empress",
     character: "Haru Okumura",
     benefits: {
       Cultivation: {
@@ -2161,7 +2167,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  faith: {
+  ,
+  {
+    name: "faith",
     character: "Kasumi Yoshizawa",
     benefits: {
       Tumbling: {
@@ -2739,7 +2747,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  fortune: {
+  ,
+  {
+    name: "fortune",
     character: "Chihaya Mifune",
     benefits: {
       "Lucky Reading": {
@@ -3062,7 +3072,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  hanged: {
+  ,
+  {
+    name: "hanged",
     character: "Munehisa Iwai",
     benefits: {
       "Starter Customization": {
@@ -3412,7 +3424,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  hermit: {
+  ,
+  {
+    name: "hermit",
     character: "Futaba Sakura",
     benefits: {
       "Moral Support": {
@@ -3772,7 +3786,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  hierophant: {
+  ,
+  {
+    name: "hierophant",
     character: "Sojiro Sakura",
     benefits: {
       "Coffee Basics": {
@@ -4053,7 +4069,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  justice: {
+  ,
+  {
+    name: "justice",
     character: "Goro Akechi",
     benefits: {
       "Sleuthing Instinct": {
@@ -4428,7 +4446,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  lovers: {
+  ,
+  {
+    name: "lovers",
     character: "Ann Takamaki",
     benefits: {
       "Baton Pass": {
@@ -4871,7 +4891,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  moon: {
+  ,
+  {
+    name: "moon",
     character: "Yuuki Mishima",
     benefits: {
       "Mishima’s Support": {
@@ -5218,7 +5240,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  priestess: {
+  ,
+  {
+    name: "priestess",
     character: "Makoto Niijima",
     benefits: {
       "Shadow Calculus": {
@@ -5623,7 +5647,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  star: {
+  ,
+  {
+    name: "star",
     character: "Hifumi Togo",
     benefits: {
       "Koma Sabaki": {
@@ -5932,7 +5958,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  sun: {
+  ,
+  {
+    name: "sun",
     character: "Toranosuke Yoshida",
     benefits: {
       Diplomacy: {
@@ -6181,7 +6209,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  temperance: {
+  ,
+  {
+    name: "temperance",
     character: "Sadayo Kawakami",
     benefits: {
       "Slack Off": {
@@ -6571,7 +6601,9 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-  tower: {
+  ,
+  {
+    name: "tower",
     character: "Shinya Oda",
     benefits: {
       "Down Shot": {
@@ -6895,4 +6927,4 @@ export const Confidants: ConfidantList = {
       },
     },
   },
-};
+];
