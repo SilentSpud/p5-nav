@@ -4,6 +4,7 @@ import { Personas, WeaknessLevels as Weaknesses } from "../data";
 import { personaHeaders } from "./personaTableConfig";
 import prepareTable from "../tableMaker";
 import { Cell, Row } from "react-table";
+import "./personaList.scss";
 
 const personaParser = () =>
   React.useMemo(() => {
@@ -78,6 +79,6 @@ export const personaList = (): JSX.Element => {
       </div>
     );
   };
-  return prepareTable({ columns, data, rowParser });
+  return prepareTable({ columns, data, rowParser, className: "personas" });
 };
 export default personaList;

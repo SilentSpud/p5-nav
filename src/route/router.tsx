@@ -1,40 +1,43 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NegotiationInfo from "../negotiation";
-import personaInfo from "../persona";
-import personaTable from "../personaList";
+import { BrowserRouter as Router, Switch as Routes, Route } from "react-router-dom";
 
-const NavLink = (params) => (
-  <LinkContainer to={params.to}>
-    <Nav.Link>{params.children}</Nav.Link>
+// Route imports
+import EventCalendar from "../calendar";
+import NegotiationInfo from "../negotiation";
+import PersonaInfo from "../persona";
+import PersonaTable from "../personaList";
+
+const NavLink = ({ to, children }: { to: string; children: React.ReactNode | React.ReactNode[] }) => (
+  <LinkContainer to={to}>
+    <Nav.Link>{children}</Nav.Link>
   </LinkContainer>
 );
-const NavSwitch = (params) => (
-  <div className={"content"}>
-    <Switch {...params}>
-      <Route path="/personas" component={personaTable} />
-      <Route path="/persona/:id" component={personaInfo} />
+const NavSwitch = () => (
+  <div className="content">
+    <Routes>
+      <Route path="/personas" component={PersonaTable} />
+      <Route path="/persona/:id" component={PersonaInfo} />
       <Route path="/skills" />
       <Route path="/skill/:id" />
-      <Route path="/negotiations" component={NegotiationInfo} />
-      <Route path="/negotiation/:id" />
+      <Route path="/calendar" component={EventCalendar} />
       <Route path="/confidants" />
       <Route path="/confidant/:id" />
-      <Route path="/questions" />
-    </Switch>
+      <Route path="/negotiations" component={NegotiationInfo} />
+      <Route path="/negotiation/:id" />
+    </Routes>
   </div>
 );
 
-export const Routes = (params) => (
-  <Router {...params}>
-    <Nav variant="tabs" className="bg-dark" navbar={true} justify={true}>
+export const NavRoutes = () => (
+  <Router>
+    <Nav variant="tabs" className="bg-dark" navbar justify>
       <NavLink to="/personas">Personas</NavLink>
       <NavLink to="/skills">Skills</NavLink>
-      <NavLink to="/negotiations">Negotiation Questions</NavLink>
+      <NavLink to="/calendar">Calendar</NavLink>
       <NavLink to="/confidants">Confidants</NavLink>
-      <NavLink to="/questions">Classroom Questions</NavLink>
+      <NavLink to="/negotiations">Negotiation Questions</NavLink>
     </Nav>
     <NavSwitch />
   </Router>

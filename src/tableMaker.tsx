@@ -9,10 +9,10 @@ const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue) => 
     <div key={i} {...row.getHeaderGroupProps()}>
       {row.headers.map((cell) => {
         if (cell.id == "title_0") {
-          return <div {...cell.getHeaderProps({ className: "searchbox" })}>{searchForm(setGlobalFilter)}</div>;
+          return <div {...cell.getHeaderProps({ className: "searchbox th" })}>{searchForm(setGlobalFilter)}</div>;
         } else {
           return (
-            <div {...cell.getHeaderProps(cell.getSortByToggleProps())}>
+            <div {...cell.getHeaderProps(cell.getSortByToggleProps({ className: "th" }))}>
               {cell.render("Header")}
               {cell.canSort && (
                 <span>{(cell.isSortedDesc && <Icon icon={faSortUp} />) || (cell.isSorted && <Icon icon={faSortDown} />) || <Icon icon={faSort} />}</span>
@@ -34,7 +34,7 @@ const searchForm = (setGlobalFilter: (filterValue) => void) => (
   ></input>
 );
 
-const prepareTable = ({ columns, data, rowParser }) => {
+const prepareTable = ({ columns, data, rowParser, className }) => {
   const sortId = columns[0]?.columns[0]?.accessor ?? columns[0]?.accessor ?? "";
   const { getTableProps, getTableBodyProps, headerGroups, rows, setGlobalFilter, prepareRow } = useTable(
     { columns: columns, data: data, initialState: { sortBy: [{ id: sortId }] } },
@@ -43,7 +43,7 @@ const prepareTable = ({ columns, data, rowParser }) => {
     useFlexLayout
   );
   return (
-    <section {...getTableProps({ className: "table table-dark" })}>
+    <section {...getTableProps({ className: `table table-dark ${className}` })}>
       <header role="rowgroup">{renderHeader(headerGroups, setGlobalFilter)}</header>
       <main {...getTableBodyProps()}>
         {rows.map((row, i) => {

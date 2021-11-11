@@ -1,25 +1,7 @@
 @import "@fontsource/fira-code/scss/mixins";
-
-$p5-red: #dc3545;
-$p5-red-dark: #a3001e;
-$p5-red-light: #ff6b70;
-$headings: #dedede;
-$text: #e6e6e6;
-$table-heading: #dedede;
-$table-head-bg: #2a2a2a;
-$table-text: #e6e6e6;
-$table-border: #383838;
-$table-bg: #121212;
-$hr-line: #2e2e2e;
-$form-bg: #2e2e2e;
-$form-border: #383838;
-$form-text: #e6e6e6;
-
-$nav-link-color: $p5-red-light !default;
-$nav-link-hover-color: $p5-red !default;
-$nav-tabs-link-active-color: $p5-red !default;
-
+@import "./overrides";
 @import "./darkly";
+@import "bootstrap/scss/bootstrap";
 
 .content {
   height: calc(100vh - 45px);
@@ -27,52 +9,14 @@ $nav-tabs-link-active-color: $p5-red !default;
 }
 
 // ----------- TABLES ----------- //
-$table: '[role="table"]';
-$thead: '[role="rowgroup"]:first-child';
-$tbody: '[role="rowgroup"]:nth-child(2)';
-$tr: '[role="row"]';
-$th: '[role="columnheader"]';
-$td: '[role="cell"]';
-
-#{$table} {
+table {
   color: $table-text;
   font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
 
-  &,
-  & #{$thead},
-  & #{$tbody} {
-    width: 100vw;
-    padding: 0;
-  }
-
-  #{$thead} {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  #{$tbody} {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: calc(100vh - 120px);
-
-    &::-webkit-scrollbar {
-      width: 0 !important;
-    }
-  }
-
-  #{$td}.elem,
-  #{$td}:first-child {
-    text-align: center;
-    &,
-    #{$td}.stat {
-      font-family: "Fira CodeVariable", "Fira Code", monospace;
-    }
-  }
-
-  #{$th} {
+  th {
     font-weight: bold;
     vertical-align: center;
     color: $table-heading;
@@ -93,38 +37,15 @@ $td: '[role="cell"]';
     }
   }
 
-  #{$tr}:nth-child(2) #{$th} {
-    text-align: center;
-  }
-
-  #{$td} {
+  td {
     border-bottom: 1px solid $table-border;
   }
-
-  #{$tr}:hover #{$td} {
-    background-color: $form-border;
-    cursor: pointer;
-  }
 }
 
-#{$th},
-.nav-link,
-#{$td} {
+th,
+td,
+.nav-link {
   user-select: none;
-}
-
-.questionlist table {
-  width: 50%;
-  float: left;
-  th:first-child {
-    width: 80%;
-  }
-  th:nth-child(n + 2) {
-    width: 5%;
-  }
-  th:not(:first-child), td:not(:first-child) {
-    text-align: center;
-  }
 }
 
 .search {

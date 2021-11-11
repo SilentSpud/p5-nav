@@ -1,3 +1,3 @@
 export * from "./router";
-import { Routes } from "./router";
-export default Routes;
+import { NavRoutes } from "./router";
+export default NavRoutes;

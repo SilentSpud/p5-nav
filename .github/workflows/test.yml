@@ -3,27 +3,27 @@ name: Build Tests
 on: push
 
 jobs:
-    release:
-        runs-on: ${{ matrix.os }}
+  release:
+    runs-on: ${{ matrix.os }}
 
-        strategy:
-            matrix:
-                os: [macos-10.14, windows-2019, ubuntu-18.04]
+    strategy:
+      matrix:
+        os: [macos-10.14, windows-2019, ubuntu-18.04]
 
-        steps:
-            - name: Git Checkout
-              uses: actions/checkout@v2
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
 
-            - name: Node Setup
-              uses: actions/setup-node@v2
-              with:
-                  node-version: 17.x
+      - name: Node Setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: 17.x
 
-            - name: Dependency Installation
-              run: yarn install --frozen-lockfile
+      - name: Dependency Installation
+        run: yarn install --frozen-lockfile
 
-            - name: Linting & Testing
+      - name: Linting & Testing
 
-              run: |
-                  yarn lint
-                  yarn tsc
+        run: |
+          yarn lint
+          yarn tsc

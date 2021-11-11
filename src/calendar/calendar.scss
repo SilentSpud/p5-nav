@@ -1,0 +1,55 @@
+@import "../sass/overrides";
+$calendar-size: calc($content-size - 46px);
+$head-size: calc($calendar-size * 0.05);
+$head-height: calc($head-size - 2px);
+$head-font-size: calc($head-height - 24px);
+$row-size: calc($calendar-size * 0.19);
+
+.calendar {
+  height: $calendar-size;
+
+  .header {
+    user-select: none;
+    &,
+    .col {
+      height: $head-size;
+    }
+    .col {
+      line-height: $head-height;
+      font-size: $head-font-size;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .week,
+  .week .col {
+    height: $row-size;
+  }
+  .col {
+    border: 1px solid #333;
+    overflow: scroll;
+  }
+  .num {
+    user-select: none;
+    font-family: "Fira CodeVariable", "Fira Code", monospace;
+    margin-bottom: 10px;
+  }
+  .vstack {
+    div {
+      padding-left: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+.popover {
+  max-width: 50vw;
+}
+.content .nav-link {
+  font-size: 14pt;
+  &.active {
+    font-weight: bold;
+  }
+}
