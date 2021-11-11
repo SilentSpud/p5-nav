@@ -39,12 +39,7 @@ export const Month = ({ events, children }: { events: EventItem[]; children: Rea
   const daysToRender = processPadding(days);
   const weeks = [];
   for (let i = 0; i < daysToRender.length; i += 7) {
-    let thisWeek = daysToRender.slice(i, i + 7);
-    // pad the week if needed
-    if (thisWeek.length < 7) {
-      thisWeek = thisWeek.concat([0, 0, 0, 0, 0, 0, 0]).slice(0, 7);
-    }
-    weeks.push(thisWeek);
+    weeks.push(daysToRender.slice(i, i + 7));
   }
   return (
     <Container fluid className="calendar">
@@ -68,10 +63,7 @@ export const Day = ({ renderDay }: { renderDay: (events: EventItem[]) => JSX.Ele
 
   return (
     <div>
-      <div>
-        <div>{dayNumber}</div>
-        <div>{daysOfTheWeek[day.getDay()]}</div>
-      </div>
+      <div className="num">{dayNumber}</div>
       <ul>{renderDay(events)}</ul>
     </div>
   );

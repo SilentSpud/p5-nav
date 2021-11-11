@@ -13,10 +13,10 @@ type EventItem = {
 };
 
 export const Calendar = () => {
-  const [currentMonth, setCurrentMonth] = useState<Date>(startOfMonth(StartDate));
+  const [month, setMonth] = useState<Date>(startOfMonth(StartDate));
 
   return (
-    <MonthlyCalendar currentMonth={currentMonth} onMonthChange={(date) => setCurrentMonth(date)}>
+    <MonthlyCalendar month={month} onMonthChange={(date) => setMonth(date)}>
       <Navbar />
       <Month events={[]}>
         <Day renderDay={(data: EventItem[]) => data.map((item: EventItem, index) => <Event key={index} title={item.title} date={item.date} />)} />

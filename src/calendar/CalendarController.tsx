@@ -4,7 +4,7 @@ import { eachDayOfInterval, endOfMonth, startOfMonth } from "date-fns";
 
 type CalendarState = {
   days: Date[];
-  currentMonth: Date;
+  month: Date;
   onMonthChange: (date: Date) => void;
 };
 
@@ -13,19 +13,19 @@ export const useMonthlyCalendar = () => useContext(MonthlyCalendarContext);
 
 type Props = {
   children: ReactNode | ReactNode[];
-  currentMonth: Date;
+  month: Date;
   onMonthChange: (date: Date) => void;
 };
 
-export const MonthlyCalendar = ({ currentMonth, onMonthChange, children }: Props) => {
-  const monthStart = startOfMonth(currentMonth);
+export const MonthlyCalendar = ({ month, onMonthChange, children }: Props) => {
+  const monthStart = startOfMonth(month);
   const days = eachDayOfInterval({
     start: monthStart,
     end: endOfMonth(monthStart),
   });
 
   return (
-    <MonthlyCalendarContext.Provider value={{ days, onMonthChange, currentMonth: monthStart, }}>
+    <MonthlyCalendarContext.Provider value={{ days, onMonthChange, month: monthStart, }}>
       {children}
     </MonthlyCalendarContext.Provider>
   );
@@ -37,7 +37,6 @@ export const processPadding = (days: Date[]) => {
   // extra at the start to line up the days
   const prePad: (Date | 0)[] = Array.from(Array(days[0].getUTCDay())).map(() => 0);
   // extra at the end to keep the calendar shape
-  const postPad: 0[] = Array.from({ length: prePad.concat(days).length % 7 }, () => 0);
   const overflow = prePad.concat(days).slice(35);
   let cutDays = prePad.concat(days).slice(0, 35);
 
@@ -46,5 +45,6 @@ export const processPadding = (days: Date[]) => {
     const newPrePad = overflow.concat(Array.from(Array(7)).map(() => 0)).slice(0, days[0].getUTCDay());
     cutDays = newPrePad.concat(days).slice(0, 35);
   }
+  const postPad: 0[] = Array.from({ length: 35 - cutDays.length }, () => 0);
   return cutDays.concat(postPad);
 };
