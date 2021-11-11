@@ -1,7 +1,7 @@
 import React, { ReactNode, useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./calendar.scss";
-import { processPadding, useMonthlyCalendar } from "./CalendarController";
+import { processPadding, useCalendar } from "./CalendarController";
 
 const DayEvents = React.createContext({ day: new Date(), events: [] });
 export const useEvents = () => useContext(DayEvents);
@@ -35,7 +35,7 @@ export const Week = ({ days, children, events }: { days: (Date | 0)[]; events: E
 );
 
 export const Month = ({ events, children }: { events: EventItem[]; children: ReactNode | ReactNode[] }) => {
-  const { days } = useMonthlyCalendar();
+  const { days } = useCalendar();
   const daysToRender = processPadding(days);
   const weeks = [];
   for (let i = 0; i < daysToRender.length; i += 7) {

@@ -1,6 +1,7 @@
 @import "../sass/overrides";
 $calendar-size: calc($content-size - 46px);
 $head-size: calc($calendar-size * 0.05);
+$head-height: calc($head-size - 2px);
 $row-size: calc($calendar-size * 0.19);
 
 .calendar {
@@ -11,7 +12,7 @@ $row-size: calc($calendar-size * 0.19);
       height: $head-size;
     }
     .col {
-      line-height: $head-size;
+      line-height: $head-height;
       text-align: center;
       vertical-align: middle;
       margin: 0;
@@ -28,7 +29,7 @@ $row-size: calc($calendar-size * 0.19);
   }
   .num {
     user-select: none;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Fira CodeVariable", "Fira Code", monospace;
   }
 }
 .content .nav-link {

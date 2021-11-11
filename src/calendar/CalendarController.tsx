@@ -8,16 +8,16 @@ type CalendarState = {
   onMonthChange: (date: Date) => void;
 };
 
-const MonthlyCalendarContext = createContext<CalendarState>({} as CalendarState);
-export const useMonthlyCalendar = () => useContext(MonthlyCalendarContext);
+const calendarContext = createContext<CalendarState>({} as CalendarState);
+export const useCalendar = () => useContext(calendarContext);
 
-type Props = {
+type CalendarProps = {
   children: ReactNode | ReactNode[];
   month: Date;
   onMonthChange: (date: Date) => void;
 };
 
-export const MonthlyCalendar = ({ month, onMonthChange, children }: Props) => {
+export const MonthlyCalendar = ({ month, onMonthChange, children }: CalendarProps) => {
   const monthStart = startOfMonth(month);
   const days = eachDayOfInterval({
     start: monthStart,
@@ -25,9 +25,9 @@ export const MonthlyCalendar = ({ month, onMonthChange, children }: Props) => {
   });
 
   return (
-    <MonthlyCalendarContext.Provider value={{ days, onMonthChange, month: monthStart, }}>
+    <calendarContext.Provider value={{ days, onMonthChange, month: monthStart, }}>
       {children}
-    </MonthlyCalendarContext.Provider>
+    </calendarContext.Provider>
   );
 };
 

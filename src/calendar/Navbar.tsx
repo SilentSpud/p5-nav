@@ -1,11 +1,11 @@
 import React from "react";
-import { useMonthlyCalendar } from "./CalendarController";
+import { useCalendar } from "./CalendarController";
 import { Nav } from "react-bootstrap";
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 export const Navbar = () => {
-  const { month, onMonthChange } = useMonthlyCalendar();
+  const { month, onMonthChange } = useCalendar();
 
   const parseNavClick = (evt: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (evt.currentTarget.classList.contains("prev")) onMonthChange((month.setMonth(month.getMonth() - 1), month));
