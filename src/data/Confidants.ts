@@ -1,4 +1,5 @@
 import confidants from "../../data/confidants.json";
+
 export interface ConfidantLevelRequirements {
   story?: boolean;
   trueEnding?: boolean;
