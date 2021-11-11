@@ -15,7 +15,7 @@ const loadQuestions = () =>
       const event: EventItem = {
         title: `Classroom Questions: ${qs.length}`,
         date: parseYear(day),
-        theme: "primary"
+        theme: "primary",
       };
       questions.push(event);
     }

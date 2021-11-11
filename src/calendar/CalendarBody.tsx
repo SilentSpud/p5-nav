@@ -3,7 +3,7 @@ import { Col, Container, Row, Stack } from "react-bootstrap";
 import { EventItem, padDates, useCalendar } from "./CalendarController";
 import "./calendar.scss";
 
-const DayEvents = React.createContext({} as { day: Date, events: EventItem[] });
+const DayEvents = React.createContext({} as { day: Date; events: EventItem[] });
 export const useEvents = () => useContext(DayEvents);
 
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -71,4 +71,4 @@ export const Day = () => {
   );
 };
 
-export const Event = ({ title, theme }: { title: string; date: Date; theme: string; }) => <div className={`bg-${theme ? theme : "primary"}`}>{title}</div>;
+export const Event = ({ title, theme }: { title: string; date: Date; theme: string }) => <div className={`bg-${theme ? theme : "primary"}`}>{title}</div>;

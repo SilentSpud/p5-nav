@@ -10,15 +10,7 @@ type CalendarState = {
 export type EventItem = {
   title: string;
   date: Date;
-  theme:
-  | "primary"
-  | "secondary"
-  | "success"
-  | "danger"
-  | "warning"
-  | "info"
-  | "light"
-  | "dark";
+  theme: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
 };
 
 const calendarContext = createContext<CalendarState>({} as CalendarState);
