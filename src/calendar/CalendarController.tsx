@@ -1,10 +1,14 @@
 import React, { createContext, ReactNode, useContext } from "react";
 import { eachDayOfInterval, endOfMonth, startOfMonth } from "date-fns";
 
-
+interface Event {
+  title: string;
+  date: Date;
+}
 type CalendarState = {
   days: Date[];
   month: Date;
+  events: Event[];
   onMonthChange: (date: Date) => void;
 };
 
@@ -14,26 +18,29 @@ export const useCalendar = () => useContext(calendarContext);
 type CalendarProps = {
   children: ReactNode | ReactNode[];
   month: Date;
+  events: Event[];
   onMonthChange: (date: Date) => void;
 };
 
-export const MonthlyCalendar = ({ month, onMonthChange, children }: CalendarProps) => {
+export const MonthlyCalendar = ({ month, onMonthChange, children, events }: CalendarProps) => {
   const monthStart = startOfMonth(month);
   const days = eachDayOfInterval({
     start: monthStart,
     end: endOfMonth(monthStart),
   });
 
-  return (
-    <calendarContext.Provider value={{ days, onMonthChange, month: monthStart, }}>
-      {children}
-    </calendarContext.Provider>
-  );
+  return <calendarContext.Provider value={{ days, onMonthChange, month: monthStart, events }}>{children}</calendarContext.Provider>;
 };
 
+// extrapolate dates from strings
+export const parseYear = (dayString: string): Date => {
+  const month = parseInt(dayString.slice(0, 1));
+  const day = parseInt(dayString.slice(2));
+  const year = /[1-3]/g.test(month.toString()) ? 2017 : 2016;
+  return new Date(year, month, day);
+};
 
-
-export const processPadding = (days: Date[]) => {
+export const padDates = (days: Date[]) => {
   // extra at the start to line up the days
   const prePad: (Date | 0)[] = Array.from(Array(days[0].getUTCDay())).map(() => 0);
   // extra at the end to keep the calendar shape

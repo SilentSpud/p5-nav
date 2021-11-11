@@ -9,7 +9,7 @@ import NegotiationInfo from "../negotiation";
 import PersonaInfo from "../persona";
 import PersonaTable from "../personaList";
 
-const NavLink = ({ to, children }: { to: string; children: React.ReactNode | React.ReactNode[]}) => (
+const NavLink = ({ to, children }: { to: string; children: React.ReactNode | React.ReactNode[] }) => (
   <LinkContainer to={to}>
     <Nav.Link>{children}</Nav.Link>
   </LinkContainer>

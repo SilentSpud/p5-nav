@@ -1,42 +1,40 @@
 import React, { ReactNode, useContext } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Stack } from "react-bootstrap";
+import { padDates, useCalendar } from "./CalendarController";
 import "./calendar.scss";
-import { processPadding, useCalendar } from "./CalendarController";
 
 const DayEvents = React.createContext({ day: new Date(), events: [] });
 export const useEvents = () => useContext(DayEvents);
 
-interface EventItem {
-  title: string;
-  date: Date;
-}
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-const isSameDay = (a: Date, b: Date) => (
+const isSameDay = (a: Date, b: Date) =>
   // only check the month and day since the years don't overlap
-  a.getMonth() === b.getMonth() ? a.getDate() === b.getDate() ? true : false : false
-);
+  a.getMonth() === b.getMonth() ? (a.getDate() === b.getDate() ? true : false) : false;
 
-export const Week = ({ days, children, events }: { days: (Date | 0)[]; events: EventItem[]; children: ReactNode | ReactNode[] }) => (
-  <Row className="week">
-    {days.map((day: Date | 0, dayIndex: number) => {
-      if (day === 0) {
-        return <Col key={dayIndex}></Col>;
-      }
-      return (
-        <Col key={dayIndex}>
-          <DayEvents.Provider key={day.toISOString()} value={{ day, events: events.filter((data) => isSameDay(data.date, day)) }}>
-            {children}
-          </DayEvents.Provider>
-        </Col>
-      );
-    })}
-  </Row>
-);
+export const Week = ({ days, children }: { days: (Date | 0)[]; children: ReactNode | ReactNode[] }) => {
+  const { events } = useCalendar();
+  return (
+    <Row className="week">
+      {days.map((day: Date | 0, dayIndex: number) => {
+        if (day === 0) {
+          return <Col key={dayIndex}></Col>;
+        }
+        return (
+          <Col key={dayIndex}>
+            <DayEvents.Provider key={day.toISOString()} value={{ day, events: events.filter((data) => isSameDay(data.date, day)) }}>
+              {children}
+            </DayEvents.Provider>
+          </Col>
+        );
+      })}
+    </Row>
+  );
+};
 
-export const Month = ({ events, children }: { events: EventItem[]; children: ReactNode | ReactNode[] }) => {
+export const Month = ({ children }: { children: ReactNode | ReactNode[] }) => {
   const { days } = useCalendar();
-  const daysToRender = processPadding(days);
+  const daysToRender = padDates(days);
   const weeks = [];
   for (let i = 0; i < daysToRender.length; i += 7) {
     weeks.push(daysToRender.slice(i, i + 7));
@@ -49,7 +47,7 @@ export const Month = ({ events, children }: { events: EventItem[]; children: Rea
         ))}
       </Row>
       {weeks.map((week, weekIndex) => (
-        <Week key={weekIndex} days={week} events={events}>
+        <Week key={weekIndex} days={week}>
           {children}
         </Week>
       ))}
@@ -57,23 +55,20 @@ export const Month = ({ events, children }: { events: EventItem[]; children: Rea
   );
 };
 
-export const Day = ({ renderDay }: { renderDay: (events: EventItem[]) => JSX.Element[] }) => {
+export const Day = () => {
   const { day, events } = useEvents();
   const dayNumber = day.getDate();
 
   return (
     <div>
       <div className="num">{dayNumber}</div>
-      <ul>{renderDay(events)}</ul>
+      <Stack direction="vertical" gap={3}>
+        {events.map((item, index) => (
+          <Event key={index} title={item.title} date={item.date} />
+        ))}
+      </Stack>
     </div>
   );
 };
 
-export const Event = ({ title, date }: { title: string; date: Date }) => (
-  <li>
-    <div>
-      <h3>{title}</h3>
-      <p>time of day: {date}</p>
-    </div>
-  </li>
-);
+export const Event = ({ title }: { title: string; date: Date }) => <div className="bg-dark border">{title}</div>;

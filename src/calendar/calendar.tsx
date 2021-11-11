@@ -1,25 +1,39 @@
-import React, { useState } from "react";
-import { startOfMonth } from "date-fns";
-import { Day, Event, Month } from "./CalendarBody";
+import React, { useMemo, useState } from "react";
+import { Day, Month } from "./CalendarBody";
 import Navbar from "./Navbar";
 import "./calendar.scss";
-import { MonthlyCalendar } from "./CalendarController";
+import { MonthlyCalendar, parseYear } from "./CalendarController";
+import { ClassroomQuestions } from "../data";
 
-const StartDate = new Date(2016, 4, 9);
+const gameStart = new Date("2016-04-01T06:00:00.000Z");
 
 type EventItem = {
   title: string;
   date: Date;
 };
 
-export const Calendar = () => {
-  const [month, setMonth] = useState<Date>(startOfMonth(StartDate));
+const loadQuestions = () =>
+  useMemo(() => {
+    const questions: EventItem[] = [];
+    for (const day in ClassroomQuestions) {
+      const qs = ClassroomQuestions[day];
+      const event: EventItem = {
+        title: `Questions: ${qs.length}`,
+        date: parseYear(day),
+      };
+      questions.push(event);
+    }
+    return questions;
+  }, []);
 
+export const Calendar = () => {
+  const [month, setMonth] = useState<Date>(gameStart);
+  const classQs = loadQuestions();
   return (
-    <MonthlyCalendar month={month} onMonthChange={(date) => setMonth(date)}>
+    <MonthlyCalendar month={month} onMonthChange={(date) => setMonth(date)} events={classQs}>
       <Navbar />
-      <Month events={[]}>
-        <Day renderDay={(data: EventItem[]) => data.map((item: EventItem, index) => <Event key={index} title={item.title} date={item.date} />)} />
+      <Month>
+        <Day />
       </Month>
     </MonthlyCalendar>
   );

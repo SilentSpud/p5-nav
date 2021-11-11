@@ -25,7 +25,7 @@ export const Navbar = () => {
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link className="next" disabled={month.getMonth() === 1} onClick={parseNavClick}>
+        <Nav.Link className="next" disabled={month.getMonth() === 2} onClick={parseNavClick}>
           Next
         </Nav.Link>
       </Nav.Item>

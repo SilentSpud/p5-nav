@@ -8,7 +8,8 @@ $row-size: calc($calendar-size * 0.19);
   height: $calendar-size;
 
   .header {
-    &, .col {
+    &,
+    .col {
       height: $head-size;
     }
     .col {
