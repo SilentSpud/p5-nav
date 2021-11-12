@@ -3,8 +3,9 @@ export interface Question {
   question: string;
   answer: string;
 }
+type DateString = `${number| ''}${number}/${number| ''}${number}`;
 export type DateInfo = {
-  date: `${number| ''}${number}/${number| ''}${number}`;
+  date: DateString;
   questions: Question[]
 }
 
