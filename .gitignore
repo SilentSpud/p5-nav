@@ -31,6 +31,8 @@ node_modules
 
 # App packaged
 build/
+.next/
+yarn.lock
 
 .idea
 npm-debug.log.*

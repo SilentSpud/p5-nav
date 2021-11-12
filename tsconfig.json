@@ -3,19 +3,41 @@
     "outDir": "build",
     "target": "es6",
     "module": "esnext",
-    "lib": ["DOM", "ESNext"],
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "moduleResolution": "node",
     "noResolve": false,
     "noImplicitAny": false,
     "removeComments": false,
     "skipLibCheck": true,
     "sourceMap": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
     "keyofStringsOnly": true,
     "esModuleInterop": true,
-    "typeRoots": ["node_modules/@types", "src/@types"]
+    "typeRoots": [
+      "node_modules/@types",
+      "src/@types"
+    ],
+    "allowJs": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
-  "exclude": ["node_modules", "build", "scripts", "configs", "webpack", "./node_modules/**/*"],
-  "include": ["./src/**/*", "@types"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "configs",
+    "webpack",
+    "./node_modules/**/*"
+  ],
+  "include": [
+    "./src/**/*",
+    "@types"
+  ]
 }
