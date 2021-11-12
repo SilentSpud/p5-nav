@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch as Routes, Route } from "react-router-d
 
 // Route imports
 import EventCalendar from "../calendar";
+import ConfidantList from "../confidants";
 import NegotiationInfo from "../negotiation";
 import PersonaInfo from "../persona";
 import PersonaTable from "../personaList";
@@ -22,7 +23,7 @@ const NavSwitch = () => (
       <Route path="/skills" />
       <Route path="/skill/:id" />
       <Route path="/calendar" component={EventCalendar} />
-      <Route path="/confidants" />
+      <Route path="/confidants" component={ConfidantList} />
       <Route path="/confidant/:id" />
       <Route path="/negotiations" component={NegotiationInfo} />
       <Route path="/negotiation/:id" />

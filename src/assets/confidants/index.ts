@@ -1,0 +1,22 @@
+import chariot from "./chariot.jpg";
+import councillor from "./councillor.jpg";
+import death from "./death.jpg";
+import devil from "./devil.jpg";
+import emperor from "./emperor.jpg";
+import empress from "./empress.jpg";
+import faith from "./faith.jpg";
+import fortune from "./fortune.jpg";
+import hanged from "./hanged.jpg";
+import hermit from "./hermit.jpg";
+import hierophant from "./hierophant.jpg";
+import justice from "./justice.jpg";
+import lovers from "./lovers.jpg";
+import moon from "./moon.jpg";
+import priestess from "./priestess.jpg";
+import star from "./star.jpg";
+import sun from "./sun.jpg";
+import temperance from "./temperance.jpg";
+import tower from "./tower.jpg";
+
+const ConfidantImages =  { chariot, councillor, death, devil, emperor, empress, faith, fortune, hanged, hermit, hierophant, justice, lovers, moon, priestess, star, sun, temperance, tower };
+export default ConfidantImages;

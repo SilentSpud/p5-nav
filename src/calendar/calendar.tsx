@@ -10,12 +10,12 @@ const gameStart = new Date("2016-04-01T06:00:00.000Z");
 const loadQuestions = () =>
   useMemo(() => {
     const questions: EventItem[] = [];
-    for (const day in ClassroomQuestions) {
+    for (const day of ClassroomQuestions) {
       const event: EventItem = {
         title: "Classroom Questions",
-        date: parseYear(day),
+        date: parseYear(day.date),
         type: "class",
-        questions: ClassroomQuestions[day],
+        questions: day.questions,
       };
       questions.push(event);
     }
