@@ -11,7 +11,7 @@ const paths: { [pathName: string]: string } = {
   src: resolveApp("src"),
   types: resolveApp("node_modules/@types"),
   appTypes: resolveApp("src/@types"),
-  publicPath: "/"
+  publicPath: "/",
 };
 
 export default paths;

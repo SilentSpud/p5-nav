@@ -1,12 +1,12 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import { getPersona } from "../data";
 
 export const personaInfo = () => {
-  const router = useRouter()
+  const router = useRouter();
   let { persona } = router.query;
-  persona = (typeof persona == "string") ? persona : persona[0];
+  persona = typeof persona == "string" ? persona : persona[0];
   const Persona = getPersona(decodeURIComponent(persona));
   return (
     <Container>

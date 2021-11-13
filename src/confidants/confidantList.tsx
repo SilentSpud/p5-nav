@@ -4,7 +4,6 @@ import "./confidants.scss";
 import { Confidant, Confidants } from "../data";
 import ConfidantImages from "../assets";
 
-
 export const ConfidantList = (): JSX.Element => {
   const rows: Confidant[][] = [];
   for (let i = 0; i < Confidants.length; i += 5) {
@@ -24,12 +23,14 @@ export const ConfidantList = (): JSX.Element => {
                   <Card.Title>{confidant.name}</Card.Title>
                   <Card.Text></Card.Text>
                 </Card.Body>
-                <Card.Footer><small className="text-muted">{confidant.character}</small></Card.Footer>
+                <Card.Footer>
+                  <small className="text-muted">{confidant.character}</small>
+                </Card.Footer>
               </Card>
             </Col>
           ))}
         </Row>
       ))}
     </Container>
-  )
-}
+  );
+};
