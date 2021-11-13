@@ -1,4 +1,4 @@
-@import "../sass/overrides";
+@import "overrides";
 $calendar-size: calc($content-size - 46px);
 $head-size: calc($calendar-size * 0.05);
 $head-height: calc($head-size - 2px);
@@ -22,6 +22,12 @@ $row-size: calc($calendar-size * 0.19);
       margin: 0;
       padding: 0;
     }
+    .nav-link {
+      font-size: 14pt;
+      &.active {
+        font-weight: bold;
+      }
+    }
   }
   .week,
   .week .col {
@@ -42,14 +48,5 @@ $row-size: calc($calendar-size * 0.19);
       border-radius: 5px;
       cursor: pointer;
     }
-  }
-}
-.popover {
-  max-width: 50vw;
-}
-.content .nav-link {
-  font-size: 14pt;
-  &.active {
-    font-weight: bold;
   }
 }

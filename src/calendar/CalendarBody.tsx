@@ -1,7 +1,6 @@
 import React, { ReactNode, useContext } from "react";
 import { Col, Container, OverlayTrigger, Row, Stack } from "react-bootstrap";
 import { EventItem, padDates, useCalendar } from "./CalendarController";
-import "./calendar.scss";
 import { ClassPopup } from "./Popup";
 
 const DayEvents = React.createContext({} as { day: Date; events: EventItem[] });
@@ -74,6 +73,7 @@ export const Day = () => {
 
 export const Event = ({ event }: { event: EventItem }) => {
   let popover: JSX.Element;
+  if (!event.questions) return null;
   let eventClass = "bg-dark";
   switch (event.type) {
     case "class": {

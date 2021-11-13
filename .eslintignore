@@ -1,0 +1,15 @@
+logs
+*.log
+.eslintcache
+node_modules
+build/
+.idea
+npm-debug.log.*
+__snapshots__
+*.css.d.ts
+*.sass.d.ts
+*.scss.d.ts
+package.json
+yarn.lock
+.travis.yml
+.next
