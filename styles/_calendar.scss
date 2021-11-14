@@ -21,6 +21,7 @@ $row-size: calc($calendar-size * 0.19);
       vertical-align: middle;
       margin: 0;
       padding: 0;
+      overflow: hidden;
     }
     .nav-link {
       font-size: 14pt;
@@ -36,6 +37,10 @@ $row-size: calc($calendar-size * 0.19);
   .col {
     border: 1px solid #333;
     overflow: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
   }
   .num {
     user-select: none;
