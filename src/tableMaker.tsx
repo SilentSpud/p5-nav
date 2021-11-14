@@ -1,10 +1,9 @@
 import React from "react";
 import { HeaderGroup, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faSort, faSortDown, faSortUp } from "@fortawesome/free-solid-svg-icons";
-const Icon = FontAwesomeIcon;
 
-const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue) => void) => {
+const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue: string | undefined) => void) => {
   return headers.map((row, i) => (
     <div key={i} {...row.getHeaderGroupProps()}>
       {row.headers.map((cell) => {
@@ -25,7 +24,7 @@ const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue) => 
   ));
 };
 
-const searchForm = (setGlobalFilter: (filterValue) => void) => (
+const searchForm = (setGlobalFilter: (filterValue: string | undefined) => void) => (
   <input
     type="search"
     placeholder="Search"
@@ -34,7 +33,7 @@ const searchForm = (setGlobalFilter: (filterValue) => void) => (
   ></input>
 );
 
-const prepareTable = ({ columns, data, rowParser, className }) => {
+const PrepareTable = ({ columns, data, rowParser, className }) => {
   const sortId = columns[0]?.columns[0]?.accessor ?? columns[0]?.accessor ?? "";
   const { getTableProps, getTableBodyProps, headerGroups, rows, setGlobalFilter, prepareRow } = useTable(
     { columns: columns, data: data, initialState: { sortBy: [{ id: sortId }] } },
@@ -54,4 +53,4 @@ const prepareTable = ({ columns, data, rowParser, className }) => {
     </section>
   );
 };
-export default prepareTable;
+export default PrepareTable;

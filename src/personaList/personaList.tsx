@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from 'next/router';
 import { Personas, WeaknessLevels as Weaknesses } from "../data";
 import { personaHeaders } from "./personaTableConfig";
-import prepareTable from "../tableMaker";
+import PrepareTable from "../tableMaker";
 import { Cell, Row } from "react-table";
 
 const PersonaParser = () =>
@@ -78,6 +78,6 @@ export const PersonaList = (): JSX.Element => {
       </div>
     );
   };
-  return prepareTable({ columns, data, rowParser, className: "personas" });
+  return PrepareTable({ columns, data, rowParser, className: "personas" });
 };
 export default PersonaList;
