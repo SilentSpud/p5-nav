@@ -1,7 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import { NegotiationList, NegotiationReaction as Reaction, NegotiationReactions as Reactions, Negotiations } from "../data";
-import "./negotiation.scss";
 
 const Answer = (props: { value: Reaction | Reactions }) => {
   let ansVal,

@@ -1,12 +1,11 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useRouter } from 'next/router';
 import { Personas, WeaknessLevels as Weaknesses } from "../data";
 import { personaHeaders } from "./personaTableConfig";
 import prepareTable from "../tableMaker";
 import { Cell, Row } from "react-table";
-import "./personaList.scss";
 
-const personaParser = () =>
+const PersonaParser = () =>
   React.useMemo(() => {
     const pList = [];
     for (const persona of Personas) {
@@ -37,7 +36,7 @@ const personaParser = () =>
   }, []);
 
 const cellParser = (cell: Cell) => {
-  switch (cell.column.parent.id) {
+  switch (cell?.column?.parent?.id) {
     case "elements": {
       switch (cell.value) {
         case Weaknesses.resist:
@@ -64,21 +63,21 @@ const cellParser = (cell: Cell) => {
   }
 };
 
-export const personaList = (): JSX.Element => {
+export const PersonaList = (): JSX.Element => {
   const columns = personaHeaders(),
-    data = personaParser();
-  const history = useHistory();
+    data = PersonaParser();
+  const router = useRouter();
   const clickHandler = (evt: React.MouseEvent<HTMLDivElement>) => {
-    const targetPersona = evt.currentTarget.querySelector<HTMLElement>('div[role="cell"]:nth-child(2)').innerText ?? "";
-    history.push(`/persona/${encodeURIComponent(targetPersona)}`);
+    const targetPersona = evt.currentTarget.querySelector<HTMLElement>('div[role="cell"]:nth-child(2)')?.innerText ?? "";
+    router.push(`/persona/${encodeURIComponent(targetPersona)}`);
   };
   const rowParser = (row: Row, i: number) => {
     return (
-      <div key={i} {...row.getRowProps()} onClick={clickHandler}>
+      <div {...row.getRowProps()} onClick={clickHandler}>
         {row.cells.map((cell) => cellParser(cell))}
       </div>
     );
   };
   return prepareTable({ columns, data, rowParser, className: "personas" });
 };
-export default personaList;
+export default PersonaList;

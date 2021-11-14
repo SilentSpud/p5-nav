@@ -1,4 +1,4 @@
 export * from "./personaTableConfig";
 export * from "./personaList";
-import { personaList } from "./personaList";
-export default personaList;
+import { PersonaList } from "./personaList";
+export default PersonaList;
