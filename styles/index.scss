@@ -1,76 +1,13 @@
 @import "@fontsource/fira-code/scss/mixins";
 @import "./overrides";
+@import "./global";
 
 
 @import "./calendar";
+@import "./confidants";
+@import "./negotiation";
+@import "./personaList";
 
-
+// Bootstrap
 @import "./darkly";
 @import "bootstrap/scss/bootstrap";
-
-.content {
-  height: calc(100vh - 45px);
-  overflow-y: scroll;
-}
-
-.popover {
-  max-width: 50vw;
-}
-
-// ----------- TABLES ----------- //
-table {
-  color: $table-text;
-  font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-
-  th {
-    font-weight: bold;
-    vertical-align: center;
-    color: $table-heading;
-    background-color: $table-head-bg;
-    border-bottom: 1px solid $table-border;
-
-    &:not(:last-child) {
-      border-right: 1px solid $table-border;
-    }
-
-    &.searchbox {
-      padding: 0;
-    }
-
-    span {
-      float: right;
-      vertical-align: middle;
-    }
-  }
-
-  td {
-    border-bottom: 1px solid $table-border;
-  }
-}
-
-th,
-td,
-.nav-link {
-  user-select: none;
-}
-
-.search {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 10px;
-  background-color: $gray-900;
-  color: $body-color;
-  border: none;
-
-  &:hover {
-    background-color: $table-head-bg;
-  }
-
-  &:focus {
-    outline: none;
-    background-color: $table-bg;
-  }
-}
