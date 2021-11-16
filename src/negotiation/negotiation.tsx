@@ -34,7 +34,7 @@ const parseQuestions = (questionList: NegotiationList) => {
     const answers = questionList[question];
 
     tableList.push(
-      <Table key={tNum} striped bordered hover>
+      <Table key={tNum} striped bordered>
         <thead>
           <tr>
             <th>{question}</th>

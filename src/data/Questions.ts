@@ -1,11 +1,10 @@
-import questions from "../../data/questions.json";
+import questions from "../../data/questions.yml";
 export interface Question {
   question: string;
   answer: string;
 }
-type DateString = `${number | ""}${number}/${number | ""}${number}`;
 export type DateInfo = {
-  date: DateString;
+  date: string;
   questions: Question[];
 };
 

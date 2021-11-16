@@ -6,14 +6,22 @@ import { getPersona } from "../data";
 export const PersonaInfo = () => {
   const router = useRouter();
   let { persona } = router.query;
+  switch (typeof persona) {
+    case "string":
+      break;
+    case "object":
+    persona = persona[0];
+    case "undefined":
+      return null;
+  }
   if (!persona) return null;
-  const Persona = getPersona(decodeURIComponent(persona[0]));
+  const personaInfo = getPersona(decodeURIComponent(persona));
   return (
     <Container>
       <Row>
-        <Col>{Persona?.name}</Col>
-        <Col>{Persona?.arcana}</Col>
-        <Col>{Persona?.level}</Col>
+        <Col>{personaInfo?.name}</Col>
+        <Col>{personaInfo?.arcana}</Col>
+        <Col>{personaInfo?.level}</Col>
       </Row>
     </Container>
   );

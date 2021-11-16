@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import personas from "../../data/personas.yml";
 
 export enum WeaknessLevels {
   weak = "wk",
@@ -67,10 +67,10 @@ export interface PersonaData {
 }
 export type PersonaList = PersonaData[];
 
+export const Personas: PersonaList = personas;
+
 export const getPersona = (id: string): PersonaData | undefined => {
   for (const p of Personas) {
-    if (p.name == id) return p;
+    if (p.name.toString() == id) return p;
   }
 };
-
-export const Personas: PersonaList = JSON.parse(fs.readFileSync("../../data/personas.json", "utf8").toString());

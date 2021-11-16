@@ -1,4 +1,4 @@
-import confidants from "../../data/confidants.json";
+import confidants from "../../data/confidants.yml";
 
 export interface ConfidantLevelRequirements {
   story?: boolean;

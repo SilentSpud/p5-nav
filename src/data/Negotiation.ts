@@ -1,4 +1,4 @@
-import negotiation from "../../data/negotiation.json";
+import negotiation from "../../data/negotiation.yml";
 
 export interface NegotiationAnswer {
   text: string;
