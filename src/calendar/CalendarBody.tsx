@@ -7,12 +7,13 @@ const DayEvents = React.createContext({} as { day: Date; events: EventItem[] });
 export const useEvents = () => useContext(DayEvents);
 
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+type DateList = (Date | 0)[];
 
 const isSameDay = (a: Date, b: Date) =>
   // only check the month and day since the years don't overlap
   a.getMonth() === b.getMonth() ? (a.getDate() === b.getDate() ? true : false) : false;
 
-export const Week = ({ days, children }: { days: (Date | 0)[]; children: ReactNode | ReactNode[] }) => {
+export const Week = ({ days, children }: { days: DateList; children: ReactNode | ReactNode[] }) => {
   const { events } = useCalendar();
   return (
     <Row className="week">
@@ -35,7 +36,7 @@ export const Week = ({ days, children }: { days: (Date | 0)[]; children: ReactNo
 export const Month = ({ children }: { children: ReactNode | ReactNode[] }) => {
   const { days } = useCalendar();
   const daysToRender = padDates(days);
-  const weeks = [];
+  let weeks: DateList[] = [];
   for (let i = 0; i < daysToRender.length; i += 7) {
     weeks.push(daysToRender.slice(i, i + 7));
   }

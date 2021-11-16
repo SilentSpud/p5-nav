@@ -30,7 +30,7 @@ export interface RankMetadata {
 }
 
 export interface ConfidantRank {
-  [questionNumber: string]: ConfidantQuestion | RankMetadata;
+  [questionNumber: string]: ConfidantQuestion | RankMetadata | undefined;
   meta?: RankMetadata;
 }
 
@@ -41,4 +41,6 @@ export interface Confidant {
   questions: { [rank: string]: ConfidantRank };
 }
 
-export const Confidants: Confidant[] = confidants;
+export type ConfidantList = Confidant[];
+
+export const Confidants: ConfidantList  = confidants;

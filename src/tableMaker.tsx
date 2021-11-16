@@ -5,7 +5,7 @@ import { faSort, faSortDown, faSortUp } from "@fortawesome/free-solid-svg-icons"
 
 const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue: string | undefined) => void) => {
   return headers.map((row, i) => (
-    <div key={i} {...row.getHeaderGroupProps()}>
+    <div {...row.getHeaderGroupProps()} key={i}>
       {row.headers.map((cell) => {
         if (cell.id == "title_0") {
           return <div {...cell.getHeaderProps({ className: "searchbox th" })}>{searchForm(setGlobalFilter)}</div>;

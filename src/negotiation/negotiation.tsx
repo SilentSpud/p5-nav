@@ -3,8 +3,7 @@ import { Table } from "react-bootstrap";
 import { NegotiationList, NegotiationReaction as Reaction, NegotiationReactions as Reactions, Negotiations } from "../data";
 
 const Answer = (props: { value: Reaction | Reactions }) => {
-  let ansVal,
-    ansUnknown = false;
+  let ansVal: Reactions, ansUnknown = false;
   switch (typeof props.value) {
     case "number":
       ansVal = props.value;
@@ -14,7 +13,6 @@ const Answer = (props: { value: Reaction | Reactions }) => {
       ansUnknown = props.value.unconfirmed ?? false;
       break;
     default:
-      console.log(props.value);
       return null;
   }
   switch (ansVal) {
@@ -30,7 +28,7 @@ const Answer = (props: { value: Reaction | Reactions }) => {
 };
 
 const parseQuestions = (questionList: NegotiationList) => {
-  const tableList = [];
+  const tableList: JSX.Element[] = [];
   let tNum = 0;
   for (const question in questionList) {
     const answers = questionList[question];
