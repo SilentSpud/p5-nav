@@ -1,31 +1,31 @@
 import React from "react";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import { Personas, WeaknessLevels as Weaknesses } from "../data";
 import { personaHeaders } from "./personaTableConfig";
 import PrepareTable from "../tableMaker";
 import { Cell, Row } from "react-table";
 
 interface CellData {
-    level: number
-    name: string
-    shadow: string | undefined
-    arcana: string
-    personality: string | undefined
-    strength: number
-    magic: number
-    endurance: number
-    agility: number
-    luck: number
-    physical: string
-    gun: string
-    fire: string
-    ice: string
-    electric: string
-    wind: string
-    psychic: string
-    nuclear: string
-    bless: string
-    curse: string
+  level: number;
+  name: string;
+  shadow: string | undefined;
+  arcana: string;
+  personality: string | undefined;
+  strength: number;
+  magic: number;
+  endurance: number;
+  agility: number;
+  luck: number;
+  physical: string;
+  gun: string;
+  fire: string;
+  ice: string;
+  electric: string;
+  wind: string;
+  psychic: string;
+  nuclear: string;
+  bless: string;
+  curse: string;
 }
 
 const PersonaParser = () =>

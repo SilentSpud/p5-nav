@@ -3,7 +3,8 @@ import { Table } from "react-bootstrap";
 import { NegotiationList, NegotiationReaction as Reaction, NegotiationReactions as Reactions, Negotiations } from "../data";
 
 const Answer = (props: { value: Reaction | Reactions }) => {
-  let ansVal: Reactions, ansUnknown = false;
+  let ansVal: Reactions,
+    ansUnknown = false;
   switch (typeof props.value) {
     case "number":
       ansVal = props.value;

@@ -15,7 +15,7 @@
     Tsukiyomi: 0
     Tsukiyomi Picaro: 0
   fuse:
-  - Attis
+    - Attis
 - name: Absorb Elec
   effect: Absorb Electric attacks.
   element: passive
@@ -26,7 +26,7 @@
   personas:
     Moloch: 64
   fuse:
-  - Chimera
+    - Chimera
   card: Full Moon ???
 - name: Absorb Ice
   effect: Absorb Ice attacks.
@@ -47,7 +47,7 @@
     Lucifer: 99
     Messiah: 85
   fuse:
-  - Chi You
+    - Chi You
 - name: Absorb Psy
   effect: Absorb Psy attacks.
   element: passive
@@ -72,7 +72,7 @@
     Zaou-Gongen: 0
   talk: Awakened God (Arahabaki)
   fuse:
-  - Loa
+    - Loa
 - name: Abyssal Eye
   cost: 5000
   effect: Deal severe Almighty damage to all foes.
@@ -132,7 +132,7 @@
     Yatagarasu: 0
     Orpheus Picaro: 32
   fuse:
-  - Decarabia
+    - Decarabia
 - name: Agilao
   cost: 800
   effect: Deal medium Fire damage to 1 foe.
@@ -154,7 +154,7 @@
     Ongyo-Ki: 95
     Messiah Picaro: 0
   fuse:
-  - Asterius Picaro
+    - Asterius Picaro
 - name: Ailment Boost
   effect: Increase chance of inflicting all ailments.
   element: passive
@@ -279,7 +279,7 @@
     Raphael: 83
     Tsukiyomi: 56
   fuse:
-  - Tsukiyomi Picaro
+    - Tsukiyomi Picaro
   card: Jazz 1/22
 - name: Assault Dive
   cost: 13
@@ -294,7 +294,7 @@
     Tam Lin: 0
     Unicorn: 0
   fuse:
-  - Bicorn
+    - Bicorn
 - name: Atomic Bloodline
   effect: Halves costs of Nuke skills
   element: trait
@@ -313,7 +313,7 @@
     Fafnir: 88
     Orichalcum: 0
   fuse:
-  - Bishamonten
+    - Bishamonten
 - name: Atomic Hellscape
   effect: Reduces costs of Nuke skills by 75%
   element: trait
@@ -347,7 +347,7 @@
     Hope Diamond: 0
     Athena: 50
   fuse:
-  - Ariadne Picaro
+    - Ariadne Picaro
 - name: Auto-Masuku
   effect: Automatic Masukukaja at the start of battle. (Overwrites Speed Master)
   element: passive
@@ -357,7 +357,7 @@
     Macabre: 74
     Asterius Picaro: 63
   fuse:
-  - Jatayu
+    - Jatayu
 - name: Auto-Mataru
   effect: Automatic Matarukaja at the start of battle. (Overwrites Attack Master)
   element: passive
@@ -442,7 +442,7 @@
     Metatron: 94
     Vohu Manah: 0
   fuse:
-  - Power
+    - Power
 - name: Bless Boost
   effect: Strengthen (non instant death) Bless attacks by 25%.
   element: passive
@@ -479,7 +479,7 @@
     Magatsu-Izanagi Picaro: 50
   talk: The Black Avenger (Chernobog)
   fuse:
-  - Kumbhanda
+    - Kumbhanda
 - name: Bloodstained Eyes
   effect: Raises evasion against foes afflicted with ailments
   element: trait
@@ -520,7 +520,7 @@
     Yurlungur: 0
   talk: Rhetorician of the Sea (Forneus)
   fuse:
-  - Nebiros
+    - Nebiros
 - name: Brain Shake
   cost: 9
   effect: Deal medium Phys damage and inflict Brainwash (medium odds) to 1 foe.
@@ -584,7 +584,7 @@
     Seiryu: 0
   talk: Monarch of Snow (King Frost)
   fuse:
-  - Belphegor
+    - Belphegor
 - name: Bufula
   cost: 800
   effect: Deal medium Ice damage to 1 foe.
@@ -721,7 +721,7 @@
     Raoul: 81
   talk: Decadent False God (Alilat)
   fuse:
-  - Athena Picaro
+    - Athena Picaro
   card: Jazz 9/25
 - name: Confuse Boost
   effect: Increase chance of inflicting Confuse.
@@ -742,7 +742,7 @@
     Neko Shogun: 33
     Orthrus: 24
   fuse:
-  - Shiisaa
+    - Shiisaa
 - name: Cosmic Flare
   cost: 5400
   effect: Deal severe Nuclear damage to all foes.
@@ -774,7 +774,7 @@
     Kaguya: 0
   talk: Funerary Warrior (Valkyrie)
   fuse:
-  - Naga
+    - Naga
 - name: Country Maker
   effect: Scales damage dealt and received against Compendium completion rate
   element: trait
@@ -842,7 +842,7 @@
     Skadi: 0
   talk: Quaking Lady of Shadow (Skadi)
   fuse:
-  - Valkyrie
+    - Valkyrie
 - name: Death Scythe
   cost: 20
   effect: Deal severe Phys damage and inflict Fear (medium odds) to 1 foe.
@@ -851,7 +851,7 @@
     Byakhee: 0
     Macabre: 0
   fuse:
-  - Macabre
+    - Macabre
 - name: Deathbound
   cost: 22
   effect: Deal 1 to 2 times medium Phys damage to all foes.
@@ -867,7 +867,7 @@
     Valkyrie: 46
   talk: Rebellious Elephant (Girimehkala)
   fuse:
-  - Girimehkala
+    - Girimehkala
 - name: Deathly Illness
   effect: Increases success rate of instant death skills
   element: trait
@@ -889,7 +889,7 @@
     Izanagi-no-Okami Picaro: 91
   talk: Hedonistic Braggart (Dionysus)
   fuse:
-  - Magatsu-Izanagi Picaro
+    - Magatsu-Izanagi Picaro
   card: Jazz 12/11
 - name: Defense Master
   effect: Automatic Rakukaja at the start of battle.
@@ -916,7 +916,7 @@
     Shiki-Ouji: 21
     Succubus: 10
   fuse:
-  - Mokoi
+    - Mokoi
   card: CJ Maid Cafe
 - name: Dekunda
   cost: 1000
@@ -945,8 +945,8 @@
     Belial: 88
     Orichalcum: 0
   fuse:
-  - Belial
-  - Thanatos Picaro
+    - Belial
+    - Thanatos Picaro
 - name: Despair Boost
   effect: Increase chance of inflicting Despair.
   element: passive
@@ -976,7 +976,7 @@
     Satan: 0
     Yamata-no-Orochi: 69
   fuse:
-  - Alilat
+    - Alilat
 - name: Diarahan
   cost: 1800
   effect: Fully restore 1 ally's HP.
@@ -995,7 +995,7 @@
     Kaguya Picaro: 30
   talk: Final Assessor (Norn)
   fuse:
-  - Sarasvati
+    - Sarasvati
 - name: Diarama
   cost: 600
   effect: Moderately restore 1 ally's HP.
@@ -1011,7 +1011,7 @@
     Phoenix: 22
   talk: Prankster Leader (High Pixie)
   fuse:
-  - Apsaras
+    - Apsaras
   card: Chain 20
 - name: Die For Me!
   cost: 4000
@@ -1040,7 +1040,7 @@
     Orichalcum: 0
     Vohu Manah: 0
   fuse:
-  - Dominion
+    - Dominion
 - name: Dizzy Boost
   effect: Increase chance of inflicting Dizzy.
   element: passive
@@ -1130,7 +1130,7 @@
     Sandman: 0
     Setanta: 0
   fuse:
-  - Incubus
+    - Incubus
 - name: Dormina
   cost: 300
   effect: Inflict Sleep (high odds) to 1 foe.
@@ -1203,7 +1203,7 @@
     Stone of Scone: 0
   talk: Gathering Devil (Choronzon)
   fuse:
-  - Nue
+    - Nue
 - name: Eigaon
   cost: 1200
   effect: Deal heavy Curse damage to 1 foe.
@@ -1218,7 +1218,7 @@
     Raoul: 0
   talk: Wandering Reviver (Nebiros)
   fuse:
-  - Rangda
+    - Rangda
 - name: Eiha
   cost: 400
   effect: Deal weak Curse damage to 1 foe.
@@ -1235,7 +1235,7 @@
     Thor: 66
     Yoshitsune: 92
   fuse:
-  - Thunderbird
+    - Thunderbird
 - name: Elec Boost
   effect: Strengthen Electric attacks by 25%.
   element: passive
@@ -1307,7 +1307,7 @@
     Thanatos: 70
     Thanatos Picaro: 74
   fuse:
-  - Orpheus F Picaro
+    - Orpheus F Picaro
   card: L Leblanc
 - name: Energy Drop
   cost: 400
@@ -1329,7 +1329,7 @@
     Parvati: 57
   talk: Destructive Beauty (Parvati)
   fuse:
-  - Kikuri-Hime
+    - Kikuri-Hime
 - name: Evade Bless
   effect: Triple evasion rate against (non instant death) Bless attacks.
   element: passive
@@ -1395,7 +1395,7 @@
     Pazuzu: 48
     Skadi: 0
   fuse:
-  - Andras
+    - Andras
 - name: Evil Touch
   cost: 300
   effect: Inflict Fear (high odds) to 1 foe.
@@ -1491,7 +1491,7 @@
     Ongyo-Ki: 93
     Messiah Picaro: 94
   fuse:
-  - Messiah Picaro
+    - Messiah Picaro
 - name: Flash Bomb
   cost: 19
   effect: Deal medium Phys damage and inflict Dizzy (low odds) to all foes.
@@ -1503,7 +1503,7 @@
     Black Rider: 0
     Horus: 49
   fuse:
-  - Ippon-Datara
+    - Ippon-Datara
 - name: Forget Boost
   effect: Increase chance of inflicting Forget.
   element: passive
@@ -1602,7 +1602,7 @@
     Titania: 0
   talk: Scandalous Queen (Titania)
   fuse:
-  - Thoth
+    - Thoth
 - name: Freila
   cost: 800
   effect: Deal medium Nuclear damage to 1 foe.
@@ -1677,7 +1677,7 @@
     Stone of Scone: 0
   talk: Tornado Devil (Fuu-Ki)
   fuse:
-  - High Pixie
+    - High Pixie
 - name: Gattling Blows
   cost: 16
   effect: Deal 3 to 4 times light Phys damage to 1 foe.
@@ -1764,7 +1764,7 @@
     Zaou-Gongen: 0
     Messiah: 0
   fuse:
-  - Cerberus
+    - Cerberus
 - name: Grace of Mother
   effect: Reduces costs of Recovery skills by 75%
   element: trait
@@ -1805,7 +1805,7 @@
     Izanagi: 25
     Izanagi Picaro: 28
   fuse:
-  - Izanagi Picaro
+    - Izanagi Picaro
 - name: Guiding Tendril
   cost: 2000
   effect: Downs all foes, Only usable when ambushing foe, Life Aid
@@ -1820,7 +1820,7 @@
     Trumpeter: 62
     Zaou-Gongen: 84
   fuse:
-  - White Rider
+    - White Rider
 - name: Gun Boost
   effect: Gun damage +25%
   element: passive
@@ -1864,7 +1864,7 @@
     Unicorn: 44
   talk: Bearer of the Scales (Anubis)
   fuse:
-  - Unicorn
+    - Unicorn
 - name: Hassou Tobi
   cost: 25
   effect: Deal 8 times weak Phys damage to all foes.
@@ -1946,7 +1946,7 @@
     Thor: 0
     Kaguya Picaro: 0
   fuse:
-  - Ose
+    - Ose
   card: CJ Leblanc
 - name: High Energy
   cost: 8000
@@ -2014,7 +2014,7 @@
     Yamata-no-Orochi: 67
   talk: Drunken Serpents (Yamata-no-Orochi)
   fuse:
-  - Lilim
+    - Lilim
 - name: Ice Boost
   effect: Strengthen Ice attacks by 25%.
   element: passive
@@ -2060,7 +2060,7 @@
     Orichalcum: 0
     Throne: 78
   fuse:
-  - Surt
+    - Surt
 - name: Infinite Scheme
   effect: Restores 100% after Futaba's All-Out Attack for all allies
   element: trait
@@ -2149,7 +2149,7 @@
     Jikokuten: 24
     Zouchouten: 0
   fuse:
-  - Oni
+    - Oni
 - name: Kouga
   cost: 800
   effect: Deal medium Bless damage to 1 foe.
@@ -2169,7 +2169,7 @@
     Sraosha: 0
     Unicorn: 43
   fuse:
-  - Anubis
+    - Anubis
 - name: Kouha
   cost: 400
   effect: Deal weak Bless damage to 1 foe.
@@ -2250,7 +2250,7 @@
     Titania: 0
   talk: Woman who brings Ruin (Lilim)
   fuse:
-  - Sandman
+    - Sandman
 - name: Lunge
   cost: 5
   effect: Deal weak Phys damage to 1 foe.
@@ -2283,7 +2283,7 @@
     Sui-Ki: 0
   talk: Raging Water Demon (Sui-Ki)
   fuse:
-  - Koropokkuru
+    - Koropokkuru
   card: CJ BBB
 - name: Mabufudyne
   cost: 2200
@@ -2306,7 +2306,7 @@
     Yamata-no-Orochi: 0
   talk: The Shadowed One (Scathach)
   fuse:
-  - Baphomet
+    - Baphomet
 - name: Mabufula
   cost: 1600
   effect: Deal medium Ice damage to all foes.
@@ -2319,7 +2319,7 @@
     Orlov: 0
     Sui-Ki: 28
   fuse:
-  - Sui-Ki
+    - Sui-Ki
 - name: Maeiga
   cost: 1600
   effect: Deal medium Curse damage to all foes.
@@ -2364,7 +2364,7 @@
     Suzaku: 19
   talk: Hunting Wolf Spirit (Makami)
   fuse:
-  - Makami
+    - Makami
 - name: Mafreidyne
   cost: 2200
   effect: Deal heavy Nuclear damage to all foes.
@@ -2376,7 +2376,7 @@
     Lilith: 62
     Trumpeter: 0
   fuse:
-  - Titania
+    - Titania
 - name: Mafreila
   cost: 1600
   effect: Deal medium Nuclear damage to all foes.
@@ -2398,7 +2398,7 @@
     Regent: 0
   talk: Captivating Dancer (Ame-no-Uzume)
   fuse:
-  - Kelpie
+    - Kelpie
 - name: Magarudyne
   cost: 2000
   effect: Deal heavy Wind damage to all foes.
@@ -2412,7 +2412,7 @@
     Magatsu-Izanagi Picaro: 49
   talk: Raging Bird God (Garuda)
   fuse:
-  - Garuda
+    - Garuda
 - name: Magarula
   cost: 1400
   effect: Deal medium Wind damage to all foes.
@@ -2427,7 +2427,7 @@
     Quetzalcoatl: 0
     Sandman: 27
   fuse:
-  - Anzu
+    - Anzu
 - name: Magatsu Mandala
   cost: 3000
   effect: Deal heavy Curse damage to all foes and inflict Confuse/Fear/Despair (medium
@@ -2452,7 +2452,7 @@
     Unicorn: 0
   talk: She of Life and Death (Isis)
   fuse:
-  - Archangel
+    - Archangel
 - name: Mahamaon
   cost: 2600
   effect: Medium chance of instantly killing all foes.
@@ -2468,7 +2468,7 @@
     Vasuki: 0
   talk: Fire Assassin (Throne)
   fuse:
-  - Melchizedek
+    - Melchizedek
 - name: Majestic Presence
   effect: Doubles effectiveness and decreases costs of Recovery skills for all allies
   element: trait
@@ -2500,7 +2500,7 @@
     Queen Mab: 0
   talk: Vampire Moth (Mothman)
   fuse:
-  - Kaiwan
+    - Kaiwan
 - name: Makara Break
   cost: 900
   effect: Remove magic-repellent shields from all foes.
@@ -2522,7 +2522,7 @@
     Vasuki: 71
     Asterius Picaro: 66
   fuse:
-  - Clotho
+    - Clotho
   card: Jazz 10/30
 - name: Makouga
   cost: 1600
@@ -2538,7 +2538,7 @@
     Principality: 0
   talk: Divine Warrior (Power)
   fuse:
-  - Isis
+    - Isis
 - name: Makougaon
   cost: 2200
   effect: Deal heavy Bless damage to all foes.
@@ -2560,7 +2560,7 @@
     Nigi Mitama: 0
     Regent: 0
   fuse:
-  - Angel
+    - Angel
 - name: Mamudo
   cost: 1400
   effect: Small chance of instantly killing all foes.
@@ -2571,7 +2571,7 @@
     Nue: 24
     Pisaca: 29
   fuse:
-  - Leanan Sidhe
+    - Leanan Sidhe
 - name: Mamudoon
   cost: 2600
   effect: medium chance of instantly killing all foes.
@@ -2589,7 +2589,7 @@
     Thanatos Picaro: 0
   talk: Missionary of Depravity (Belial)
   fuse:
-  - Chernobog
+    - Chernobog
 - name: Mapsi
   cost: 1000
   effect: Deal weak Psy damage to all foes.
@@ -2621,7 +2621,7 @@
     Parvati: 59
   talk: Throbbing King of Desires (Mara)
   fuse:
-  - Forneus
+    - Forneus
 - name: Maragi
   cost: 1000
   effect: Deal weak Fire damage to all foes.
@@ -2634,7 +2634,7 @@
     Regent: 0
     Orpheus F Picaro: 0
   fuse:
-  - Cait Sith
+    - Cait Sith
   card: CJ BBB
 - name: Maragidyne
   cost: 2200
@@ -2653,7 +2653,7 @@
     Asterius Picaro: 0
   talk: Harlot of Desire (Lilith)
   fuse:
-  - Orpheus Picaro
+    - Orpheus Picaro
 - name: Maragion
   cost: 1600
   effect: Deal medium Fire damage to all foes.
@@ -2665,7 +2665,7 @@
     Orpheus F: 12
     Orpheus Picaro: 0
   fuse:
-  - Orthrus
+    - Orthrus
 - name: Marakukaja
   cost: 2400
   effect: Increase party's Defense for 3 turns.
@@ -2687,7 +2687,7 @@
     Orpheus F Picaro: 16
   talk: Strumming Veena Player (Sarasvati)
   fuse:
-  - Lamia
+    - Lamia
   card: Jazz 7/17 10/16
 - name: Marakunda
   cost: 2400
@@ -2701,7 +2701,7 @@
     Orobas: 19
     Surt: 85
   fuse:
-  - Orobas
+    - Orobas
   card: Jazz 8/14 11/13
 - name: Marin Karin
   cost: 300
@@ -2755,7 +2755,7 @@
     Thoth: 0
   talk: Killer Teddy Bear (Bugs)
   fuse:
-  - Mandrake
+    - Mandrake
   card: Jazz 8/28 11/27 CJ Aquarium
 - name: Matarukaja
   cost: 2400
@@ -2781,7 +2781,7 @@
     Orpheus Picaro: 33
   talk: Lamenting Sacrifice (Kushinada)
   fuse:
-  - Eligor
+    - Eligor
   card: Jazz 7/10 10/9
 - name: Matarunda
   cost: 2400
@@ -2796,7 +2796,7 @@
     Orpheus Picaro: 0
   talk: Dancing Witch (Rangda)
   fuse:
-  - Slime
+    - Slime
   card: Jazz 8/7 11/6
 - name: Mazio
   cost: 1000
@@ -2806,7 +2806,7 @@
     Ame-no-Uzume: 0
     Regent: 0
   fuse:
-  - Agathion
+    - Agathion
 - name: Maziodyne
   cost: 2200
   effect: Deal heavy Electric damage to all foes.
@@ -2824,7 +2824,7 @@
     Magatsu-Izanagi: 45
   talk: Thunder Emperor (Thor)
   fuse:
-  - Barong
+    - Barong
 - name: Mazionga
   cost: 1600
   effect: Deal medium Electric damage to all foes.
@@ -2842,7 +2842,7 @@
     Izanagi Picaro: 27
   talk: Storm-Invoking Ptarmigan (Thunderbird)
   fuse:
-  - Take-Minakata
+    - Take-Minakata
   card: Trial 30
 - name: Me Patra
   cost: 800
@@ -2876,7 +2876,7 @@
     Titania: 61
     Yatagarasu: 59
   fuse:
-  - Kaguya Picaro
+    - Kaguya Picaro
 - name: Mediarama
   cost: 1200
   effect: Moderately restore party's HP.
@@ -2945,7 +2945,7 @@
     Messiah Picaro: 0
   talk: Coffin Borne God (Mot)
   fuse:
-  - Black Rider
+    - Black Rider
 - name: Mementos Scan
   effect: Chance to fully map a floor of Mementos when entering that floor.
   element: passive
@@ -2960,7 +2960,7 @@
     Oni: 24
     Quetzalcoatl: 0
   fuse:
-  - Black Ooze
+    - Black Ooze
 - name: Mighty Gaze
   effect: All-target magic damage +20%
   element: trait
@@ -2980,7 +2980,7 @@
     Garuda: 0
     Rakshasa: 27
   fuse:
-  - Mothman
+    - Mothman
 - name: Miracle Punch
   cost: 8
   effect: Deal medium Phys damage to 1 foe. High critical rate.
@@ -2994,7 +2994,7 @@
     Ariadne Picaro: 0
   talk: Auspicious Pachyderm (Ganesha)
   fuse:
-  - Obariyon
+    - Obariyon
 - name: Miracle Rush
   cost: 16
   effect: Deal medium Phys damage to all foes. High critical rate.
@@ -3075,7 +3075,7 @@
     Tsukiyomi: 0
     Tsukiyomi Picaro: 0
   fuse:
-  - Dakini
+    - Dakini
 - name: Myriad Truths
   cost: 4000
   effect: Deal 3 times heavy Almighty damage to all foes.
@@ -3117,7 +3117,7 @@
     Oberon: 0
   talk: Self-Infatuated Star (Narcissus)
   fuse:
-  - Narcissus
+    - Narcissus
 - name: Nuke Amp
   effect: Strengthen Nuclear attacks by 50%.
   element: passive
@@ -3127,7 +3127,7 @@
     Lilith: 65
     Titania: 60
   fuse:
-  - Mithras
+    - Mithras
 - name: Nuke Boost
   effect: Strengthen Nuclear attacks by 25%.
   element: passive
@@ -3271,7 +3271,7 @@
     Thanatos Picaro: 72
   talk: Spear-Wielding General (Cu Chulainn)
   fuse:
-  - Yamata-no-Orochi
+    - Yamata-no-Orochi
 - name: Oni Kagura
   cost: 16
   effect: Deal medium Phys damage and inflict Rage (low odds) to all foes.
@@ -3284,7 +3284,7 @@
     Yaksini: 22
   talk: Cruel Leopard (Ose)
   fuse:
-  - Yaksini
+    - Yaksini
 - name: Oratorio
   cost: 3800
   effect: Fully restore party's HP and negate all -nda debuffs.
@@ -3306,7 +3306,7 @@
     Baal: 0
     Orichalcum: 0
   fuse:
-  - Quetzalcoatl
+    - Quetzalcoatl
 - name: Patra
   cost: 400
   effect: Cure Dizzy/Forget/Sleep/Hunger of 1 ally.
@@ -3367,7 +3367,7 @@
     Naga: 0
   talk: Brutal Cavalryman (Berith)
   fuse:
-  - Berith
+    - Berith
 - name: President's Insight
   cost: 1500
   effect: Next Magic attack +150% damage for 1 ally, Attack Master
@@ -3400,7 +3400,7 @@
     Sudama: 23
   talk: Wishless Star (Kaiwan)
   fuse:
-  - Sudama
+    - Sudama
 - name: Psiodyne
   cost: 1200
   effect: Deal heavy Psy damage to 1 foe.
@@ -3469,7 +3469,7 @@
     Orichalcum: 0
     Shiva: 0
   fuse:
-  - Mara
+    - Mara
 - name: Pulinpa
   cost: 300
   effect: Inflict Confuse (high odds) to 1 foe.
@@ -3587,7 +3587,7 @@
     Hope Diamond: 0
     Koumokuten: 0
   fuse:
-  - Rakshasa
+    - Rakshasa
 - name: Regenerate 3
   effect: Recover 6% of max HP each turn in battle.
   element: passive
@@ -3600,7 +3600,7 @@
     Satan: 0
     Messiah: 82
   fuse:
-  - Koumokuten
+    - Koumokuten
   card: CJ Art Museum
 - name: Relentless
   effect: Damage that strikes foe weaknesses +50%
@@ -3627,7 +3627,7 @@
     Lucifer: 97
     Mother Harlot: 88
   fuse:
-  - Raphael
+    - Raphael
 - name: Repel Curse
   effect: Repel Curse attacks.
   element: passive
@@ -3639,7 +3639,7 @@
   personas:
     Mot: 77
   fuse:
-  - Mot
+    - Mot
 - name: Repel Fire
   effect: Repel Fire attacks.
   element: passive
@@ -3652,7 +3652,7 @@
   personas:
     Beelzebub: 91
   fuse:
-  - Parvati
+    - Parvati
 - name: Repel Nuke
   effect: Repel Nuclear attacks.
   element: passive
@@ -3660,7 +3660,7 @@
     Seiryu: 63
     Uriel: 83
   fuse:
-  - Lilith
+    - Lilith
 - name: Repel Phys
   effect: Repel Phys attacks.
   element: passive
@@ -3675,14 +3675,14 @@
   personas:
     Kali: 67
   fuse:
-  - Kali
+    - Kali
 - name: Repel Wind
   effect: Repel Wind attacks.
   element: passive
   personas:
     Hastur: 89
   fuse:
-  - Byakhee
+    - Byakhee
 - name: Resist Bless
   effect: Reduce damage from Bless attacks.
   element: passive
@@ -3801,7 +3801,7 @@
     Yurlungur: 45
   talk: Pagan Saviour (Melchizedek)
   fuse:
-  - Ganesha
+    - Ganesha
 - name: Riot Gun
   cost: 24
   effect: Deal severe Gun damage to all foes.
@@ -3811,7 +3811,7 @@
     Shiva: 85
     Vishnu: 90
   fuse:
-  - Cu Chulainn
+    - Cu Chulainn
 - name: Rising Slash
   cost: 14
   effect: Deal heavy Phys damage to 1 foe. More powerful under Baton Pass.
@@ -3827,7 +3827,7 @@
     Izanagi: 21
     Izanagi Picaro: 24
   fuse:
-  - Inugami
+    - Inugami
 - name: Salvation
   cost: 4800
   effect: Fully restore HP and cure all ailments of party except for unique status.
@@ -3843,7 +3843,7 @@
     Izanagi-no-Okami: 84
     Izanagi-no-Okami Picaro: 93
   fuse:
-  - Izanagi-no-Okami Picaro
+    - Izanagi-no-Okami Picaro
 - name: Samarecarm
   cost: 1800
   effect: Revive 1 ally with all HP recovered.
@@ -3861,7 +3861,7 @@
     Athena: 51
     Athena Picaro: 55
   fuse:
-  - Norn
+    - Norn
   card: CJ Church
 - name: Samsara
   cost: 4000
@@ -4037,7 +4037,7 @@
     Pazuzu: 49
     Pisaca: 0
   fuse:
-  - Legion
+    - Legion
 - name: Static Electricity
   effect: Increases chance of inflicting Shock on downed foes
   element: trait
@@ -4161,7 +4161,7 @@
     Raphael: 0
     Sandalphon: 79
   fuse:
-  - Atavaka
+    - Atavaka
 - name: Tactical Spirit
   effect: Chance to halve Support skill costs for all allies
   element: trait
@@ -4287,7 +4287,7 @@
     Asterius: 60
   talk: Vicious Pentagram (Decarabia)
   fuse:
-  - Scathach
+    - Scathach
   card: Jazz 10/2 CJ Destiny Land
 - name: Thermal Conduct
   effect: Increases chance of inflicting Burn after Baton Pass
@@ -4316,7 +4316,7 @@
     Odin: 0
     Orichalcum: 0
   fuse:
-  - Dionysus
+    - Dionysus
 - name: Titanomachia
   cost: 3400
   effect: Deal severe Fire damage to all foes and inflict Fear (high odds).
@@ -4353,7 +4353,7 @@
     Vasuki: 0
     White Rider: 0
   fuse:
-  - Shiki-Ouji
+    - Shiki-Ouji
 - name: Tyrant's Mind
   effect: All damage +25%, Can exceed 100% limit
   element: passive
@@ -4446,7 +4446,7 @@
   personas:
     Yaksini: 24
   fuse:
-  - Kin-Ki
+    - Kin-Ki
 - name: Victory Cry
   effect: Recover full HP and SP after a successful battle.
   element: passive
@@ -4471,7 +4471,7 @@
     Tsukiyomi Picaro: 60
   talk: The Blackened Fury (Kali)
   fuse:
-  - Oberon
+    - Oberon
 - name: Wage War
   cost: 800
   effect: Inflict Rage (medium odds) to all foes.
@@ -4511,7 +4511,7 @@
     Vishnu: 88
   talk: Warped Abyss (Hastur)
   fuse:
-  - Fuu-Ki
+    - Fuu-Ki
 - name: Wind Bloodline
   effect: Halves costs of Wind skills
   element: trait
@@ -4583,7 +4583,7 @@
     Yoshitsune: 0
   talk: Dancing Lion (Barong)
   fuse:
-  - Atropos
+    - Atropos
 - name: Zionga
   cost: 800
   effect: Deal medium Electric damage to 1 foe.

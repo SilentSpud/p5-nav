@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import { Calendar, parseYear, EventItem } from "./CalendarController";
 import { ClassroomQuestions } from "../data";
 
-
 const gameStart = new Date("2016-04-01T06:00:00.000Z");
 
 const loadQuestions = () =>

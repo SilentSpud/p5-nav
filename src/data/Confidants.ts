@@ -43,4 +43,4 @@ export interface Confidant {
 
 export type ConfidantList = Confidant[];
 
-export const Confidants: ConfidantList  = confidants;
+export const Confidants: ConfidantList = confidants;

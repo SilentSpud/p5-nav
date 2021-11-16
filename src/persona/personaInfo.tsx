@@ -10,7 +10,7 @@ export const PersonaInfo = () => {
     case "string":
       break;
     case "object":
-    persona = persona[0];
+      persona = persona[0];
     case "undefined":
       return null;
   }
