@@ -7,8 +7,9 @@
   "scripts": {
     "build": "next build",
     "start": "next start",
-    "clean": "rimraf build",
-    "clean:all": "rimraf build node_modules yarn.lock",
+    "export": "next export",
+    "clean": "rimraf build .next",
+    "clean:all": "rimraf build node_modules yarn.lock .next",
     "dev": "next dev",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
