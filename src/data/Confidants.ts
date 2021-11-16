@@ -43,4 +43,10 @@ export interface Confidant {
 
 export type ConfidantList = Confidant[];
 
+export const getConfidant = (name: string): Confidant | void => {
+  for (let confidant of Confidants) {
+    if (confidant.name == name) return confidant;
+  }
+}
+
 export const Confidants: ConfidantList = confidants;

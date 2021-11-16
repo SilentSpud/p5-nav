@@ -1,11 +1,11 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useRouter } from "next/router";
-import { getPersona } from "../data";
+import { getConfidant } from "../data";
 
 export const ConfidantInfo = () => {
   const router = useRouter();
-  let { persona: confidant } = router.query;
+  let { confidant } = router.query;
   switch (typeof confidant) {
     case "string":
       break;
@@ -14,6 +14,10 @@ export const ConfidantInfo = () => {
     case "undefined":
       return null;
   }
-  if (!confidant) return null;
-  console.log(confidant);
+  const confidantInfo = getConfidant(confidant);
+  if (!confidantInfo) return null;
+  console.log(confidantInfo);
+  return (
+    <p>{confidantInfo.name}</p>
+  )
 };

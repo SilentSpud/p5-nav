@@ -19,11 +19,13 @@ export const ConfidantList = (): JSX.Element => {
         <Row key={index}>
           {row.map((confidant, index) => (
             <Col key={index}>
-              <Card className="confidant">
-                <Link href={`/confidant/${confidant.name}`} passHref>
-                  <Card.Img as={Image} variant="top" src={ConfidantImages[confidant.name]} width={170} height={300} layout="fixed" draggable={false} />
-                </Link>
-              </Card>
+              <Link href={`/confidant/${confidant.name}`} passHref>
+                <a>
+                  <Card className="confidant">
+                    <Card.Img as={Image} variant="top" src={ConfidantImages[confidant.name]} width={170} height={300} layout="fixed" draggable={false} />
+                  </Card>
+                </a>
+              </Link>
             </Col>
           ))}
         </Row>
