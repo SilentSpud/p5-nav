@@ -3,10 +3,10 @@ export interface Question {
   question: string;
   answer: string;
 }
-type DateString = `${number| ''}${number}/${number| ''}${number}`;
+type DateString = `${number | ""}${number}/${number | ""}${number}`;
 export type DateInfo = {
   date: DateString;
-  questions: Question[]
-}
+  questions: Question[];
+};
 
 export const ClassroomQuestions: DateInfo[] = questions;

@@ -1,9 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import "./confidants.scss";
 import { Confidant, Confidants } from "../data";
-import ConfidantImages from "../assets";
-
 
 export const ConfidantList = (): JSX.Element => {
   const rows: Confidant[][] = [];
@@ -19,17 +16,19 @@ export const ConfidantList = (): JSX.Element => {
           {row.map((confidant, index) => (
             <Col key={index}>
               <Card className="confidant">
-                <Card.Img variant="top" src={ConfidantImages[confidant.name]} />
+                <Card.Img variant="top" src={""} />
                 <Card.Body>
                   <Card.Title>{confidant.name}</Card.Title>
                   <Card.Text></Card.Text>
                 </Card.Body>
-                <Card.Footer><small className="text-muted">{confidant.character}</small></Card.Footer>
+                <Card.Footer>
+                  <small className="text-muted">{confidant.character}</small>
+                </Card.Footer>
               </Card>
             </Col>
           ))}
         </Row>
       ))}
     </Container>
-  )
-}
+  );
+};

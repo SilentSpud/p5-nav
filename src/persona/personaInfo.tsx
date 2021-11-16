@@ -1,18 +1,19 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useRouter } from "next/router";
 import { getPersona } from "../data";
 
-export const personaInfo = () => {
-  const { id } = useParams<{ id: string }>();
-  const Persona = getPersona(decodeURIComponent(id));
-  console.log(Persona);
+export const PersonaInfo = () => {
+  const router = useRouter();
+  let { persona } = router.query;
+  if (!persona) return null;
+  const Persona = getPersona(decodeURIComponent(persona[0]));
   return (
     <Container>
       <Row>
-        <Col>{Persona.name}</Col>
-        <Col>{Persona.arcana}</Col>
-        <Col>{Persona.level}</Col>
+        <Col>{Persona?.name}</Col>
+        <Col>{Persona?.arcana}</Col>
+        <Col>{Persona?.level}</Col>
       </Row>
     </Container>
   );

@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from "react";
 import { Day, Month } from "./CalendarBody";
 import Navbar from "./Navbar";
-import "./calendar.scss";
 import { Calendar, parseYear, EventItem } from "./CalendarController";
 import { ClassroomQuestions } from "../data";
+
 
 const gameStart = new Date("2016-04-01T06:00:00.000Z");
 

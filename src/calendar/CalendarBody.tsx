@@ -1,19 +1,19 @@
 import React, { ReactNode, useContext } from "react";
 import { Col, Container, OverlayTrigger, Row, Stack } from "react-bootstrap";
 import { EventItem, padDates, useCalendar } from "./CalendarController";
-import "./calendar.scss";
 import { ClassPopup } from "./Popup";
 
 const DayEvents = React.createContext({} as { day: Date; events: EventItem[] });
 export const useEvents = () => useContext(DayEvents);
 
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+type DateList = (Date | 0)[];
 
 const isSameDay = (a: Date, b: Date) =>
   // only check the month and day since the years don't overlap
   a.getMonth() === b.getMonth() ? (a.getDate() === b.getDate() ? true : false) : false;
 
-export const Week = ({ days, children }: { days: (Date | 0)[]; children: ReactNode | ReactNode[] }) => {
+export const Week = ({ days, children }: { days: DateList; children: ReactNode | ReactNode[] }) => {
   const { events } = useCalendar();
   return (
     <Row className="week">
@@ -36,7 +36,7 @@ export const Week = ({ days, children }: { days: (Date | 0)[]; children: ReactNo
 export const Month = ({ children }: { children: ReactNode | ReactNode[] }) => {
   const { days } = useCalendar();
   const daysToRender = padDates(days);
-  const weeks = [];
+  let weeks: DateList[] = [];
   for (let i = 0; i < daysToRender.length; i += 7) {
     weeks.push(daysToRender.slice(i, i + 7));
   }
@@ -74,6 +74,7 @@ export const Day = () => {
 
 export const Event = ({ event }: { event: EventItem }) => {
   let popover: JSX.Element;
+  if (!event.questions) return null;
   let eventClass = "bg-dark";
   switch (event.type) {
     case "class": {

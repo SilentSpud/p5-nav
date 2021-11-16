@@ -1,4 +1,4 @@
-import personas from "../../data/personas.json";
+import * as fs from 'fs';
 
 export enum WeaknessLevels {
   weak = "wk",
@@ -26,8 +26,7 @@ export enum DamageTypes {
   hea = "healing",
   tra = "trait",
 }
-export interface PersonaData { 
-
+export interface PersonaData {
   name: string;
   arcana: string;
   level: number;
@@ -38,11 +37,11 @@ export interface PersonaData {
   shadow?: string;
   personality?: string;
   treasureDemon?: boolean;
-  dlcExclusive?: boolean;   // pay up
-  specialFusion?: boolean;  // ony available through a special fusion
-  maxConfidant?: boolean;   // only available if you've maxed out the confidant of the associated arcana
-  thirdSemester?: boolean;  // only available after 1/12
-  newGamePlus?: boolean;    // only available in NG+
+  dlcExclusive?: boolean; // pay up
+  specialFusion?: boolean; // ony available through a special fusion
+  maxConfidant?: boolean; // only available if you've maxed out the confidant of the associated arcana
+  thirdSemester?: boolean; // only available after 1/12
+  newGamePlus?: boolean; // only available in NG+
   stats: {
     strength: number;
     magic: number;
@@ -66,11 +65,12 @@ export interface PersonaData {
     [name: string]: number;
   };
 }
+export type PersonaList = PersonaData[];
 
-export const getPersona = (id: string): PersonaData => {
+export const getPersona = (id: string): PersonaData | undefined => {
   for (const p of Personas) {
     if (p.name == id) return p;
   }
 };
 
-export const Personas: PersonaData[] = personas;
+export const Personas: PersonaList = JSON.parse(fs.readFileSync("../../data/personas.json", "utf8").toString());
