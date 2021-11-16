@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [macos-10.14, windows-2019, ubuntu-18.04]
+        os: [macos-latest, windows-latest, ubuntu-latest]
 
     steps:
       - name: Git Checkout
@@ -23,7 +23,6 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Linting & Testing
-
         run: |
           yarn lint
           yarn tsc
