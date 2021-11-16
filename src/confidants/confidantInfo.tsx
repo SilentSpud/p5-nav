@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useRouter } from "next/router";
 import { getConfidant } from "../data";
 
-export const ConfidantInfo = () => {
+const useConfidant = () => {
   const router = useRouter();
   let { confidant } = router.query;
   switch (typeof confidant) {
@@ -14,10 +14,12 @@ export const ConfidantInfo = () => {
     case "undefined":
       return null;
   }
-  const confidantInfo = getConfidant(confidant);
-  if (!confidantInfo) return null;
-  console.log(confidantInfo);
-  return (
-    <p>{confidantInfo.name}</p>
-  )
+  return getConfidant(confidant);
+};
+
+export const ConfidantInfo = () => {
+  const confidant = useConfidant();
+  if (!confidant) return null;
+  console.log(confidant);
+  return <p>{confidant.name}</p>;
 };

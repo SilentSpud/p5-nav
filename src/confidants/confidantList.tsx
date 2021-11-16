@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 import { Confidants } from "../data";
 import type { Confidant } from "../data";
 import ConfidantImages from "./confidantImages";

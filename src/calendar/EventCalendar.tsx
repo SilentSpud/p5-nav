@@ -6,25 +6,6 @@ import { ClassroomQuestions } from "../data";
 
 const gameStart = "2016-04-01T06:00:00.000Z";
 
-// TODO: fix this
-export const useDate = (): [value: string, setValue: React.Dispatch<React.SetStateAction<string>> ] => {
-  const [value, setValue] = React.useState(gameStart);
-
-  React.useEffect(() => {
-    const stickyValue = window.localStorage.getItem("month");
-
-    if (stickyValue !== null) {
-      setValue(stickyValue);
-    }
-  }, []);
-
-  React.useEffect(() => {
-    if (value != gameStart) window.localStorage.setItem("month", value.toString());
-  }, [value]);
-
-  return [value, setValue];
-}
-
 const LoadQuestions = () =>
   useMemo(() => {
     const questions: EventItem[] = [];
@@ -41,12 +22,10 @@ const LoadQuestions = () =>
   }, []);
 
 export const EventCalendar = () => {
-  const [localMonth, setLocalMonth] = useDate();
-  const [month, setMonth] = useState<Date>(new Date(localMonth));
+  const [month, setMonth] = useState<Date>(new Date(gameStart));
   const monthHandler = (date: Date) => {
-    setLocalMonth(date.toString());
     setMonth(date);
-  }
+  };
   const classQs = LoadQuestions();
   return (
     <Calendar month={month} onMonthChange={monthHandler} events={classQs}>
