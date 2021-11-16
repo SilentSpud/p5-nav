@@ -5,7 +5,7 @@ import { Nav } from "react-bootstrap";
 import Head from "next/head";
 
 // Fix for fontawesome
-import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
+import '../../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 
