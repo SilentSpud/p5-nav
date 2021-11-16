@@ -1,5 +1,15 @@
-.confidant {
-  img {
-    max-width: 140px;
+.confidants {
+  .confidant {
+    width: 170px;
+    img {
+      cursor: pointer;
+    }
+    &:first-child {
+      margin-left: auto;
+    }
+    &:last-child {
+      margin-right: auto;
+    }
   }
 }
+$grid-gutter-width: 0 !default;

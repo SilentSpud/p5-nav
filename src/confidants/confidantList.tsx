@@ -1,29 +1,28 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { Confidant, Confidants } from "../data";
+import Image from "next/image";
+import Link from 'next/link';
+import { Confidants } from "../data";
+import type { Confidant } from "../data";
+import ConfidantImages from "./confidantImages";
 
 export const ConfidantList = (): JSX.Element => {
   const rows: Confidant[][] = [];
-  for (let i = 0; i < Confidants.length; i += 5) {
-    const row = Confidants.slice(i, i + 5);
+  for (let index = 0; index < Confidants.length; index += 10) {
+    const row = Confidants.slice(index, index + 10);
     rows.push(row);
   }
 
   return (
-    <Container fluid>
+    <Container fluid className="confidants">
       {rows.map((row, index) => (
         <Row key={index}>
           {row.map((confidant, index) => (
             <Col key={index}>
               <Card className="confidant">
-                <Card.Img variant="top" src={""} />
-                <Card.Body>
-                  <Card.Title>{confidant.name}</Card.Title>
-                  <Card.Text></Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                  <small className="text-muted">{confidant.character}</small>
-                </Card.Footer>
+                <Link href={`/confidant/${confidant.name}`} passHref>
+                  <Card.Img as={Image} variant="top" src={ConfidantImages[confidant.name]} width={170} height={300} layout="fixed" draggable={false} />
+                </Link>
               </Card>
             </Col>
           ))}

@@ -26,10 +26,8 @@ export const MyApp = ({ Component, pageProps }: AppProps) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Nav variant="tabs" className="bg-dark" navbar justify>
-      <NavLink href="/persona">Personas</NavLink>
-      <NavLink href="/skill" disabled>
-        Skills
-      </NavLink>
+      <NavLink href="/persona" disabled>Personas</NavLink>
+      <NavLink href="/skill" disabled>Skills</NavLink>
       <NavLink href="/calendar">Calendar</NavLink>
       <NavLink href="/confidant">Confidants</NavLink>
       <NavLink href="/negotiation">Negotiation Questions</NavLink>
