@@ -11,7 +11,8 @@ export interface ConfidantLevelRequirements {
   knowledge?: number | "max";
 }
 export interface ConfidantBenefit {
-  rank: number | "max" | "royal";
+  rank: number | "Max" | "Royal";
+  name?: string;
   description: string;
 }
 export interface ConfidantQuestion {
@@ -37,7 +38,7 @@ export interface ConfidantRank {
 export interface Confidant {
   name: string;
   character: string;
-  benefits: { [name: string]: ConfidantBenefit };
+  benefits: ConfidantBenefit[];
   questions: { [rank: string]: ConfidantRank };
 }
 
