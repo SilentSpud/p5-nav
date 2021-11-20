@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import { useConfidant } from ".";
-import { ConfidantRank } from "../data";
+import { ConfidantRank, RankMetadata } from "../data";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faMinus, faAngleUp, faAnglesUp, faArrowUp, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
@@ -53,14 +53,14 @@ export const ConfidantAnswers = () => {
   );
 }
 
-const tableHead = (rank: string | number) => (
+const tableHead = ({ rank, meta }: { rank: string | number; meta: RankMetadata | undefined }) => (
   <thead>
     <tr>
-      <th colSpan={4}>{rank.rank == "Max" ? "Max" : `Rank ${rank.rank}`}</th>
+      <th colSpan={4}>{rank == "Max" ? "Max" : `Rank ${rank}`}</th>
     </tr>
-    {rank.meta &&
+    {meta &&
       <tr>
-        <th colSpan={4}><pre>{JSON.stringify(rank.meta)}</pre></th>
+        <th colSpan={4}><pre>{JSON.stringify(meta)}</pre></th>
       </tr>
     }
   </thead>
@@ -74,7 +74,7 @@ const Points = ({ points, max }: { points: number; max: boolean }): JSX.Element 
     case 3: symbol = faArrowUp; break;
   }
   return (
-    <span className="answer-points"><Icon icon={symbol} className={max ? "max-points" : ""}/></span>
+    <span className="answer-points"><Icon icon={symbol} className={max ? "max-points" : "bad-points"} title={`+${points}`}/></span>
   )
 }
 
@@ -86,7 +86,7 @@ const parseRow = (rank: ConfidantRank, index: number) => {
           <tr key={index}>
             <td>{question.number == "Follow-up" ? "Follow-up" : `Response ${question.number}`}</td>
             {question.answers && question.answers.map((answer, index) => {
-              return <td key={index}>{answer.answer} <Points points={answer.points} max={false} /></td>
+              return <td key={index}>{answer.answer} <Points points={answer.points} max={answer.max ?? false} /></td>
             })}
           </tr>
         ))}

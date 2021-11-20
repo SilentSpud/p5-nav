@@ -1,8 +1,15 @@
+@import "overrides";
 .confidant {
   .confidant-answers {
     .answer-points {
       float: right;
       vertical-align: middle;
+    }
+    .max-points {
+      color: $p5-red;
+    }
+    .bad-points {
+      color: #888;
     }
   }
 }
