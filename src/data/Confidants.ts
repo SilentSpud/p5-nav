@@ -16,21 +16,22 @@ export interface Confidant {
 }
 export interface ConfidantBenefit {
   name: string;
-  rank: number | string;
+  rank: number | "Max" | "Royal";
   description: string;
 }
 export interface ConfidantRank {
-  rank: number | string;
+  rank: string
   questions?: ConfidantQuestion[];
   meta?: RankMetadata;
 }
 export interface ConfidantQuestion {
-  number: number | string;
+  number: number | "Follow-up";
   answers: ConfidantAnswer[];
 }
 export interface ConfidantAnswer {
   answer: string;
-  points?: number;
+  points: number;
+  max?: boolean;
   romance?: boolean; // starts romance
   bad?: boolean;
   end?: boolean; // ends romance

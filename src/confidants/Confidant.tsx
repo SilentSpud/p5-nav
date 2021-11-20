@@ -14,6 +14,6 @@ export const useConfidant = (): ConfidantType => useContext(ConfidantContext);
 export const Confidant = ({ confidant: confidantName, children }: confidantProps ) => {
   const confidant = getConfidant(confidantName);
   if (!confidant) return null;
-  return <ConfidantContext.Provider value={confidant}>{children}</ConfidantContext.Provider>;
+  return <div className="confidant"><ConfidantContext.Provider value={confidant}>{children}</ConfidantContext.Provider></div>;
 };
 export default Confidant;
