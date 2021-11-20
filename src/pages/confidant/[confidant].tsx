@@ -1,2 +1,2 @@
-import { ConfidantInfo } from "../../confidants";
-export default ConfidantInfo;
+import { ConfidantDetails } from "../../confidants";
+export default ConfidantDetails;
