@@ -1,4 +1,5 @@
 import skills from "../../data/skills.yml";
+export const Skills: SkillData[] = skills;
 export interface SkillData {
   name: string;
   cost?: number;
@@ -34,5 +35,3 @@ export enum SkillElems {
   "healing",
   "trait",
 }
-
-export const Skills: SkillData[] = skills;
