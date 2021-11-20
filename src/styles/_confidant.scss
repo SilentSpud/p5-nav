@@ -1,7 +1,8 @@
 @import "overrides";
 .confidant {
   .confidant-answers {
-    .requirements-cell, td {
+    .requirements-cell,
+    td {
       font-weight: normal;
     }
     .answer-points {
@@ -14,9 +15,17 @@
     }
   }
   .answers-table {
-    td:first-child  { width: 10vw; }
-    td:nth-child(2) { width: 30vw; }
-    td:nth-child(3) { width: 30vw; }
-    td:last-child   { width: 30vw; }
+    td:first-child {
+      width: 10vw;
+    }
+    td:nth-child(2) {
+      width: 30vw;
+    }
+    td:nth-child(3) {
+      width: 30vw;
+    }
+    td:last-child {
+      width: 30vw;
+    }
   }
 }

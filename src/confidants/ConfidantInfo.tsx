@@ -15,8 +15,8 @@ export const ConfidantIntro = () => {
       <h2>{camel(name)}</h2>
       <h3>{character}</h3>
     </section>
-  )
-}
+  );
+};
 
 export const ConfidantBenefits = () => {
   const { benefits } = useConfidant();
@@ -41,17 +41,13 @@ export const ConfidantBenefits = () => {
         </tbody>
       </Table>
     </section>
-  )
-}
+  );
+};
 
 export const ConfidantAnswers = () => {
   const { ranks } = useConfidant();
-  return (
-    <section className="confidant-answers">
-      {ranks.map((rank, index) => parseRank(rank, index))}
-    </section>
-  );
-}
+  return <section className="confidant-answers">{ranks.map((rank, index) => parseRank(rank, index))}</section>;
+};
 
 const parseRequirements = (reqs: ConfidantLevelRequirements) => {
   if (reqs.story) return "Unlocked through story progression";
@@ -64,65 +60,84 @@ const parseRequirements = (reqs: ConfidantLevelRequirements) => {
   if (reqs.proficiency) return `Requires ${reqs.proficiency == 5 ? "Max" : `Level ${reqs.proficiency}`} Proficiency`;
   if (reqs.kindness) return `Requires ${reqs.kindness == 5 ? "Max" : `Level ${reqs.kindness}`} Kindness`;
   if (reqs.knowledge) return `Requires ${reqs.knowledge == 5 ? "Max" : `Level ${reqs.knowledge}`} Knowledge`;
-}
+};
 
 const TableHead = ({ rank, meta }: { rank: string | number; meta: RankMetadata | undefined }) => (
   <thead>
     <tr>
-      <th colSpan={4}>{rank == "Max" ? "Max" : `Rank ${rank}`}{meta && meta.romance && " (Romance)"}</th>
+      <th colSpan={4}>
+        {rank == "Max" ? "Max" : `Rank ${rank}`}
+        {meta && meta.romance && " (Romance)"}
+      </th>
     </tr>
-    {meta && meta.requirements &&
+    {meta && meta.requirements && (
       <tr>
-        <th colSpan={4} className="requirements-cell">{parseRequirements(meta.requirements)}</th>
+        <th colSpan={4} className="requirements-cell">
+          {parseRequirements(meta.requirements)}
+        </th>
       </tr>
-    }
+    )}
   </thead>
-)
+);
 
 const Points = ({ points, max }: { points: number; max: boolean }): JSX.Element => {
   const symbol = (() => {
     switch (points) {
-      case 1: return faAngleUp;
-      case 2: return faAnglesUp;
-      case 3: return faArrowUp;
-      default: return faMinus;
+      case 1:
+        return faAngleUp;
+      case 2:
+        return faAnglesUp;
+      case 3:
+        return faArrowUp;
+      default:
+        return faMinus;
     }
   })();
   return (
-    <span className="answer-points"><Icon icon={symbol} className={max ? "max-points" : ""} title={`+${points} points`} /></span>
-  )
-}
+    <span className="answer-points">
+      <Icon icon={symbol} className={max ? "max-points" : ""} title={`+${points} points`} />
+    </span>
+  );
+};
 
 const parseRank = (rank: ConfidantRank, index: number) => {
   return (
     <Table bordered key={index} className="answers-table">
       <TableHead rank={rank.rank} meta={rank.meta} />
       <tbody>
-        {rank.questions && rank.questions.map((question, index) => (
-          <tr key={index}>
-            <td>{question.number == "Follow-up" ? "Follow-up" : `Question ${question.number}`}</td>
-            {question.answers && question.answers.map((answer, index) => {
-              // Create td with span for each answer
-              return <td key={index}>{answer.answer} <Points points={answer.points} max={answer.max ?? false} /></td>
-            })}
-            {question.answers && question.answers.length < 3 && (() => {
-              // Add padding if needed
-              const elems: JSX.Element[] = [];
-              for (let i = question.answers.length; i < 3; i++) {
-                elems.push(<td></td>);
-              }
-              return elems;
-            })()}
-          </tr>
-        ))}
+        {rank.questions &&
+          rank.questions.map((question, index) => (
+            <tr key={index}>
+              <td>{question.number == "Follow-up" ? "Follow-up" : `Question ${question.number}`}</td>
+              {question.answers &&
+                question.answers.map((answer, index) => {
+                  // Create td with span for each answer
+                  return (
+                    <td key={index}>
+                      {answer.answer} <Points points={answer.points} max={answer.max ?? false} />
+                    </td>
+                  );
+                })}
+              {question.answers &&
+                question.answers.length < 3 &&
+                (() => {
+                  // Add padding if needed
+                  const elems: JSX.Element[] = [];
+                  for (let i = question.answers.length; i < 3; i++) {
+                    elems.push(<td></td>);
+                  }
+                  return elems;
+                })()}
+            </tr>
+          ))}
       </tbody>
     </Table>
   );
-}
+};
 
 export const ConfidantInfo = {
   intro: ConfidantIntro,
   benefits: ConfidantBenefits,
-  answers: ConfidantAnswers
-}
+  answers: ConfidantAnswers,
+};
 export default ConfidantInfo;
