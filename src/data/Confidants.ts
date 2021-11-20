@@ -16,16 +16,16 @@ export interface Confidant {
 }
 export interface ConfidantBenefit {
   name: string;
-  rank: number | "Max" | "Royal";
+  rank: number | string | "Max" | "Royal";
   description: string;
 }
 export interface ConfidantRank {
-  rank: string
+  rank: number | string;
   questions?: ConfidantQuestion[];
   meta?: RankMetadata;
 }
 export interface ConfidantQuestion {
-  number: number | "Follow-up";
+  number: number | string | "Follow-up";
   answers: ConfidantAnswer[];
 }
 export interface ConfidantAnswer {
