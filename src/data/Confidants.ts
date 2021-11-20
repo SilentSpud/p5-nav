@@ -1,5 +1,11 @@
-import confidants from "../../data/confidants.yml";
+import confidants from "../../data/confidants.json";
 export const Confidants: ConfidantList = confidants;
+
+export const getConfidant = (name: string): Confidant | void => {
+  for (let confidant of Confidants) {
+    if (confidant.name == name) return confidant;
+  }
+};
 
 export type ConfidantList = Confidant[];
 export interface Confidant {
@@ -10,16 +16,16 @@ export interface Confidant {
 }
 export interface ConfidantBenefit {
   name: string;
-  rank: number | "Max" | "Royal";
+  rank: number | string;
   description: string;
 }
 export interface ConfidantRank {
-  rank: string;
+  rank: number | string;
   questions?: ConfidantQuestion[];
   meta?: RankMetadata;
 }
 export interface ConfidantQuestion {
-  number: string;
+  number: number | string;
   answers: ConfidantAnswer[];
 }
 export interface ConfidantAnswer {
