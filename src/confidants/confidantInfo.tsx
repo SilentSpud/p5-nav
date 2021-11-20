@@ -19,16 +19,6 @@ const useConfidant = () => {
   return getConfidant(confidant);
 };
 
-
-const formatBenefits = (benefits: { [name: string]: ConfidantBenefit }) => {
-  const benefitsList: ConfidantBenefit[] = [];
-  for (let perkName in benefits) {
-    let perk = Object.assign({ name: perkName }, benefits[perkName]);
-    benefitsList.push(perk);
-  }
-  return benefitsList;
-};
-
 export const ConfidantInfo = () => {
   const confidant = useConfidant();
   if (!confidant) return null;
@@ -44,7 +34,7 @@ export const ConfidantInfo = () => {
             <th>Name</th>
             <th>Description</th>
           </tr>
-          </thead>
+        </thead>
         <tbody>
           {confidant.benefits.map((row, index) => (
             <tr key={index}>
