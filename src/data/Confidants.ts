@@ -1,14 +1,15 @@
 import confidants from "../../data/confidants.yml";
 
 export interface ConfidantLevelRequirements {
-  story?: boolean;
-  trueEnding?: boolean;
-  date?: string;
-  courage?: number | "max";
-  charm?: number | "max";
-  proficiency?: number | "max";
-  kindness?: number | "max";
-  knowledge?: number | "max";
+  story?: boolean;          // requires story progress
+  trueEnding?: boolean;     // requires progress on true ending
+  secondSemester?: boolean; // only after 8/22
+  courage?: number;
+  charm?: number;
+  guts?: number;
+  proficiency?: number;
+  kindness?: number;
+  knowledge?: number;
 }
 export interface ConfidantBenefit {
   rank: number | "Max" | "Royal";
@@ -26,7 +27,6 @@ export interface ConfidantAnswer {
 }
 export interface RankMetadata {
   requirements?: ConfidantLevelRequirements;
-  unlock?: string;
   romance?: boolean;
 }
 
