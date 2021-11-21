@@ -80,7 +80,7 @@ const TableHead = ({ rank, meta }: { rank: string | number; meta: RankMetadata |
   </thead>
 );
 
-const Points = ({ points, max }: { points: number; max: boolean }): JSX.Element => {
+const Points = ({ points, max }: { points: number; max: boolean }) => {
   const symbol = (() => {
     switch (points) {
       case 1:
