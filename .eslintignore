@@ -13,3 +13,4 @@ package.json
 yarn.lock
 .travis.yml
 .next
+data/*.json

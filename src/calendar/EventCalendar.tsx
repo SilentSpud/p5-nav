@@ -4,10 +4,9 @@ import Navbar from "./Navbar";
 import { Calendar, parseYear, EventItem } from "./CalendarController";
 import { ClassroomQuestions } from "../data";
 
+const gameStart = "2016-04-01T06:00:00.000Z";
 
-const gameStart = new Date("2016-04-01T06:00:00.000Z");
-
-const loadQuestions = () =>
+const LoadQuestions = () =>
   useMemo(() => {
     const questions: EventItem[] = [];
     for (const day of ClassroomQuestions) {
@@ -23,10 +22,13 @@ const loadQuestions = () =>
   }, []);
 
 export const EventCalendar = () => {
-  const [month, setMonth] = useState<Date>(gameStart);
-  const classQs = loadQuestions();
+  const [month, setMonth] = useState<Date>(new Date(gameStart));
+  const monthHandler = (date: Date) => {
+    setMonth(date);
+  };
+  const classQs = LoadQuestions();
   return (
-    <Calendar month={month} onMonthChange={(date) => setMonth(date)} events={classQs}>
+    <Calendar month={month} onMonthChange={monthHandler} events={classQs}>
       <Navbar />
       <Month>
         <Day />

@@ -1,0 +1,31 @@
+@import "overrides";
+.confidant {
+  .confidant-answers {
+    .requirements-cell,
+    td {
+      font-weight: normal;
+    }
+    .answer-points {
+      float: right;
+      vertical-align: middle;
+      color: #888;
+    }
+    .max-points {
+      color: $p5-red;
+    }
+  }
+  .answers-table {
+    td:first-child {
+      width: 10vw;
+    }
+    td:nth-child(2) {
+      width: 30vw;
+    }
+    td:nth-child(3) {
+      width: 30vw;
+    }
+    td:last-child {
+      width: 30vw;
+    }
+  }
+}

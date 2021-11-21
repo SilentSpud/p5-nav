@@ -1,5 +1,9 @@
 import negotiation from "../../data/negotiation.yml";
+export const Negotiations: NegotiationList = negotiation;
 
+export interface NegotiationList {
+  [question: string]: NegotiationAnswer[];
+}
 export interface NegotiationAnswer {
   text: string;
   gloomy: NegotiationReaction | NegotiationReactions;
@@ -17,8 +21,3 @@ export enum NegotiationReactions {
   OK = 2,
   Good = 3,
 }
-export interface NegotiationList {
-  [question: string]: NegotiationAnswer[];
-}
-
-export const Negotiations: NegotiationList = negotiation;

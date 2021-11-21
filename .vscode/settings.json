@@ -36,6 +36,7 @@
     "*.{css,sass,scss}.d.ts": true
   },
   "files.watcherExclude": {
-    "**/target": true
+    "**/target": true,
+    "**/data": true
   }
 }

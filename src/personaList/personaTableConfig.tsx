@@ -2,7 +2,7 @@ import React from "react";
 import { Row } from "react-table";
 import { WeaknessLevels as Weaknesses } from "../data";
 
-export const personaHeaders = () =>
+export const PersonaHeaders = () =>
   React.useMemo(
     () => [
       {

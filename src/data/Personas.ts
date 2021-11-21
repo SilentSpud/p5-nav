@@ -1,4 +1,11 @@
 import personas from "../../data/personas.yml";
+export const Personas: PersonaList = personas;
+
+export const getPersona = (id: string): PersonaData | undefined => {
+  for (const p of Personas) {
+    if (p.name.toString() == id) return p;
+  }
+};
 
 export enum WeaknessLevels {
   weak = "wk",
@@ -66,11 +73,3 @@ export interface PersonaData {
   };
 }
 export type PersonaList = PersonaData[];
-
-export const Personas: PersonaList = personas;
-
-export const getPersona = (id: string): PersonaData | undefined => {
-  for (const p of Personas) {
-    if (p.name.toString() == id) return p;
-  }
-};

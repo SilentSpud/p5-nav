@@ -1,46 +1,53 @@
-import confidants from "../../data/confidants.yml";
+import confidants from "../../data/confidants.json";
+export const Confidants: ConfidantList = confidants;
 
-export interface ConfidantLevelRequirements {
-  story?: boolean;
-  trueEnding?: boolean;
-  date?: string;
-  courage?: number | "max";
-  charm?: number | "max";
-  proficiency?: number | "max";
-  kindness?: number | "max";
-  knowledge?: number | "max";
-}
-export interface ConfidantBenefit {
-  rank: number | "max" | "royal";
-  description: string;
-}
-export interface ConfidantQuestion {
-  [answerText: string]: ConfidantAnswer;
-}
-export interface ConfidantAnswer {
-  points?: number;
-  romance?: boolean;
-  bad?: boolean;
-  end?: boolean;
-}
-export interface RankMetadata {
-  requirements?: ConfidantLevelRequirements;
-  unlock?: string;
-  romance?: boolean;
-}
+export const getConfidant = (name: string): Confidant | void => {
+  for (let confidant of Confidants) {
+    if (confidant.name == name) return confidant;
+  }
+};
 
-export interface ConfidantRank {
-  [questionNumber: string]: ConfidantQuestion | RankMetadata | undefined;
-  meta?: RankMetadata;
-}
-
+export type ConfidantList = Confidant[];
 export interface Confidant {
   name: string;
   character: string;
-  benefits: { [name: string]: ConfidantBenefit };
-  questions: { [rank: string]: ConfidantRank };
+  benefits: ConfidantBenefit[];
+  ranks: ConfidantRank[];
 }
-
-export type ConfidantList = Confidant[];
-
-export const Confidants: ConfidantList  = confidants;
+export interface ConfidantBenefit {
+  name: string;
+  rank: number | string | "Max" | "Royal";
+  description: string;
+}
+export interface ConfidantRank {
+  rank: number | string;
+  questions?: ConfidantQuestion[];
+  meta?: RankMetadata;
+}
+export interface ConfidantQuestion {
+  number: number | string | "Follow-up";
+  answers: ConfidantAnswer[];
+}
+export interface ConfidantAnswer {
+  answer: string;
+  points: number;
+  max?: boolean;
+  romance?: boolean; // starts romance
+  bad?: boolean;
+  end?: boolean; // ends romance
+}
+export interface RankMetadata {
+  requirements?: ConfidantLevelRequirements;
+  romance?: boolean; // requires romance
+}
+export interface ConfidantLevelRequirements {
+  story?: boolean; // requires story progress
+  trueEnding?: boolean; // requires progress on true ending
+  secondSemester?: boolean; // only after 8/22
+  courage?: number;
+  charm?: number;
+  guts?: number;
+  proficiency?: number;
+  kindness?: number;
+  knowledge?: number;
+}
