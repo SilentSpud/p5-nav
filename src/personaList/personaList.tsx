@@ -1,40 +1,78 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { Personas, WeaknessLevels as Weaknesses } from "../data";
+import { Cell, Row } from "react-table";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { faCrown, faDollarSign, faClock, faSquarePlus, faAsterisk, faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { Personas, Persona, WeaknessLevels as Weaknesses } from "../data";
 import { PersonaHeaders } from "./personaTableConfig";
 import PrepareTable from "../tableMaker";
-import { Cell, Row } from "react-table";
 
 interface CellData {
-  lvl: number;
-  name: string;
-  shadow: string | undefined;
-  arcana: string;
-  personality: string | undefined;
-  strength: number;
-  magic: number;
-  endurance: number;
-  agility: number;
-  luck: number;
-  physical: string;
-  gun: string;
-  fire: string;
-  ice: string;
-  electric: string;
-  wind: string;
-  psychic: string;
-  nuclear: string;
-  bless: string;
-  curse: string;
+  lvl: number | JSX.Element;
+  name: string | JSX.Element;
+  shadow: string | JSX.Element | undefined;
+  arcana: string | JSX.Element;
+  personality: string | JSX.Element | undefined;
+  strength: number | JSX.Element;
+  magic: number | JSX.Element;
+  endurance: number | JSX.Element;
+  agility: number | JSX.Element;
+  luck: number | JSX.Element;
+  physical: string | JSX.Element;
+  gun: string | JSX.Element;
+  fire: string | JSX.Element;
+  ice: string | JSX.Element;
+  electric: string | JSX.Element;
+  wind: string | JSX.Element;
+  psychic: string | JSX.Element;
+  nuclear: string | JSX.Element;
+  bless: string | JSX.Element;
+  curse: string | JSX.Element;
 }
 
-const PersonaParser = () =>
+export const parseNameTags = ({ name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant }: Persona) => (
+  <>
+    {name}
+    {treasureDemon && (
+      <span className="icon rare" title="Rare persona">
+        <Icon icon={faCrown} />
+      </span>
+    )}
+    {dlcExclusive && (
+      <span className="icon dlc" title="DLC exclusive">
+        <Icon icon={faDollarSign} />
+      </span>
+    )}
+    {thirdSemester && (
+      <span className="icon third" title="Third semester exclusive">
+        <Icon icon={faClock} />
+      </span>
+    )}
+    {newGamePlus && (
+      <span className="icon ngp" title="New Game+ exclusive">
+        <Icon icon={faSquarePlus} />
+      </span>
+    )}
+    {specialFusion && (
+      <span className="icon fusion" title="Special fusion">
+        <Icon icon={faAsterisk} />
+      </span>
+    )}
+    {maxConfidant && (
+      <span className="icon fusion" title="Maxed confidant required">
+        <Icon icon={faCircleChevronUp} />
+      </span>
+    )}
+  </>
+);
+
+const ParsePersona = () =>
   React.useMemo(() => {
     const pList: CellData[] = [];
     for (const persona of Personas) {
       pList.push({
         lvl: persona.level,
-        name: persona.name,
+        name: parseNameTags(persona),
         shadow: persona.shadow,
         arcana: persona.arcana,
         personality: persona.personality,
@@ -88,7 +126,7 @@ const cellParser = (cell: Cell) => {
 
 export const PersonaList = (): JSX.Element => {
   const columns = PersonaHeaders(),
-    data = PersonaParser();
+    data = ParsePersona();
   const router = useRouter();
   const clickHandler = (evt: React.MouseEvent<HTMLDivElement>) => {
     const targetPersona = evt.currentTarget.querySelector<HTMLElement>('div[role="cell"]:nth-child(2)')?.innerText ?? "";

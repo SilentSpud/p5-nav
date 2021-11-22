@@ -16,7 +16,9 @@
     td:first-child {
       width: 10vw;
     }
-    td:nth-child(2), td:nth-child(3), td:last-child {
+    td:nth-child(2),
+    td:nth-child(3),
+    td:last-child {
       width: 30vw;
     }
   }

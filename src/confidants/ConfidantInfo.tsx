@@ -3,7 +3,7 @@ import { Table } from "react-bootstrap";
 import { useConfidant } from ".";
 import { ConfidantLevelRequirements, ConfidantRank, RankMetadata } from "../data";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { faMinus, faAngleUp, faAnglesUp, faArrowUp, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { faMinus, faAngleUp, faAnglesUp, faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
