@@ -10,15 +10,15 @@ const NameTag = ({ className, title, icon }: { className: string; title: string;
   </span>
 );
 
-export const NameTags = ({ persona }: { persona: Persona }) => (
+export const NameTags = ({ persona: { name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant } }: { persona: Persona }) => (
   <>
-    {persona.name}
-    {persona.treasureDemon && <NameTag className="rare" title="Rare persona" icon={faCrown} />}
-    {persona.dlcExclusive && <NameTag className="dlc" title="DLC exclusive" icon={faDollarSign} />}
-    {persona.thirdSemester && <NameTag className="third" title="Third semester exclusive" icon={faClock} />}
-    {persona.newGamePlus && <NameTag className="ngp" title="New Game+ exclusive" icon={faSquarePlus} />}
-    {persona.specialFusion && <NameTag className="fusion" title="Special fusion" icon={faAsterisk} />}
-    {persona.maxConfidant && <NameTag className="max" title="Maxed confidant required" icon={faCircleChevronUp} />}
+    {name}
+    {treasureDemon && <NameTag className="rare" title="Rare persona" icon={faCrown} />}
+    {dlcExclusive && <NameTag className="dlc" title="DLC exclusive" icon={faDollarSign} />}
+    {thirdSemester && <NameTag className="third" title="Third semester exclusive" icon={faClock} />}
+    {newGamePlus && <NameTag className="ngp" title="New Game+ exclusive" icon={faSquarePlus} />}
+    {specialFusion && <NameTag className="fusion" title="Special fusion" icon={faAsterisk} />}
+    {maxConfidant && <NameTag className="max" title="Maxed confidant required" icon={faCircleChevronUp} />}
   </>
 );
 
