@@ -1,7 +1,8 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import { useRouter } from "next/router";
-import { NameTags } from ".";
+import Image from "next/image";
+import { Elements, NameTags } from ".";
 import { getPersona } from "../data";
 
 export const PersonaInfo = () => {
@@ -41,7 +42,9 @@ export const PersonaInfo = () => {
           {info.inherits && (
             <tr>
               <td>Inherits:</td>
-              <td>{info.inherits}</td>
+              <td>
+                <Image src={Elements[info.inherits]} alt={info.inherits} draggable={false} />
+              </td>
             </tr>
           )}
           {info.item && (
