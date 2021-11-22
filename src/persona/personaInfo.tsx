@@ -3,7 +3,50 @@ import { Table } from "react-bootstrap";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { Elements, NameTags } from ".";
-import { getPersona } from "../data";
+import { getPersona, PersonaProps } from "../data";
+
+const BasicInfo = ({ persona: { arcana, level, trait, inherits, item, alarmItem } }: { persona: PersonaProps }) => (
+  <Table>
+    <tbody>
+      <tr>
+        <td>Arcana:</td>
+        <td>{arcana}</td>
+      </tr>
+      <tr>
+        <td>Level:</td>
+        <td>{level}</td>
+      </tr>
+      {trait && (
+        <tr>
+          <td>Trait:</td>
+          <td>{trait}</td>
+        </tr>
+      )}
+      {inherits && (
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <Image src={Elements[inherits]} alt={inherits} title={inherits} draggable={false} />
+          </td>
+        </tr>
+      )}
+      {item && (
+        <tr>
+          <td>Execution Item:</td>
+          <td>{item}</td>
+        </tr>
+      )}
+      {alarmItem && (
+        <tr>
+          <td>Alarm Item:</td>
+          <td>{alarmItem}</td>
+        </tr>
+      )}
+    </tbody>
+  </Table>
+)
+
+
 
 export const PersonaInfo = () => {
   const router = useRouter();
@@ -23,44 +66,7 @@ export const PersonaInfo = () => {
       <h1>
         <NameTags persona={info} />
       </h1>
-      <Table>
-        <tbody>
-          <tr>
-            <td>Arcana:</td>
-            <td>{info.arcana}</td>
-          </tr>
-          <tr>
-            <td>Level:</td>
-            <td>{info.level}</td>
-          </tr>
-          {info.trait && (
-            <tr>
-              <td>Trait:</td>
-              <td>{info.trait}</td>
-            </tr>
-          )}
-          {info.inherits && (
-            <tr>
-              <td>Inherits:</td>
-              <td>
-                <Image src={Elements[info.inherits]} alt={info.inherits} draggable={false} />
-              </td>
-            </tr>
-          )}
-          {info.item && (
-            <tr>
-              <td>Execution Item:</td>
-              <td>{info.item}</td>
-            </tr>
-          )}
-          {info.alarmItem && (
-            <tr>
-              <td>Alarm Item:</td>
-              <td>{info.alarmItem}</td>
-            </tr>
-          )}
-        </tbody>
-      </Table>
+      <BasicInfo persona={info} />
       {info.shadow && (
         <Table>
           <thead>

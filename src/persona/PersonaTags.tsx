@@ -2,7 +2,7 @@ import React from "react";
 import { CellPropGetter, TableCellProps } from "react-table";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faCrown, faDollarSign, faClock, faSquarePlus, faAsterisk, faCircleChevronUp, IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { Persona, WeaknessLevels as Weaknesses } from "../data";
+import { PersonaProps, WeaknessLevels as Weaknesses } from "../data";
 
 const NameTag = ({ className, title, icon }: { className: string; title: string; icon: IconDefinition }) => (
   <span className={`icon ${className}`} title={title}>
@@ -10,7 +10,7 @@ const NameTag = ({ className, title, icon }: { className: string; title: string;
   </span>
 );
 
-export const NameTags = ({ persona: { name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant } }: { persona: Persona }) => (
+export const NameTags = ({ persona: { name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant } }: { persona: PersonaProps }) => (
   <>
     {name}
     {treasureDemon && <NameTag className="rare" title="Rare persona" icon={faCrown} />}

@@ -1,7 +1,7 @@
 import personas from "../../data/personas.json";
 export const Personas: PersonaList = personas;
 
-export const getPersona = (id: string): Persona | undefined => {
+export const getPersona = (id: string): PersonaProps | undefined => {
   for (const p of Personas) {
     if (p.name.toString() == id) return p;
   }
@@ -33,7 +33,7 @@ export enum DamageTypes {
   hea = "healing",
   tra = "trait",
 }
-export interface Persona {
+export interface PersonaProps {
   name: string;
   arcana: string;
   level: number;
@@ -74,4 +74,4 @@ export interface SkillUnlock {
   name: string;
   level: number;
 }
-export type PersonaList = Persona[];
+export type PersonaList = PersonaProps[];

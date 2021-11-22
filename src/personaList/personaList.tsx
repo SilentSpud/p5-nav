@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { Cell, Row } from "react-table";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faCrown, faDollarSign, faClock, faSquarePlus, faAsterisk, faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
-import { Personas, Persona, WeaknessLevels as Weaknesses } from "../data";
+import { Personas, PersonaProps, WeaknessLevels as Weaknesses } from "../data";
 import { PersonaHeaders } from "./personaTableConfig";
 import PrepareTable from "../tableMaker";
 import { NameTags, Resistance } from "../persona";
