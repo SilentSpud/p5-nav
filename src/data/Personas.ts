@@ -1,4 +1,4 @@
-import personas from "../../data/personas.yml";
+import personas from "../../data/personas.json";
 export const Personas: PersonaList = personas;
 
 export const getPersona = (id: string): PersonaData | undefined => {
@@ -57,19 +57,21 @@ export interface PersonaData {
     luck: number;
   };
   elements: {
-    physical: WeaknessLevels;
-    gun: WeaknessLevels;
-    fire: WeaknessLevels;
-    ice: WeaknessLevels;
-    electric: WeaknessLevels;
-    wind: WeaknessLevels;
-    psychic: WeaknessLevels;
-    nuclear: WeaknessLevels;
-    bless: WeaknessLevels;
-    curse: WeaknessLevels;
+    physical: WeaknessLevels | string;
+    gun: WeaknessLevels | string;
+    fire: WeaknessLevels | string;
+    ice: WeaknessLevels | string;
+    electric: WeaknessLevels | string;
+    wind: WeaknessLevels | string;
+    psychic: WeaknessLevels | string;
+    nuclear: WeaknessLevels | string;
+    bless: WeaknessLevels | string;
+    curse: WeaknessLevels | string;
   };
-  skills: {
-    [name: string]: number;
-  };
+  skills: SkillUnlock[];
+}
+export interface SkillUnlock {
+  name: string;
+  level: number;
 }
 export type PersonaList = PersonaData[];
