@@ -87,12 +87,11 @@ section[role="table"].personas {
     background-color: $form-border;
     cursor: pointer;
   }
-}
 
-div[role="columnheader"],
-.nav-link,
-div[role="cell"] {
-  user-select: none;
+  div[role="columnheader"],
+  div[role="cell"] {
+    user-select: none;
+  }
 }
 
 .questionlist table {

@@ -46,11 +46,12 @@ table {
 
   td {
     border-bottom: 1px solid $table-border;
+    img {
+      user-select: none;
+    }
   }
 }
 
-th,
-td,
 .nav-link {
   user-select: none;
 }
