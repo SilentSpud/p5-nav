@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { useRouter } from "next/router";
 import { getPersona } from "../data";
 
@@ -17,12 +17,12 @@ export const PersonaInfo = () => {
   if (!persona) return null;
   const personaInfo = getPersona(decodeURIComponent(persona));
   return (
-    <Container>
-      <Row>
-        <Col>{personaInfo?.name}</Col>
-        <Col>{personaInfo?.arcana}</Col>
-        <Col>{personaInfo?.level}</Col>
-      </Row>
-    </Container>
+    <Table>
+      <tbody>
+        <tr><td>Name:</td><td>{personaInfo?.name}</td></tr>
+        <tr><td>Arcana:</td><td>{personaInfo?.arcana}</td></tr>
+        <tr><td>Level:</td><td>{personaInfo?.level}</td></tr>
+      </tbody>
+    </Table>
   );
 };

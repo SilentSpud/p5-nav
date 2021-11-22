@@ -11,17 +11,17 @@ export const ConfidantIntro = () => {
   const { name, character } = useConfidant();
 
   return (
-    <section className="confidant-intro">
+    <>
       <h2>{camel(name)}</h2>
       <h3>{character}</h3>
-    </section>
+    </>
   );
 };
 
 export const ConfidantBenefits = () => {
   const { benefits } = useConfidant();
   return (
-    <section className="confidant-benefits">
+    <>
       <Table striped bordered>
         <thead>
           <tr>
@@ -40,13 +40,13 @@ export const ConfidantBenefits = () => {
           ))}
         </tbody>
       </Table>
-    </section>
+    </>
   );
 };
 
 export const ConfidantAnswers = () => {
   const { ranks } = useConfidant();
-  return <section className="confidant-answers">{ranks.map((rank, index) => parseRank(rank, index))}</section>;
+  return <>{ranks.map((rank, index) => parseRank(rank, index))}</>;
 };
 
 const parseRequirements = (reqs: ConfidantLevelRequirements) => {
