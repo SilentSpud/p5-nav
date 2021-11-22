@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import { useRouter } from "next/router";
-import { parseNameTags } from "../personaList";
+import { NameTags } from ".";
 import { getPersona } from "../data";
 
 export const PersonaInfo = () => {
@@ -19,7 +19,9 @@ export const PersonaInfo = () => {
   if (!persona || !info) return null;
   return (
     <div className="persona-info">
-      <h1>{parseNameTags(info)}</h1>
+      <h1>
+        <NameTags persona={info} />
+      </h1>
       <Table>
         <tbody>
           <tr>

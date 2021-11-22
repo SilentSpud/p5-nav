@@ -6,6 +6,7 @@ import { faCrown, faDollarSign, faClock, faSquarePlus, faAsterisk, faCircleChevr
 import { Personas, Persona, WeaknessLevels as Weaknesses } from "../data";
 import { PersonaHeaders } from "./personaTableConfig";
 import PrepareTable from "../tableMaker";
+import { NameTags, Resistance } from "../persona";
 
 interface CellData {
   lvl: number | JSX.Element;
@@ -30,49 +31,13 @@ interface CellData {
   curse: string | JSX.Element;
 }
 
-export const parseNameTags = ({ name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant }: Persona) => (
-  <>
-    {name}
-    {treasureDemon && (
-      <span className="icon rare" title="Rare persona">
-        <Icon icon={faCrown} />
-      </span>
-    )}
-    {dlcExclusive && (
-      <span className="icon dlc" title="DLC exclusive">
-        <Icon icon={faDollarSign} />
-      </span>
-    )}
-    {thirdSemester && (
-      <span className="icon third" title="Third semester exclusive">
-        <Icon icon={faClock} />
-      </span>
-    )}
-    {newGamePlus && (
-      <span className="icon ngp" title="New Game+ exclusive">
-        <Icon icon={faSquarePlus} />
-      </span>
-    )}
-    {specialFusion && (
-      <span className="icon fusion" title="Special fusion">
-        <Icon icon={faAsterisk} />
-      </span>
-    )}
-    {maxConfidant && (
-      <span className="icon fusion" title="Maxed confidant required">
-        <Icon icon={faCircleChevronUp} />
-      </span>
-    )}
-  </>
-);
-
 const ParsePersona = () =>
   React.useMemo(() => {
     const pList: CellData[] = [];
     for (const persona of Personas) {
       pList.push({
         lvl: persona.level,
-        name: parseNameTags(persona),
+        name: <NameTags persona={persona} />,
         shadow: persona.shadow,
         arcana: persona.arcana,
         personality: persona.personality,
@@ -99,20 +64,7 @@ const ParsePersona = () =>
 const cellParser = (cell: Cell) => {
   switch (cell?.column?.parent?.id) {
     case "elements": {
-      switch (cell.value) {
-        case Weaknesses.resist:
-          return <div {...cell.getCellProps({ className: "text-warning elem" })}>Res</div>;
-        case Weaknesses.repel:
-          return <div {...cell.getCellProps({ className: "text-danger elem" })}>Rep</div>;
-        case Weaknesses.weak:
-          return <div {...cell.getCellProps({ className: "text-success elem" })}>Weak</div>;
-        case Weaknesses.none:
-          return <div {...cell.getCellProps({ className: "elem" })}>&nbsp;</div>;
-        case Weaknesses.absorb:
-          return <div {...cell.getCellProps({ className: "text-info elem" })}>Abs</div>;
-        case Weaknesses.nullify:
-          return <div {...cell.getCellProps({ className: "text-light elem" })}>Null</div>;
-      }
+      return <Resistance value={cell.value} inherits={cell.getCellProps} />;
     }
     case "stats": {
       return <div {...cell.getCellProps({ className: "stats" })}>{cell.render("Cell")}</div>;
