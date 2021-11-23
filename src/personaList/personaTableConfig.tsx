@@ -22,11 +22,11 @@ const sortElems = (rowA: Row, rowB: Row, columnId: string) => {
 
 export const personaHeaders = [
   {
-    Header: <SearchForm />,
+    Header: "",
     accessor: (persona: Persona) => persona.level,
     id: "title",
     columns: [
-      { Header: "Lvl", width: 30, id: "lvl", accessor: (persona: Persona) => persona.level },
+      { Header: "Lvl", width: 30, id: "lvl", accessor: (persona: Persona) => persona.level.toString() },
       { Header: "Name", width: 150, id: "name", accessor: (persona: Persona) => <NameTags persona={persona} /> },
       { Header: "Arcana", width: 70, id: "arcana", accessor: (persona: Persona) => persona.arcana },
       { Header: "Shadow", width: 150, id: "shadow", accessor: (persona: Persona) => persona.shadow ?? null },
@@ -37,11 +37,11 @@ export const personaHeaders = [
     Header: "Stats",
     id: "stats",
     columns: [
-      { Header: "Strength", width: 60, id: "strength", accessor: (persona: Persona) => persona.stats.strength },
-      { Header: "Magic", width: 50, id: "magic", accessor: (persona: Persona) => persona.stats.magic },
-      { Header: "Endurance", width: 65, id: "endurance", accessor: (persona: Persona) => persona.stats.endurance },
-      { Header: "Agility", width: 55, id: "agility", accessor: (persona: Persona) => persona.stats.agility },
-      { Header: "Luck", width: 40, id: "luck", accessor: (persona: Persona) => persona.stats.luck },
+      { Header: "Strength", width: 60, id: "strength", accessor: (persona: Persona) => <>{persona.stats.strength.toString()}</> },
+      { Header: "Magic", width: 50, id: "magic", accessor: (persona: Persona) => <>{persona.stats.magic.toString()}</> },
+      { Header: "Endurance", width: 65, id: "endurance", accessor: (persona: Persona) => <>{persona.stats.endurance.toString()}</> },
+      { Header: "Agility", width: 55, id: "agility", accessor: (persona: Persona) => <>{persona.stats.agility.toString()}</> },
+      { Header: "Luck", width: 40, id: "luck", accessor: (persona: Persona) => <>{persona.stats.luck.toString()}</> },
     ],
   },
   {

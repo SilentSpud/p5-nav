@@ -72,6 +72,6 @@ export const SkillList = (): JSX.Element => {
   const columns = Headers as Column[];
   const data = parseSkills();
   const rowParser: (row: Row<{}>, index: number) => JSX.Element = (row, index) => <Row key={index} rowProps={row.getRowProps} cells={row.cells} />;
-  return PrepareTable({ columns, data, rowParser, className: "skills" });
+  return <PrepareTable {...{ columns, data, rowParser, className: "skills" }} />;
 };
 export default SkillList;

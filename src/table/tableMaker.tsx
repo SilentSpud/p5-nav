@@ -1,40 +1,6 @@
 import React from "react";
-import { CloseButton } from "react-bootstrap";
-import { Column, HeaderGroup, Row, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
-import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { faSort, faSortDown, faSortUp } from "@fortawesome/free-solid-svg-icons";
-
-const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue: string | undefined) => void) => {
-  return headers.map((row, i) => (
-    <div {...row.getHeaderGroupProps()} key={i}>
-      {row.headers.map((cell) => {
-        if (cell.id == "title_0") {
-          return <div {...cell.getHeaderProps({ className: "searchbox th" })}>{SearchForm(setGlobalFilter)}</div>;
-        } else {
-          return (
-            <div {...cell.getHeaderProps(cell.getSortByToggleProps({ className: "th" }))}>
-              {cell.render("Header")}
-              {cell.canSort && (
-                <span>{(cell.isSortedDesc && <Icon icon={faSortUp} />) || (cell.isSorted && <Icon icon={faSortDown} />) || <Icon icon={faSort} />}</span>
-              )}
-            </div>
-          );
-        }
-      })}
-    </div>
-  ));
-};
-export const SearchForm = ({ setGlobalFilter }: { setGlobalFilter: (filterValue: string | undefined) => void }) => (
-  <div className="search">
-    <input
-      type="search"
-      placeholder="Search"
-      className="text-light w-100 h-100"
-      onChange={({ currentTarget }) => setGlobalFilter(currentTarget.value || undefined)}
-    />
-    <CloseButton className="clear" onClick={() => setGlobalFilter(undefined)} />
-  </div>
-);
+import { Row, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
+import { Header } from ".";
 
 export type PrepareTableProps = {
   rowParser: (row: Row, index: number) => JSX.Element;
@@ -52,7 +18,7 @@ const PrepareTable = ({ columns, data, rowParser, className }: PrepareTableProps
   );
   return (
     <section {...getTableProps({ className: `table table-dark ${className}` })}>
-      <header role="rowgroup">{renderHeader(headerGroups, setGlobalFilter)}</header>
+      <header role="rowgroup">{Header(headerGroups, setGlobalFilter)}</header>
       <main {...getTableBodyProps()}>
         {rows.map((row, index) => {
           prepareRow(row);

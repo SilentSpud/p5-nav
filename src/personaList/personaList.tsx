@@ -31,6 +31,6 @@ export const PersonaList = (): JSX.Element => {
       </div>
     );
   };
-  return PrepareTable({ columns: personaHeaders, data: Personas, rowParser, className: "personas" });
+  return <PrepareTable {...{ columns: personaHeaders, data: Personas, rowParser: rowParser, className: "personas" }} />;
 };
 export default PersonaList;
