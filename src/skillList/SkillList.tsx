@@ -1,21 +1,10 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { Row } from "react-table";
+import { Column, Row } from "react-table";
 import PrepareTable from "../tableMaker";
 import { Skills } from "../data";
 
-/*export interface SkillData {
-  name: string;
-  cost?: number;
-  effect: string;
-  element: string | ResElems | SkillElems;
-  talk?: string;
-  fuse?: string | string[];
-  card?: string;
-  unique?: string;
-  dlc?: boolean;
-  note?: string;
-}*/
+
 const Headers = [
   {
     Header: "Skill List",
@@ -24,7 +13,7 @@ const Headers = [
       { Header: "Name", accessor: "name" },
       { Header: "Cost", accessor: "cost" },
       { Header: "Effect", accessor: "effect" },
-      { Header: "PersonElementality", accessor: "element" },
+      { Header: "Element", accessor: "element" },
     ],
   },
   {
@@ -54,7 +43,7 @@ interface CellData {
   note: string | JSX.Element;
 }
 
-const parseSkills = () => {
+const parseSkills = () => React.useMemo(() => {
   const pList: CellData[] = [];
   for (const skill of Skills) {
     pList.push({
@@ -71,7 +60,7 @@ const parseSkills = () => {
     });
   }
   return pList;
-};
+}, []);
 
 const Row = ({ rowProps, cells }): JSX.Element => (
   <div {...rowProps()}>
@@ -83,10 +72,11 @@ const Row = ({ rowProps, cells }): JSX.Element => (
 
 
 export const SkillList = (): JSX.Element => {
+  const columns = Headers as Column[];
   const data = parseSkills();
   const rowParser: (row: Row<{}>, index: number) => JSX.Element = (row, index) => (
-    <Row rowProps={row.getRowProps} cells={row.cells} />
+    <Row key={index} rowProps={row.getRowProps} cells={row.cells} />
   )
-  return PrepareTable({ columns: Headers, data, rowParser, className: "skills" });
+  return PrepareTable({ columns, data, rowParser, className: "skills" });
 };
 export default SkillList;

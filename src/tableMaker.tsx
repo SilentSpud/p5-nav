@@ -24,36 +24,23 @@ const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue: str
     </div>
   ));
 };
-
-const searchForm = (setGlobalFilter: (filterValue: string | undefined) => void) => {
-  const SearchBox = (
-  <input
-    type="search"
-    placeholder="Search"
-    className="text-light w-100 h-100"
-    onChange={({ currentTarget: target }) => setGlobalFilter(target.value || undefined)}
-  ></input>
-  );
-
-  const CloseBox = (
-    <CloseButton className="clear" disabled={SearchBox.value == ""} onClick={({ currentTarget }) => {
-      SearchBox.value = "";
-      setGlobalFilter(undefined);
-    }} />
-  )
-  
-  return (
+const searchForm = (setGlobalFilter: (filterValue: string | undefined) => void): JSX.Element => (
   <div className="search">
-    {SearchBox}
-    {CloseBox}
+    <input
+      type="search"
+      placeholder="Search"
+      className="text-light w-100 h-100"
+      onChange={({ currentTarget }) => setGlobalFilter(currentTarget.value || undefined)}
+    />
+    <CloseButton className="clear" onClick={() => setGlobalFilter(undefined)} />
   </div>
-  )
 );
+
 export type PrepareTableProps = {
   rowParser: (row: Row, index: number) => JSX.Element;
   className: string;
   data: any[];
-  columns: any[];
+  columns: Column[];
 };
 const PrepareTable = ({ columns, data, rowParser, className }: PrepareTableProps) => {
   const sortId = columns[0]?.columns[0]?.accessor?.toString() ?? columns[0]?.accessor?.toString() ?? "";

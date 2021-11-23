@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { Cell, Row } from "react-table";
+import { Cell, Column, Row } from "react-table";
 import { Personas } from "../data";
 import { personaHeaders } from "./personaTableConfig";
 import PrepareTable from "../tableMaker";
@@ -74,6 +74,7 @@ const cellParser = (cell: Cell) => {
 export const PersonaList = (): JSX.Element => {
   const data = ParsePersona();
   const router = useRouter();
+  const columns = personaHeaders as Column[];
   const clickHandler = (evt: React.MouseEvent<HTMLDivElement>) => {
     const targetPersona = evt.currentTarget.querySelector<HTMLElement>('div[role="cell"]:nth-child(2)')?.innerText ?? "";
     router.push(`/persona/${encodeURIComponent(targetPersona)}`);
@@ -85,6 +86,6 @@ export const PersonaList = (): JSX.Element => {
       </div>
     );
   };
-  return PrepareTable({ columns: personaHeaders, data, rowParser, className: "personas" });
+  return PrepareTable({ columns, data, rowParser, className: "personas" });
 };
 export default PersonaList;
