@@ -10,20 +10,20 @@ const Headers = [
     Header: "Skill List",
     id: "title",
     columns: [
-      { Header: "Name", accessor: "name" },
-      { Header: "Cost", accessor: "cost" },
-      { Header: "Element", accessor: "element" },
-      { Header: "Effect", accessor: "effect" },
+      { Header: <>Name</>, accessor: "name", width: 100 },
+      { Header: <>Cost</>, accessor: "cost", width: 50 },
+      { Header: <>Element</>, accessor: "element", width: 50 },
+      { Header: <>Effect</>, accessor: "effect", width: 350 },
     ],
   },
   {
     Header: "Flags",
     id: "flags",
     columns: [
-      { Header: "Talk", accessor: "talk" },
-      { Header: "Fuse", accessor: "fuse" },
-      { Header: "Card", accessor: "card" },
-      { Header: "Unique", accessor: "unique" },
+      { Header: "Talk", accessor: "talk", width: 150 },
+      { Header: "Fuse", accessor: "fuse", width: 100 },
+      { Header: "Card", accessor: "card", width: 100 },
+      { Header: "Unique", accessor: "unique", width: 100 },
     ],
   }
 ];
