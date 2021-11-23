@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faCrown, faDollarSign, faClock, faSquarePlus, faAsterisk, faCircleChevronUp, IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { PersonaProps, WeaknessLevels as Weaknesses } from "../data";
+import { Persona, WeaknessLevels as Weaknesses } from "../data";
 
 const NameTag = ({ className, title, icon }: { className: string; title: string; icon: IconDefinition }) => (
   <span className={`icon ${className}`} title={title}>
@@ -12,7 +12,7 @@ const NameTag = ({ className, title, icon }: { className: string; title: string;
 export const NameTags = ({
   persona: { name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant },
 }: {
-  persona: PersonaProps;
+  persona: Persona;
 }) => (
   <>
     {name}

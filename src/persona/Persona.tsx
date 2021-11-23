@@ -1,5 +1,5 @@
 import React, { createContext, ReactNode, useContext } from "react";
-import { PersonaProps } from "../data";
+import { Persona as PersonaProps } from "../data";
 
 const PersonaCtx = createContext<PersonaProps>({} as PersonaProps);
 export const usePersona = (): PersonaProps => useContext(PersonaCtx);
