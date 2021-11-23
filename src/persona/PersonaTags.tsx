@@ -9,11 +9,7 @@ const NameTag = ({ className, title, icon }: { className: string; title: string;
   </span>
 );
 
-export const NameTags = ({
-  persona: { name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant },
-}: {
-  persona: Persona;
-}) => (
+export const NameTags = ({ persona: { name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant } }: { persona: Persona }) => (
   <>
     {name}
     {treasureDemon && <NameTag className="rare" title="Rare persona" icon={faCrown} />}

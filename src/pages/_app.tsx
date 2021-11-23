@@ -10,16 +10,18 @@ import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
-const NavLink = ({ href, children, disabled, active }: { href: string; children: React.ReactNode | React.ReactNode[]; disabled?: boolean; active?: boolean }) => {
+const NavLink = ({ href, children, disabled }: { href: string; children: React.ReactNode | React.ReactNode[]; disabled?: boolean; active?: boolean }) => {
   let { pathname } = useRouter();
   if (pathname.indexOf("/") != pathname.lastIndexOf("/")) {
     pathname = pathname.split("/").slice(0, 2).join("/");
   }
   return (
     <Link href={href} passHref>
-      <Nav.Link disabled={disabled ?? false} active={pathname == href}>{children}</Nav.Link>
+      <Nav.Link disabled={disabled ?? false} active={pathname == href}>
+        {children}
+      </Nav.Link>
     </Link>
-  )
+  );
 };
 
 export const Main = ({ Component, pageProps }: AppProps) => (
