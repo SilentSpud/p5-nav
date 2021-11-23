@@ -1,5 +1,4 @@
 import React from "react";
-import { CellPropGetter, TableCellProps } from "react-table";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faCrown, faDollarSign, faClock, faSquarePlus, faAsterisk, faCircleChevronUp, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { PersonaProps, WeaknessLevels as Weaknesses } from "../data";
@@ -26,31 +25,32 @@ export const NameTags = ({
   </>
 );
 
-export const Resistance = ({ value, element }: { value: string; element: string }) => {
+export const Resistance = ({ value, element, full }: { value: string; element: string; full: boolean }) => {
   const inf: { className?: string; key: string; children?: React.ReactNode | React.ReactNode[] } = { key: element };
   switch (value as Weaknesses) {
     case Weaknesses.resist:
       inf.className = "text-warning";
-      inf.children = <>Res</>;
+      inf.children = full ? <>Resists</> : <>Res</>;
       break;
     case Weaknesses.repel:
       inf.className = "text-danger";
-      inf.children = <>Rep</>;
+      inf.children = full ? <>Repels</> : <>Rep</>;
       break;
     case Weaknesses.weak:
       inf.className = "text-success";
-      inf.children = <>Weak</>;
+      inf.children = full ? <>Weak</> : <>Weak</>;
       break;
     case Weaknesses.none:
-      inf.children = <>&nbsp;</>;
+      inf.className = "text-muted";
+      inf.children = full ? <>Neutral</> : <>&nbsp;</>;
       break;
     case Weaknesses.absorb:
       inf.className = "text-info";
-      inf.children = <>Abs</>;
+      inf.children = full ? <>Absorb</> : <>Abs</>;
       break;
     case Weaknesses.nullify:
       inf.className = "text-light";
-      inf.children = <>Null</>;
+      inf.children = full ? <>Nullify</> : <>Null</>;
       break;
   }
   inf.className += " elem";

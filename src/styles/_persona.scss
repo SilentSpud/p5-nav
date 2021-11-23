@@ -5,11 +5,7 @@
     vertical-align: middle;
   }
   td:first-child {
-    width: 10vw;
-  }
-
-  td:last-child {
-    width: 90vw;
+    width: 8vw;
   }
 
   .icon {
@@ -24,6 +20,26 @@
     &:hover {
       text-decoration: underline;
       cursor: pointer;
+    }
+  }
+  .persona-stats {
+    td {
+      width: 20vw;
+      &:not(:last-child) {
+        border-right: 1px solid $table-border;
+      }
+    }
+  }
+  .persona-elems {
+    td {
+      width: 10vw;
+    }
+  }
+  .persona-skills {
+    td:first-child {
+      font-family: $monospace;
+      width: 3vw;
+      text-align: right;
     }
   }
 }
