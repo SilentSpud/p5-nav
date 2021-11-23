@@ -76,7 +76,9 @@ const ShadowInfo = () => {
 };
 
 const StatsTable = () => {
-  const { stats: { strength, magic, endurance, agility, luck } } = usePersona();
+  const {
+    stats: { strength, magic, endurance, agility, luck },
+  } = usePersona();
   return (
     <Table className="persona-stats">
       <thead>
@@ -101,8 +103,8 @@ const StatsTable = () => {
         </tr>
       </tbody>
     </Table>
-  )
-}
+  );
+};
 const SkillTable = () => {
   const { skills } = usePersona();
   return (
@@ -121,8 +123,8 @@ const SkillTable = () => {
         ))}
       </tbody>
     </Table>
-  )
-}
+  );
+};
 
 export const PersonaInfo = () => {
   const router = useRouter();
