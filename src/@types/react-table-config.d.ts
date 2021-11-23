@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   UseColumnOrderInstanceProps,
   UseColumnOrderState,
@@ -89,7 +87,9 @@ declare module "react-table" {
       UseGlobalFiltersColumnOptions<D>,
       UseGroupByColumnOptions<D>,
       UseResizeColumnsColumnOptions<D>,
-      UseSortByColumnOptions<D> {}
+      UseSortByColumnOptions<D> {
+    columns: Column[];
+  }
 
   export interface ColumnInstance<D extends Record<string, unknown> = Record<string, unknown>>
     extends UseFiltersColumnProps<D>,
