@@ -31,6 +31,14 @@ section[role="table"].personas {
       width: 0 !important;
     }
   }
+  .icon {
+    float: right;
+    vertical-align: middle;
+    text-align: center;
+    width: 16px;
+    margin: 0;
+    padding: 0;
+  }
 
   div[role="cell"]:first-child,
   .elem {
@@ -79,12 +87,11 @@ section[role="table"].personas {
     background-color: $form-border;
     cursor: pointer;
   }
-}
 
-div[role="columnheader"],
-.nav-link,
-div[role="cell"] {
-  user-select: none;
+  div[role="columnheader"],
+  div[role="cell"] {
+    user-select: none;
+  }
 }
 
 .questionlist table {

@@ -3,7 +3,7 @@ import { Table } from "react-bootstrap";
 import { useConfidant } from ".";
 import { ConfidantLevelRequirements, ConfidantRank, RankMetadata } from "../data";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { faMinus, faAngleUp, faAnglesUp, faArrowUp, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { faMinus, faAngleUp, faAnglesUp, faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
@@ -11,17 +11,17 @@ export const ConfidantIntro = () => {
   const { name, character } = useConfidant();
 
   return (
-    <section className="confidant-intro">
+    <>
       <h2>{camel(name)}</h2>
       <h3>{character}</h3>
-    </section>
+    </>
   );
 };
 
 export const ConfidantBenefits = () => {
   const { benefits } = useConfidant();
   return (
-    <section className="confidant-benefits">
+    <>
       <Table striped bordered>
         <thead>
           <tr>
@@ -40,13 +40,13 @@ export const ConfidantBenefits = () => {
           ))}
         </tbody>
       </Table>
-    </section>
+    </>
   );
 };
 
 export const ConfidantAnswers = () => {
   const { ranks } = useConfidant();
-  return <section className="confidant-answers">{ranks.map((rank, index) => parseRank(rank, index))}</section>;
+  return <>{ranks.map((rank, index) => parseRank(rank, index))}</>;
 };
 
 const parseRequirements = (reqs: ConfidantLevelRequirements) => {

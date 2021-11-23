@@ -1,7 +1,7 @@
-import personas from "../../data/personas.yml";
+import personas from "../../data/personas.json";
 export const Personas: PersonaList = personas;
 
-export const getPersona = (id: string): PersonaData | undefined => {
+export const getPersona = (id: string): PersonaProps | undefined => {
   for (const p of Personas) {
     if (p.name.toString() == id) return p;
   }
@@ -33,7 +33,7 @@ export enum DamageTypes {
   hea = "healing",
   tra = "trait",
 }
-export interface PersonaData {
+export interface PersonaProps {
   name: string;
   arcana: string;
   level: number;
@@ -57,19 +57,21 @@ export interface PersonaData {
     luck: number;
   };
   elements: {
-    physical: WeaknessLevels;
-    gun: WeaknessLevels;
-    fire: WeaknessLevels;
-    ice: WeaknessLevels;
-    electric: WeaknessLevels;
-    wind: WeaknessLevels;
-    psychic: WeaknessLevels;
-    nuclear: WeaknessLevels;
-    bless: WeaknessLevels;
-    curse: WeaknessLevels;
+    physical: WeaknessLevels | string;
+    gun: WeaknessLevels | string;
+    fire: WeaknessLevels | string;
+    ice: WeaknessLevels | string;
+    electric: WeaknessLevels | string;
+    wind: WeaknessLevels | string;
+    psychic: WeaknessLevels | string;
+    nuclear: WeaknessLevels | string;
+    bless: WeaknessLevels | string;
+    curse: WeaknessLevels | string;
   };
-  skills: {
-    [name: string]: number;
-  };
+  skills: SkillUnlock[];
 }
-export type PersonaList = PersonaData[];
+export interface SkillUnlock {
+  name: string;
+  level: number;
+}
+export type PersonaList = PersonaProps[];
