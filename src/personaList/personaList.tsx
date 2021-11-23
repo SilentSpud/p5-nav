@@ -46,16 +46,16 @@ const ParsePersona = () =>
         endurance: persona.stats.endurance,
         agility: persona.stats.agility,
         luck: persona.stats.luck,
-        physical: persona.elements.physical,
-        gun: persona.elements.gun,
-        fire: persona.elements.fire,
-        ice: persona.elements.ice,
-        electric: persona.elements.electric,
-        wind: persona.elements.wind,
-        psychic: persona.elements.psychic,
-        nuclear: persona.elements.nuclear,
-        bless: persona.elements.bless,
-        curse: persona.elements.curse,
+        physical: <Resistance element="physical" value={persona.elements.physical} />,
+        gun: <Resistance element="gun" value={persona.elements.gun} />,
+        fire: <Resistance element="fire" value={persona.elements.fire} />,
+        ice: <Resistance element="ice" value={persona.elements.ice} />,
+        electric: <Resistance element="electric" value={persona.elements.electric} />,
+        wind: <Resistance element="wind" value={persona.elements.wind} />,
+        psychic: <Resistance element="psychic" value={persona.elements.psychic} />,
+        nuclear: <Resistance element="nuclear" value={persona.elements.nuclear} />,
+        bless: <Resistance element="bless" value={persona.elements.bless} />,
+        curse: <Resistance element="curse" value={persona.elements.curse} />,
       });
     }
     return pList;
@@ -63,9 +63,6 @@ const ParsePersona = () =>
 
 const cellParser = (cell: Cell) => {
   switch (cell?.column?.parent?.id) {
-    case "elements": {
-      return <Resistance value={cell.value} inherits={cell.getCellProps} />;
-    }
     case "stats": {
       return <div {...cell.getCellProps({ className: "stats" })}>{cell.render("Cell")}</div>;
     }

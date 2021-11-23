@@ -26,8 +26,8 @@ export const NameTags = ({
   </>
 );
 
-export const Resistance = ({ value, inherits }: { value: string; inherits?: (propGetter?: CellPropGetter<any>) => TableCellProps }) => {
-  const inf: { className?: string; children?: React.ReactNode | React.ReactNode[] } = {};
+export const Resistance = ({ value, element }: { value: string; element: string }) => {
+  const inf: { className?: string; key: string; children?: React.ReactNode | React.ReactNode[] } = { key: element };
   switch (value as Weaknesses) {
     case Weaknesses.resist:
       inf.className = "text-warning";
@@ -54,5 +54,5 @@ export const Resistance = ({ value, inherits }: { value: string; inherits?: (pro
       break;
   }
   inf.className += " elem";
-  return <div {...(inherits ? inherits(inf) : inf)}></div>;
+  return <span {...inf}></span>;
 };

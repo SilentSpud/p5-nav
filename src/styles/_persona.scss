@@ -1,6 +1,9 @@
 @import "overrides";
 
 .persona-info {
+  td {
+    vertical-align: middle;
+  }
   td:first-child {
     width: 10vw;
   }
@@ -38,7 +41,7 @@
   a {
     &:link,
     &:visited {
-      color: $p5-red;
+      color: $p5-red-light;
       text-decoration: none;
     }
 
@@ -49,7 +52,7 @@
     }
 
     &:active {
-      color: $p5-red-light;
+      color: $p5-red;
     }
   }
 }
