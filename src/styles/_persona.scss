@@ -13,6 +13,23 @@
     text-align: center;
     font-size: 24px;
   }
+  a {
+    &:link,
+    &:visited {
+      color: $p5-red-light;
+      text-decoration: none;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $p5-red;
+    }
+  }
 
   .arcana {
     color: $p5-red;
@@ -47,28 +64,13 @@
 .popup {
   .popover-body {
     padding: 0;
+    border: 1px solid #AAA;
+    border-radius: 3px;
   }
   .table {
     margin-bottom: 0;
     tr:last-child td {
       border-bottom: none;
-    }
-  }
-  a {
-    &:link,
-    &:visited {
-      color: $p5-red-light;
-      text-decoration: none;
-    }
-
-    &:active,
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-
-    &:active {
-      color: $p5-red;
     }
   }
 }
