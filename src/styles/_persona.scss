@@ -1,13 +1,55 @@
+@import "overrides";
+
 .persona-info {
   td:first-child {
     width: 10vw;
   }
+
   td:last-child {
     width: 90vw;
   }
+
   .icon {
     vertical-align: top;
     text-align: center;
     font-size: 24px;
+  }
+
+  .arcana {
+    color: $p5-red;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.popup {
+  .popover-body {
+    padding: 0;
+  }
+  .table {
+    margin-bottom: 0;
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+  a {
+    &:link,
+    &:visited {
+      color: $p5-red;
+      text-decoration: none;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $p5-red-light;
+    }
   }
 }
