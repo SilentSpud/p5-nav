@@ -32,11 +32,11 @@ const searchForm = (setGlobalFilter: (filterValue: string | undefined) => void) 
     onChange={(key) => setGlobalFilter(key.currentTarget.value || undefined)}
   ></input>
 );
-type PrepareTableProps = {
+export type PrepareTableProps = {
   rowParser: (row: Row, index: number) => JSX.Element;
   className: string;
-  data: [];
-  columns: Column[];
+  data: any[];
+  columns: any[];
 };
 const PrepareTable = ({ columns, data, rowParser, className }: PrepareTableProps) => {
   const sortId = columns[0]?.columns[0]?.accessor?.toString() ?? columns[0]?.accessor?.toString() ?? "";
