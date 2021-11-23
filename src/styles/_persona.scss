@@ -1,6 +1,9 @@
 @import "overrides";
 
 .persona-info {
+  table {
+    margin-bottom: 10px;
+  }
   td {
     vertical-align: middle;
   }
@@ -37,6 +40,14 @@
     &:hover {
       text-decoration: underline;
       cursor: pointer;
+    }
+  }
+  .persona-stats, .persona-elems, .persona-skills {
+    th {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      font-weight: 500;
+      border-bottom: 2px solid #777;
     }
   }
   .persona-stats {
