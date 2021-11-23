@@ -1,19 +1,21 @@
-import skills from "../../data/skills.yml";
+import skills from "../../data/skills.json";
 export const Skills: SkillData[] = skills;
 export interface SkillData {
   name: string;
   cost?: number;
   effect: string;
-  element: ResElems | SkillElems;
-  personas?: {
-    [name: string]: number;
-  };
+  element: string | ResElems | SkillElems;
+  personas?: PersonaRef[];
   talk?: string;
   fuse?: string | string[];
   card?: string;
   unique?: string;
   dlc?: boolean;
   note?: string;
+}
+interface PersonaRef {
+  name: string;
+  level: number;
 }
 export enum ResElems {
   "phys",
