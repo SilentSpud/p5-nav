@@ -29,36 +29,6 @@ interface CellData {
   curse: string | JSX.Element;
 }
 
-const ParsePersona = () =>
-  React.useMemo(() => {
-    const pList: CellData[] = [];
-    for (const persona of Personas) {
-      pList.push({
-        lvl: persona.level,
-        name: <NameTags persona={persona} />,
-        shadow: persona.shadow,
-        arcana: persona.arcana,
-        personality: persona.personality,
-        strength: persona.stats.strength,
-        magic: persona.stats.magic,
-        endurance: persona.stats.endurance,
-        agility: persona.stats.agility,
-        luck: persona.stats.luck,
-        physical: <Resistance element="physical" value={persona.elements.physical} />,
-        gun: <Resistance element="gun" value={persona.elements.gun} />,
-        fire: <Resistance element="fire" value={persona.elements.fire} />,
-        ice: <Resistance element="ice" value={persona.elements.ice} />,
-        electric: <Resistance element="electric" value={persona.elements.electric} />,
-        wind: <Resistance element="wind" value={persona.elements.wind} />,
-        psychic: <Resistance element="psychic" value={persona.elements.psychic} />,
-        nuclear: <Resistance element="nuclear" value={persona.elements.nuclear} />,
-        bless: <Resistance element="bless" value={persona.elements.bless} />,
-        curse: <Resistance element="curse" value={persona.elements.curse} />,
-      });
-    }
-    return pList;
-  }, []);
-
 const cellParser = (cell: Cell) => {
   switch (cell?.column?.parent?.id) {
     case "stats": {
@@ -72,7 +42,7 @@ const cellParser = (cell: Cell) => {
 };
 
 export const PersonaList = (): JSX.Element => {
-  const data = ParsePersona();
+  const data = Personas;
   const router = useRouter();
   const columns = personaHeaders as Column[];
   const clickHandler = (evt: React.MouseEvent<HTMLDivElement>) => {
