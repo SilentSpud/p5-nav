@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderGroup, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
+import { Column, HeaderGroup, Row, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faSort, faSortDown, faSortUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,9 +32,14 @@ const searchForm = (setGlobalFilter: (filterValue: string | undefined) => void) 
     onChange={(key) => setGlobalFilter(key.currentTarget.value || undefined)}
   ></input>
 );
-
-const PrepareTable = ({ columns, data, rowParser, className }) => {
-  const sortId = columns[0]?.columns[0]?.accessor ?? columns[0]?.accessor ?? "";
+type PrepareTableProps = {
+  rowParser: (row: Row, index: number) => JSX.Element;
+  className: string;
+  data: [];
+  columns: Column[];
+};
+const PrepareTable = ({ columns, data, rowParser, className }: PrepareTableProps) => {
+  const sortId = columns[0]?.columns[0]?.accessor?.toString() ?? columns[0]?.accessor?.toString() ?? "";
   const { getTableProps, getTableBodyProps, headerGroups, rows, setGlobalFilter, prepareRow } = useTable(
     { columns: columns, data: data, initialState: { sortBy: [{ id: sortId }] } },
     useGlobalFilter,
@@ -45,9 +50,9 @@ const PrepareTable = ({ columns, data, rowParser, className }) => {
     <section {...getTableProps({ className: `table table-dark ${className}` })}>
       <header role="rowgroup">{renderHeader(headerGroups, setGlobalFilter)}</header>
       <main {...getTableBodyProps()}>
-        {rows.map((row, i) => {
+        {rows.map((row, index) => {
           prepareRow(row);
-          return rowParser(row, i);
+          return rowParser(row, index);
         })}
       </main>
     </section>
