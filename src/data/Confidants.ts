@@ -1,13 +1,39 @@
 import confidants from "../../data/confidants.json";
-export const Confidants: ConfidantList = confidants;
+export const Confidants: Confidant[] = confidants;
 
-export const getConfidant = (name: string): Confidant | void => {
+export const getConfidant = (name: string): Confidant | StoryConfidant | undefined => {
   for (let confidant of Confidants) {
     if (confidant.name == name) return confidant;
   }
+  for (let confidant of StoryConfidants) {
+    if (confidant.name == name) return Object.assign(confidant, { story: true });
+  }
 };
 
-export type ConfidantList = Confidant[];
+export const StoryConfidants: StoryConfidant[] = [
+  {
+    name: "magician",
+    character: "Morgana",
+  },
+  {
+    name: "fool",
+    character: "Igor",
+  },
+  {
+    name: "judgement",
+    character: "Sae Niijima",
+  },
+  {
+    name: "strength",
+    character: "Justine & Caroline",
+  },
+];
+
+export interface StoryConfidant {
+  name: string;
+  character: string;
+  story?: boolean;
+}
 export interface Confidant {
   name: string;
   character: string;
