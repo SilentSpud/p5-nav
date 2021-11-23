@@ -17,8 +17,6 @@ export interface SkillData {
   fuse?: string | string[];
   card?: string;
   unique?: string;
-  dlc?: boolean;
-  note?: string;
 }
 interface PersonaRef {
   name: string;

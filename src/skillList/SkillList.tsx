@@ -12,8 +12,8 @@ const Headers = [
     columns: [
       { Header: "Name", accessor: "name" },
       { Header: "Cost", accessor: "cost" },
-      { Header: "Effect", accessor: "effect" },
       { Header: "Element", accessor: "element" },
+      { Header: "Effect", accessor: "effect" },
     ],
   },
   {
@@ -24,8 +24,6 @@ const Headers = [
       { Header: "Fuse", accessor: "fuse" },
       { Header: "Card", accessor: "card" },
       { Header: "Unique", accessor: "unique" },
-      { Header: "DLC", accessor: "dlc" },
-      { Header: "Note", accessor: "note" },
     ],
   }
 ];
@@ -39,8 +37,6 @@ interface CellData {
   fuse: string | JSX.Element;
   card: string | JSX.Element;
   unique: string | JSX.Element;
-  dlc: string | JSX.Element;
-  note: string | JSX.Element;
 }
 
 const parseSkills = () => React.useMemo(() => {
@@ -54,9 +50,7 @@ const parseSkills = () => React.useMemo(() => {
       talk: skill.talk ?? <>&nbsp;</>,
       fuse: (skill.fuse && (typeof skill.fuse == "string" ? skill.fuse : skill.fuse.join(", "))) ?? <>&nbsp;</>,
       card: skill.card ?? <>&nbsp;</>,
-      unique: skill.unique ?? <>&nbsp;</>,
-      dlc: skill.dlc ? <>true</> : <>&nbsp;</>,
-      note: skill.note ?? <>&nbsp;</>,
+      unique: skill.unique ?? <>&nbsp;</>
     });
   }
   return pList;
