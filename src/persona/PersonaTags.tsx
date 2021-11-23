@@ -25,7 +25,7 @@ export const NameTags = ({
   </>
 );
 
-export const Resistance = ({ value, element, full }: { value: string; element: string; full: boolean }) => {
+export const Resistance = ({ value, element, full }: { value: string; element: string; full?: boolean }) => {
   const inf: { className?: string; key: string; children?: React.ReactNode | React.ReactNode[] } = { key: element };
   switch (value as Weaknesses) {
     case Weaknesses.resist:
