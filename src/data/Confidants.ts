@@ -32,7 +32,7 @@ export const StoryConfidants: StoryConfidant[] = [
 export interface StoryConfidant {
   name: string;
   character: string;
-  story?: boolean;
+  story?: true;
 }
 export interface Confidant {
   name: string;
