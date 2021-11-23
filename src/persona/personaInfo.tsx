@@ -75,6 +75,55 @@ const ShadowInfo = () => {
   );
 };
 
+const StatsTable = () => {
+  const { stats: { strength, magic, endurance, agility, luck } } = usePersona();
+  return (
+    <Table className="persona-stats">
+      <thead>
+        <tr>
+          <th colSpan={5}>Stats</th>
+        </tr>
+        <tr>
+          <th>Strength</th>
+          <th>Magic</th>
+          <th>Endurance</th>
+          <th>Agility</th>
+          <th>Luck</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{strength}</td>
+          <td>{magic}</td>
+          <td>{endurance}</td>
+          <td>{agility}</td>
+          <td>{luck}</td>
+        </tr>
+      </tbody>
+    </Table>
+  )
+}
+const SkillTable = () => {
+  const { skills } = usePersona();
+  return (
+    <Table className="persona-skills">
+      <thead>
+        <tr>
+          <th colSpan={2}>Skills</th>
+        </tr>
+      </thead>
+      <tbody>
+        {skills.map((skill, index) => (
+          <tr key={index}>
+            <td>{skill.name}</td>
+            <td>{skill.level}</td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
+  )
+}
+
 export const PersonaInfo = () => {
   const router = useRouter();
   let { persona } = router.query;
@@ -95,6 +144,8 @@ export const PersonaInfo = () => {
       </h1>
       <BasicInfo />
       {info.shadow && <ShadowInfo />}
+      <StatsTable />
+      <SkillTable />
     </Persona>
   );
 };
