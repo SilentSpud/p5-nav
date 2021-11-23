@@ -49,7 +49,11 @@ export const ArcanaPopup = ({ arcana }): JSX.Element | null => {
 
   return (
     <Popup overlay={overlay}>
-      <span className="arcana"><Link href={`/confidant/${confidant.name}`}><a>{camel(confidant.name)}</a></Link></span>
+      <span className="arcana">
+        <Link href={`/confidant/${confidant.name}`}>
+          <a>{camel(confidant.name)}</a>
+        </Link>
+      </span>
     </Popup>
   );
 };
