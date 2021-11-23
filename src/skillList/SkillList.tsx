@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { Column, Row } from "react-table";
-import PrepareTable from "../tableMaker";
+import PrepareTable from "../table";
 import { Skills } from "../data";
 
 const Headers = [

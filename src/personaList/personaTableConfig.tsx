@@ -3,6 +3,7 @@ import { Row } from "react-table";
 import { WeaknessLevels as Weaknesses } from "../data";
 import { Persona } from "../data";
 import { NameTags, Resistance } from "../persona";
+import { SearchForm } from "../table";
 
 const sortElems = (rowA: Row, rowB: Row, columnId: string) => {
   const sortOrder = [
@@ -21,7 +22,8 @@ const sortElems = (rowA: Row, rowB: Row, columnId: string) => {
 
 export const personaHeaders = [
   {
-    Header: "Persona List",
+    Header: <SearchForm />,
+    accessor: (persona: Persona) => persona.level,
     id: "title",
     columns: [
       { Header: "Lvl", width: 30, id: "lvl", accessor: (persona: Persona) => persona.level },

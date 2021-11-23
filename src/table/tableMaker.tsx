@@ -9,7 +9,7 @@ const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue: str
     <div {...row.getHeaderGroupProps()} key={i}>
       {row.headers.map((cell) => {
         if (cell.id == "title_0") {
-          return <div {...cell.getHeaderProps({ className: "searchbox th" })}>{searchForm(setGlobalFilter)}</div>;
+          return <div {...cell.getHeaderProps({ className: "searchbox th" })}>{SearchForm(setGlobalFilter)}</div>;
         } else {
           return (
             <div {...cell.getHeaderProps(cell.getSortByToggleProps({ className: "th" }))}>
@@ -24,7 +24,7 @@ const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue: str
     </div>
   ));
 };
-const searchForm = (setGlobalFilter: (filterValue: string | undefined) => void): JSX.Element => (
+export const SearchForm = ({ setGlobalFilter }: { setGlobalFilter: (filterValue: string | undefined) => void }) => (
   <div className="search">
     <input
       type="search"
@@ -40,12 +40,12 @@ export type PrepareTableProps = {
   rowParser: (row: Row, index: number) => JSX.Element;
   className: string;
   data: any[];
-  columns: Column[];
+  columns: any[];
 };
 const PrepareTable = ({ columns, data, rowParser, className }: PrepareTableProps) => {
   const sortId = columns[0]?.columns[0]?.accessor?.toString() ?? columns[0]?.accessor?.toString() ?? "";
   const { getTableProps, getTableBodyProps, headerGroups, rows, setGlobalFilter, prepareRow } = useTable(
-    { columns: columns, data: data, initialState: { sortBy: [{ id: sortId }] } },
+    { columns, data, initialState: { sortBy: [{ id: sortId }] } },
     useGlobalFilter,
     useSortBy,
     useFlexLayout
