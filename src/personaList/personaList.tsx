@@ -1,10 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { Cell, Row } from "react-table";
-import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { faCrown, faDollarSign, faClock, faSquarePlus, faAsterisk, faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
-import { Personas, PersonaProps, WeaknessLevels as Weaknesses } from "../data";
-import { PersonaHeaders } from "./personaTableConfig";
+import { Personas } from "../data";
+import { personaHeaders } from "./personaTableConfig";
 import PrepareTable from "../tableMaker";
 import { NameTags, Resistance } from "../persona";
 
@@ -74,8 +72,7 @@ const cellParser = (cell: Cell) => {
 };
 
 export const PersonaList = (): JSX.Element => {
-  const columns = PersonaHeaders(),
-    data = ParsePersona();
+  const data = ParsePersona();
   const router = useRouter();
   const clickHandler = (evt: React.MouseEvent<HTMLDivElement>) => {
     const targetPersona = evt.currentTarget.querySelector<HTMLElement>('div[role="cell"]:nth-child(2)')?.innerText ?? "";
@@ -88,6 +85,6 @@ export const PersonaList = (): JSX.Element => {
       </div>
     );
   };
-  return PrepareTable({ columns, data, rowParser, className: "personas" });
+  return PrepareTable({ columns: personaHeaders, data, rowParser, className: "personas" });
 };
 export default PersonaList;
