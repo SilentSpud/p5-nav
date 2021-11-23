@@ -1,4 +1,5 @@
 import React from "react";
+import { CloseButton } from "react-bootstrap";
 import { Column, HeaderGroup, Row, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faSort, faSortDown, faSortUp } from "@fortawesome/free-solid-svg-icons";
@@ -24,13 +25,29 @@ const renderHeader = (headers: HeaderGroup[], setGlobalFilter: (filterValue: str
   ));
 };
 
-const searchForm = (setGlobalFilter: (filterValue: string | undefined) => void) => (
+const searchForm = (setGlobalFilter: (filterValue: string | undefined) => void) => {
+  const SearchBox = (
   <input
     type="search"
     placeholder="Search"
-    className="text-light w-100 h-100 search"
-    onChange={(key) => setGlobalFilter(key.currentTarget.value || undefined)}
+    className="text-light w-100 h-100"
+    onChange={({ currentTarget: target }) => setGlobalFilter(target.value || undefined)}
   ></input>
+  );
+
+  const CloseBox = (
+    <CloseButton className="clear" disabled={SearchBox.value == ""} onClick={({ currentTarget }) => {
+      SearchBox.value = "";
+      setGlobalFilter(undefined);
+    }} />
+  )
+  
+  return (
+  <div className="search">
+    {SearchBox}
+    {CloseBox}
+  </div>
+  )
 );
 export type PrepareTableProps = {
   rowParser: (row: Row, index: number) => JSX.Element;

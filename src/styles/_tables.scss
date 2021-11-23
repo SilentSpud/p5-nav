@@ -96,22 +96,38 @@ section[role="table"] {
 
 
 .search {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 10px;
-  background-color: #222;
-  color: #fff;
-  border: none;
-
-  &:hover {
-    background-color: $table-head-bg;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  &, & input {
+    width: 100%;
+    height: 100%;
   }
+  input {
+    padding-left: 10px;
+    background-color: #222;
+    color: #fff;
+    border: none;
 
-  &:focus {
-    outline: none;
-    background-color: $table-bg;
+    &:hover {
+      background-color: $table-head-bg;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $table-bg;
+    }
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
   }
-  &::-webkit-search-cancel-button {
-    display: none;
+  .clear {
+    top: 0;
+    height: 30px;
+    right: 5px;
+    position: absolute;
+    &:active {
+      outline: none;
+    }
   }
 }
