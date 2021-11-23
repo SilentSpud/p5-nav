@@ -8,7 +8,7 @@ export type PrepareTableProps = {
   data: any[];
   columns: any[];
 };
-const PrepareTable = ({ columns, data, rowParser, className }: PrepareTableProps) => {
+export const PrepareTable = ({ columns, data, rowParser, className }: PrepareTableProps) => {
   const sortId = columns[0]?.columns[0]?.accessor?.toString() ?? columns[0]?.accessor?.toString() ?? "";
   const { getTableProps, getTableBodyProps, headerGroups, rows, setGlobalFilter, prepareRow } = useTable(
     { columns, data, initialState: { sortBy: [{ id: sortId }] } },

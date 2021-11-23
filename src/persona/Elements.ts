@@ -12,27 +12,29 @@ import passiveData from "../../public/passive.webp";
 import physData from "../../public/phys.webp";
 import psyData from "../../public/psy.webp";
 import supportData from "../../public/support.webp";
-import swordData from "../../public/sword.webp";
 import traitData from "../../public/trait.webp";
 import windData from "../../public/wind.webp";
 
-export const Elements = {
-  ailment: ailmentData,
-  almighty: almightyData,
+export const ResElements = {
+  phys: physData,
+  gun: gunData,
+  fire: fireData,
+  ice: iceData,
+  elec: elecData,
+  wind: windData,
+  psy: psyData,
+  nuke: nukeData,
   bless: blessData,
   curse: curseData,
-  elec: elecData,
-  fire: fireData,
-  gun: gunData,
-  healing: healingData,
-  ice: iceData,
-  nuke: nukeData,
-  passive: passiveData,
-  phys: physData,
-  psy: psyData,
-  support: supportData,
-  sword: swordData,
-  trait: traitData,
-  wind: windData,
 };
+export const SkillElements = {
+  almighty: almightyData,
+  ailment: ailmentData,
+  support: supportData,
+  passive: passiveData,
+  healing: healingData,
+  trait: traitData,
+};
+
+export const Elements = Object.assign(ResElements, SkillElements);
 export default Elements;

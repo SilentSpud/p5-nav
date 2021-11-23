@@ -3,7 +3,7 @@ import { Day, Month } from "./CalendarBody";
 import Navbar from "./Navbar";
 import { Calendar, parseYear, EventItem } from "./CalendarController";
 import { ClassroomQuestions } from "../data";
-import useStorage from 'react-use-localstorage2';
+import useStorage from "react-use-localstorage2";
 
 const gameStart = "2016-04-01T06:00:00.000Z";
 
