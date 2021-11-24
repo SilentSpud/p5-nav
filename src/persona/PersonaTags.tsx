@@ -26,11 +26,11 @@ export const Resistance = ({ value, element, full }: { value: string; element: s
   switch (value as Weaknesses) {
     case Weaknesses.resist:
       inf.className = "text-warning";
-      inf.children = full ? <>Resists</> : <>Res</>;
+      inf.children = full ? <>Resist</> : <>Res</>;
       break;
     case Weaknesses.repel:
       inf.className = "text-danger";
-      inf.children = full ? <>Repels</> : <>Rep</>;
+      inf.children = full ? <>Repel</> : <>Rep</>;
       break;
     case Weaknesses.weak:
       inf.className = "text-success";
@@ -49,6 +49,5 @@ export const Resistance = ({ value, element, full }: { value: string; element: s
       inf.children = full ? <>Nullify</> : <>Null</>;
       break;
   }
-  inf.className += " elem";
   return <span {...inf}></span>;
 };
