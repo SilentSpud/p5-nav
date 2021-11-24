@@ -41,11 +41,10 @@ section[role="table"] {
   }
 
   div[role="cell"]:first-child,
-  .elem {
+  div[role="cell"] span {
     text-align: center;
 
-    &,
-    .stat {
+    div[role="cell"] .stats {
       font-family: $monospace;
     }
   }

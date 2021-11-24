@@ -1,10 +1,8 @@
 import React from "react";
 import { Row } from "react-table";
-import Image from "next/image";
 import { WeaknessLevels as Weaknesses } from "../data";
 import { Persona } from "../data";
-import { NameTags, ResElements, Resistance } from "../persona";
-import { SearchForm } from "../table";
+import { NameTags, Resistance } from "../persona";
 
 const sortElems = (rowA: Row, rowB: Row, columnId: string) => {
   const sortOrder = [
@@ -24,10 +22,9 @@ const sortElems = (rowA: Row, rowB: Row, columnId: string) => {
 export const personaHeaders = [
   {
     Header: "",
-    accessor: (persona: Persona) => persona.level,
     id: "title",
     columns: [
-      { Header: "Lvl", width: 30, id: "lvl", accessor: (persona: Persona) => persona.level.toString() },
+      { Header: "Lvl", width: 30, id: "lvl", sort: true, accessor: (persona: Persona) => persona.level },
       { Header: "Name", width: 150, id: "name", accessor: (persona: Persona) => <NameTags persona={persona} /> },
       { Header: "Arcana", width: 70, id: "arcana", accessor: (persona: Persona) => persona.arcana },
       { Header: "Shadow", width: 150, id: "shadow", accessor: (persona: Persona) => persona.shadow ?? null },
@@ -50,8 +47,8 @@ export const personaHeaders = [
     id: "elements",
     columns: [
       {
-        Header: <Image src={ResElements.phys} alt="Physical" title="Physical" />,
-        width: 55,
+        Header: "Phys",
+        width: 40,
         id: "phys",
         sortType: sortElems,
         accessor: (persona: Persona) => persona.elements.physical,
@@ -82,8 +79,8 @@ export const personaHeaders = [
         Cell: ({ value }) => <Resistance element="ice" value={value.elements.ice} />,
       },
       {
-        Header: "Electric",
-        width: 55,
+        Header: "Elec",
+        width: 40,
         id: "elec",
         sortType: sortElems,
         accessor: ({ elements: { electric } }: Persona) => electric,
@@ -98,16 +95,16 @@ export const personaHeaders = [
         Cell: ({ value }) => <Resistance element="wind" value={value} />,
       },
       {
-        Header: "Psychic",
-        width: 50,
+        Header: "Psy",
+        width: 40,
         id: "psy",
         sortType: sortElems,
         accessor: ({ elements: { psychic } }: Persona) => psychic,
         Cell: ({ value }) => <Resistance element="psychic" value={value} />,
       },
       {
-        Header: "Nuclear",
-        width: 55,
+        Header: "Nuke",
+        width: 40,
         id: "nuke",
         sortType: sortElems,
         accessor: ({ elements: { nuclear } }: Persona) => nuclear,
@@ -115,7 +112,7 @@ export const personaHeaders = [
       },
       {
         Header: "Bless",
-        width: 45,
+        width: 40,
         id: "bless",
         sortType: sortElems,
         accessor: ({ elements: { bless } }: Persona) => bless,
@@ -123,7 +120,7 @@ export const personaHeaders = [
       },
       {
         Header: "Curse",
-        width: 45,
+        width: 40,
         id: "curse",
         sortType: sortElems,
         accessor: ({ elements: { curse } }: Persona) => curse,
