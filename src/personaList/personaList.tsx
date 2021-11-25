@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { Cell, Row } from "react-table";
 import { Personas } from "../data";
 import { personaHeaders } from "./personaTableConfig";
@@ -19,18 +19,11 @@ const cellParser = (cell: Cell) => {
 };
 
 export const PersonaList = (): JSX.Element => {
-  const router = useRouter();
-  const clickHandler = (evt: React.MouseEvent<HTMLDivElement>) => {
-    const targetPersona = evt.currentTarget.querySelector<HTMLElement>('div[role="cell"]:nth-child(2)')?.innerText ?? "";
-    router.push(`/persona/${encodeURIComponent(targetPersona)}`);
-  };
-  const rowParser = (row: Row, i: number) => {
-    return (
-      <div {...row.getRowProps()} onClick={clickHandler}>
-        {row.cells.map((cell) => cellParser(cell))}
-      </div>
-    );
-  };
-  return <PrepareTable {...{ columns: personaHeaders, data: Personas, rowParser: rowParser, className: "personas" }} />;
+  const rowParser = ({ getRowProps, cells, values: { name } }: Row, i: number) => (
+    <Link key={i} href={`/persona/${name}`}><a {...getRowProps()}>
+      {cells.map((cell) => cellParser(cell))}
+    </a></Link>
+  );
+  return <PrepareTable {...{ columns: personaHeaders, data: Personas, rowParser, className: "personas" }} />;
 };
 export default PersonaList;
