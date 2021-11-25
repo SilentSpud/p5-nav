@@ -40,8 +40,29 @@ const Headers = () =>
       },
       {
         Header: <>&nbsp;</>,
-        id: "effect-empty",
-        columns: [{ Header: <>Effect</>, id: "effect", width: 350, accessor: (skill: Skill) => skill.effect }],
+        id: "details",
+        columns: [
+          { id: "effect", width: 150, accessor: ({ effect }: Skill) => effect, Header: "Effect" },
+          {
+            id: "personas",
+            width: 150,
+            accessor: ({ personas }: Skill) => personas,
+            Header: "Personas",
+            Cell: ({ value }) => (
+              <span className="persona-links">
+                {value.map(({ name, level }: PersonaRef, index: number) => (
+                  <span key={index}>
+                    <Link href={`/persona/${encodeURIComponent(name)}`}>
+                      <a>{name}</a>
+                    </Link>
+                    {level ? ` (${level})` : ""}
+                    {index < value.length - 1 ? ", " : ""}
+                  </span>
+                ))}
+              </span>
+            ),
+          },
+        ],
       },
     ],
     []
