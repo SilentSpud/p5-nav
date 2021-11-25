@@ -18,7 +18,7 @@ export interface Skill {
   card?: string;
   unique?: string;
 }
-interface PersonaRef {
+export interface PersonaRef {
   name: string;
   level: number;
 }
