@@ -22,7 +22,7 @@ export const PersonaList = (): JSX.Element => {
   const rowParser = ({ getRowProps, cells, values: { name } }: Row, i: number) => {
     const parseClick = ({ target }) => {
       if (target.tagName.toLowerCase() == "a") return false;
-      router.push(`/skill/${name}`);
+      router.push(`/persona/${encodeURIComponent(name)}`);
     };
     return (
       <div {...getRowProps()} key={i} onClick={parseClick}>

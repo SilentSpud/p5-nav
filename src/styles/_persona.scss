@@ -35,11 +35,10 @@
   }
 
   .arcana {
-    color: $p5-red;
+    color: $p5-red-light;
 
     &:hover {
       text-decoration: underline;
-      cursor: pointer;
     }
   }
   .persona-stats,

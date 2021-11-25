@@ -31,9 +31,13 @@ export const ArcanaPopup = ({ arcana }): JSX.Element | null => {
   return (
     <OverlayTrigger trigger={["hover", "focus"]} placement="bottom" overlay={overlay} rootClose>
       <span className="arcana">
-        <Link href={`/confidant/${confidant.name}`}>
-          <a>{camel(confidant.name)}</a>
-        </Link>
+        {isStory ? (
+          <>{camel(confidant.name)}</>
+        ) : (
+          <Link href={`/confidant/${confidant.name}`}>
+            <a>{camel(confidant.name)}</a>
+          </Link>
+        )}
       </span>
     </OverlayTrigger>
   );
