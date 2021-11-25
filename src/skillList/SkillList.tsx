@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { Row, Cell } from "react-table";
 import PrepareTable from "../table";
-import { Skills, Skill, Persona, PersonaRef } from "../data";
+import { Skills, Skill, PersonaRef } from "../data";
 import { SkillTags, CostTag } from "../skill";
 import { Elements } from "../persona";
 
@@ -24,7 +24,7 @@ const Headers = () =>
           },
           {
             id: "name",
-            width: 100,
+            width: 60,
             accessor: ({ name }: Skill) => name,
             Header: "Name",
             Cell: ({ row: { original } }) => <SkillTags skill={original} />,
@@ -42,10 +42,10 @@ const Headers = () =>
         Header: <>&nbsp;</>,
         id: "details",
         columns: [
-          { id: "effect", width: 150, accessor: ({ effect }: Skill) => effect, Header: "Effect" },
+          { id: "effect", width: 175, accessor: ({ effect }: Skill) => effect, Header: "Effect" },
           {
             id: "personas",
-            width: 150,
+            width: 250,
             accessor: ({ personas }: Skill) => personas,
             Header: "Personas",
             Cell: ({ value }) => (
