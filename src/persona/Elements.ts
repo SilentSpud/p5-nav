@@ -21,9 +21,11 @@ export const ResElements = {
   fire: fireData,
   ice: iceData,
   elec: elecData,
+  electric: elecData,
   wind: windData,
   psy: psyData,
   nuke: nukeData,
+  nuclear: nukeData,
   bless: blessData,
   curse: curseData,
 };
