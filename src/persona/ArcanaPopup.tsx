@@ -11,12 +11,15 @@ export const ArcanaPopup = ({ arcana }): JSX.Element | null => {
   const isStory = "story" in confidant;
   let overlay: JSX.Element = (
     <Popover className="popup arcana-popup">
-      <Popover.Header>{camel(confidant.name)}{isStory ? " (Story)" : ""}</Popover.Header>
+      <Popover.Header>
+        {camel(confidant.name)}
+        {isStory ? " (Story)" : ""}
+      </Popover.Header>
       <Popover.Body>
         <Table>
           <tbody>
             <tr>
-              {!isStory && <td>Character:</td> || null}
+              {(!isStory && <td>Character:</td>) || null}
               <td>{confidant.character}</td>
             </tr>
           </tbody>
