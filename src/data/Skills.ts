@@ -1,13 +1,13 @@
 import skills from "../../data/skills.json";
-export const Skills: SkillData[] = skills;
+export const Skills: Skill[] = skills;
 
-export const getSkill = (name: string): SkillData | undefined => {
+export const getSkill = (name: string): Skill | undefined => {
   for (const skill of Skills) {
     if (skill.name == name) return skill;
   }
 };
 
-export interface SkillData {
+export interface Skill {
   name: string;
   cost?: number;
   effect: string;
