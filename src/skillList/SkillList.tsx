@@ -1,65 +1,35 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { Column, Row } from "react-table";
+import { Row, Cell } from "react-table";
 import PrepareTable from "../table";
-import { Skills } from "../data";
+import { Skills, Skill } from "../data";
+import { SkillTags } from "../skill";
 
 const Headers = [
   {
     Header: "Skill List",
     id: "title",
     columns: [
-      { Header: <>Name</>, accessor: "name", width: 100 },
-      { Header: <>Cost</>, accessor: "cost", width: 50 },
-      { Header: <>Element</>, accessor: "element", width: 50 },
-      { Header: <>Effect</>, accessor: "effect", width: 350 },
+      { Header: <>Element</>, id: "element", width: 35, sort: true, accessor: (skill: Skill) => skill.element },
+      { Header: <>Name</>, id: "name", width: 100, accessor: (skill: Skill) => <SkillTags skill={skill} /> },
+      { Header: <>Cost</>, id: "cost", width: 50, accessor: (skill: Skill) => skill.cost },
+      { Header: <>Effect</>, id: "effect", width: 350, accessor: (skill: Skill) => skill.effect },
     ],
   },
   {
     Header: "Flags",
     id: "flags",
     columns: [
-      { Header: "Talk", accessor: "talk", width: 150 },
-      { Header: "Fuse", accessor: "fuse", width: 100 },
-      { Header: "Card", accessor: "card", width: 100 },
-      { Header: "Unique", accessor: "unique", width: 100 },
+      { Header: "Fuse", id: "fuse", width: 100, accessor: (skill: Skill) => skill.fuse },
+      { Header: "Card", id: "card", width: 100, accessor: (skill: Skill) => skill.card },
     ],
   },
 ];
 
-interface CellData {
-  name: string | JSX.Element;
-  cost: number | JSX.Element;
-  effect: string | JSX.Element;
-  element: string | JSX.Element;
-  talk: string | JSX.Element;
-  fuse: string | JSX.Element;
-  card: string | JSX.Element;
-  unique: string | JSX.Element;
-}
-
-const parseSkills = () =>
-  React.useMemo(() => {
-    const pList: CellData[] = [];
-    for (const skill of Skills) {
-      pList.push({
-        name: skill.name,
-        cost: skill.cost ?? <>&nbsp;</>,
-        effect: skill.effect,
-        element: skill.element.toString() ?? <>&nbsp;</>,
-        talk: skill.talk ?? <>&nbsp;</>,
-        fuse: (skill.fuse && (typeof skill.fuse == "string" ? skill.fuse : skill.fuse.join(", "))) ?? <>&nbsp;</>,
-        card: skill.card ?? <>&nbsp;</>,
-        unique: skill.unique ?? <>&nbsp;</>,
-      });
-    }
-    return pList;
-  }, []);
-
 const Row = ({ rowProps, cells }): JSX.Element => (
   <div {...rowProps()}>
     {cells.map(
-      (cell, index): JSX.Element => (
+      (cell: Cell, index: number): JSX.Element => (
         <div {...cell.getCellProps()} key={index}>
           {cell.render("Cell")}
         </div>
@@ -69,9 +39,7 @@ const Row = ({ rowProps, cells }): JSX.Element => (
 );
 
 export const SkillList = (): JSX.Element => {
-  const columns = Headers as Column[];
-  const data = parseSkills();
   const rowParser: (row: Row<{}>, index: number) => JSX.Element = (row, index) => <Row key={index} rowProps={row.getRowProps} cells={row.cells} />;
-  return <PrepareTable {...{ columns, data, rowParser, className: "skills" }} />;
+  return <PrepareTable {...{ columns: Headers, data: Skills, rowParser, className: "skills", sortId: "name" }} />;
 };
 export default SkillList;

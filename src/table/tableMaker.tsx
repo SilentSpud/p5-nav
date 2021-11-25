@@ -7,26 +7,32 @@ export type PrepareTableProps = {
   className?: string;
   data: any[];
   columns: any[];
+  sortId?: string;
 };
-export const PrepareTable = ({ columns, data, rowParser, className }: PrepareTableProps) => {
-  let sortId = columns[0]?.columns[0]?.id?.toString() ?? columns[0]?.id?.toString() ?? "";
-  for (let column of columns) {
-    if (column.sort) {
-      sortId = column.id;
-      break;
-    }
-    if (column.columns) {
-      for (let col of column.columns) {
-        if (col.sort) {
-          sortId = col.id;
-          break;
+export const PrepareTable = ({ columns, data, rowParser, className, sortId }: PrepareTableProps) => {
+  let sort = "";
+  if (sortId) {
+    sort = sortId;
+  } else {
+    sort = columns[0]?.columns[0]?.id?.toString() ?? columns[0]?.id?.toString() ?? "";
+    for (let column of columns) {
+      if (column.sort) {
+        sort = column.id;
+        break;
+      }
+      if (column.columns) {
+        for (let col of column.columns) {
+          if (col.sort) {
+            sort = col.id;
+            break;
+          }
         }
       }
     }
   }
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, setGlobalFilter, prepareRow } = useTable(
-    { columns, data, initialState: { sortBy: [{ id: sortId }] } },
+    { columns, data, initialState: { sortBy: [{ id: sort }] } },
     useGlobalFilter,
     useSortBy,
     useFlexLayout
