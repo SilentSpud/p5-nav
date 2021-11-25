@@ -2,7 +2,6 @@ import React from "react";
 import { useRouter } from "next/router";
 import { getSkill } from "../data";
 
-
 export const SkillInfo = () => {
   const router = useRouter();
   let { skill } = router.query;
