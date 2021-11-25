@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import Image from "next/image";
 import { Row, Cell } from "react-table";
 import PrepareTable from "../table";
@@ -46,21 +46,19 @@ const Headers = () =>
     []
   );
 
-const Row = ({ rowProps, cells }): JSX.Element => (
-  <div {...rowProps()}>
-    {cells.map(
-      (cell: Cell, index: number): JSX.Element => (
-        <div {...cell.getCellProps()} key={index}>
-          {cell.render("Cell")}
-        </div>
-      )
-    )}
-  </div>
-);
-
 export const SkillList = (): JSX.Element => {
   const headers = Headers();
-  const rowParser: (row: Row<{}>, index: number) => JSX.Element = (row, index) => <Row key={index} rowProps={row.getRowProps} cells={row.cells} />;
+  const rowParser = ({ getRowProps, cells, values: { name } }: Row, index: number) => (
+    <Link key={index} href={`/skill/${name}`}><a {...getRowProps()}>
+      {cells.map(
+        (cell: Cell, index: number): JSX.Element => (
+          <div {...cell.getCellProps()} key={index}>
+            {cell.render("Cell")}
+          </div>
+        )
+      )}
+    </a></Link>
+  );
   return <PrepareTable {...{ columns: headers, data: Skills, rowParser, className: "skills", sortId: "name" }} />;
 };
 export default SkillList;
