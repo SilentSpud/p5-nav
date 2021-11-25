@@ -18,3 +18,9 @@ export const SkillTags = ({ skill: { name, talk, fuse, card, unique } }: { skill
     {fuse && <SkillTag className="fuse" title="Fusion Card" icon={faAsterisk} />}
   </>
 );
+
+export const CostTag = ({ cost }: { cost?: number }): JSX.Element => {
+  if (!cost) return <></>;
+  if (cost.toString().slice(-2) == "00") return <>{cost.toString().slice(0, -2)} SP</>;
+  else return <>{cost} HP</>;
+};
