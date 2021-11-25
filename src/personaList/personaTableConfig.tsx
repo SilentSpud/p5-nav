@@ -1,7 +1,7 @@
 import React from "react";
-import { Row } from "react-table";
+import type { Row } from "react-table";
 import { WeaknessLevels as Weaknesses } from "../data";
-import { Persona } from "../data";
+import type { Persona } from "../data";
 import { NameTags, Resistance } from "../persona";
 
 const sortElems = (rowA: Row, rowB: Row, columnId: string) => {
@@ -19,16 +19,25 @@ const sortElems = (rowA: Row, rowB: Row, columnId: string) => {
   return sortOrder.indexOf(sortA) < sortOrder.indexOf(sortB) ? 1 : -1;
 };
 
+const ResistanceCell = ({ value, id }) => <Resistance element={id} value={value} />;
+const ResistanceHeader = ({ text, caption }: { text: string; caption?: string }) => <span className="title" title={caption ?? ""} children={text} />;
+
 export const personaHeaders = [
   {
     Header: "",
     id: "title",
     columns: [
-      { Header: "Lvl", width: 30, id: "lvl", sort: true, accessor: (persona: Persona) => persona.level },
-      { Header: "Name", width: 150, id: "name", accessor: (persona: Persona) => <NameTags persona={persona} /> },
-      { Header: "Arcana", width: 70, id: "arcana", accessor: (persona: Persona) => persona.arcana },
-      { Header: "Shadow", width: 150, id: "shadow", accessor: (persona: Persona) => persona.shadow ?? null },
-      { Header: "Personality", width: 70, id: "personality", accessor: (persona: Persona) => persona.personality ?? null },
+      { id: "lvl", width: 30, sort: true, accessor: ({ level }: Persona) => level, Header: "Lvl" },
+      {
+        id: "name",
+        width: 150,
+        accessor: ({ name }: Persona) => name,
+        Header: "Name",
+        Cell: ({ row: { original } }) => <NameTags persona={original} />,
+      },
+      { id: "arcana", width: 70, accessor: ({ arcana }: Persona) => arcana, Header: "Arcana" },
+      { id: "shadow", width: 150, accessor: ({ shadow }: Persona) => shadow, Header: "Shadow" },
+      { id: "personality", width: 70, accessor: ({ personality }: Persona) => personality, Header: "Personality" },
     ],
   },
   {
@@ -38,52 +47,37 @@ export const personaHeaders = [
       {
         id: "strength",
         width: 35,
-        Header: (
-          <span className="title" title="Strength">
-            Str
-          </span>
-        ),
-        accessor: (persona: Persona) => <>{persona.stats.strength.toString()}</>,
+        accessor: ({ stats: { strength } }: Persona) => strength,
+        Header: <span className="title" title="Strength" children="Str" />,
+        Cell: ({ value }) => <span className="mono" children={value} />,
       },
       {
         id: "magic",
         width: 35,
-        Header: (
-          <span className="title" title="Magic">
-            Mag
-          </span>
-        ),
-        accessor: (persona: Persona) => <>{persona.stats.magic.toString()}</>,
+        accessor: ({ stats: { magic } }: Persona) => magic,
+        Header: <span className="title" title="Magic" children="Mag" />,
+        Cell: ({ value }) => <span className="mono" children={value} />,
       },
       {
         id: "endurance",
         width: 35,
-        Header: (
-          <span className="title" title="Endurance">
-            End
-          </span>
-        ),
-        accessor: (persona: Persona) => <>{persona.stats.endurance.toString()}</>,
+        accessor: ({ stats: { endurance } }: Persona) => endurance,
+        Header: <span className="title" title="Endurance" children="End" />,
+        Cell: ({ value }) => <span className="mono" children={value} />,
       },
       {
         id: "agility",
         width: 35,
-        Header: (
-          <span className="title" title="Agility">
-            Agi
-          </span>
-        ),
-        accessor: (persona: Persona) => <>{persona.stats.agility.toString()}</>,
+        accessor: ({ stats: { agility } }: Persona) => agility,
+        Header: <span className="title" title="Agility" children="Agi" />,
+        Cell: ({ value }) => <span className="mono" children={value} />,
       },
       {
         id: "luck",
         width: 35,
-        Header: (
-          <span className="title" title="Luck">
-            Luc
-          </span>
-        ),
-        accessor: (persona: Persona) => <>{persona.stats.luck.toString()}</>,
+        accessor: ({ stats: { luck } }: Persona) => luck,
+        Header: <span className="title" title="Luck" children="Luc" />,
+        Cell: ({ value }) => <span className="mono" children={value} />,
       },
     ],
   },
@@ -92,84 +86,84 @@ export const personaHeaders = [
     id: "elements",
     columns: [
       {
-        Header: "Phys",
-        width: 40,
         id: "phys",
+        width: 35,
         sortType: sortElems,
-        accessor: (persona: Persona) => persona.elements.physical,
-        Cell: ({ value }) => <Resistance element="physical" value={value} />,
+        accessor: ({ elements: { physical } }: Persona) => physical,
+        Header: <ResistanceHeader caption="Physical" text="Phys" />,
+        Cell: ({ value, column: { id } }) => <ResistanceCell value={value} id={id} />,
       },
       {
-        Header: "Gun",
-        width: 40,
         id: "gun",
+        width: 35,
         sortType: sortElems,
-        accessor: (persona: Persona) => persona,
-        Cell: ({ value }) => <Resistance element="gun" value={value.elements.gun} />,
+        accessor: ({ elements: { gun } }: Persona) => gun,
+        Header: <ResistanceHeader text="Gun" />,
+        Cell: ({ value, column: { id } }) => <ResistanceCell value={value} id={id} />,
       },
       {
-        Header: "Fire",
-        width: 40,
         id: "fire",
+        width: 35,
         sortType: sortElems,
-        accessor: (persona: Persona) => persona,
-        Cell: ({ value }) => <Resistance element="fire" value={value.elements.fire} />,
+        accessor: ({ elements: { fire } }: Persona) => fire,
+        Header: <ResistanceHeader text="Fire" />,
+        Cell: ({ value, column: { id } }) => <ResistanceCell value={value} id={id} />,
       },
       {
-        Header: "Ice",
-        width: 40,
         id: "ice",
+        width: 35,
         sortType: sortElems,
-        accessor: (persona: Persona) => persona,
-        Cell: ({ value }) => <Resistance element="ice" value={value.elements.ice} />,
+        accessor: ({ elements: { ice } }: Persona) => ice,
+        Header: <ResistanceHeader text="Ice" />,
+        Cell: ({ value, column: { id } }) => <ResistanceCell value={value} id={id} />,
       },
       {
-        Header: "Elec",
-        width: 40,
         id: "elec",
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { electric } }: Persona) => electric,
-        Cell: ({ value }) => <Resistance element="electric" value={value} />,
+        Header: <ResistanceHeader caption="Electric" text="Elec" />,
+        Cell: ({ value, column: { id } }) => <ResistanceCell value={value} id={id} />,
       },
       {
-        Header: "Wind",
-        width: 40,
         id: "wind",
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { wind } }: Persona) => wind,
-        Cell: ({ value }) => <Resistance element="wind" value={value} />,
+        Header: <ResistanceHeader text="Wind" />,
+        Cell: ({ value, column: { id } }) => <ResistanceCell value={value} id={id} />,
       },
       {
-        Header: "Psy",
-        width: 40,
         id: "psy",
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { psychic } }: Persona) => psychic,
-        Cell: ({ value }) => <Resistance element="psychic" value={value} />,
+        Header: <ResistanceHeader caption="Psychic" text="Psy" />,
+        Cell: ({ value, column: { id } }) => <ResistanceCell value={value} id={id} />,
       },
       {
-        Header: "Nuke",
-        width: 40,
         id: "nuke",
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { nuclear } }: Persona) => nuclear,
-        Cell: ({ value }) => <Resistance element="nuclear" value={value} />,
+        Header: <ResistanceHeader caption="Nuclear" text="Nuke" />,
+        Cell: ({ value, column: { id } }) => <ResistanceCell value={value} id={id} />,
       },
       {
-        Header: "Bless",
-        width: 40,
         id: "bless",
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { bless } }: Persona) => bless,
-        Cell: ({ value }) => <Resistance element="bless" value={value} />,
+        Header: <ResistanceHeader caption="Bless" text="Bles" />,
+        Cell: ({ value, column: { id } }) => <ResistanceCell value={value} id={id} />,
       },
       {
-        Header: "Curse",
-        width: 45,
         id: "curse",
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { curse } }: Persona) => curse,
-        Cell: ({ value }) => <Resistance element="curse" value={value} />,
+        Header: <ResistanceHeader caption="Curse" text="Curs" />,
+        Cell: ({ value, column: { id } }) => <ResistanceCell value={value} id={id} />,
       },
     ],
   },
