@@ -35,9 +35,12 @@ section[role="table"] {
     float: right;
     vertical-align: middle;
     text-align: center;
-    width: 16px;
+    width: 20px;
     margin: 0;
     padding: 0;
+    svg {
+      font-size: 16px;
+    }
   }
 
   div[role="cell"]:first-child,
@@ -71,6 +74,11 @@ section[role="table"] {
     span {
       float: right;
       vertical-align: middle;
+      &.title {
+        text-align: left;
+        display: block;
+        float: left;
+      }
     }
   }
 

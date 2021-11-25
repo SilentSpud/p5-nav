@@ -5,14 +5,22 @@
     vertical-align: middle;
     img {
       height: 33px;
-      margin-top: auto;
-      margin-bottom: auto;
-      display: block;
+      vertical-align: middle;
     }
     &:first-child {
       margin: 0;
       padding: 0;
-      height: 38px;
+    }
+    &:nth-child(3) {
+      text-align: right;
+      font-family: $monospace;
+    }
+  }
+
+  .icon {
+    width: 24px !important;
+    svg {
+      font-size: 22px !important;
     }
   }
 }

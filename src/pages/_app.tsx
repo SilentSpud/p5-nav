@@ -5,11 +5,6 @@ import type { AppProps } from "next/app";
 import { Nav } from "react-bootstrap";
 import Head from "next/head";
 
-// Fix for fontawesome
-import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false;
-
 const NavLink = ({ href, children, disabled }: { href: string; children: React.ReactNode | React.ReactNode[]; disabled?: boolean; active?: boolean }) => {
   let { pathname } = useRouter();
   if (pathname.indexOf("/") != pathname.lastIndexOf("/")) {

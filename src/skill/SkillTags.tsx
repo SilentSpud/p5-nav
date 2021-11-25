@@ -1,21 +1,22 @@
 import React from "react";
-import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { IconDefinition, faGem, faComments, faFile, faAsterisk } from "@fortawesome/free-solid-svg-icons";
+import { IconType } from "react-icons/lib";
+import { FaGem, FaComments } from "react-icons/fa";
+import { GiCardJackHearts, GiGuillotine } from "react-icons/gi";
 import { Skill } from "../data";
 
-const SkillTag = ({ className, title, icon }: { className: string; title: string; icon: IconDefinition }) => (
+const SkillTag = ({ className, title, icon: Icon }: { className: string; title: string; icon: IconType }) => (
   <span className={`icon ${className}`} title={title}>
-    <Icon icon={icon} />
+    <Icon />
   </span>
 );
 
 export const SkillTags = ({ skill: { name, talk, fuse, card, unique } }: { skill: Skill }) => (
   <>
     {name}
-    {talk && <SkillTag className="talk" title="Card earned through negotiation" icon={faComments} />}
-    {unique && <SkillTag className="unique" title="Unique skill" icon={faGem} />}
-    {card && <SkillTag className="card" title="Card" icon={faFile} />}
-    {fuse && <SkillTag className="fuse" title="Fusion Card" icon={faAsterisk} />}
+    {talk && <SkillTag className="talk" title="Card earned through negotiation" icon={FaComments} />}
+    {unique && <SkillTag className="unique" title="Unique skill" icon={FaGem} />}
+    {card && <SkillTag className="card" title="Card" icon={GiCardJackHearts} />}
+    {fuse && <SkillTag className="fuse" title="Fusion Card" icon={GiGuillotine} />}
   </>
 );
 

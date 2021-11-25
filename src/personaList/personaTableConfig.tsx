@@ -35,11 +35,56 @@ export const personaHeaders = [
     Header: "Stats",
     id: "stats",
     columns: [
-      { Header: "Strength", width: 60, id: "strength", accessor: (persona: Persona) => <>{persona.stats.strength.toString()}</> },
-      { Header: "Magic", width: 50, id: "magic", accessor: (persona: Persona) => <>{persona.stats.magic.toString()}</> },
-      { Header: "Endurance", width: 65, id: "endurance", accessor: (persona: Persona) => <>{persona.stats.endurance.toString()}</> },
-      { Header: "Agility", width: 55, id: "agility", accessor: (persona: Persona) => <>{persona.stats.agility.toString()}</> },
-      { Header: "Luck", width: 40, id: "luck", accessor: (persona: Persona) => <>{persona.stats.luck.toString()}</> },
+      {
+        id: "strength",
+        width: 35,
+        Header: (
+          <span className="title" title="Strength">
+            Str
+          </span>
+        ),
+        accessor: (persona: Persona) => <>{persona.stats.strength.toString()}</>,
+      },
+      {
+        id: "magic",
+        width: 35,
+        Header: (
+          <span className="title" title="Magic">
+            Mag
+          </span>
+        ),
+        accessor: (persona: Persona) => <>{persona.stats.magic.toString()}</>,
+      },
+      {
+        id: "endurance",
+        width: 35,
+        Header: (
+          <span className="title" title="Endurance">
+            End
+          </span>
+        ),
+        accessor: (persona: Persona) => <>{persona.stats.endurance.toString()}</>,
+      },
+      {
+        id: "agility",
+        width: 35,
+        Header: (
+          <span className="title" title="Agility">
+            Agi
+          </span>
+        ),
+        accessor: (persona: Persona) => <>{persona.stats.agility.toString()}</>,
+      },
+      {
+        id: "luck",
+        width: 35,
+        Header: (
+          <span className="title" title="Luck">
+            Luc
+          </span>
+        ),
+        accessor: (persona: Persona) => <>{persona.stats.luck.toString()}</>,
+      },
     ],
   },
   {
@@ -120,7 +165,7 @@ export const personaHeaders = [
       },
       {
         Header: "Curse",
-        width: 40,
+        width: 45,
         id: "curse",
         sortType: sortElems,
         accessor: ({ elements: { curse } }: Persona) => curse,

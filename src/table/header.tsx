@@ -1,5 +1,4 @@
-import { faSortUp, faSortDown, faSort } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { FaSortUp, FaSortDown, FaSort } from "react-icons/fa";
 import React from "react";
 import { CloseButton } from "react-bootstrap";
 import { HeaderGroup } from "react-table";
@@ -25,9 +24,7 @@ export const Header = (headers: HeaderGroup[], setGlobalFilter: (filterValue: st
           return (
             <div {...cell.getHeaderProps(cell.getSortByToggleProps({ className: "th" }))}>
               {cell.render("Header")}
-              {cell.canSort && (
-                <span>{(cell.isSortedDesc && <Icon icon={faSortUp} />) || (cell.isSorted && <Icon icon={faSortDown} />) || <Icon icon={faSort} />}</span>
-              )}
+              {cell.canSort && <span>{(cell.isSortedDesc && <FaSortUp />) || (cell.isSorted && <FaSortDown />) || <FaSort />}</span>}
             </div>
           );
         }
