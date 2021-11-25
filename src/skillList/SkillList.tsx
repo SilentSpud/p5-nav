@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { Row, Cell } from "react-table";
 import PrepareTable from "../table";
-import { Skills, Skill } from "../data";
+import { Skills, Skill, Persona, PersonaRef } from "../data";
 import { SkillTags, CostTag } from "../skill";
 import { Elements } from "../persona";
 
@@ -47,18 +48,25 @@ const Headers = () =>
   );
 
 export const SkillList = (): JSX.Element => {
+  const router = useRouter();
   const headers = Headers();
-  const rowParser = ({ getRowProps, cells, values: { name } }: Row, index: number) => (
-    <Link key={index} href={`/skill/${name}`}><a {...getRowProps()}>
-      {cells.map(
-        (cell: Cell, index: number): JSX.Element => (
-          <div {...cell.getCellProps()} key={index}>
-            {cell.render("Cell")}
-          </div>
-        )
-      )}
-    </a></Link>
-  );
+  const rowParser = ({ getRowProps, cells, values: { name } }: Row, index: number) => {
+    const parseClick = ({ target }) => {
+      if (target.tagName.toLowerCase() == "a") return false;
+      router.push(`/skill/${name}`);
+    };
+    return (
+      <div {...getRowProps()} key={index} onClick={parseClick}>
+        {cells.map(
+          (cell: Cell, index: number): JSX.Element => (
+            <div {...cell.getCellProps()} key={index}>
+              {cell.render("Cell")}
+            </div>
+          )
+        )}
+      </div>
+    );
+  };
   return <PrepareTable {...{ columns: headers, data: Skills, rowParser, className: "skills", sortId: "name" }} />;
 };
 export default SkillList;
