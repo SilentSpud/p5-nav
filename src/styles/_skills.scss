@@ -1,0 +1,43 @@
+@import "overrides";
+
+.skills {
+  div[role="cell"] {
+    vertical-align: middle;
+    img {
+      height: 33px;
+      vertical-align: middle;
+    }
+    &:first-child {
+      margin: 0;
+      padding: 0;
+    }
+    &:nth-child(3) {
+      text-align: right;
+      font-family: $monospace;
+    }
+  }
+
+  .icon {
+    width: 24px !important;
+    svg {
+      font-size: 22px !important;
+    }
+  }
+  a {
+    &:link,
+    &:visited {
+      color: $p5-red-light;
+      text-decoration: none;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $p5-red;
+    }
+  }
+}

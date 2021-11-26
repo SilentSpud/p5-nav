@@ -1,19 +1,26 @@
-import skills from "../../data/skills.yml";
-export const Skills: SkillData[] = skills;
-export interface SkillData {
+import skills from "../../data/skills.json";
+export const Skills: Skill[] = skills;
+
+export const getSkill = (name: string): Skill | undefined => {
+  for (const skill of Skills) {
+    if (skill.name == name) return skill;
+  }
+};
+
+export interface Skill {
   name: string;
   cost?: number;
   effect: string;
-  element: ResElems | SkillElems;
-  personas?: {
-    [name: string]: number;
-  };
+  element: string | ResElems | SkillElems;
+  personas?: PersonaRef[];
   talk?: string;
   fuse?: string | string[];
   card?: string;
   unique?: string;
-  dlc?: boolean;
-  note?: string;
+}
+export interface PersonaRef {
+  name: string;
+  level: number;
 }
 export enum ResElems {
   "phys",

@@ -38,7 +38,10 @@ const parseQuestions = (questionList: NegotiationList) => {
       <Table key={tNum} bordered>
         <thead>
           <tr>
-            <th>{question}</th>
+            <td colSpan={5}>{question}</td>
+          </tr>
+          <tr>
+            <th></th>
             <th>Gloomy</th>
             <th>Irritable</th>
             <th>Timid</th>

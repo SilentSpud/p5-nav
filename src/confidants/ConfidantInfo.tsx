@@ -1,9 +1,8 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import { useConfidant } from ".";
+import { FaMinus, FaAngleUp, FaAngleDoubleUp, FaArrowUp } from "react-icons/fa";
 import { ConfidantLevelRequirements, ConfidantRank, RankMetadata } from "../data";
-import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { faMinus, faAngleUp, faAnglesUp, faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
@@ -81,21 +80,21 @@ const TableHead = ({ rank, meta }: { rank: string | number; meta: RankMetadata |
 );
 
 const Points = ({ points, max }: { points: number; max: boolean }) => {
-  const symbol = (() => {
+  const Symbol = (() => {
     switch (points) {
       case 1:
-        return faAngleUp;
+        return FaAngleUp;
       case 2:
-        return faAnglesUp;
+        return FaAngleDoubleUp;
       case 3:
-        return faArrowUp;
+        return FaArrowUp;
       default:
-        return faMinus;
+        return FaMinus;
     }
   })();
   return (
     <span className="answer-points">
-      <Icon icon={symbol} className={max ? "max-points" : ""} title={`+${points} points`} />
+      <Symbol className={max ? "max-points" : ""} title={`+${points} points`} />
     </span>
   );
 };

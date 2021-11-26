@@ -23,10 +23,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # env files
-.env
-.env.development
-.env.test
-.env.production
+.env.local
+.env.local.development
+.env.local.test
+.env.local.production
 
 # typescript
 *.tsbuildinfo

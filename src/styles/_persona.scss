@@ -1,6 +1,9 @@
 @import "overrides";
 
 .persona-info {
+  table {
+    margin-bottom: 10px;
+  }
   td {
     vertical-align: middle;
   }
@@ -13,13 +16,39 @@
     text-align: center;
     font-size: 24px;
   }
+  a {
+    &:link,
+    &:visited {
+      color: $p5-red-light;
+      text-decoration: none;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $p5-red;
+    }
+  }
 
   .arcana {
-    color: $p5-red;
+    color: $p5-red-light;
 
     &:hover {
       text-decoration: underline;
-      cursor: pointer;
+    }
+  }
+  .persona-stats,
+  .persona-elems,
+  .persona-skills {
+    th {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      font-weight: 500;
+      border-bottom: 2px solid #777;
     }
   }
   .persona-stats {
@@ -47,28 +76,13 @@
 .popup {
   .popover-body {
     padding: 0;
+    border: 1px solid #aaa;
+    border-radius: 3px;
   }
   .table {
     margin-bottom: 0;
     tr:last-child td {
       border-bottom: none;
-    }
-  }
-  a {
-    &:link,
-    &:visited {
-      color: $p5-red-light;
-      text-decoration: none;
-    }
-
-    &:active,
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-
-    &:active {
-      color: $p5-red;
     }
   }
 }

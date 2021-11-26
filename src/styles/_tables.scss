@@ -1,0 +1,132 @@
+@import "overrides";
+
+section[role="table"] {
+  color: $table-text;
+  font: 14px/1.5 $sans-serif;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+
+  header,
+  main {
+    width: 100vw;
+    padding: 0;
+  }
+
+  *[role="row"]:hover div[role="cell"] {
+    background-color: $form-border;
+    cursor: pointer;
+  }
+
+  header {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  main {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 120px);
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+  }
+  .icon {
+    float: right;
+    vertical-align: middle;
+    text-align: center;
+    width: 20px;
+    margin: 0;
+    padding: 0;
+    svg {
+      font-size: 16px;
+    }
+  }
+
+  div[role="cell"]:first-child,
+  div[role="cell"] span {
+    text-align: center;
+
+    div[role="cell"] .stats {
+      font-family: $monospace;
+    }
+  }
+
+  *[role="row"]:nth-child(2) div[role="columnheader"] {
+    text-align: center;
+  }
+
+  div[role="columnheader"] {
+    font-weight: bold;
+    vertical-align: center;
+    color: $table-heading;
+    background-color: $table-head-bg;
+    border-bottom: 1px solid $table-border;
+
+    &:not(:last-child) {
+      border-right: 1px solid $table-border;
+    }
+
+    &.searchbox {
+      padding: 0;
+    }
+
+    span {
+      float: right;
+      vertical-align: middle;
+      &.title {
+        text-align: left;
+        display: block;
+        float: left;
+      }
+    }
+  }
+
+  *[role="row"]:nth-child(2) div[role="columnheader"] {
+    text-align: center;
+  }
+
+  div[role="cell"] {
+    border-bottom: 1px solid $table-border;
+  }
+
+  *[role="row"]:hover div[role="cell"] {
+    background-color: $form-border;
+    cursor: pointer;
+  }
+
+  div[role="columnheader"],
+  div[role="cell"] {
+    user-select: none;
+  }
+}
+
+.search {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  &,
+  & input {
+    width: 100%;
+    height: 100%;
+  }
+  input {
+    padding-left: 10px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+
+    &:hover {
+      background-color: $table-head-bg;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $table-bg;
+    }
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+}

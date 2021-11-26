@@ -1,27 +1,24 @@
 import React from "react";
-import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { faCrown, faDollarSign, faClock, faSquarePlus, faAsterisk, faCircleChevronUp, IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { PersonaProps, WeaknessLevels as Weaknesses } from "../data";
+import { FaCrown, FaDollarSign, FaPlusCircle, FaRegClock, FaChevronCircleUp } from "react-icons/fa";
+import { GiTwinShell } from "react-icons/gi";
+import { IconType } from "react-icons/lib";
+import { Persona, WeaknessLevels as Weaknesses } from "../data";
 
-const NameTag = ({ className, title, icon }: { className: string; title: string; icon: IconDefinition }) => (
+const NameTag = ({ className, title, icon: Icon }: { className: string; title: string; icon: IconType }) => (
   <span className={`icon ${className}`} title={title}>
-    <Icon icon={icon} />
+    <Icon />
   </span>
 );
 
-export const NameTags = ({
-  persona: { name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant },
-}: {
-  persona: PersonaProps;
-}) => (
+export const NameTags = ({ persona: { name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant } }: { persona: Persona }) => (
   <>
     {name}
-    {treasureDemon && <NameTag className="rare" title="Rare persona" icon={faCrown} />}
-    {dlcExclusive && <NameTag className="dlc" title="DLC exclusive" icon={faDollarSign} />}
-    {thirdSemester && <NameTag className="third" title="Third semester exclusive" icon={faClock} />}
-    {newGamePlus && <NameTag className="ngp" title="New Game+ exclusive" icon={faSquarePlus} />}
-    {specialFusion && <NameTag className="fusion" title="Special fusion" icon={faAsterisk} />}
-    {maxConfidant && <NameTag className="max" title="Maxed confidant required" icon={faCircleChevronUp} />}
+    {newGamePlus && <NameTag className="ngp" title="New Game+ exclusive" icon={FaPlusCircle} />}
+    {thirdSemester && <NameTag className="third" title="Third semester exclusive" icon={FaRegClock} />}
+    {maxConfidant && <NameTag className="max" title="Maxed confidant required" icon={FaChevronCircleUp} />}
+    {specialFusion && <NameTag className="fusion" title="Special fusion" icon={GiTwinShell} />}
+    {treasureDemon && <NameTag className="rare" title="Rare persona" icon={FaCrown} />}
+    {dlcExclusive && <NameTag className="dlc" title="DLC exclusive" icon={FaDollarSign} />}
   </>
 );
 
@@ -30,11 +27,11 @@ export const Resistance = ({ value, element, full }: { value: string; element: s
   switch (value as Weaknesses) {
     case Weaknesses.resist:
       inf.className = "text-warning";
-      inf.children = full ? <>Resists</> : <>Res</>;
+      inf.children = full ? <>Resist</> : <>Res</>;
       break;
     case Weaknesses.repel:
       inf.className = "text-danger";
-      inf.children = full ? <>Repels</> : <>Rep</>;
+      inf.children = full ? <>Repel</> : <>Rep</>;
       break;
     case Weaknesses.weak:
       inf.className = "text-success";
@@ -53,6 +50,5 @@ export const Resistance = ({ value, element, full }: { value: string; element: s
       inf.children = full ? <>Nullify</> : <>Null</>;
       break;
   }
-  inf.className += " elem";
   return <span {...inf}></span>;
 };
