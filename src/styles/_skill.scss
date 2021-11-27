@@ -1,10 +1,10 @@
 @import "globals";
 
-.skill-unlocks, .skill-info {
+.skill-unlocks,
+.skill-info {
   td:first-child {
     width: 7vw;
     text-align: right;
     border-right: 1px solid $table-border;
   }
 }
- 
