@@ -36,31 +36,32 @@ const Headers = () =>
             Header: "Cost",
             Cell: ({ value }) => <CostTag cost={value} />,
           },
+          { id: "effect", width: 175, accessor: ({ effect }: Skill) => effect, Header: "Effect" },
         ],
       },
       {
         Header: <>&nbsp;</>,
         id: "details",
         columns: [
-          { id: "effect", width: 175, accessor: ({ effect }: Skill) => effect, Header: "Effect" },
           {
             id: "personas",
             width: 250,
             accessor: ({ personas }: Skill) => personas,
             Header: "Personas",
-            Cell: ({ value }) => value ? (
-              <span className="persona-links">
-                {value.map(({ name, level }: PersonaRef, index: number) => (
-                  <span key={index}>
-                    <Link href={`/persona/${encodeURIComponent(name)}`}>
-                      <a>{name}</a>
-                    </Link>
-                    {level ? ` (${level})` : ""}
-                    {index < value.length - 1 ? ", " : ""}
-                  </span>
-                ))}
-              </span>
-            ) : null,
+            Cell: ({ value }) =>
+              value ? (
+                <span className="persona-links">
+                  {value.map(({ name, level }: PersonaRef, index: number) => (
+                    <span key={index}>
+                      <Link href={`/persona/${encodeURIComponent(name)}`}>
+                        <a>{name}</a>
+                      </Link>
+                      {level ? ` (${level})` : ""}
+                      {index < value.length - 1 ? ", " : ""}
+                    </span>
+                  ))}
+                </span>
+              ) : null,
           },
         ],
       },

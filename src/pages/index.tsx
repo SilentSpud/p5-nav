@@ -18,8 +18,12 @@ const Home: NextPage = () => {
       <main>
         <p>This site uses data from the following sources:</p>
         <ul>
-          <li><a href="https://github.com/aqiu384/megaten-fusion-tool">Megaten Fusion Tool</a></li>
-          <li><a href="https://megamitensei.fandom.com/wiki/Megami_Tensei_Wiki">Megami Tensei Wiki</a></li>
+          <li>
+            <a target="_blank" rel="noreferrer" href="https://github.com/aqiu384/megaten-fusion-tool">Megaten Fusion Tool</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noreferrer" href="https://megamitensei.fandom.com/wiki/Megami_Tensei_Wiki">Megami Tensei Wiki</a>
+          </li>
         </ul>
       </main>
     </div>
