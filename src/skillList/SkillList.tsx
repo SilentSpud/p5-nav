@@ -48,7 +48,7 @@ const Headers = () =>
             width: 250,
             accessor: ({ personas }: Skill) => personas,
             Header: "Personas",
-            Cell: ({ value }) => (
+            Cell: ({ value }) => value ? (
               <span className="persona-links">
                 {value.map(({ name, level }: PersonaRef, index: number) => (
                   <span key={index}>
@@ -60,7 +60,7 @@ const Headers = () =>
                   </span>
                 ))}
               </span>
-            ),
+            ) : null,
           },
         ],
       },
