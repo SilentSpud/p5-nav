@@ -1,16 +1,17 @@
 @import "@fontsource/fira-code/scss/mixins";
-@import "./overrides";
-@import "./global";
+@import "globals";
+@import "body";
 
-@import "./tables";
-@import "./calendar";
-@import "./confidants";
-@import "./confidant";
-@import "./negotiation";
-@import "./personaList";
-@import "./persona";
-@import "./skills";
+@import "tables";
+@import "calendar";
+@import "confidants";
+@import "confidant";
+@import "negotiation";
+@import "personaList";
+@import "persona";
+@import "skills";
+@import "skill";
 
 // Bootstrap
-@import "./darkly";
+@import "darkly";
 @import "bootstrap/scss/bootstrap";
