@@ -2,7 +2,6 @@ import React from "react";
 
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +15,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>empty for now</main>
+      <main>
+        <p>This site uses data from the following sources:</p>
+        <ul>
+          <li><a href="https://github.com/aqiu384/megaten-fusion-tool">Megaten Fusion Tool</a></li>
+          <li><a href="https://megamitensei.fandom.com/wiki/Megami_Tensei_Wiki">Megami Tensei Wiki</a></li>
+        </ul>
+      </main>
     </div>
   );
 };
