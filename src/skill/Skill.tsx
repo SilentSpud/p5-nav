@@ -102,8 +102,12 @@ const UnlockInfo = () => {
         )}
         {unique && (
           <tr>
-            <td>Unique:</td>
-            <td>{unique}</td>
+            <td>Unique to:</td>
+            <td>
+              <Link href={`/persona/${unique}`}>
+                <a>{unique}</a>
+              </Link>
+            </td>
           </tr>
         )}
       </tbody>
