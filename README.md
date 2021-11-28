@@ -1,3 +1,3 @@
 # Royal Navigator
 
-Multi-purpose information tool for Persona 5: Royal
+Multi-purpose information tool for Persona 5 Royal
