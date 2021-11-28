@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getPersona, getSkill, Persona, Skill } from "../data";
 import { Table } from "react-bootstrap";
-import { CostTag, SkillTags } from ".";
+import { CostTag, SkillTags, StatusTag } from ".";
 import { Elements } from "../persona";
 
 const SkillCtx = createContext<Skill>({} as Skill);
@@ -39,7 +39,9 @@ const BasicInfo = () => {
         )}
         <tr>
           <td>Effect</td>
-          <td>{effect}</td>
+          <td>
+            <StatusTag text={effect} />
+          </td>
         </tr>
         <tr>
           <td>Element</td>

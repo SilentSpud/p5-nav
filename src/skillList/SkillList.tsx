@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Row, Cell } from "react-table";
 import PrepareTable from "../table";
 import { Skills, Skill, PersonaRef } from "../data";
-import { SkillTags, CostTag } from "../skill";
+import { SkillTags, CostTag, StatusTag } from "../skill";
 import { Elements } from "../persona";
 
 const Headers = () =>
@@ -36,7 +36,13 @@ const Headers = () =>
             Header: "Cost",
             Cell: ({ value }) => <CostTag cost={value} />,
           },
-          { id: "effect", width: 175, accessor: ({ effect }: Skill) => effect, Header: "Effect" },
+          {
+            id: "effect",
+            width: 175,
+            accessor: ({ effect }: Skill) => effect,
+            Header: "Effect",
+            Cell: ({ value }) => <StatusTag text={value} />,
+          },
         ],
       },
       {

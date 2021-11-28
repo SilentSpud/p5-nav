@@ -8,3 +8,11 @@
     border-right: 1px solid $table-border;
   }
 }
+
+.status-link {
+  text-decoration: underline dashed;
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
