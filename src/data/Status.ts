@@ -1,3 +1,10 @@
+
+export const getStatus = (name: string) => {
+  for (let stat of Status) {
+    if (stat.name == name) return stat;
+  }
+}
+
 export type StatusInfo = {
   name: string;
   effect?: string[];
