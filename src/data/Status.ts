@@ -22,7 +22,6 @@ export type Effects = {
   blockSkill?: true; // Unable to use any skills
   cureOnHit?: true; // Ailment cured if the target is attacked
   cureOnNegotiate?: true; // Ailment cured when the player negotiates with the target
-  fleeOnNegotiate?: true; // Will sometimes run from battle. Will run if negotiated with
 };
 
 export const Status: StatusInfo[] = [
@@ -89,10 +88,7 @@ export const Status: StatusInfo[] = [
   },
   {
     name: "Fear",
-    effects: {
-      fleeOnNegotiate: true,
-    },
-    effect: ["High chance of ignoring commands"],
+    effect: ["High chance of ignoring commands", "Chance of fleeing from battle", "Will flee if negotiated with"],
     technical: [{ name: "Psychic" }, { name: "Ice", heart: true }],
   },
   {
