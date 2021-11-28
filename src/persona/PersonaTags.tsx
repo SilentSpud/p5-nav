@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCrown, FaDollarSign, FaPlusCircle, FaRegClock, FaChevronCircleUp } from "react-icons/fa";
+import { FaCrown, FaDollarSign, FaPlusCircle, FaClock, FaChevronCircleUp } from "react-icons/fa";
 import { GiTwinShell } from "react-icons/gi";
 import { IconType } from "react-icons/lib";
 import { Persona, WeaknessLevels as Weaknesses } from "../data";
@@ -14,7 +14,7 @@ export const NameTags = ({ persona: { name, treasureDemon, dlcExclusive, thirdSe
   <>
     {name}
     {newGamePlus && <NameTag className="ngp" title="New Game+ exclusive" icon={FaPlusCircle} />}
-    {thirdSemester && <NameTag className="third" title="Third semester exclusive" icon={FaRegClock} />}
+    {thirdSemester && <NameTag className="third" title="Third semester exclusive" icon={FaClock} />}
     {maxConfidant && <NameTag className="max" title="Maxed confidant required" icon={FaChevronCircleUp} />}
     {specialFusion && <NameTag className="fusion" title="Special fusion" icon={GiTwinShell} />}
     {treasureDemon && <NameTag className="rare" title="Rare persona" icon={FaCrown} />}
