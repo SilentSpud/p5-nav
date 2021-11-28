@@ -23,7 +23,7 @@ export const Status: StatusInfo[] = [
     name: "Down",
     effect: ["Unable to evade", "Affected characters take 125% damage", "Downed characters recover on their turn"],
   },
-  { name: "Burn", effect: ["Take 10% max HP damage after every action"], technical: [{ name: "Wind" }, { name: "Nuclear" }] },
+  { name: "Burn", effect: ["-10% max HP damage after every turn"], technical: [{ name: "Wind" }, { name: "Nuclear" }] },
   {
     name: "Freeze",
     effects: {
@@ -31,7 +31,7 @@ export const Status: StatusInfo[] = [
       blockNegotiate: true,
       cureOnHit: true,
     },
-    effect: ["Resistance to Physical and Gun is null"],
+    effect: ["Weak to Physical and Gun"],
     technical: [{ name: "Physical" }, { name: "Gun" }, { name: "Nuclear" }],
   },
   {
@@ -40,7 +40,7 @@ export const Status: StatusInfo[] = [
       blockAction: true,
       blockNegotiate: true,
     },
-    effect: ["If the target is hit with a melee attack, there is a slight chance the attacker will become shocked"],
+    effect: ["If the target is hit with melee, there's a slight chance the attacker will become shocked"],
     technical: [{ name: "Physical" }, { name: "Gun" }, { name: "Nuclear" }],
   },
   {
@@ -77,7 +77,7 @@ export const Status: StatusInfo[] = [
       cureOnHit: true,
       cureOnNegotiate: true,
     },
-    effect: ["Random chance to throw away money or items", "Allies can also use healing items", "Enemies can skip their turn"],
+    effect: ["Random chance to throw away money or items", "Allies can also waste healing items", "Enemies can skip their turn"],
     technical: [{ name: "Psychic" }, { name: "Wind", heart: true }, { name: "Gun", heart: true }],
   },
   {
@@ -94,7 +94,7 @@ export const Status: StatusInfo[] = [
       blockAction: true,
       cureOnNegotiate: true,
     },
-    effect: ["SP will decrease by 5%, and the character becomes incapacitated after 3 turns while in despair."],
+    effect: ["-5% SP", "Character is incapacitated after 3 turns"],
     technical: [{ name: "Psychic" }, { name: "Curse", heart: true }],
   },
   {
