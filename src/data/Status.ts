@@ -31,7 +31,7 @@ export const Status: StatusInfo[] = [
       blockNegotiate: true,
       cureOnHit: true,
     },
-    effect: ["Weak to Physical and Gun"],
+    effect: ["Weak to Physical & Gun"],
     technical: [{ name: "Physical" }, { name: "Gun" }, { name: "Nuclear" }],
   },
   {
@@ -103,7 +103,7 @@ export const Status: StatusInfo[] = [
       blockAction: true,
       cureOnNegotiate: true,
     },
-    effect: ["+100% Attack", "-50% Defense, Evasion, Accuracy", "Ignores commands, automatically uses basic melee"],
+    effect: ["+100% Attack", "-50% Defense, Evasion, & Accuracy", "Ignores commands, automatically uses basic melee"],
     technical: [{ name: "Psychic" }, { name: "Fire", heart: true }],
   },
   {

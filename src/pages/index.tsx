@@ -19,8 +19,6 @@ const Home: NextPage = () => {
         <h1>Royal Navigator</h1>
         <p>An information tool for Persona 5 Royal</p>
 
-
-
         <p>This site uses data from the following sources:</p>
         <ul>
           <li>
