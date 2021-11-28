@@ -1,4 +1,4 @@
-@import "overrides";
+@import "globals";
 
 .persona-info {
   table {
@@ -11,11 +11,12 @@
     width: 8vw;
   }
 
-  .icon {
-    vertical-align: top;
-    text-align: center;
-    font-size: 24px;
+  .tags {
+    margin-left: 10px;
+    font-size: 2rem;
+    vertical-align: bottom;
   }
+
   a {
     &:link,
     &:visited {
@@ -74,9 +75,13 @@
 }
 
 .popup {
+  .arcana-popup {
+    .popover-body {
+      border: 1px solid #aaa;
+    }
+  }
   .popover-body {
     padding: 0;
-    border: 1px solid #aaa;
     border-radius: 3px;
   }
   .table {

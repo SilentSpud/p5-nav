@@ -2,6 +2,7 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 import { Elements, NameTags, Persona, usePersona, ArcanaPopup, Resistance } from ".";
 import { getPersona } from "../data";
 
@@ -167,7 +168,11 @@ const SkillTable = () => {
         {skills.map((skill, index) => (
           <tr key={index}>
             <td>{skill.level}</td>
-            <td>{skill.name}</td>
+            <td>
+              <Link href={`/skill/${skill.name}`}>
+                <a>{skill.name}</a>
+              </Link>
+            </td>
           </tr>
         ))}
       </tbody>

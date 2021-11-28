@@ -14,7 +14,7 @@ export interface Skill {
   element: string | ResElems | SkillElems;
   personas?: PersonaRef[];
   talk?: string;
-  fuse?: string | string[];
+  execute?: string[];
   card?: string;
   unique?: string;
 }

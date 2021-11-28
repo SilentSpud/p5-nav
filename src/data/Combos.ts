@@ -1,15 +1,3 @@
-export const RarePersonas = [
-  "Crystal Skull",
-  "Koh-i-Noor",
-  "Queen's Necklace",
-  "Regent",
-  "Stone of Scone",
-  "Orlov",
-  "Emperor's Amulet",
-  "Hope Diamond",
-  "Orichalcum",
-];
-
 export const RareCombos = {
   fool: [+2, +1, +1, -1, -1, -1, -1, +1, +1],
   magician: [+1, -1, -1, +1, +2, +1, +1, +1, -2],
@@ -338,20 +326,4 @@ export const SpecialCombos = [
   { result: "Trumpeter", sources: ["White Rider", "Red Rider", "Black Rider", "Pale Rider"] },
   { result: "Vasuki", sources: ["Naga", "Ananta", "Raja Naga"] },
   { result: "Yoshitsune", sources: ["Shiki-Ouji", "Arahabaki", "Okuninushi", "Yatagarasu", "Futsunushi"] },
-];
-
-export const DlcPersonas = [
-  ["Izanagi", "Izanagi Picaro"],
-  ["Orpheus", "Orpheus Picaro"],
-  ["Ariadne", "Ariadne Picaro"],
-  ["Asterius", "Asterius Picaro"],
-  ["Thanatos", "Thanatos Picaro"],
-  ["Kaguya", "Kaguya Picaro"],
-  ["Magatsu-Izanagi", "Magatsu-Izanagi Picaro"],
-  ["Tsukiyomi", "Tsukiyomi Picaro"],
-  ["Messiah", "Messiah Picaro"],
-  ["Orpheus F", "Orpheus F Picaro"],
-  ["Athena", "Athena Picaro"],
-  ["Izanagi-no-Okami", "Izanagi-no-Okami Picaro"],
-  ["Raoul"],
 ];
