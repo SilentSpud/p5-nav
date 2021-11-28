@@ -5,8 +5,8 @@ import { GiCardJackHearts, GiGuillotine } from "react-icons/gi";
 import { Skill } from "../data";
 import { StatusPopup } from ".";
 
-const SkillTag = ({ className, title, icon: Icon }: { className: string; title: string; icon: IconType }) => (
-  <span className={`icon ${className}`} title={title}>
+const SkillTag = ({ title, icon: Icon }: { title: string; icon: IconType }) => (
+  <span className="icon" title={title}>
     <Icon />
   </span>
 );
@@ -15,10 +15,10 @@ export const SkillTags = ({ skill: { name, talk, execute, card, unique } }: { sk
   <>
     {name}
     <span className="tags">
-      {talk && <SkillTag className="talk" title="Card earned through negotiation" icon={FaComments} />}
-      {unique && <SkillTag className="unique" title="Unique skill" icon={FaGem} />}
-      {card && <SkillTag className="card" title="Available as a skill card" icon={GiCardJackHearts} />}
-      {execute && <SkillTag className="execute" title="Card earned through execution" icon={GiGuillotine} />}
+      {talk && <SkillTag title="Card earned through negotiation" icon={FaComments} />}
+      {unique && <SkillTag title="Unique skill" icon={FaGem} />}
+      {card && <SkillTag title="Available as a skill card" icon={GiCardJackHearts} />}
+      {execute && <SkillTag title="Card earned through execution" icon={GiGuillotine} />}
     </span>
   </>
 );
