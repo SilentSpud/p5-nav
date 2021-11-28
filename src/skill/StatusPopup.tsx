@@ -10,11 +10,12 @@ export const StatusPopup = ({ name: statName }): JSX.Element | null => {
       <Popover.Body>
         <Table>
           <tbody>
-            {effect && effect.map((row, index) => (
-              <tr key={index}>
-                <td>{row}</td>
-              </tr>
-            ))}
+            {effect &&
+              effect.map((row, index) => (
+                <tr key={index}>
+                  <td>{row}</td>
+                </tr>
+              ))}
             {effects && (
               <>
                 {effects.blockAction && (

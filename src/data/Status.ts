@@ -1,9 +1,8 @@
-
 export const getStatus = (name: string) => {
   for (let stat of Status) {
     if (stat.name == name) return stat;
   }
-}
+};
 
 export type StatusInfo = {
   name: string;
@@ -17,11 +16,11 @@ export type Technical = {
 };
 
 export type Effects = {
-  blockAction?: true; // Unable to take action
-  blockNegotiate?: true; // Unable to negotiate with target
-  blockSkill?: true; // Unable to use any skills
-  cureOnHit?: true; // Ailment cured if the target is attacked
-  cureOnNegotiate?: true; // Ailment cured when the player negotiates with the target
+  blockAction?: true;
+  blockNegotiate?: true;
+  blockSkill?: true;
+  cureOnHit?: true;
+  cureOnNegotiate?: true;
 };
 
 export const Status: StatusInfo[] = [
