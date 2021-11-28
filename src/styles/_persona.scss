@@ -74,9 +74,13 @@
 }
 
 .popup {
+  .arcana-popup {
+    .popover-body {
+      border: 1px solid #aaa;
+    }
+  }
   .popover-body {
     padding: 0;
-    border: 1px solid #aaa;
     border-radius: 3px;
   }
   .table {

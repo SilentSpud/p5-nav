@@ -8,6 +8,8 @@ import { Skills, Skill, PersonaRef } from "../data";
 import { SkillTags, CostTag, StatusTag } from "../skill";
 import { Elements } from "../persona";
 
+
+const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 const Headers = () =>
   React.useMemo(
     () => [
@@ -20,7 +22,7 @@ const Headers = () =>
             width: 30,
             accessor: (skill: Skill) => skill.element,
             Header: "Element",
-            Cell: ({ value }) => <Image src={Elements[value]} alt={value} title={value} draggable={false} />,
+            Cell: ({ value }) => <Image src={Elements[value]} alt={camel(value)} title={camel(value)} draggable={false} />,
           },
           {
             id: "name",
