@@ -11,11 +11,12 @@
     width: 8vw;
   }
 
-  .icon {
-    vertical-align: top;
-    text-align: center;
-    font-size: 24px;
+  .tags {
+    margin-left: 10px;
+    font-size: 2rem;
+    vertical-align: bottom;
   }
+
   a {
     &:link,
     &:visited {

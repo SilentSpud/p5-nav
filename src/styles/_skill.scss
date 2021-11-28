@@ -1,5 +1,13 @@
 @import "globals";
 
+h1 {
+  .tags {
+    margin-left: 10px;
+    font-size: 2rem;
+    vertical-align: bottom;
+  }
+}
+
 .skill-unlocks,
 .skill-info {
   td:first-child {

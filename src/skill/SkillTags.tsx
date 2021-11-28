@@ -14,10 +14,12 @@ const SkillTag = ({ className, title, icon: Icon }: { className: string; title: 
 export const SkillTags = ({ skill: { name, talk, execute, card, unique } }: { skill: Skill }) => (
   <>
     {name}
-    {talk && <SkillTag className="talk" title="Card earned through negotiation" icon={FaComments} />}
-    {unique && <SkillTag className="unique" title="Unique skill" icon={FaGem} />}
-    {card && <SkillTag className="card" title="Available as a skill card" icon={GiCardJackHearts} />}
-    {execute && <SkillTag className="execute" title="Card earned through execution" icon={GiGuillotine} />}
+    <span className="tags">
+      {talk && <SkillTag className="talk" title="Card earned through negotiation" icon={FaComments} />}
+      {unique && <SkillTag className="unique" title="Unique skill" icon={FaGem} />}
+      {card && <SkillTag className="card" title="Available as a skill card" icon={GiCardJackHearts} />}
+      {execute && <SkillTag className="execute" title="Card earned through execution" icon={GiGuillotine} />}
+    </span>
   </>
 );
 

@@ -8,7 +8,6 @@ import { Skills, Skill, PersonaRef } from "../data";
 import { SkillTags, CostTag, StatusTag } from "../skill";
 import { Elements } from "../persona";
 
-
 const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 const Headers = () =>
   React.useMemo(
