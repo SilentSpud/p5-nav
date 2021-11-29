@@ -27,6 +27,11 @@ const Home: NextPage = () => {
             </a>
           </li>
           <li>
+            <a target="_blank" rel="noreferrer" href="https://github.com/chinhodado/persona5_calculator">
+              Persona 5 Calculator
+            </a>
+          </li>
+          <li>
             <a target="_blank" rel="noreferrer" href="https://megamitensei.fandom.com/wiki/Megami_Tensei_Wiki">
               Megami Tensei Wiki
             </a>
