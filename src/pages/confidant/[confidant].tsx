@@ -1,8 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { Confidant, ConfidantInfo } from ".";
+import { ConfidantInfo, Confidant } from "../../confidants";
 
-export const ConfidantDetails = () => {
+const ConfidantDetails = () => {
   const router = useRouter();
   let { confidant: confidantName } = router.query;
   switch (typeof confidantName) {
@@ -21,3 +21,5 @@ export const ConfidantDetails = () => {
     </Confidant>
   );
 };
+
+export default ConfidantDetails;

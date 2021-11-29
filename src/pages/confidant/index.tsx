@@ -2,11 +2,10 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Image from "next/image";
 import Link from "next/link";
-import { Confidants } from "../data";
-import type { Confidant } from "../data";
-import ConfidantImages from "./confidantImages";
+import { Confidants, Confidant } from "../../data";
+import { ConfidantImages } from "../../confidants";
 
-export const ConfidantList = (): JSX.Element => {
+const ConfidantList = (): JSX.Element => {
   const rows: Confidant[][] = [];
   for (let index = 0; index < Confidants.length; index += 10) {
     const row = Confidants.slice(index, index + 10);
@@ -33,3 +32,4 @@ export const ConfidantList = (): JSX.Element => {
     </Container>
   );
 };
+export default ConfidantList;

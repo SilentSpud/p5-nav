@@ -17,7 +17,10 @@ import star from "../../public/confidants/star.webp";
 import sun from "../../public/confidants/sun.webp";
 import temperance from "../../public/confidants/temperance.webp";
 import tower from "../../public/confidants/tower.webp";
-const ConfidantImages = {
+type ConfidantImageList = {
+  [name: string]: StaticImageData
+}
+export const ConfidantImages: ConfidantImageList = {
   chariot,
   councillor,
   death,
@@ -38,4 +41,3 @@ const ConfidantImages = {
   temperance,
   tower,
 };
-export default ConfidantImages;
