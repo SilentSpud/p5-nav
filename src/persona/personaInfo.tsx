@@ -1,12 +1,10 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
-import { Elements, NameTags, Persona, usePersona, ArcanaPopup, Resistance } from ".";
-import { getPersona } from "../data";
+import { Elements, usePersona, ArcanaPopup, Resistance } from ".";
 
-const BasicInfo = () => {
+export const BasicInfo = () => {
   const { arcana, level, trait, inherits, item, alarmItem } = usePersona();
   return (
     <Table>
@@ -52,7 +50,7 @@ const BasicInfo = () => {
   );
 };
 
-const ShadowInfo = () => {
+export const ShadowInfo = () => {
   const { shadow, personality } = usePersona();
   return (
     <Table>
@@ -70,7 +68,7 @@ const ShadowInfo = () => {
   );
 };
 
-const StatsTable = () => {
+export const StatsTable = () => {
   const {
     stats: { strength, magic, endurance, agility, luck },
   } = usePersona();
@@ -98,7 +96,7 @@ const StatsTable = () => {
   );
 };
 
-const ElementsTable = () => {
+export const ElementsTable = () => {
   const {
     elements: { physical, gun, fire, ice, electric, wind, psychic, nuclear, bless, curse },
   } = usePersona();
@@ -155,7 +153,7 @@ const ElementsTable = () => {
     </Table>
   );
 };
-const SkillTable = () => {
+export const SkillTable = () => {
   const { skills } = usePersona();
   return (
     <Table className="persona-skills">
@@ -177,32 +175,5 @@ const SkillTable = () => {
         ))}
       </tbody>
     </Table>
-  );
-};
-
-export const PersonaInfo = () => {
-  const router = useRouter();
-  let { persona } = router.query;
-  switch (typeof persona) {
-    case "string":
-      break;
-    case "object":
-      persona = persona[0];
-    case "undefined":
-      return null;
-  }
-  const info = getPersona(decodeURIComponent(persona));
-  if (!persona || !info) return null;
-  return (
-    <Persona persona={info}>
-      <h1>
-        <NameTags persona={info} />
-      </h1>
-      <BasicInfo />
-      {info.shadow && <ShadowInfo />}
-      <StatsTable />
-      <ElementsTable />
-      <SkillTable />
-    </Persona>
   );
 };
