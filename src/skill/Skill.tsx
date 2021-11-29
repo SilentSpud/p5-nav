@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getPersona, getSkill, Persona, Skill as SkillInfo } from "../data";
+import { getPersona, Skill as SkillInfo } from "../data";
 import { Table } from "react-bootstrap";
 import { CostTag, StatusTag } from ".";
 import { Elements } from "../persona";
@@ -50,22 +50,7 @@ export const UnlockInfo = () => {
         </tr>
       </thead>
       <tbody>
-        {talk &&
-          (() => {
-            const persona = getPersona(talk) as Persona;
-            return (
-              <tr>
-                <td>Negotiation</td>
-                <td>
-                  {persona.shadow} (
-                  <Link href={`/persona/${talk}`}>
-                    <a>{talk}</a>
-                  </Link>
-                  )
-                </td>
-              </tr>
-            );
-          })()}
+        {talk && <TalkInfo talk={talk} />}
         {execute && (
           <tr>
             <td>Execution</td>
@@ -97,6 +82,23 @@ export const UnlockInfo = () => {
         )}
       </tbody>
     </Table>
+  );
+};
+
+const TalkInfo = ({ talk }: { talk: string }) => {
+  const persona = getPersona(talk);
+  if (!persona) return null;
+  return (
+    <tr>
+      <td>Negotiation</td>
+      <td>
+        {persona.shadow} (
+        <Link href={`/persona/${talk}`}>
+          <a>{talk}</a>
+        </Link>
+        )
+      </td>
+    </tr>
   );
 };
 

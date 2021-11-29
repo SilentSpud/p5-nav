@@ -1,30 +1,50 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { getPersona } from "../../data";
+import { getPersona, Personas } from "../../data";
 import { BasicInfo, ElementsTable, NameTags, Persona, ShadowInfo, StatsTable, SkillTable } from "../../persona";
-const PersonaInfo = () => {
-  const router = useRouter();
-  let { persona: name } = router.query;
+import { ParsedUrlQuery } from "querystring";
+
+export const getStaticPaths = async () => {
+  return {
+    paths: Personas.map((item) => {
+      return { params: { persona: item.name } };
+    }),
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params: props }) => {
+  return { props };
+};
+
+const loadRouter = ({ persona }: ParsedUrlQuery) => {
+  let name = persona;
   switch (typeof name) {
     case "object":
       name = name[0];
     case "undefined":
-      return null;
+      return undefined;
   }
-  const persona = getPersona(name);
-  if (!name || !persona) return null;
+  return getPersona(name);
+};
+
+const PersonaInfo = ({ persona }: { persona?: string }) => {
+  const router = useRouter();
+  let personaInfo = persona ? getPersona(persona) : loadRouter(router.query);
+  if (!personaInfo) return null;
+  const { name, shadow } = personaInfo;
   return (
     <>
       <Head>
-        <title>{persona.name} - rNav</title>
+        <title>{name} - rNav</title>
       </Head>
-      <Persona persona={persona}>
+      <Persona persona={personaInfo}>
         <h1>
-          <NameTags persona={persona} />
+          <NameTags persona={personaInfo} />
         </h1>
         <BasicInfo />
-        {persona.shadow && <ShadowInfo />}
+        {shadow && <ShadowInfo />}
         <StatsTable />
         <ElementsTable />
         <SkillTable />

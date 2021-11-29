@@ -1,31 +1,48 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { getSkill } from "../../data";
+import { getSkill, Skills } from "../../data";
 import { BasicInfo, Skill, SkillTags, UnlockInfo } from "../../skill";
+import { ParsedUrlQuery } from "querystring";
 
-const SkillInfo = () => {
-  const router = useRouter();
-  let { skill: skillName } = router.query;
-  switch (typeof skillName) {
-    case "string":
-      break;
+export const getStaticPaths = async () => {
+  return {
+    paths: Skills.map((item) => {
+      return { params: { skill: item.name } };
+    }),
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params: props }) => {
+  return { props };
+};
+
+const loadRouter = ({ skill }: ParsedUrlQuery) => {
+  let name = skill;
+  switch (typeof name) {
     case "object":
-      skillName = skillName[0];
+      name = name[0];
     case "undefined":
-      return null;
+      return undefined;
   }
-  const skill = getSkill(decodeURIComponent(skillName));
-  if (!skillName || !skill) return null;
+  return getSkill(name);
+};
+
+const SkillInfo = ({ skill }: { skill?: string }) => {
+  const router = useRouter();
+  let skillInfo = skill ? getSkill(skill) : loadRouter(router.query);
+  if (!skillInfo) return null;
+  const { name } = skillInfo;
 
   return (
     <>
       <Head>
-        <title>{skillName} - rNav</title>
+        <title>{name} - rNav</title>
       </Head>
-      <Skill skill={skill}>
+      <Skill skill={skillInfo}>
         <h1>
-          <SkillTags skill={skill} />
+          <SkillTags skill={skillInfo} />
         </h1>
         <BasicInfo />
         <UnlockInfo />
