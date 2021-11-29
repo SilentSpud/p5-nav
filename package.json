@@ -1,6 +1,6 @@
 {
   "name": "royal-nav",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Information tool for Persona 5 Royal",
   "author": "Silent",
   "license": "MIT",
@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "clean": "rimraf build .next",
-    "clean:all": "rimraf build node_modules yarn.lock .next out",
+    "clean": "rimraf build out .next",
+    "clean:all": "rimraf build out .next node_modules yarn.lock tsconfig.tsbuildinfo",
     "dev": "next dev",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
