@@ -1,2 +1,1 @@
-import { SkillList } from "./SkillList";
-export default SkillList;
+export * from "./SkillList";
