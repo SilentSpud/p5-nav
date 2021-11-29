@@ -6,12 +6,6 @@ import Head from "next/head";
 import { Confidants, Confidant } from "../../data";
 import { ConfidantImages } from "../../confidants";
 
-export const getStaticProps = async ({}) => {
-  return {
-    props: {},
-  };
-};
-
 const ConfidantList = (): JSX.Element => {
   const rows: Confidant[][] = [];
   for (let index = 0; index < Confidants.length; index += 10) {
