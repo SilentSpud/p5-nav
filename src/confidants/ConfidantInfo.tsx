@@ -2,7 +2,7 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { useConfidant } from ".";
 import { FaMinus, FaAngleUp, FaAngleDoubleUp, FaArrowUp } from "react-icons/fa";
-import { ConfidantLevelRequirements, ConfidantRank, RankMetadata } from "../data";
+import { ConfidantAnswer, ConfidantLevelRequirements, ConfidantRank, RankMetadata } from "../data";
 
 const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
@@ -45,7 +45,13 @@ export const ConfidantBenefits = () => {
 
 export const ConfidantAnswers = () => {
   const { ranks } = useConfidant();
-  return <>{ranks.map((rank, index) => parseRank(rank, index))}</>;
+  return (
+    <>
+      {ranks.map((rank, index) => (
+        <Rank rank={rank} key={index} />
+      ))}
+    </>
+  );
 };
 
 const parseRequirements = (reqs: ConfidantLevelRequirements) => {
@@ -99,38 +105,37 @@ const Points = ({ points, max }: { points: number; max: boolean }) => {
   );
 };
 
-const parseRank = (rank: ConfidantRank, index: number) => {
+const Rank = ({ rank: { rank, meta, questions } }: { rank: ConfidantRank }) => (
+  <Table bordered className="answers-table">
+    <TableHead rank={rank} meta={meta} />
+    <tbody>
+      {questions &&
+        questions.map((question, index) => (
+          <tr key={index}>
+            <td key={index}>{question.number == "Follow-up" ? "Follow-up" : `Question ${question.number}`}</td>
+            {question.answers && question.answers.map((answer, index) => <Answer answer={answer} key={index} />)}
+            {question.answers && // Add padding if needed
+              question.answers.length < 3 && <Padding count={question.answers.length} />}
+          </tr>
+        ))}
+    </tbody>
+  </Table>
+);
+
+const Answer = ({ answer: { answer, points, max } }: { answer: ConfidantAnswer }) => (
+  <td>
+    {answer} <Points points={points} max={max ?? false} />
+  </td>
+);
+
+const Padding = ({ count }: { count: number }) => {
+  if (count == 3) return null;
   return (
-    <Table bordered key={index} className="answers-table">
-      <TableHead rank={rank.rank} meta={rank.meta} />
-      <tbody>
-        {rank.questions &&
-          rank.questions.map((question, index) => (
-            <tr key={index}>
-              <td>{question.number == "Follow-up" ? "Follow-up" : `Question ${question.number}`}</td>
-              {question.answers &&
-                question.answers.map((answer, index) => {
-                  // Create td with span for each answer
-                  return (
-                    <td key={index}>
-                      {answer.answer} <Points points={answer.points} max={answer.max ?? false} />
-                    </td>
-                  );
-                })}
-              {question.answers &&
-                question.answers.length < 3 &&
-                (() => {
-                  // Add padding if needed
-                  const elems: JSX.Element[] = [];
-                  for (let i = question.answers.length; i < 3; i++) {
-                    elems.push(<td></td>);
-                  }
-                  return elems;
-                })()}
-            </tr>
-          ))}
-      </tbody>
-    </Table>
+    <>
+      {Array.from(Array(3 - count)).map((_row, index) => (
+        <td key={index}></td>
+      ))}
+    </>
   );
 };
 
