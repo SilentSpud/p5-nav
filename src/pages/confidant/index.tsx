@@ -16,12 +16,12 @@ const ConfidantList = (): JSX.Element => {
     <Container fluid className="confidants">
       {rows.map((row, index) => (
         <Row key={index}>
-          {row.map((confidant, index) => (
+          {row.map(({ name }, index) => (
             <Col key={index}>
-              <Link href={`/confidant/${confidant.name}`} passHref>
+              <Link href={`/confidant/${name}`} passHref>
                 <Card className="confidant">
                   <a>
-                    <Card.Img as={Image} variant="top" src={ConfidantImages[confidant.name]} width={170} height={300} layout="fixed" draggable={false} />
+                    <Card.Img {...ConfidantImages[name]} as={Image} variant="top" layout="fixed" draggable={false} />
                   </a>
                 </Card>
               </Link>
