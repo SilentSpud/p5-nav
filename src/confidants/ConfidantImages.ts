@@ -18,8 +18,8 @@ import sun from "../../public/confidants/sun.webp";
 import temperance from "../../public/confidants/temperance.webp";
 import tower from "../../public/confidants/tower.webp";
 type ConfidantImageList = {
-  [name: string]: StaticImageData
-}
+  [name: string]: StaticImageData;
+};
 export const ConfidantImages: ConfidantImageList = {
   chariot,
   councillor,

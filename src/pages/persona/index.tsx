@@ -4,6 +4,12 @@ import { Personas } from "../../data";
 import { personaHeaders, PersonaRowParser } from "../../personaList";
 import PrepareTable from "../../table";
 
+export async function getStaticProps(context) {
+  return {
+    props: {},
+  };
+}
+
 export const PersonaTable = () => (
   <>
     <Head>

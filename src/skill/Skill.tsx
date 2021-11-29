@@ -101,7 +101,5 @@ export const UnlockInfo = () => {
 };
 
 export const Skill = ({ skill, children }: { skill: SkillInfo; children: React.ReactNode | React.ReactNode[] }) => (
-  <SkillCtx.Provider value={skill}>
-    {children}
-  </SkillCtx.Provider>
+  <SkillCtx.Provider value={skill}>{children}</SkillCtx.Provider>
 );

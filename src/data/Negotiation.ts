@@ -1,4 +1,4 @@
-import negotiation from "../../data/negotiation.yml";
+import negotiation from "../../data/negotiation.json";
 export const Negotiations: NegotiationList = negotiation;
 
 export interface NegotiationList {

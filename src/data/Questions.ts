@@ -1,4 +1,4 @@
-import questions from "../../data/questions.yml";
+import questions from "../../data/questions.json";
 export const ClassroomQuestions: DateInfo[] = questions;
 export interface Question {
   question: string;

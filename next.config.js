@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const withYaml = require("next-plugin-yaml");
 const NextConfig = {
   reactStrictMode: true,
   generateBuildId: () => "build",
@@ -10,4 +9,4 @@ if (process.env.IMGIX_DOMAIN) {
     path: process.env.IMGIX_DOMAIN,
   };
 }
-module.exports = withYaml(NextConfig);
+module.exports = NextConfig;

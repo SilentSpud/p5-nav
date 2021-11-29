@@ -75,21 +75,20 @@ export const Headers = () =>
     []
   );
 
-
 export const SkillRowParser = ({ getRowProps, cells, values: { name } }: Row, index: number) => {
-    const parseClick = ({ target }) => {
-      if (target.tagName.toLowerCase() == "a") return false;
-      router.push(`/skill/${name}`);
-    };
-    return (
-      <div {...getRowProps()} key={index} onClick={parseClick}>
-        {cells.map(
-          (cell: Cell, index: number): JSX.Element => (
-            <div {...cell.getCellProps()} key={index}>
-              {cell.render("Cell")}
-            </div>
-          )
-        )}
-      </div>
-    );
+  const parseClick = ({ target }) => {
+    if (target.tagName.toLowerCase() == "a") return false;
+    router.push(`/skill/${name}`);
   };
+  return (
+    <div {...getRowProps()} key={index} onClick={parseClick}>
+      {cells.map(
+        (cell: Cell, index: number): JSX.Element => (
+          <div {...cell.getCellProps()} key={index}>
+            {cell.render("Cell")}
+          </div>
+        )
+      )}
+    </div>
+  );
+};
