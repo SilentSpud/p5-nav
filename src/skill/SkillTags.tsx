@@ -22,20 +22,20 @@ export const SkillTags = ({ skill: { name, talk, execute, card, unique } }: { sk
     </span>
   </>
 );
-
 export const CostTag = ({ cost }: { cost?: number }): JSX.Element => {
   if (!cost) return <></>;
   if (cost.toString().slice(-2) == "00") return <>{cost.toString().slice(0, -2)} SP</>;
   else return <>{cost} HP</>;
 };
 
+const Dummy = ({ children }) => <>{children}</>;
 export const StatusTag = ({ text }: { text: string }) => {
   const statusRegex = /(Down|Burn|Freeze|Shock|Dizzy|Forget|Sleep|Confuse|Fear|Despair|Rage|Brainwash|Hunger)/g;
   if (statusRegex.test(text)) {
     return (
       <>
         {text.split(statusRegex).map((substr, index) => {
-          if (!statusRegex.test(substr)) return <>{substr}</>;
+          if (!statusRegex.test(substr)) return <Dummy key={index}>{substr}</Dummy>;
           return <StatusPopup key={index} name={substr} />;
         })}
       </>

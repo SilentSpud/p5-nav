@@ -1,30 +1,15 @@
 import React, { createContext, useContext } from "react";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
-import { getPersona, getSkill, Persona, Skill } from "../data";
+import { getPersona, getSkill, Persona, Skill as SkillInfo } from "../data";
 import { Table } from "react-bootstrap";
-import { CostTag, SkillTags, StatusTag } from ".";
+import { CostTag, StatusTag } from ".";
 import { Elements } from "../persona";
 
-const SkillCtx = createContext<Skill>({} as Skill);
-const useSkill = (): Skill => useContext(SkillCtx);
+const SkillCtx = createContext<SkillInfo>({} as SkillInfo);
+const useSkill = (): SkillInfo => useContext(SkillCtx);
 
-/*
-interface Skill {
-  name: string;
-  cost?: number;
-  effect: string;
-  element: string | ResElems | SkillElems;
-  personas?: PersonaRef[];
-  talk?: string;
-  fuse?: string | string[];
-  card?: string;
-  unique?: string;
-}
-*/
-
-const BasicInfo = () => {
+export const BasicInfo = () => {
   const { cost, effect, element } = useSkill();
   return (
     <Table className="skill-info">
@@ -54,7 +39,7 @@ const BasicInfo = () => {
   );
 };
 
-const UnlockInfo = () => {
+export const UnlockInfo = () => {
   const { talk, execute, card, unique } = useSkill();
   if (!talk && !execute && !card && !unique) return null;
   return (
@@ -115,27 +100,6 @@ const UnlockInfo = () => {
   );
 };
 
-export const SkillInfo = () => {
-  const router = useRouter();
-  let { skill } = router.query;
-  switch (typeof skill) {
-    case "string":
-      break;
-    case "object":
-      skill = skill[0];
-    case "undefined":
-      return null;
-  }
-  const info = getSkill(decodeURIComponent(skill));
-  if (!skill || !info) return null;
-
-  return (
-    <SkillCtx.Provider value={info}>
-      <h1>
-        <SkillTags skill={info} />
-      </h1>
-      <BasicInfo />
-      <UnlockInfo />
-    </SkillCtx.Provider>
-  );
-};
+export const Skill = ({ skill, children }: { skill: SkillInfo; children: React.ReactNode | React.ReactNode[] }) => (
+  <SkillCtx.Provider value={skill}>{children}</SkillCtx.Provider>
+);

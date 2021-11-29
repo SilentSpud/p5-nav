@@ -1,15 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import Image from "next/image";
-import { Row, Cell } from "react-table";
-import PrepareTable from "../table";
-import { Skills, Skill, PersonaRef } from "../data";
+import { Skill, PersonaRef } from "../data";
 import { SkillTags, CostTag, StatusTag } from "../skill";
 import { Elements } from "../persona";
+import router from "next/router";
+import { Row, Cell } from "react-table";
 
 const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
-const Headers = () =>
+export const Headers = () =>
   React.useMemo(
     () => [
       {
@@ -76,26 +75,20 @@ const Headers = () =>
     []
   );
 
-export const SkillList = (): JSX.Element => {
-  const router = useRouter();
-  const headers = Headers();
-  const rowParser = ({ getRowProps, cells, values: { name } }: Row, index: number) => {
-    const parseClick = ({ target }) => {
-      if (target.tagName.toLowerCase() == "a") return false;
-      router.push(`/skill/${name}`);
-    };
-    return (
-      <div {...getRowProps()} key={index} onClick={parseClick}>
-        {cells.map(
-          (cell: Cell, index: number): JSX.Element => (
-            <div {...cell.getCellProps()} key={index}>
-              {cell.render("Cell")}
-            </div>
-          )
-        )}
-      </div>
-    );
+export const SkillRowParser = ({ getRowProps, cells, values: { name } }: Row, index: number) => {
+  const parseClick = ({ target }) => {
+    if (target.tagName.toLowerCase() == "a") return false;
+    router.push(`/skill/${name}`);
   };
-  return <PrepareTable {...{ columns: headers, data: Skills, rowParser, className: "skills", sortId: "name" }} />;
+  return (
+    <div {...getRowProps()} key={index} onClick={parseClick}>
+      {cells.map(
+        (cell: Cell, index: number): JSX.Element => (
+          <div {...cell.getCellProps()} key={index}>
+            {cell.render("Cell")}
+          </div>
+        )
+      )}
+    </div>
+  );
 };
-export default SkillList;

@@ -2,7 +2,7 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { NegotiationList, NegotiationReaction as Reaction, NegotiationReactions as Reactions, Negotiations } from "../data";
 
-const Answer = (props: { value: Reaction | Reactions }) => {
+export const Answer = (props: { value: Reaction | Reactions }) => {
   let ansVal: Reactions,
     ansUnknown = false;
   switch (typeof props.value) {
@@ -28,7 +28,7 @@ const Answer = (props: { value: Reaction | Reactions }) => {
   }
 };
 
-const parseQuestions = (questionList: NegotiationList) => {
+export const parseQuestions = (questionList: NegotiationList) => {
   const tableList: JSX.Element[] = [];
   let tNum = 0;
   for (const question in questionList) {
@@ -64,9 +64,4 @@ const parseQuestions = (questionList: NegotiationList) => {
     tNum++;
   }
   return tableList;
-};
-
-export const NegotiationInfo = () => {
-  const questions = parseQuestions(Negotiations);
-  return <div className="questionlist">{questions}</div>;
 };

@@ -118,3 +118,4 @@ export const Status: StatusInfo[] = [
     effect: ["Greatly lowers attack power", "Doubles the HP/SP cost of skills"],
   },
 ];
+export default Status;
