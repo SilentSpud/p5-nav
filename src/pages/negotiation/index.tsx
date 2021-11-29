@@ -3,13 +3,17 @@ import Head from "next/head";
 import { Negotiations } from "../../data";
 import { parseQuestions } from "../../negotiation";
 
-const questions = parseQuestions(Negotiations);
-const NegotiationInfo = () => (
+export const getStaticProps = async ({}) => {
+  return {
+    props: { questions: Negotiations },
+  };
+};
+const NegotiationInfo = ({ questions }) => (
   <>
     <Head>
       <title>Negotiation - rNav</title>
     </Head>
-    <div className="questionlist">{questions}</div>;
+    <div className="questionlist">{parseQuestions(questions)}</div>;
   </>
 );
 export default NegotiationInfo;
