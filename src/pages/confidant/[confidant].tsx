@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { ConfidantInfo, Confidant } from "../../confidants";
 
@@ -47,11 +48,16 @@ const ConfidantDetails = () => {
       return null;
   }
   return (
-    <Confidant confidant={confidantName}>
-      <ConfidantInfo.intro />
-      <ConfidantInfo.benefits />
-      <ConfidantInfo.answers />
-    </Confidant>
+    <>
+      <Head>
+        <title>{confidantName} - rNav</title>
+      </Head>
+      <Confidant confidant={confidantName}>
+        <ConfidantInfo.intro />
+        <ConfidantInfo.benefits />
+        <ConfidantInfo.answers />
+      </Confidant>
+    </>
   );
 };
 

@@ -1,30 +1,36 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 import { getSkill } from "../../data";
 import { BasicInfo, Skill, SkillTags, UnlockInfo } from "../../skill";
 
 const SkillInfo = () => {
   const router = useRouter();
-  let { skill } = router.query;
-  switch (typeof skill) {
+  let { skill: skillName } = router.query;
+  switch (typeof skillName) {
     case "string":
       break;
     case "object":
-      skill = skill[0];
+      skillName = skillName[0];
     case "undefined":
       return null;
   }
-  const info = getSkill(decodeURIComponent(skill));
-  if (!skill || !info) return null;
+  const skill = getSkill(decodeURIComponent(skillName));
+  if (!skillName || !skill) return null;
 
   return (
-    <Skill skill={info}>
-      <h1>
-        <SkillTags skill={info} />
-      </h1>
-      <BasicInfo />
-      <UnlockInfo />
-    </Skill>
+    <>
+      <Head>
+        <title>{skillName} - rNav</title>
+      </Head>
+      <Skill skill={skill}>
+        <h1>
+          <SkillTags skill={skill} />
+        </h1>
+        <BasicInfo />
+        <UnlockInfo />
+      </Skill>
+    </>
   );
 };
 export default SkillInfo;
