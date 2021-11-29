@@ -1,11 +1,11 @@
 import { useMemo } from "react";
 import { parseYear, EventItem } from "./CalendarController";
-import { ClassroomQuestions } from "../data";
+import { Questions } from "../data";
 
 export const LoadQuestions = () =>
   useMemo(() => {
     const questions: EventItem[] = [];
-    for (const day of ClassroomQuestions) {
+    for (const day of Questions) {
       const event: EventItem = {
         title: "Classroom Questions",
         date: parseYear(day.date),
