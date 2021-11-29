@@ -4,6 +4,7 @@ import { Cell, Row } from "react-table";
 import { Personas } from "../data";
 import { personaHeaders } from "./personaTableConfig";
 import PrepareTable from "../table";
+import Head from "next/head";
 
 const cellParser = (cell: Cell) => {
   let className = "";
@@ -30,6 +31,13 @@ export const PersonaList = (): JSX.Element => {
       </div>
     );
   };
-  return <PrepareTable {...{ columns: personaHeaders, data: Personas, rowParser, className: "personas" }} />;
+  return (
+    <>
+    <Head>
+      <title>Personas - rNav</title>
+    </Head>
+      <PrepareTable {...{ columns: personaHeaders, data: Personas, rowParser, className: "personas" }} />
+    </>
+  );
 };
 export default PersonaList;
