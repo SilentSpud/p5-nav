@@ -1,5 +1,6 @@
 import skills from "../../data/skills.json";
 export const Skills: Skill[] = skills;
+export default Skills;
 
 export const getSkill = (name: string): Skill | undefined => {
   for (const skill of Skills) {

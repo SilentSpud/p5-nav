@@ -1,5 +1,6 @@
 import personas from "../../data/personas.json";
-export const Personas: PersonaList = personas;
+export const Personas: Persona[] = personas;
+export default Personas;
 
 export const getPersona = (id: string): Persona | undefined => {
   for (const p of Personas) {
@@ -74,4 +75,3 @@ export interface SkillUnlock {
   name: string;
   level: number;
 }
-export type PersonaList = Persona[];

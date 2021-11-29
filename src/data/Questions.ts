@@ -1,5 +1,6 @@
 import questions from "../../data/questions.json";
-export const ClassroomQuestions: DateInfo[] = questions;
+export const Questions: DateInfo[] = questions;
+export default Questions;
 export interface Question {
   question: string;
   answer: string;

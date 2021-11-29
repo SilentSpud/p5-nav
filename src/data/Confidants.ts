@@ -1,5 +1,6 @@
 import confidants from "../../data/confidants.json";
 export const Confidants: Confidant[] = confidants;
+export default Confidants;
 
 export const getConfidant = (name: string): Confidant | StoryConfidant | undefined => {
   for (let confidant of Confidants) {
