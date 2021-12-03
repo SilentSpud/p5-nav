@@ -65,6 +65,12 @@ export const personaHeaders = [
         Cell: ({ row: { original } }) => <NameTags persona={original} />,
       },
       { id: "arcana", width: 70, accessor: ({ arcana }: Persona) => arcana, Header: "Arcana" },
+    ],
+  },
+  {
+    Header: "Shadow",
+    id: "shadow",
+    columns: [
       { id: "shadow", width: 150, accessor: ({ shadow }: Persona) => shadow, Header: "Shadow" },
       { id: "personality", width: 70, accessor: ({ personality }: Persona) => personality, Header: "Personality" },
     ],
