@@ -5,16 +5,7 @@ import { Persona, WeaknessLevels } from "../data";
 import { Resistance, NameTags } from "../persona";
 
 const PersonaCellParser = (cell: Cell) => {
-  let className = "";
-  switch (cell?.column?.parent?.id) {
-    case "elements":
-      className = "element";
-      break;
-    case "stats":
-      className = "stats";
-      break;
-  }
-  return <div {...cell.getCellProps({ className })}>{cell.render("Cell")}</div>;
+  return <div {...cell.getCellProps(cell?.column?.parent?.id ? { className: cell.column.parent.id } : {})}>{cell.render("Cell")}</div>;
 };
 
 export const PersonaRowParser = ({ getRowProps, cells, values: { name } }: Row, i: number) => {
@@ -33,15 +24,14 @@ const sortElems = (rowA: Row, rowB: Row, columnId: string) => {
   const sortOrder = [
     WeaknessLevels.weak as string,
     WeaknessLevels.none as string,
+    WeaknessLevels.resist as string,
     WeaknessLevels.nullify as string,
     WeaknessLevels.repel as string,
     WeaknessLevels.absorb as string,
-    WeaknessLevels.resist as string,
   ];
-  const sortA = rowA.values[columnId],
-    sortB = rowB.values[columnId];
-  if (sortA == sortB) return 0;
-  return sortOrder.indexOf(sortA) < sortOrder.indexOf(sortB) ? 1 : -1;
+  const A = rowA.values[columnId],
+    B = rowB.values[columnId];
+  return A == B ? 0 : sortOrder.indexOf(A) < sortOrder.indexOf(B) ? 1 : -1;
 };
 
 const ResistanceCell = ({ value, id }) => <Resistance element={id} value={value} />;
@@ -69,7 +59,7 @@ export const personaHeaders = [
   },
   {
     Header: "Shadow",
-    id: "shadow",
+    id: "shadow-info",
     columns: [
       { id: "shadow", width: 150, accessor: ({ shadow }: Persona) => shadow, Header: "Shadow" },
       { id: "personality", width: 70, accessor: ({ personality }: Persona) => personality, Header: "Personality" },
