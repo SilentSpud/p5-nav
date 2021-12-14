@@ -11,11 +11,13 @@ const NavLink = ({ href, children, disabled }: { href: string; children: React.R
     pathname = pathname.split("/").slice(0, 2).join("/");
   }
   return (
-    <Link href={href} passHref>
-      <Nav.Link disabled={disabled ?? false} active={pathname == href}>
-        {children}
-      </Nav.Link>
-    </Link>
+    <Nav.Item>
+      <Link href={href} passHref>
+        <Nav.Link disabled={disabled ?? false} active={pathname == href}>
+          {children}
+        </Nav.Link>
+      </Link>
+    </Nav.Item>
   );
 };
 
