@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { ConfidantInfo, Confidant } from "../../confidants";
+const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
 export const getStaticPaths = async () => {
   return {
@@ -50,7 +51,7 @@ const ConfidantDetails = () => {
   return (
     <>
       <Head>
-        <title>{confidantName} - rNav</title>
+        <title>{camel(confidantName)} - rNav</title>
       </Head>
       <Confidant confidant={confidantName}>
         <ConfidantInfo.intro />
