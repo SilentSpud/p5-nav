@@ -90,9 +90,9 @@ const Points = ({ points, max }: { points: number; max: boolean }) => {
       case 1:
         return FaAngleUp;
       case 2:
-        return FaArrowUp;
-      case 3:
         return FaAngleDoubleUp;
+      case 3:
+        return FaArrowUp;
       default:
         return FaMinus;
     }
