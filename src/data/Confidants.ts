@@ -43,7 +43,7 @@ export interface Confidant {
 }
 export interface ConfidantBenefit {
   name: string;
-  rank: number | string | "Max" | "Royal";
+  rank: number;
   description: string;
 }
 export interface ConfidantRank {
