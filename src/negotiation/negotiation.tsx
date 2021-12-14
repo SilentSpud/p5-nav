@@ -28,13 +28,14 @@ const Answer = (props: { value: Reaction | Reactions }) => {
   }
 };
 
-const QuestionTable = ({ question, answers }: { question: string; answers: NegotiationAnswer[]; }) => {
-
+const QuestionTable = ({ question, answers }: { question: string; answers: NegotiationAnswer[] }) => {
   return (
     <Table bordered variant="dark">
       <thead>
         <tr>
-          <th colSpan={5} className="question">{question}</th>
+          <th colSpan={5} className="question">
+            {question}
+          </th>
         </tr>
         <tr>
           <th></th>
@@ -56,8 +57,8 @@ const QuestionTable = ({ question, answers }: { question: string; answers: Negot
         ))}
       </tbody>
     </Table>
-  )
-}
+  );
+};
 
 export const QuestionList = ({ questions }: { questions: NegotiationList }) => {
   const tableList: JSX.Element[] = [];
