@@ -8,7 +8,7 @@ const NegotiationInfo = () => (
     <Head>
       <title>Negotiation - rNav</title>
     </Head>
-    <div className="questionlist">{parseQuestions(Negotiations)}</div>;
+    <div className="questionlist">{parseQuestions(Negotiations)}</div>
   </>
 );
 export default NegotiationInfo;
