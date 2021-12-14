@@ -36,6 +36,12 @@ export const Headers = () =>
             Header: "Cost",
             Cell: ({ value }) => <CostTag cost={value} />,
           },
+        ],
+      },
+      {
+        Header: <>&nbsp;</>,
+        id: "details",
+        columns: [
           {
             id: "effect",
             width: 175,
@@ -43,12 +49,6 @@ export const Headers = () =>
             Header: "Effect",
             Cell: ({ value }) => <StatusTag text={value} />,
           },
-        ],
-      },
-      {
-        Header: <>&nbsp;</>,
-        id: "details",
-        columns: [
           {
             id: "personas",
             width: 250,
