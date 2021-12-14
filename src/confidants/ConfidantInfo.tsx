@@ -23,15 +23,15 @@ export const ConfidantBenefits = () => {
       <Table striped bordered>
         <thead>
           <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Description</th>
+            <th style={{ width: "5%" }}>Rank</th>
+            <th style={{ width: "10%" }}>Name</th>
+            <th style={{ width: "85%" }}>Description</th>
           </tr>
         </thead>
         <tbody>
           {benefits.map(({ rank, name, description }, index) => (
             <tr key={index}>
-              <td>{rank > 9 ? (rank == 10 ? "Max" : "Royal") : rank}</td>
+              <td className="mono">{rank > 9 ? (rank == 10 ? "Max" : "Royal") : rank}</td>
               <td>{name}</td>
               <td>{description}</td>
             </tr>
@@ -111,7 +111,7 @@ const Rank = ({ rank: { rank, meta, questions } }: { rank: ConfidantRank }) => (
       {questions &&
         questions.map((question, index) => (
           <tr key={index}>
-            <td key={index}>{question.number == "Follow-up" ? "Follow-up" : `Question ${question.number}`}</td>
+            <td className="bold" key={index}>{question.number == "Follow-up" ? "Follow-up" : `Question ${question.number}`}</td>
             {question.answers && question.answers.map((answer, index) => <Answer answer={answer} key={index} />)}
             {question.answers && // Add padding if needed
               question.answers.length < 3 && <Padding count={question.answers.length} />}
