@@ -129,4 +129,14 @@ section[role="table"] {
       display: none;
     }
   }
+  .clear {
+    top: 0;
+    height: 30px;
+    right: 5px;
+    position: absolute;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
 }

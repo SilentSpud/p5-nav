@@ -1,5 +1,6 @@
 import { FaSortUp, FaSortDown, FaSort } from "react-icons/fa";
 import React from "react";
+import { CloseButton } from "react-bootstrap";
 import { HeaderGroup } from "react-table";
 
 export const SearchForm = ({ filter }: { filter: (filterValue: string | undefined) => void }) =>
@@ -7,6 +8,7 @@ export const SearchForm = ({ filter }: { filter: (filterValue: string | undefine
     () => (
       <div className="search">
         <input type="search" placeholder="Search" className="text-light w-100 h-100" onChange={({ currentTarget: { value } }) => filter(value || undefined)} />
+        <CloseButton className="clear" onClick={() => filter(undefined)} />
       </div>
     ),
     [filter]
