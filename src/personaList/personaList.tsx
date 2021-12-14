@@ -46,7 +46,7 @@ export const personaHeaders = [
     Header: "",
     id: "title",
     columns: [
-      { id: "lvl", width: 30, accessor: ({ level }: Persona) => level, Header: "Lvl" },
+      { id: "lvl", width: 30, disableGlobalFilter: true, accessor: ({ level }: Persona) => level, Header: "Lvl" },
       {
         id: "name",
         width: 150,
@@ -54,7 +54,7 @@ export const personaHeaders = [
         Header: "Name",
         Cell: ({ row: { original } }) => <NameTags persona={original} />,
       },
-      { id: "arcana", width: 70, accessor: ({ arcana }: Persona) => arcana, Header: "Arcana" },
+      { id: "arcana", disableGlobalFilter: true, width: 70, accessor: ({ arcana }: Persona) => arcana, Header: "Arcana" },
     ],
   },
   {
@@ -62,7 +62,7 @@ export const personaHeaders = [
     id: "shadow-info",
     columns: [
       { id: "shadow", width: 150, accessor: ({ shadow }: Persona) => shadow, Header: "Shadow" },
-      { id: "personality", width: 70, accessor: ({ personality }: Persona) => personality, Header: "Personality" },
+      { id: "personality", disableGlobalFilter: true, width: 70, accessor: ({ personality }: Persona) => personality, Header: "Personality" },
     ],
   },
   {
@@ -73,6 +73,7 @@ export const personaHeaders = [
         id: "strength",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         accessor: ({ stats: { strength } }: Persona) => strength,
         Header: (
           <span className="title" title="Strength">
@@ -85,6 +86,7 @@ export const personaHeaders = [
         id: "magic",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         accessor: ({ stats: { magic } }: Persona) => magic,
         Header: (
           <span className="title" title="Magic">
@@ -97,6 +99,7 @@ export const personaHeaders = [
         id: "endurance",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         accessor: ({ stats: { endurance } }: Persona) => endurance,
         Header: (
           <span className="title" title="Endurance">
@@ -109,6 +112,7 @@ export const personaHeaders = [
         id: "agility",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         accessor: ({ stats: { agility } }: Persona) => agility,
         Header: (
           <span className="title" title="Agility">
@@ -121,6 +125,7 @@ export const personaHeaders = [
         id: "luck",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         accessor: ({ stats: { luck } }: Persona) => luck,
         Header: (
           <span className="title" title="Luck">
@@ -139,6 +144,7 @@ export const personaHeaders = [
         id: "phys",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         sortType: sortElems,
         accessor: ({ elements: { physical } }: Persona) => physical,
         Header: <ResistanceHeader caption="Physical" text="Phys" />,
@@ -148,6 +154,7 @@ export const personaHeaders = [
         id: "gun",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         sortType: sortElems,
         accessor: ({ elements: { gun } }: Persona) => gun,
         Header: <ResistanceHeader text="Gun" />,
@@ -157,6 +164,7 @@ export const personaHeaders = [
         id: "fire",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         sortType: sortElems,
         accessor: ({ elements: { fire } }: Persona) => fire,
         Header: <ResistanceHeader text="Fire" />,
@@ -166,6 +174,7 @@ export const personaHeaders = [
         id: "ice",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         sortType: sortElems,
         accessor: ({ elements: { ice } }: Persona) => ice,
         Header: <ResistanceHeader text="Ice" />,
@@ -175,6 +184,7 @@ export const personaHeaders = [
         id: "elec",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         sortType: sortElems,
         accessor: ({ elements: { electric } }: Persona) => electric,
         Header: <ResistanceHeader caption="Electric" text="Elec" />,
@@ -184,6 +194,7 @@ export const personaHeaders = [
         id: "wind",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         sortType: sortElems,
         accessor: ({ elements: { wind } }: Persona) => wind,
         Header: <ResistanceHeader text="Wind" />,
@@ -193,6 +204,7 @@ export const personaHeaders = [
         id: "psy",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         sortType: sortElems,
         accessor: ({ elements: { psychic } }: Persona) => psychic,
         Header: <ResistanceHeader caption="Psychic" text="Psy" />,
@@ -202,6 +214,7 @@ export const personaHeaders = [
         id: "nuke",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         sortType: sortElems,
         accessor: ({ elements: { nuclear } }: Persona) => nuclear,
         Header: <ResistanceHeader caption="Nuclear" text="Nuke" />,
@@ -211,6 +224,7 @@ export const personaHeaders = [
         id: "bless",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         sortType: sortElems,
         accessor: ({ elements: { bless } }: Persona) => bless,
         Header: <ResistanceHeader caption="Bless" text="Bles" />,
@@ -220,6 +234,7 @@ export const personaHeaders = [
         id: "curse",
         width: 25,
         disableSortBy: true,
+        disableGlobalFilter: true,
         sortType: sortElems,
         accessor: ({ elements: { curse } }: Persona) => curse,
         Header: <ResistanceHeader caption="Curse" text="Curs" />,
