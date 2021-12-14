@@ -52,6 +52,8 @@ export const Headers = () =>
           {
             id: "personas",
             width: 250,
+            disableGlobalFilter: true,
+            disableSortBy: true,
             accessor: ({ personas }: Skill) => personas,
             Header: "Personas",
             Cell: ({ value }) =>
