@@ -1,6 +1,12 @@
 .questionlist table {
   width: 50%;
   float: left;
+  th {
+    font-weight: normal;
+    &.question {
+      font-weight: bold;
+    }
+  }
   th:first-child {
     width: 80%;
   }
