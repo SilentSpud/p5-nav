@@ -1,7 +1,7 @@
 @import "globals";
 @import "darkly";
 .content {
-  height: calc(100vh - 45px);
+  height: calc(100vh - 42px);
   width: 100vw;
   overflow: hidden;
   overflow-y: scroll;
@@ -13,43 +13,6 @@
 
 .popover {
   max-width: 50vw;
-}
-
-// ----------- TABLES ----------- //
-table {
-  color: $table-text;
-  font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-
-  th {
-    font-weight: bold;
-    vertical-align: center;
-    color: $table-heading;
-    background-color: $table-head-bg;
-    border-bottom: 1px solid $table-border;
-
-    &:not(:last-child) {
-      border-right: 1px solid $table-border;
-    }
-
-    &.searchbox {
-      padding: 0;
-    }
-
-    span {
-      float: right;
-      vertical-align: middle;
-    }
-  }
-
-  td {
-    border-bottom: 1px solid $table-border;
-    img {
-      user-select: none;
-    }
-  }
 }
 
 .nav-link {

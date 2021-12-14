@@ -1,0 +1,22 @@
+@import "darkly";
+
+footer div.nav-pills {
+  border-top: 1px solid $gray-300;
+  border-bottom: none;
+  height: 60px;
+
+  .nav-link {
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    vertical-align: middle;
+    &:not(.disabled) {
+      &:hover {
+        border: 1px solid #ddd;
+      }
+    }
+    &.disabled {
+      border-radius: 0;
+    }
+  }
+}
