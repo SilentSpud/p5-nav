@@ -3,16 +3,23 @@ import React from "react";
 import { CloseButton } from "react-bootstrap";
 import { HeaderGroup } from "react-table";
 
-export const SearchForm = ({ filter }: { filter: (filterValue: string | undefined) => void }) =>
-  React.useMemo(
+export const SearchForm = ({ filter }: { filter: (filterValue: string | undefined) => void }) => {
+  const searchRef = React.createRef<HTMLInputElement>();
+  return React.useMemo(
     () => (
       <div className="search">
-        <input type="search" placeholder="Search" className="text-light w-100 h-100" onChange={({ currentTarget: { value } }) => filter(value || undefined)} />
-        <CloseButton className="clear" onClick={() => filter(undefined)} />
+        <input type="search" placeholder="Search" className="text-light w-100 h-100" ref={searchRef} onChange={({ currentTarget: { value } }) => filter(value || undefined)} />
+        <CloseButton className="clear" onClick={() => {
+          filter(undefined);
+          if (!searchRef.current) return;
+          searchRef.current.value = "";
+          searchRef.current.focus();
+        }} />
       </div>
     ),
-    [filter]
+    [filter, searchRef]
   );
+}
 
 export const Header = (headers: HeaderGroup[], setGlobalFilter: (filterValue: string | undefined) => void) => {
   return headers.map((row, i) => (
