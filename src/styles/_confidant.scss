@@ -22,4 +22,13 @@
       width: 30vw;
     }
   }
+  .char-name {
+    font-size: 18pt;
+    &:before {
+      content: "(";
+    }
+    &:after {
+      content: ")";
+    }
+  }
 }

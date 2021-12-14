@@ -10,10 +10,9 @@ export const ConfidantIntro = () => {
   const { name, character } = useConfidant();
 
   return (
-    <>
-      <h2>{camel(name)}</h2>
-      <h3>{character}</h3>
-    </>
+    <h2>
+      {camel(name)} <span className="char-name">{character}</span>
+    </h2>
   );
 };
 
@@ -91,9 +90,9 @@ const Points = ({ points, max }: { points: number; max: boolean }) => {
       case 1:
         return FaAngleUp;
       case 2:
-        return FaAngleDoubleUp;
-      case 3:
         return FaArrowUp;
+      case 3:
+        return FaAngleDoubleUp;
       default:
         return FaMinus;
     }
