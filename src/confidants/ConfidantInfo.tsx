@@ -29,11 +29,11 @@ export const ConfidantBenefits = () => {
           </tr>
         </thead>
         <tbody>
-          {benefits.map((row, index) => (
+          {benefits.map(({ rank, name, description }, index) => (
             <tr key={index}>
-              <td>{row.rank > 9 ? row.rank == 10 ? "Max" : "Royal" : row.rank}</td>
-              <td>{row.name}</td>
-              <td>{row.description}</td>
+              <td>{rank > 9 ? (rank == 10 ? "Max" : "Royal") : rank}</td>
+              <td>{name}</td>
+              <td>{description}</td>
             </tr>
           ))}
         </tbody>
@@ -66,11 +66,11 @@ const parseRequirements = (reqs: ConfidantLevelRequirements) => {
   if (reqs.knowledge) return `Requires ${reqs.knowledge == 5 ? "Max" : `Level ${reqs.knowledge}`} Knowledge`;
 };
 
-const TableHead = ({ rank, meta }: { rank: string | number; meta: RankMetadata | undefined }) => (
+const TableHead = ({ rank, meta }: { rank: string | number; meta?: RankMetadata }) => (
   <thead>
     <tr>
       <th colSpan={4}>
-        {rank > 9 ? rank == 10 ? "Max" : "Royal" : `Rank ${rank}`}
+        {rank > 9 ? (rank == 10 ? "Max" : "Royal") : `Rank ${rank}`}
         {meta && meta.romance && " (Romance)"}
       </th>
     </tr>

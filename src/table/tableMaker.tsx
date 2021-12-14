@@ -13,7 +13,6 @@ export type PrepareTableProps = {
   sortId: string;
 };
 export const PrepareTable = ({ columns, data, rowParser, className, sortId }: PrepareTableProps) => {
-
   const initialState = { pageIndex: 0, pageSize: 50, sortBy: [{ id: sortId }] };
   const tableOptions: TableOptions<object> = { columns, data, initialState };
   const instance = useTable(tableOptions, useGlobalFilter, useSortBy, usePagination, useFlexLayout);
