@@ -96,7 +96,7 @@ export const Status: StatusInfo[] = [
       blockAction: true,
       cureOnNegotiate: true,
     },
-    effect: ["-5% SP", "Character is incapacitated after 3 turns"],
+    effect: ["-5% SP", "Target is downed after 3 turns"],
     technical: [{ name: "Psychic" }, { name: "Curse", heart: true }],
   },
   {
@@ -105,12 +105,12 @@ export const Status: StatusInfo[] = [
       blockAction: true,
       cureOnNegotiate: true,
     },
-    effect: ["+100% Attack", "-50% Defense, Evasion, & Accuracy", "Ignores commands, automatically uses basic melee"],
+    effect: ["+100% Attack", "-50% Defense, Evasion, & Accuracy", "Ignores commands, uses basic melee"],
     technical: [{ name: "Psychic" }, { name: "Fire", heart: true }],
   },
   {
     name: "Brainwash",
-    effect: ["Random chance to heal/buff an enemy or attack an ally", "Special dialogue options while negotiating"],
+    effect: ["Random chance to heal/buff an enemy or attack an ally", "Special negotiation dialogue options"],
     technical: [{ name: "Psychic" }, { name: "Bless", heart: true }],
   },
   {

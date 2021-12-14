@@ -1,0 +1,30 @@
+@import "darkly";
+
+footer {
+  div.nav-pills {
+    height: 40px;
+
+    .nav-item {
+      vertical-align: middle;
+    }
+
+    .nav-link {
+      height: 40px;
+      font-size: 14pt;
+
+      svg {
+        font-size: 20pt;
+      }
+
+      &:not(.disabled) {
+        &:hover {
+          border: 1px solid $p5-red;
+        }
+      }
+
+      &.disabled {
+        border-radius: 0;
+      }
+    }
+  }
+}

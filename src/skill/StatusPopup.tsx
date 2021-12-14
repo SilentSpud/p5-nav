@@ -2,6 +2,12 @@ import React from "react";
 import { OverlayTrigger, Popover, Table } from "react-bootstrap";
 import { getStatus, StatusInfo } from "../data";
 
+const Row = ({ children }) => (
+  <tr>
+    <td>{children}</td>
+  </tr>
+);
+
 export const StatusPopup = ({ name: statName }): JSX.Element | null => {
   const { name, effects, effect } = getStatus(statName) as StatusInfo;
   let overlay: JSX.Element = (
@@ -18,31 +24,11 @@ export const StatusPopup = ({ name: statName }): JSX.Element | null => {
               ))}
             {effects && (
               <>
-                {effects.blockAction && (
-                  <tr>
-                    <td>Unable to perform any actions</td>
-                  </tr>
-                )}
-                {effects.blockNegotiate && (
-                  <tr>
-                    <td>Unable to negotiate with the target while afflicted</td>
-                  </tr>
-                )}
-                {effects.blockSkill && (
-                  <tr>
-                    <td>Unable to use any skills</td>
-                  </tr>
-                )}
-                {effects.cureOnHit && (
-                  <tr>
-                    <td>Cured if the target is attacked</td>
-                  </tr>
-                )}
-                {effects.cureOnNegotiate && (
-                  <tr>
-                    <td>Cured if the target is negotiated with</td>
-                  </tr>
-                )}
+                {effects.blockAction && <Row>Unable to perform any actions</Row>}
+                {effects.blockNegotiate && <Row>Unable to negotiate while afflicted</Row>}
+                {effects.blockSkill && <Row>Unable to use any skills</Row>}
+                {effects.cureOnHit && <Row>Cured if attacked</Row>}
+                {effects.cureOnNegotiate && <Row>Cured if negotiated with</Row>}
               </>
             )}
           </tbody>

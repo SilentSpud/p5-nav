@@ -1,5 +1,42 @@
 @import "globals";
 
+// ----------- TABLES ----------- //
+table {
+  color: $table-text;
+  font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+
+  th {
+    font-weight: bold;
+    vertical-align: center;
+    color: $table-heading;
+    background-color: $table-head-bg;
+    border-bottom: 1px solid $table-border;
+
+    &:not(:last-child) {
+      border-right: 1px solid $table-border;
+    }
+
+    &.searchbox {
+      padding: 0;
+    }
+
+    span {
+      float: right;
+      vertical-align: middle;
+    }
+  }
+
+  td {
+    border-bottom: 1px solid $table-border;
+    img {
+      user-select: none;
+    }
+  }
+}
+
 section[role="table"] {
   color: $table-text;
   font: 14px/1.5 $sans-serif;
@@ -23,10 +60,18 @@ section[role="table"] {
     overflow-x: hidden;
   }
 
+  footer {
+    height: 40px;
+    padding: 0;
+    .nav-item {
+      padding: 0;
+    }
+  }
+
   main {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 120px - 40px);
 
     &::-webkit-scrollbar {
       width: 0 !important;
@@ -127,6 +172,16 @@ section[role="table"] {
     }
     &::-webkit-search-cancel-button {
       display: none;
+    }
+  }
+  .clear {
+    top: 0;
+    height: 30px;
+    right: 5px;
+    position: absolute;
+    &:focus {
+      outline: none;
+      box-shadow: none;
     }
   }
 }

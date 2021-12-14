@@ -36,13 +36,6 @@ export const Headers = () =>
             Header: "Cost",
             Cell: ({ value }) => <CostTag cost={value} />,
           },
-          {
-            id: "effect",
-            width: 175,
-            accessor: ({ effect }: Skill) => effect,
-            Header: "Effect",
-            Cell: ({ value }) => <StatusTag text={value} />,
-          },
         ],
       },
       {
@@ -50,8 +43,17 @@ export const Headers = () =>
         id: "details",
         columns: [
           {
+            id: "effect",
+            width: 175,
+            accessor: ({ effect }: Skill) => effect,
+            Header: "Effect",
+            Cell: ({ value }) => <StatusTag text={value} />,
+          },
+          {
             id: "personas",
             width: 250,
+            disableGlobalFilter: true,
+            disableSortBy: true,
             accessor: ({ personas }: Skill) => personas,
             Header: "Personas",
             Cell: ({ value }) =>

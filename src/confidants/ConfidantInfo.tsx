@@ -10,10 +10,9 @@ export const ConfidantIntro = () => {
   const { name, character } = useConfidant();
 
   return (
-    <>
-      <h2>{camel(name)}</h2>
-      <h3>{character}</h3>
-    </>
+    <h2>
+      {camel(name)} <span className="char-name">{character}</span>
+    </h2>
   );
 };
 
@@ -24,17 +23,17 @@ export const ConfidantBenefits = () => {
       <Table striped bordered>
         <thead>
           <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Description</th>
+            <th style={{ width: "5%" }}>Rank</th>
+            <th style={{ width: "10%" }}>Name</th>
+            <th style={{ width: "85%" }}>Description</th>
           </tr>
         </thead>
         <tbody>
-          {benefits.map((row, index) => (
+          {benefits.map(({ rank, name, description }, index) => (
             <tr key={index}>
-              <td>{row.rank}</td>
-              <td>{row.name}</td>
-              <td>{row.description}</td>
+              <td className="mono">{rank > 9 ? (rank == 10 ? "Max" : "Royal") : rank}</td>
+              <td>{name}</td>
+              <td>{description}</td>
             </tr>
           ))}
         </tbody>
@@ -67,11 +66,11 @@ const parseRequirements = (reqs: ConfidantLevelRequirements) => {
   if (reqs.knowledge) return `Requires ${reqs.knowledge == 5 ? "Max" : `Level ${reqs.knowledge}`} Knowledge`;
 };
 
-const TableHead = ({ rank, meta }: { rank: string | number; meta: RankMetadata | undefined }) => (
+const TableHead = ({ rank, meta }: { rank: string | number; meta?: RankMetadata }) => (
   <thead>
     <tr>
       <th colSpan={4}>
-        {rank == "Max" ? "Max" : `Rank ${rank}`}
+        {rank > 9 ? (rank == 10 ? "Max" : "Royal") : `Rank ${rank}`}
         {meta && meta.romance && " (Romance)"}
       </th>
     </tr>
@@ -112,7 +111,7 @@ const Rank = ({ rank: { rank, meta, questions } }: { rank: ConfidantRank }) => (
       {questions &&
         questions.map((question, index) => (
           <tr key={index}>
-            <td key={index}>{question.number == "Follow-up" ? "Follow-up" : `Question ${question.number}`}</td>
+            <td className="bold" key={index}>{question.number == "Follow-up" ? "Follow-up" : `Question ${question.number}`}</td>
             {question.answers && question.answers.map((answer, index) => <Answer answer={answer} key={index} />)}
             {question.answers && // Add padding if needed
               question.answers.length < 3 && <Padding count={question.answers.length} />}
