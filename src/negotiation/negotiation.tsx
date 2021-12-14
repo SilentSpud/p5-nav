@@ -62,7 +62,7 @@ const QuestionTable = ({ question, answers }: { question: string; answers: Negot
 export const QuestionList = ({ questions }: { questions: NegotiationList }) => {
   const tableList: JSX.Element[] = [];
   for (const question in questions) {
-    tableList.push(<QuestionTable question={question} answers={questions[question]} />);
+    tableList.push(<QuestionTable key={question} question={question} answers={questions[question]} />);
   }
   return <>{tableList}</>;
 };
