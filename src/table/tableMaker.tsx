@@ -1,52 +1,36 @@
-import React from "react";
-import { Row, useFlexLayout, useGlobalFilter, useSortBy, useTable } from "react-table";
-import { Header } from ".";
+import React, { createContext, useContext } from "react";
+import { Row, TableInstance, TableOptions, useFlexLayout, useGlobalFilter, usePagination, useSortBy, useTable } from "react-table";
+import { Footer, Header } from ".";
+
+const TableCtx = createContext<TableInstance>({} as TableInstance);
+export const useTableInfo = (): TableInstance => useContext(TableCtx);
 
 export type PrepareTableProps = {
   rowParser: (row: Row, index: number) => JSX.Element;
   className?: string;
   data: any[];
   columns: any[];
-  sortId?: string;
+  sortId: string;
 };
 export const PrepareTable = ({ columns, data, rowParser, className, sortId }: PrepareTableProps) => {
-  let sort = "";
-  if (sortId) {
-    sort = sortId;
-  } else {
-    sort = columns[0]?.columns[0]?.id?.toString() ?? columns[0]?.id?.toString() ?? "";
-    for (let column of columns) {
-      if (column.sort) {
-        sort = column.id;
-        break;
-      }
-      if (column.columns) {
-        for (let col of column.columns) {
-          if (col.sort) {
-            sort = col.id;
-            break;
-          }
-        }
-      }
-    }
-  }
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, setGlobalFilter, prepareRow } = useTable(
-    { columns, data, initialState: { sortBy: [{ id: sort }] } },
-    useGlobalFilter,
-    useSortBy,
-    useFlexLayout
-  );
+  const initialState = { pageIndex: 0, pageSize: 50, sortBy: [{ id: sortId }] };
+  const tableOptions: TableOptions<object> = { columns, data, initialState };
+  const instance = useTable(tableOptions, useGlobalFilter, useSortBy, usePagination, useFlexLayout);
+  const { getTableProps, getTableBodyProps, page, prepareRow } = instance;
   return (
-    <section {...getTableProps({ className: `table table-dark ${className ?? ""}` })}>
-      <header role="rowgroup">{Header(headerGroups, setGlobalFilter)}</header>
-      <main {...getTableBodyProps()}>
-        {rows.map((row, index) => {
-          prepareRow(row);
-          return rowParser(row, index);
-        })}
-      </main>
-    </section>
+    <TableCtx.Provider value={instance}>
+      <section {...getTableProps({ className: `table table-dark ${className ?? ""}` })}>
+        <Header />
+        <main {...getTableBodyProps()}>
+          {page.map((row, index) => {
+            prepareRow(row);
+            return rowParser(row, index);
+          })}
+        </main>
+        <Footer />
+      </section>
+    </TableCtx.Provider>
   );
 };
 export default PrepareTable;
