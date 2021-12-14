@@ -1,21 +1,30 @@
 @import "darkly";
 
-footer div.nav-pills {
-  border-top: 1px solid $gray-300;
-  border-bottom: none;
-  height: 60px;
+footer {
+  div.nav-pills {
+    height: 40px;
 
-  .nav-link {
-    height: 60px;
-    line-height: 60px;
-    display: block;
-    &:not(.disabled) {
-      &:hover {
-        border: 1px solid #ddd;
-      }
+    .nav-item {
+      vertical-align: middle;
     }
-    &.disabled {
-      border-radius: 0;
+
+    .nav-link {
+      height: 40px;
+      font-size: 14pt;
+
+      svg {
+        font-size: 20pt;
+      }
+
+      &:not(.disabled) {
+        &:hover {
+          border: 1px solid $table-border-color;
+        }
+      }
+
+      &.disabled {
+        border-radius: 0;
+      }
     }
   }
 }

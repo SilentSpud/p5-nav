@@ -61,7 +61,7 @@ section[role="table"] {
   }
 
   footer {
-    height: 60px;
+    height: 40px;
     padding: 0;
     .nav-item {
       padding: 0;
@@ -71,7 +71,7 @@ section[role="table"] {
   main {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 120px - 40px);
 
     &::-webkit-scrollbar {
       width: 0 !important;

@@ -15,7 +15,7 @@ const NavLink = ({
   onClick?: React.MouseEventHandler<HTMLElement>;
 }) => {
   return (
-    <Nav.Item>
+    <Nav.Item as="span">
       <Nav.Link {...{ disabled, active, onClick }}>{children}</Nav.Link>
     </Nav.Item>
   );
@@ -35,7 +35,7 @@ export const Footer = () => {
   return (
     <footer>
       <Nav justify variant="pills">
-        <NavLink onClick={() => gotoPage(0)} disabled={pageIndex > 0}>
+        <NavLink onClick={() => gotoPage(0)} disabled={pageIndex == 0}>
           <FaAngleDoubleLeft />
         </NavLink>
         <NavLink onClick={() => previousPage()} disabled={!canPreviousPage}>
@@ -47,7 +47,7 @@ export const Footer = () => {
         <NavLink onClick={() => nextPage()} disabled={!canNextPage}>
           <FaAngleRight />
         </NavLink>
-        <NavLink onClick={() => gotoPage(pageCount - 1)} disabled={pageIndex < pageCount - 1}>
+        <NavLink onClick={() => gotoPage(pageCount - 1)} disabled={pageIndex == pageCount - 1}>
           <FaAngleDoubleRight />
         </NavLink>
       </Nav>
