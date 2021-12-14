@@ -24,7 +24,7 @@ export const Header = (headers: HeaderGroup[], setGlobalFilter: (filterValue: st
           );
         } else {
           return (
-            <div {...cell.getHeaderProps(cell.getSortByToggleProps({ className: "th" }))}>
+            <div {...cell.getHeaderProps({ ...cell.getSortByToggleProps(), className: "th" })}>
               {cell.render("Header")}
               {cell.canSort && <span>{(cell.isSortedDesc && <FaSortUp />) || (cell.isSorted && <FaSortDown />) || <FaSort />}</span>}
             </div>
