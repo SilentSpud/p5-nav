@@ -49,7 +49,7 @@ export const personaHeaders = [
       { id: "lvl", width: 30, accessor: ({ level }: Persona) => level, Header: "Lvl" },
       {
         id: "name",
-        width: 125,
+        width: 150,
         accessor: ({ name }: Persona) => name,
         Header: "Name",
         Cell: ({ row: { original } }) => <NameTags persona={original} />,
@@ -61,7 +61,7 @@ export const personaHeaders = [
     Header: "Shadow",
     id: "shadow-info",
     columns: [
-      { id: "shadow", width: 125, accessor: ({ shadow }: Persona) => shadow, Header: "Shadow" },
+      { id: "shadow", width: 150, accessor: ({ shadow }: Persona) => shadow, Header: "Shadow" },
       { id: "personality", width: 70, accessor: ({ personality }: Persona) => personality, Header: "Personality" },
     ],
   },
@@ -132,7 +132,7 @@ export const personaHeaders = [
     columns: [
       {
         id: "phys",
-        width: 40,
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { physical } }: Persona) => physical,
         Header: <ResistanceHeader caption="Physical" text="Phys" />,
@@ -140,7 +140,7 @@ export const personaHeaders = [
       },
       {
         id: "gun",
-        width: 40,
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { gun } }: Persona) => gun,
         Header: <ResistanceHeader text="Gun" />,
@@ -148,7 +148,7 @@ export const personaHeaders = [
       },
       {
         id: "fire",
-        width: 40,
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { fire } }: Persona) => fire,
         Header: <ResistanceHeader text="Fire" />,
@@ -156,7 +156,7 @@ export const personaHeaders = [
       },
       {
         id: "ice",
-        width: 40,
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { ice } }: Persona) => ice,
         Header: <ResistanceHeader text="Ice" />,
@@ -164,7 +164,7 @@ export const personaHeaders = [
       },
       {
         id: "elec",
-        width: 40,
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { electric } }: Persona) => electric,
         Header: <ResistanceHeader caption="Electric" text="Elec" />,
@@ -172,7 +172,7 @@ export const personaHeaders = [
       },
       {
         id: "wind",
-        width: 40,
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { wind } }: Persona) => wind,
         Header: <ResistanceHeader text="Wind" />,
@@ -180,7 +180,7 @@ export const personaHeaders = [
       },
       {
         id: "psy",
-        width: 40,
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { psychic } }: Persona) => psychic,
         Header: <ResistanceHeader caption="Psychic" text="Psy" />,
@@ -188,7 +188,7 @@ export const personaHeaders = [
       },
       {
         id: "nuke",
-        width: 40,
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { nuclear } }: Persona) => nuclear,
         Header: <ResistanceHeader caption="Nuclear" text="Nuke" />,
@@ -196,7 +196,7 @@ export const personaHeaders = [
       },
       {
         id: "bless",
-        width: 40,
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { bless } }: Persona) => bless,
         Header: <ResistanceHeader caption="Bless" text="Bles" />,
@@ -204,7 +204,7 @@ export const personaHeaders = [
       },
       {
         id: "curse",
-        width: 40,
+        width: 35,
         sortType: sortElems,
         accessor: ({ elements: { curse } }: Persona) => curse,
         Header: <ResistanceHeader caption="Curse" text="Curs" />,
