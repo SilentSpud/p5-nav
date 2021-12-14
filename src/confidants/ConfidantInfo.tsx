@@ -111,7 +111,9 @@ const Rank = ({ rank: { rank, meta, questions } }: { rank: ConfidantRank }) => (
       {questions &&
         questions.map((question, index) => (
           <tr key={index}>
-            <td className="bold" key={index}>{question.number == "Follow-up" ? "Follow-up" : `Question ${question.number}`}</td>
+            <td className="bold" key={index}>
+              {question.number == "Follow-up" ? "Follow-up" : `Question ${question.number}`}
+            </td>
             {question.answers && question.answers.map((answer, index) => <Answer answer={answer} key={index} />)}
             {question.answers && // Add padding if needed
               question.answers.length < 3 && <Padding count={question.answers.length} />}
