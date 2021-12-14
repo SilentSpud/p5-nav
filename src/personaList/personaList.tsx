@@ -46,7 +46,7 @@ export const personaHeaders = [
     Header: "",
     id: "title",
     columns: [
-      { id: "lvl", width: 30, sort: true, accessor: ({ level }: Persona) => level, Header: "Lvl" },
+      { id: "lvl", width: 30, accessor: ({ level }: Persona) => level, Header: "Lvl" },
       {
         id: "name",
         width: 150,
