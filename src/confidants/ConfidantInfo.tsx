@@ -31,7 +31,7 @@ export const ConfidantBenefits = () => {
         <tbody>
           {benefits.map((row, index) => (
             <tr key={index}>
-              <td>{row.rank}</td>
+              <td>{row.rank > 9 ? row.rank == 10 ? "Max" : "Royal" : row.rank}</td>
               <td>{row.name}</td>
               <td>{row.description}</td>
             </tr>
@@ -70,7 +70,7 @@ const TableHead = ({ rank, meta }: { rank: string | number; meta: RankMetadata |
   <thead>
     <tr>
       <th colSpan={4}>
-        {rank == "Max" ? "Max" : `Rank ${rank}`}
+        {rank > 9 ? rank == 10 ? "Max" : "Royal" : `Rank ${rank}`}
         {meta && meta.romance && " (Romance)"}
       </th>
     </tr>
