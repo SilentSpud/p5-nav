@@ -1,6 +1,7 @@
 import React from "react";
-import { FaCrown, FaDollarSign, FaPlusCircle, FaClock, FaChevronCircleUp } from "react-icons/fa";
-import { GiTwinShell } from "react-icons/gi";
+import { FaCrown, FaDollarSign, FaPlusCircle, FaClock, FaChevronCircleUp, FaExclamationTriangle } from "react-icons/fa";
+import { GiArrowsShield, GiShieldBounces, GiShieldReflect, GiTwinShell } from "react-icons/gi";
+import { FiSlash } from "react-icons/fi";
 import { IconType } from "react-icons/lib";
 import { Persona, WeaknessLevels as Weaknesses } from "../data";
 
@@ -24,32 +25,33 @@ export const NameTags = ({ persona: { name, treasureDemon, dlcExclusive, thirdSe
   </>
 );
 
+type ResistanceInfo = { className: string; key: string; children: React.ReactNode | string };
 export const Resistance = ({ value, element, full }: { value: string; element: string; full?: boolean }) => {
-  const inf: { className?: string; key: string; children?: React.ReactNode | React.ReactNode[] } = { key: element };
+  const inf = { key: element, className: `${full ? "" : "res-icon "}` } as ResistanceInfo;
   switch (value as Weaknesses) {
     case Weaknesses.resist:
-      inf.className = "text-warning";
-      inf.children = full ? <>Resist</> : <>Res</>;
+      inf.className += `text-warning `;
+      inf.children = full ? "Resist" : <GiShieldBounces title="Resist" />;
       break;
     case Weaknesses.repel:
-      inf.className = "text-danger";
-      inf.children = full ? <>Repel</> : <>Rep</>;
+      inf.className += `text-danger`;
+      inf.children = full ? "Repel" : <GiShieldReflect title="Repel" />;
       break;
     case Weaknesses.weak:
-      inf.className = "text-success";
-      inf.children = full ? <>Weak</> : <>Weak</>;
-      break;
-    case Weaknesses.none:
-      inf.className = "text-muted";
-      inf.children = full ? <>Neutral</> : <>&nbsp;</>;
+      inf.className += `text-success`;
+      inf.children = full ? "Weak" : <FaExclamationTriangle title="Weak" />;
       break;
     case Weaknesses.absorb:
-      inf.className = "text-info";
-      inf.children = full ? <>Absorb</> : <>Abs</>;
+      inf.className += `text-info`;
+      inf.children = full ? "Absorb" : <GiArrowsShield title="Absorb" />;
       break;
     case Weaknesses.nullify:
-      inf.className = "text-light";
-      inf.children = full ? <>Nullify</> : <>Null</>;
+      inf.className += `text-light`;
+      inf.children = full ? "Nullify" : <FiSlash title="Nullify" />;
+      break;
+    case Weaknesses.none:
+      inf.className += "text-muted";
+      inf.children = full ? "Neutral" : <>&nbsp;</>;
       break;
   }
   return <span {...inf}></span>;
