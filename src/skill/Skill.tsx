@@ -7,7 +7,7 @@ import { CostTag, StatusTag } from ".";
 import { Elements } from "../persona";
 
 const SkillCtx = createContext<SkillInfo>({} as SkillInfo);
-const useSkill = (): SkillInfo => useContext(SkillCtx);
+export const useSkill = (): SkillInfo => useContext(SkillCtx);
 
 export const BasicInfo = () => {
   const { cost, effect, element } = useSkill();
@@ -99,6 +99,32 @@ const TalkInfo = ({ talk }: { talk: string }) => {
         )
       </td>
     </tr>
+  );
+};
+
+export const PersonaTable = () => {
+  const { personas } = useSkill();
+  if (!personas) return null;
+  return (
+    <Table className="skill-personas">
+      <thead>
+        <tr>
+          <th colSpan={2}>Personas</th>
+        </tr>
+      </thead>
+      <tbody>
+        {personas.map((persona, index) => (
+          <tr key={index}>
+            <td>{persona.level}</td>
+            <td>
+              <Link href={`/skill/${persona.name}`}>
+                <a>{persona.name}</a>
+              </Link>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
   );
 };
 

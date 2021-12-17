@@ -1,51 +1,50 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { getSkill, Skills } from "../../data";
-import { BasicInfo, Skill, SkillTags, UnlockInfo } from "../../skill";
+import { getSkill, Skills, Skill as SkillType } from "../../data";
+import { BasicInfo, PersonaTable, Skill, SkillTags, UnlockInfo } from "../../skill";
 import { ParsedUrlQuery } from "querystring";
+import { Error404, toCamel } from "..";
 
-export const getStaticPaths = async () => {
-  return {
-    paths: Skills.map((item) => {
-      return { params: { skill: item.name } };
-    }),
-    fallback: false,
-  };
-};
+export const getStaticPaths = async () => ({
+  paths: Skills.map(({ name }) => ({ params: { skill: name.replace(/ /g, "_") } })),
+  fallback: false,
+});
 
 export const getStaticProps = async ({ params: props }) => {
   return { props };
 };
 
-const loadRouter = ({ skill }: ParsedUrlQuery) => {
-  let name = skill;
-  switch (typeof name) {
-    case "object":
-      name = name[0];
-    case "undefined":
-      return undefined;
-  }
-  return getSkill(name);
+const loadRouter = ({ persona }: ParsedUrlQuery) => {
+  let name = persona;
+  if (typeof name !== "string") return undefined;
+  return name as string;
 };
 
 const SkillInfo = ({ skill }: { skill?: string }) => {
   const router = useRouter();
-  let skillInfo = skill ? getSkill(skill) : loadRouter(router.query);
-  if (!skillInfo) return null;
-  const { name } = skillInfo;
+  let skillName = skill ?? loadRouter(router.query);
+  if (!skillName) return <Error404 />;
+  const skillInfo = getSkill(skillName.replace(/_/g, " ")) as SkillType;
 
+  const { name, effect, element } = skillInfo;
+  const descText = `Effect: ${effect}
+
+  Element: ${toCamel(element)}`;
   return (
     <>
       <Head>
         <title>{name} - rNav</title>
+        <meta property="og:title" content={`${name} - Skill - royal Navigator`} />
+        <meta property="og:description" content={descText} />
       </Head>
       <Skill skill={skillInfo}>
         <h1>
-          <SkillTags skill={skillInfo} />
+          {name} <SkillTags />
         </h1>
         <BasicInfo />
         <UnlockInfo />
+        <PersonaTable />
       </Skill>
     </>
   );

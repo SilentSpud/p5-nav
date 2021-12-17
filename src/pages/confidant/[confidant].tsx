@@ -2,56 +2,62 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { ConfidantInfo, Confidant } from "../../confidants";
-const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
+import { getConfidant, Confidant as GameConfidant, StoryConfidant } from "../../data";
+import { ParsedUrlQuery } from "querystring";
+import { Error404, toCamel } from "..";
 
-export const getStaticPaths = async () => {
+const confidants = [
+  "chariot",
+  "councillor",
+  "death",
+  "devil",
+  "emperor",
+  "empress",
+  "faith",
+  "fortune",
+  "hanged",
+  "hermit",
+  "hierophant",
+  "justice",
+  "lovers",
+  "moon",
+  "priestess",
+  "star",
+  "sun",
+  "temperance",
+  "tower",
+];
+export const getStaticPaths = async () => ({
+  paths: confidants.map((confidant) => ({
+    params: { confidant },
+  })),
+  fallback: false,
+});
+
+export const getStaticProps = async ({ params: props }) => {
   return {
-    paths: [
-      { params: { confidant: "chariot" } },
-      { params: { confidant: "councillor" } },
-      { params: { confidant: "death" } },
-      { params: { confidant: "devil" } },
-      { params: { confidant: "emperor" } },
-      { params: { confidant: "empress" } },
-      { params: { confidant: "faith" } },
-      { params: { confidant: "fortune" } },
-      { params: { confidant: "hanged" } },
-      { params: { confidant: "hermit" } },
-      { params: { confidant: "hierophant" } },
-      { params: { confidant: "justice" } },
-      { params: { confidant: "lovers" } },
-      { params: { confidant: "moon" } },
-      { params: { confidant: "priestess" } },
-      { params: { confidant: "star" } },
-      { params: { confidant: "sun" } },
-      { params: { confidant: "temperance" } },
-      { params: { confidant: "tower" } },
-    ],
-    fallback: false,
+    props,
   };
 };
 
-export const getStaticProps = async ({ params }) => {
-  return {
-    props: params,
-  };
+const loadRouter = ({ confidant }: ParsedUrlQuery) => {
+  let name = confidant;
+  if (typeof name !== "string") return undefined;
+  return name as string;
 };
 
-const ConfidantDetails = () => {
+const ConfidantDetails = ({ confidant }: { confidant?: string }) => {
   const router = useRouter();
-  let { confidant: confidantName } = router.query;
-  switch (typeof confidantName) {
-    case "string":
-      break;
-    case "object":
-      confidantName = confidantName[0];
-    case "undefined":
-      return null;
-  }
+  let confidantName = confidant ? confidant : loadRouter(router.query);
+  if (!confidantName) return <Error404 />;
+  const confidantInfo = getConfidant(confidantName) as GameConfidant | StoryConfidant;
+  const { character } = confidantInfo;
   return (
     <>
       <Head>
-        <title>{camel(confidantName)} - rNav</title>
+        <title>{toCamel(confidantName)} - rNav</title>
+        <meta property="og:title" content={`${toCamel(confidantName)} - royal Navigator`} />
+        <meta property="og:description" content={`Character: ${character}`} />
       </Head>
       <Confidant confidant={confidantName}>
         <ConfidantInfo.intro />

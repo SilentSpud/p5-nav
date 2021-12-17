@@ -10,6 +10,24 @@
   overflow: hidden;
   overflow-y: scroll;
 
+  a {
+    &:link,
+    &:visited {
+      color: $p5-red-light;
+      text-decoration: none;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $p5-red;
+    }
+  }
+
   &::-webkit-scrollbar {
     width: 0 !important;
   }

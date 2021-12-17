@@ -11,6 +11,8 @@ const EventCalendar = () => {
     <>
       <Head>
         <title>Calendar - rNav</title>
+        <meta property="og:title" content="Calendar - royal Navigator" />
+        <meta property="og:description" content="Persona 5 Royal event calendar" />
       </Head>
       <Calendar month={monthDate} onMonthChange={monthHandler} events={classQs}>
         <Navbar />

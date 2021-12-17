@@ -1,15 +1,14 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { getPersona, Personas } from "../../data";
+import { getPersona, Personas, Persona as PersonaType } from "../../data";
 import { BasicInfo, ElementsTable, NameTags, Persona, ShadowInfo, StatsTable, SkillTable } from "../../persona";
 import { ParsedUrlQuery } from "querystring";
+import { Error404 } from "..";
 
 export const getStaticPaths = async () => {
   return {
-    paths: Personas.map((item) => {
-      return { params: { persona: item.name } };
-    }),
+    paths: Personas.map(({ name }) => ({ params: { persona: name.replace(/ /g, "_") } })),
     fallback: false,
   };
 };
@@ -20,28 +19,31 @@ export const getStaticProps = async ({ params: props }) => {
 
 const loadRouter = ({ persona }: ParsedUrlQuery) => {
   let name = persona;
-  switch (typeof name) {
-    case "object":
-      name = name[0];
-    case "undefined":
-      return undefined;
-  }
-  return getPersona(name);
+  if (typeof name !== "string") return undefined;
+  return name as string;
 };
 
 const PersonaInfo = ({ persona }: { persona?: string }) => {
   const router = useRouter();
-  let personaInfo = persona ? getPersona(persona) : loadRouter(router.query);
-  if (!personaInfo) return null;
-  const { name, shadow } = personaInfo;
+  const personaName = persona ?? loadRouter(router.query);
+  if (!personaName) return <Error404 />;
+  const personaInfo = getPersona(personaName.replace(/_/g, " ")) as PersonaType;
+
+  const { name, shadow, level, arcana } = personaInfo;
+  const descText = `
+  Level:  ${level.toString()}
+  Arcana: ${arcana}
+  Shadow: ${shadow}`;
   return (
     <>
       <Head>
         <title>{name} - rNav</title>
+        <meta property="og:title" content={`${name} - Persona - royal Navigator`} />
+        <meta property="og:description" content={descText} />
       </Head>
       <Persona persona={personaInfo}>
         <h1>
-          <NameTags persona={personaInfo} />
+          {name} <NameTags />
         </h1>
         <BasicInfo />
         {shadow && <ShadowInfo />}

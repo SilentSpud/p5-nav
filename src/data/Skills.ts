@@ -12,7 +12,7 @@ export interface Skill {
   name: string;
   cost?: number;
   effect: string;
-  element: string | ResElems | SkillElems;
+  element: string;
   personas?: PersonaRef[];
   talk?: string;
   execute?: string[];

@@ -8,6 +8,14 @@ h1 {
   }
 }
 
+.skill-personas {
+  td:first-child {
+    font-family: $monospace;
+    width: 3vw;
+    text-align: right;
+  }
+}
+
 .skill-unlocks,
 .skill-info {
   td:first-child {

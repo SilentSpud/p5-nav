@@ -8,6 +8,8 @@ const SkillList = (): JSX.Element => (
   <>
     <Head>
       <title>Skills - rNav</title>
+      <meta property="og:title" content="Skill List - royal Navigator" />
+      <meta property="og:description" content="Table of skills" />
     </Head>
     <PrepareTable {...{ columns: Headers(), data: Skills, rowParser: SkillRowParser, className: "skills", sortId: "name" }} />
   </>

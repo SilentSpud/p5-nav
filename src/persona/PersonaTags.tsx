@@ -4,6 +4,7 @@ import { GiArrowsShield, GiShieldBounces, GiShieldReflect, GiTwinShell } from "r
 import { FiSlash } from "react-icons/fi";
 import { IconType } from "react-icons/lib";
 import { Persona, WeaknessLevels as Weaknesses } from "../data";
+import { usePersona } from ".";
 
 const NameTag = ({ className, title, icon: Icon }: { className: string; title: string; icon: IconType }) => (
   <span className={`icon ${className}`} title={title}>
@@ -11,9 +12,12 @@ const NameTag = ({ className, title, icon: Icon }: { className: string; title: s
   </span>
 );
 
-export const NameTags = ({ persona: { name, treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant } }: { persona: Persona }) => (
-  <>
-    {name}
+export const NameTags = ({ persona: persona1 }: { persona?: Persona }) => {
+  const persona2 = usePersona();
+  const persona = persona1 ?? persona2;
+  if (!persona) return null;
+  const { treasureDemon, dlcExclusive, thirdSemester, newGamePlus, specialFusion, maxConfidant } = persona;
+  return (
     <span className="tags">
       {newGamePlus && <NameTag className="ngp" title="New Game+ exclusive" icon={FaPlusCircle} />}
       {thirdSemester && <NameTag className="third" title="Third semester exclusive" icon={FaClock} />}
@@ -22,8 +26,8 @@ export const NameTags = ({ persona: { name, treasureDemon, dlcExclusive, thirdSe
       {treasureDemon && <NameTag className="rare" title="Rare persona" icon={FaCrown} />}
       {dlcExclusive && <NameTag className="dlc" title="DLC exclusive" icon={FaDollarSign} />}
     </span>
-  </>
-);
+  );
+};
 
 type ResistanceInfo = { className: string; key: string; children: React.ReactNode | string };
 export const Resistance = ({ value, element, full }: { value: string; element: string; full?: boolean }) => {

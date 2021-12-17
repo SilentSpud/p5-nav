@@ -17,24 +17,6 @@
     vertical-align: bottom;
   }
 
-  a {
-    &:link,
-    &:visited {
-      color: $p5-red-light;
-      text-decoration: none;
-    }
-
-    &:active,
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-
-    &:active {
-      color: $p5-red;
-    }
-  }
-
   .arcana {
     color: $p5-red-light;
 

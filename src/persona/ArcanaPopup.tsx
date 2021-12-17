@@ -2,8 +2,7 @@ import React from "react";
 import { OverlayTrigger, Popover, Table } from "react-bootstrap";
 import Link from "next/link";
 import { getConfidant } from "../data";
-
-const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
+import { toCamel } from "../pages";
 
 export const ArcanaPopup = ({ arcana }): JSX.Element | null => {
   const confidant = getConfidant(arcana);
@@ -12,7 +11,7 @@ export const ArcanaPopup = ({ arcana }): JSX.Element | null => {
   let overlay: JSX.Element = (
     <Popover className="popup arcana-popup">
       <Popover.Header>
-        {camel(confidant.name)}
+        {toCamel(confidant.name)}
         {isStory ? " (Story)" : ""}
       </Popover.Header>
       <Popover.Body>
@@ -32,10 +31,10 @@ export const ArcanaPopup = ({ arcana }): JSX.Element | null => {
     <OverlayTrigger trigger={["hover", "focus"]} placement="bottom" overlay={overlay} rootClose>
       <span className="arcana">
         {isStory ? (
-          <>{camel(confidant.name)}</>
+          <>{toCamel(confidant.name)}</>
         ) : (
           <Link href={`/confidant/${confidant.name}`}>
-            <a>{camel(confidant.name)}</a>
+            <a>{toCamel(confidant.name)}</a>
           </Link>
         )}
       </span>
