@@ -27,9 +27,14 @@ export const Main = ({ Component, pageProps }: AppProps) => (
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-      <title>Royal Navigator</title>
+      <title>royal Navigator</title>
       <meta name="theme-color" content="#DC3545" />
       <link rel="icon" href="/favicon.ico" />
+      <meta property="og:title" content="royal Navigator" />
+      <meta property="og:url" content="https://royalnav.io/" />
+      <meta property="og:description" content="Multi-purpose information tool for Persona 5 Royal" />
+      <meta property="twitter:label1" content="Status" />
+      <meta property="twitter:data1" content="In Development" />
     </Head>
     <Nav variant="tabs" className="bg-dark" navbar justify as="header">
       <NavLink href="/persona">Personas</NavLink>
