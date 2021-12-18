@@ -11,7 +11,7 @@ const PersonaCellParser = (cell: Cell) => {
 export const PersonaRowParser = ({ getRowProps, cells, values: { name } }: Row, i: number) => {
   const parseClick = ({ target }) => {
     if (target.tagName.toLowerCase() == "a") return false;
-    router.push(`/persona/${encodeURIComponent(name)}`);
+    router.push(`/persona/${encodeURIComponent(name.replaceAll(" ", "_"))}`);
   };
   return (
     <div {...getRowProps()} key={i} onClick={parseClick}>
@@ -52,7 +52,11 @@ export const personaHeaders = [
         width: 150,
         accessor: ({ name }: Persona) => name,
         Header: "Name",
-        Cell: ({ row: { original } }) => <NameTags persona={original} />,
+        Cell: ({ row: { original } }: { row: { original: Persona } }) => (
+          <>
+            {original.name} <NameTags persona={original} />
+          </>
+        ),
       },
       { id: "arcana", disableGlobalFilter: true, width: 70, accessor: ({ arcana }: Persona) => arcana, Header: "Arcana" },
     ],

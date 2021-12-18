@@ -3,15 +3,14 @@ import { Table } from "react-bootstrap";
 import { useConfidant } from ".";
 import { FaMinus, FaAngleUp, FaAngleDoubleUp, FaArrowUp } from "react-icons/fa";
 import { ConfidantAnswer, ConfidantLevelRequirements, ConfidantRank, RankMetadata } from "../data";
-
-const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
+import { toCamel } from "../pages";
 
 export const ConfidantIntro = () => {
   const { name, character } = useConfidant();
 
   return (
     <h2>
-      {camel(name)} <span className="char-name">{character}</span>
+      {toCamel(name)} <span className="char-name">{character}</span>
     </h2>
   );
 };

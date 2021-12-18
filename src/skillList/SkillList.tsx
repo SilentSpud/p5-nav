@@ -6,8 +6,8 @@ import { SkillTags, CostTag, StatusTag } from "../skill";
 import { Elements } from "../persona";
 import router from "next/router";
 import { Row, Cell } from "react-table";
+import { toCamel } from "../pages";
 
-const camel = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 export const Headers = () =>
   React.useMemo(
     () => [
@@ -20,14 +20,18 @@ export const Headers = () =>
             width: 30,
             accessor: (skill: Skill) => skill.element,
             Header: "Element",
-            Cell: ({ value }) => <Image src={Elements[value]} alt={camel(value)} title={camel(value)} draggable={false} />,
+            Cell: ({ value }) => <Image src={Elements[value]} alt={toCamel(value)} title={toCamel(value)} draggable={false} />,
           },
           {
             id: "name",
             width: 60,
             accessor: ({ name }: Skill) => name,
             Header: "Name",
-            Cell: ({ row: { original } }) => <SkillTags skill={original} />,
+            Cell: ({ row: { original } }: { row: { original: Skill } }) => (
+              <>
+                {original.name} <SkillTags skill={original} />
+              </>
+            ),
           },
           {
             id: "cost",
@@ -80,7 +84,7 @@ export const Headers = () =>
 export const SkillRowParser = ({ getRowProps, cells, values: { name } }: Row, index: number) => {
   const parseClick = ({ target }) => {
     if (target.tagName.toLowerCase() == "a") return false;
-    router.push(`/skill/${name}`);
+    router.push(`/skill/${(name as string).replaceAll(" ", "_")}`);
   };
   return (
     <div {...getRowProps()} key={index} onClick={parseClick}>

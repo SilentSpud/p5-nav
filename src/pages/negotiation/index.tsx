@@ -7,6 +7,8 @@ const NegotiationInfo = () => (
   <>
     <Head>
       <title>Negotiation - rNav</title>
+      <meta property="og:title" content="Negotiation - royal Navigator" />
+      <meta property="og:description" content="Negotiation questions and answers" />
     </Head>
     <div className="questionlist">
       <QuestionList questions={Negotiations} />

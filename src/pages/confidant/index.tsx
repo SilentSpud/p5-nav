@@ -16,6 +16,8 @@ const ConfidantList = (): JSX.Element => {
     <>
       <Head>
         <title>Confidants - rNav</title>
+        <meta property="og:title" content="Confidants - royal Navigator" />
+        <meta property="og:description" content="Confidant benefits and questions" />
       </Head>
       <Container fluid className="confidants">
         {rows.map((row, index) => (
