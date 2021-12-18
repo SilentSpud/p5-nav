@@ -6,32 +6,33 @@ import { getConfidant, Confidant as GameConfidant, StoryConfidant } from "../../
 import { ParsedUrlQuery } from "querystring";
 import { Error404, toCamel } from "..";
 
-export const getStaticPaths = async () => {
-  return {
-    paths: [
-      { params: { confidant: "chariot" } },
-      { params: { confidant: "councillor" } },
-      { params: { confidant: "death" } },
-      { params: { confidant: "devil" } },
-      { params: { confidant: "emperor" } },
-      { params: { confidant: "empress" } },
-      { params: { confidant: "faith" } },
-      { params: { confidant: "fortune" } },
-      { params: { confidant: "hanged" } },
-      { params: { confidant: "hermit" } },
-      { params: { confidant: "hierophant" } },
-      { params: { confidant: "justice" } },
-      { params: { confidant: "lovers" } },
-      { params: { confidant: "moon" } },
-      { params: { confidant: "priestess" } },
-      { params: { confidant: "star" } },
-      { params: { confidant: "sun" } },
-      { params: { confidant: "temperance" } },
-      { params: { confidant: "tower" } },
-    ],
-    fallback: false,
-  };
-};
+const confidants = [
+  "chariot",
+  "councillor",
+  "death",
+  "devil",
+  "emperor",
+  "empress",
+  "faith",
+  "fortune",
+  "hanged",
+  "hermit",
+  "hierophant",
+  "justice",
+  "lovers",
+  "moon",
+  "priestess",
+  "star",
+  "sun",
+  "temperance",
+  "tower",
+];
+export const getStaticPaths = async () => ({
+  paths: confidants.map((confidant) => ({
+    params: { confidant },
+  })),
+  fallback: false,
+});
 
 export const getStaticProps = async ({ params: props }) => {
   return {

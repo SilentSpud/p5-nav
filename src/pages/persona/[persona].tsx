@@ -8,9 +8,7 @@ import { Error404 } from "..";
 
 export const getStaticPaths = async () => {
   return {
-    paths: Personas.map((item) => {
-      return { params: { persona: item.name.replaceAll(" ", "_") } };
-    }),
+    paths: Personas.map(({ name }) => ({ params: { persona: name.replace(/ /g, "_") } })),
     fallback: false,
   };
 };

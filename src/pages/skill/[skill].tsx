@@ -6,14 +6,10 @@ import { BasicInfo, PersonaTable, Skill, SkillTags, UnlockInfo } from "../../ski
 import { ParsedUrlQuery } from "querystring";
 import { Error404, toCamel } from "..";
 
-export const getStaticPaths = async () => {
-  return {
-    paths: Skills.map((item) => {
-      return { params: { skill: item.name.replaceAll(" ", "_") } };
-    }),
-    fallback: false,
-  };
-};
+export const getStaticPaths = async () => ({
+  paths: Skills.map(({ name }) => ({ params: { skill: name.replace(/ /g, "_") } })),
+  fallback: false,
+});
 
 export const getStaticProps = async ({ params: props }) => {
   return { props };
