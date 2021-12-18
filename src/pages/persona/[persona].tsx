@@ -27,7 +27,7 @@ const PersonaInfo = ({ persona }: { persona?: string }) => {
   const router = useRouter();
   const personaName = persona ?? loadRouter(router.query);
   if (!personaName) return <Error404 />;
-  const personaInfo = getPersona(personaName.replaceAll("_", " ")) as PersonaType;
+  const personaInfo = getPersona(personaName.replace(/_/g, " ")) as PersonaType;
 
   const { name, shadow, level } = personaInfo;
   return (
