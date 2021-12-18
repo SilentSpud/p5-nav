@@ -30,6 +30,7 @@ export const Main = ({ Component, pageProps }: AppProps) => (
       <title>royal Navigator</title>
       <meta name="theme-color" content="#DC3545" />
       <link rel="icon" href="/favicon.ico" />
+      <meta name="twitter:card" content="summary_large_image" />
     </Head>
     <Nav variant="tabs" className="bg-dark" navbar justify as="header">
       <NavLink href="/persona">Personas</NavLink>
