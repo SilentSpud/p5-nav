@@ -4,7 +4,7 @@ import Head from "next/head";
 import { getSkill, Skills, Skill as SkillType } from "../../data";
 import { BasicInfo, PersonaTable, Skill, SkillTags, UnlockInfo } from "../../skill";
 import { ParsedUrlQuery } from "querystring";
-import { Error404 } from "..";
+import { Error404, toCamel } from "..";
 
 export const getStaticPaths = async () => {
   return {
@@ -22,7 +22,7 @@ export const getStaticProps = async ({ params: props }) => {
 const loadRouter = ({ persona }: ParsedUrlQuery) => {
   let name = persona;
   if (typeof name !== "string") return undefined;
-  return (name as string);
+  return name as string;
 };
 
 const SkillInfo = ({ skill }: { skill?: string }) => {
@@ -31,12 +31,15 @@ const SkillInfo = ({ skill }: { skill?: string }) => {
   if (!skillName) return <Error404 />;
   const skillInfo = getSkill(skillName.replaceAll("_", " ")) as SkillType;
 
-  const { name } = skillInfo;
+  const { name, effect, element } = skillInfo;
   return (
     <>
       <Head>
         <title>{name} - rNav</title>
-        <meta property="og:title" content={`${name} - royal Navigator`} />
+        <meta property="og:title" content={`${name} - Skill - royal Navigator`} />
+        <meta property="og:description" content={effect} />
+        <meta property="twitter:label1" content="Element" />
+        <meta property="twitter:data1" content={toCamel(element)} />
       </Head>
       <Skill skill={skillInfo}>
         <h1>

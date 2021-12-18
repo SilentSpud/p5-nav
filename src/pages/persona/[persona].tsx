@@ -22,7 +22,7 @@ export const getStaticProps = async ({ params: props }) => {
 const loadRouter = ({ persona }: ParsedUrlQuery) => {
   let name = persona;
   if (typeof name !== "string") return undefined;
-  return (name as string);
+  return name as string;
 };
 
 const PersonaInfo = ({ persona }: { persona?: string }) => {
@@ -31,15 +31,16 @@ const PersonaInfo = ({ persona }: { persona?: string }) => {
   if (!personaName) return <Error404 />;
   const personaInfo = getPersona(personaName.replaceAll("_", " ")) as PersonaType;
 
-  const { name, shadow } = personaInfo;
+  const { name, shadow, level } = personaInfo;
   return (
     <>
       <Head>
         <title>{name} - rNav</title>
-        <meta property="og:title" content={`${name} - royal Navigator`} />
-        <meta property="og:description" content="Multi-purpose information tool for Persona 5 Royal" />
-        <meta property="twitter:label1" content="Status" />
-        <meta property="twitter:data1" content="In Development" />
+        <meta property="og:title" content={`${name} - Persona - royal Navigator`} />
+        <meta property="twitter:label1" content="Level" />
+        <meta property="twitter:data1" content={level.toString()} />
+        <meta property="twitter:label2" content="Shadow" />
+        <meta property="twitter:data2" content={shadow} />
       </Head>
       <Persona persona={personaInfo}>
         <h1>
