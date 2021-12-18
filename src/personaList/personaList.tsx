@@ -11,7 +11,7 @@ const PersonaCellParser = (cell: Cell) => {
 export const PersonaRowParser = ({ getRowProps, cells, values: { name } }: Row, i: number) => {
   const parseClick = ({ target }) => {
     if (target.tagName.toLowerCase() == "a") return false;
-    router.push(`/persona/${encodeURIComponent(name.replaceAll(" ", "_"))}`);
+    router.push(`/persona/${encodeURIComponent(name.replace(/\s/g, "_"))}`);
   };
   return (
     <div {...getRowProps()} key={i} onClick={parseClick}>

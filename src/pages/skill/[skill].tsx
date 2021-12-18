@@ -25,7 +25,7 @@ const SkillInfo = ({ skill }: { skill?: string }) => {
   const router = useRouter();
   let skillName = skill ?? loadRouter(router.query);
   if (!skillName) return <Error404 />;
-  const skillInfo = getSkill(skillName.replaceAll("_", " ")) as SkillType;
+  const skillInfo = getSkill(skillName.replace(/_/g, " ")) as SkillType;
 
   const { name, effect, element } = skillInfo;
   return (

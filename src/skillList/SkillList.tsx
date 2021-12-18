@@ -84,7 +84,7 @@ export const Headers = () =>
 export const SkillRowParser = ({ getRowProps, cells, values: { name } }: Row, index: number) => {
   const parseClick = ({ target }) => {
     if (target.tagName.toLowerCase() == "a") return false;
-    router.push(`/skill/${(name as string).replaceAll(" ", "_")}`);
+    router.push(`/skill/${(name as string).replace(/\s/g, "_")}`);
   };
   return (
     <div {...getRowProps()} key={index} onClick={parseClick}>
