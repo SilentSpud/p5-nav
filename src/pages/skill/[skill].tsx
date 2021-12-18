@@ -28,14 +28,15 @@ const SkillInfo = ({ skill }: { skill?: string }) => {
   const skillInfo = getSkill(skillName.replace(/_/g, " ")) as SkillType;
 
   const { name, effect, element } = skillInfo;
+  const descText = `Effect: ${effect}
+
+  Element: ${toCamel(element)}`;
   return (
     <>
       <Head>
         <title>{name} - rNav</title>
         <meta property="og:title" content={`${name} - Skill - royal Navigator`} />
-        <meta property="og:description" content={effect} />
-        <meta property="twitter:label1" content="Element" />
-        <meta property="twitter:data1" content={toCamel(element)} />
+        <meta property="og:description" content={descText} />
       </Head>
       <Skill skill={skillInfo}>
         <h1>

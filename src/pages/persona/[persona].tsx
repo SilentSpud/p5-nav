@@ -29,16 +29,17 @@ const PersonaInfo = ({ persona }: { persona?: string }) => {
   if (!personaName) return <Error404 />;
   const personaInfo = getPersona(personaName.replace(/_/g, " ")) as PersonaType;
 
-  const { name, shadow, level } = personaInfo;
+  const { name, shadow, level, arcana } = personaInfo;
+  const descText = `
+  Level:  ${level.toString()}
+  Arcana: ${arcana}
+  Shadow: ${shadow}`;
   return (
     <>
       <Head>
         <title>{name} - rNav</title>
         <meta property="og:title" content={`${name} - Persona - royal Navigator`} />
-        <meta property="twitter:label1" content="Level" />
-        <meta property="twitter:data1" content={level.toString()} />
-        <meta property="twitter:label2" content="Shadow" />
-        <meta property="twitter:data2" content={shadow} />
+        <meta property="og:description" content={descText} />
       </Head>
       <Persona persona={personaInfo}>
         <h1>

@@ -51,13 +51,13 @@ const ConfidantDetails = ({ confidant }: { confidant?: string }) => {
   let confidantName = confidant ? confidant : loadRouter(router.query);
   if (!confidantName) return <Error404 />;
   const confidantInfo = getConfidant(confidantName) as GameConfidant | StoryConfidant;
+  const { character } = confidantInfo;
   return (
     <>
       <Head>
         <title>{toCamel(confidantName)} - rNav</title>
         <meta property="og:title" content={`${toCamel(confidantName)} - royal Navigator`} />
-        <meta property="twitter:label1" content="Character" />
-        <meta property="twitter:data1" content={confidantInfo.character} />
+        <meta property="og:description" content={`Character: ${character}`} />
       </Head>
       <Confidant confidant={confidantName}>
         <ConfidantInfo.intro />
