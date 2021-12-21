@@ -3,9 +3,11 @@ import { Table } from "react-bootstrap";
 import Image from "next/image";
 import Link from "next/link";
 import { Elements, usePersona, ArcanaPopup, Resistance } from ".";
+import { DamageElements, SpecialElements } from "../data";
 
 export const BasicInfo = () => {
   const { arcana, level, trait, inherits, item, alarmItem } = usePersona();
+  const element = inherits ? DamageElements[inherits] ?? SpecialElements[inherits] : undefined;
   return (
     <Table>
       <tbody>
@@ -29,7 +31,7 @@ export const BasicInfo = () => {
           <tr>
             <td>Inherits:</td>
             <td>
-              <Image src={Elements[inherits]} alt={inherits} title={inherits} draggable={false} />
+              <Image src={Elements[inherits]} alt={element} title={element} draggable={false} />
             </td>
           </tr>
         )}
