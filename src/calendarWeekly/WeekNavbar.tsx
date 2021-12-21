@@ -1,15 +1,13 @@
 import React from "react";
-import ordinal from "ordinal";
 import { addWeeks, subWeeks, getWeekOfMonth, getMonth, getYear, getDate } from "date-fns";
 import { Nav } from "react-bootstrap";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useWeek } from ".";
+import { useWeek, padNum } from ".";
 
-const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 type AClickEvent = React.MouseEvent<HTMLAnchorElement, MouseEvent>;
 
-const isStart = (week: Date) => getYear(week) === 2016 && (getMonth(week) < 2 || (getMonth(week) === 2 && getWeekOfMonth(week) === 0));
-const isEnd = (week: Date) => getYear(week) === 2017 && (getMonth(week) > 1 || (getMonth(week) === 1 && getWeekOfMonth(week) === 5));
+const isStart = (week: Date) => getYear(week) === 2016 && (getMonth(week) < 3 || (getMonth(week) === 3 && getWeekOfMonth(week) === 2));
+const isEnd = (week: Date) => getYear(week) === 2017 && (getMonth(week) > 2 || (getMonth(week) === 2 && getWeekOfMonth(week) === 5));
 
 export const WeekNavbar = () => {
   const { week, setWeek } = useWeek();
@@ -29,7 +27,7 @@ export const WeekNavbar = () => {
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="current" disabled>
-          {`Week of ${monthNames[week.getMonth()]} ${ordinal(getDate(week))}`}
+          {`Week of ${getMonth(week) + 1}/${padNum(getDate(week))}`}
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>

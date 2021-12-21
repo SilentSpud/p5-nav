@@ -4,7 +4,7 @@ import { Week } from "../../../calendarWeekly";
 import Head from "next/head";
 
 export const WeekCalendar = () => {
-  const [week, setWeek] = React.useState("2016-04-01T06:00:00.000Z"),
+  const [week, setWeek] = React.useState("2016-04-09T06:00:00.000Z"),
     weekHandler = (date: Date) => setWeek(JSON.stringify(date).replace(/"/g, "")),
     classQs = LoadQuestions(),
     weekDate = new Date(week as string);

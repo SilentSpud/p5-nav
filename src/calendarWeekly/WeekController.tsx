@@ -8,6 +8,7 @@ type WeekCtxProps = {
   setWeek: (date: Date) => void;
   selected?: Date;
   setSelected: (date: Date) => void;
+  events: any[];
 };
 
 const WeekCtx = React.createContext<WeekCtxProps>({} as WeekCtxProps);
@@ -22,6 +23,7 @@ type WeekProps = {
 
 export const WeekController = ({ children, week, setWeek, events }: WeekProps) => {
   let [selected, setSelected] = useState<Date>();
+  console.log(startOfWeek(week));
   const weekData = {
     week: startOfWeek(week),
     setWeek,
