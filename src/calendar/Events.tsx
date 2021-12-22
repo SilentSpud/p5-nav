@@ -1,4 +1,5 @@
 import React, { ReactNode, useContext } from "react";
+import { getDate, getMonth, getYear } from "date-fns";
 import { EventList, Question, EventDate } from "../data";
 
 type children = ReactNode | ReactNode[];
@@ -11,6 +12,9 @@ type EventsProps = {
 const EventCtx = React.createContext<EventsProps>({} as EventsProps);
 export const useEvents = () => useContext(EventCtx);
 
+const eventFilter = (event: Date, date: Date): boolean =>
+  getMonth(event) == getMonth(date) && getDate(event) == getDate(date) && getYear(event) == getYear(date);
+
 export const Events = ({ children, events }: { children: children; events: EventList<Question> }) => {
   const eventList: EventList<Question> = [];
   for (const event of events) {
@@ -21,10 +25,8 @@ export const Events = ({ children, events }: { children: children; events: Event
     });
   }
 
-  const getEventsByDate = (date: Date): EventDate<Question> => {
-    const event = eventList.find(({ date: evtDate }) => evtDate == date);
-    return event ?? { date, events: [] };
-  };
+  const getEventsByDate = (date: Date): EventDate<Question> =>
+    eventList.find(({ date: evtDate }) => eventFilter(evtDate as Date, date)) ?? { date, events: [] };
 
   return (
     <EventCtx.Provider

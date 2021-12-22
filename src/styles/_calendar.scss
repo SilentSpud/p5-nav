@@ -1,39 +1,70 @@
 @import "globals";
+
 $calendar-size: calc($content-size - 46px);
 $head-size: calc($calendar-size * 0.05);
 $head-height: calc($head-size - 2px);
-$head-font-size: calc($head-height - 24px);
-$row-size: calc($calendar-size * 0.19);
+$body-size: calc($calendar-size - $head-size);
+$week-size: calc($body-size * 0.33);
+$break-size: calc($body-size * 0.005);
+$day-size: calc($body-size * 0.67);
 
-.calendar {
+.weekly {
   height: $calendar-size;
+  background-color: $table-head-bg;
 
-  .header {
+  .row {
+    background-color: $bg-color;
+  }
+
+  header {
     user-select: none;
+
     &,
     .col {
       height: $head-size;
     }
+
     .col {
       line-height: $head-height;
-      font-size: $head-font-size;
+      font-size: 20px;
       text-align: center;
       vertical-align: middle;
       margin: 0;
       padding: 0;
       overflow: hidden;
     }
+
     .nav-link {
       font-size: 14pt;
+
       &.active {
         font-weight: bold;
       }
     }
+
+    .left {
+      float: left;
+      padding-left: 10px;
+    }
+    .right {
+      float: right;
+      padding-right: 15px;
+    }
   }
+
   .week,
   .week .col {
-    height: $row-size;
+    height: $week-size;
   }
+
+  .day {
+    margin-top: $break-size;
+    &,
+    .day .col {
+      height: $day-size;
+    }
+  }
+
   .col {
     border: 1px solid #333;
     overflow: scroll;
@@ -42,11 +73,13 @@ $row-size: calc($calendar-size * 0.19);
       width: 0 !important;
     }
   }
+
   .num {
     user-select: none;
     font-family: "Fira CodeVariable", "Fira Code", monospace;
     margin-bottom: 10px;
   }
+
   .vstack {
     div {
       padding-left: 5px;
