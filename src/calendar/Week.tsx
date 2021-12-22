@@ -4,7 +4,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import { WeekNavbar, WeekController, useWeek, Events, useEvents } from ".";
 
 const theWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-export const padNum = (num: string | number) => ("00" + num.toString()).slice(-2);
 
 const WeekHeader = () => {
   const { week } = useWeek();
@@ -37,7 +36,7 @@ const WeekBody = () => {
         return (
           <Col key={index}>
             <div className="h-25 morning"></div>
-            <div className="h-25 afternoon">{dayEvents.events.length > 1 && <div className="bg-primary">Classroom Questions</div>}</div>
+            <div className="h-25 afternoon">{dayEvents.events.length > 0 && <div className="bg-primary">Classroom Questions</div>}</div>
             <div className="h-25 evening"></div>
             <div className="h-25 night"></div>
           </Col>

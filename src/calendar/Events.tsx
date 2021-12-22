@@ -44,6 +44,6 @@ export default Events;
 export const parseDate = (dateString: string) => {
   const [month, day] = dateString.split("/").map((elem) => parseInt(elem));
   const year = month < 4 ? 2017 : 2016;
-  const date = new Date(year, month, day);
+  const date = new Date(year, month - 1, day);
   return date;
 };

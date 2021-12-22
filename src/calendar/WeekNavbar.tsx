@@ -2,7 +2,7 @@ import React from "react";
 import { addWeeks, subWeeks, getWeekOfMonth, getMonth, getYear, getDate } from "date-fns";
 import { Nav } from "react-bootstrap";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useWeek, padNum } from ".";
+import { useWeek } from ".";
 
 type AClickEvent = React.MouseEvent<HTMLAnchorElement, MouseEvent>;
 
@@ -27,7 +27,7 @@ export const WeekNavbar = () => {
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="current" disabled>
-          {`Week of ${getMonth(week) + 1}/${padNum(getDate(week))}`}
+          {`Week of ${getMonth(week) + 1}/${getDate(week)}`}
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
