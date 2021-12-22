@@ -5,7 +5,7 @@ type children = ReactNode | ReactNode[];
 
 type EventsProps = {
   events: EventList<Question>;
-  getEventsByDate: (date: Date) => EventDate<Question> | undefined;
+  getEventsByDate: (date: Date) => EventDate<Question>;
 };
 
 const EventCtx = React.createContext<EventsProps>({} as EventsProps);
