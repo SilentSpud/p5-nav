@@ -1,7 +1,7 @@
 import questions from "../../data/questions.json";
 export type EventList<EventProps extends EventDetails> = EventDate<EventProps>[];
 export type EventDate<EventProps> = {
-  date: string;
+  date: string | Date;
   events: EventProps[];
 };
 export type EventDetails = {
