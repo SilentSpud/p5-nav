@@ -33,14 +33,13 @@ const WeekBody = () => {
       {Array.from(Array(7)).map((_blank, index) => {
         const date = addDays(week, index);
         const dayEvents = getEventsByDate(date);
-        console.log(dayEvents.events.length);
+
         return (
           <Col key={index}>
-            {dayEvents.events.map((event, index) => (
-              <div key={index} className="bg-primary">
-                Classroom Question
-              </div>
-            ))}
+            <div className="h-25 morning"></div>
+            <div className="h-25 afternoon">{dayEvents.events.length > 1 && <div className="bg-primary">Classroom Questions</div>}</div>
+            <div className="h-25 evening"></div>
+            <div className="h-25 night"></div>
           </Col>
         );
       })}
