@@ -33,8 +33,8 @@ const WeekBody = () => {
     <Row className="week">
       {Array.from(Array(7)).map((_blank, index) => {
         const date = addDays(week, index);
-        const events = getEvents(date);
-        const isEvents = !!events.afternoon?.events && events.afternoon.events.length > 0;
+        const { afternoon } = getEvents(date);
+        const isEvents = !!afternoon?.events && afternoon.events.length > 0;
 
         return (
           <Col key={index}>

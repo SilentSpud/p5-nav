@@ -9,5 +9,5 @@ type EventsProps = {
 };
 const EventCtx = React.createContext<EventsProps>({} as EventsProps);
 export const useEvents = () => useContext(EventCtx);
-export const Events = ({ children }: { children: children }) =>  <EventCtx.Provider value={{ getEvents }}>{children}</EventCtx.Provider>;
+export const Events = ({ children }: { children: children }) => <EventCtx.Provider value={{ getEvents }}>{children}</EventCtx.Provider>;
 export default Events;
