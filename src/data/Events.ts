@@ -7,19 +7,26 @@ export type Schedule = {
 export type Day = {
   [category: string]: any;
   questions?: Question[];
-  day?: TimeSlot;
-  night?: TimeSlot;
+  day?: DayInfo;
+  night?: DayInfo;
 };
 export type DateInfo = {
   date: Date;
-  events: any[];
+  afternoon?: TimeSlot;
+  evening?: TimeSlot;
+  night?: TimeSlot;
 };
+type TimeSlot = {
+  events?: any[];
+  time?: FreeTime;
+  weather?: (Weather | SpecialWeather)[];
+}
 export type Question = {
   question: string;
   answer: string;
 };
-export type TimeSlot = {
-  time: number | FreeTime;
+export type DayInfo = {
+  time: number;
   weather: string[] | (Weather | SpecialWeather)[];
 };
 
