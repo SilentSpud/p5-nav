@@ -46,19 +46,29 @@ $day-size: calc($body-size * 0.67);
       float: left;
       padding-left: 10px;
     }
+
     .right {
       float: right;
       padding-right: 15px;
     }
   }
 
-  .week,
-  .week .col {
-    height: $week-size;
+  .week {
+    .col div {
+      height: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &,
+    & .col {
+      height: $week-size;
+    }
   }
 
   .day {
     margin-top: $break-size;
+
     &,
     .day .col {
       height: $day-size;

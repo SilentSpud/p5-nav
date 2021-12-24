@@ -6,7 +6,6 @@ import { Events } from "../../data";
 export const WeekCalendar = () => {
   const [week, setWeek] = React.useState("2016-04-09T06:00:00.000Z"),
     weekHandler = (date: Date) => setWeek(JSON.stringify(date).replace(/"/g, "")),
-    classQs = Events.Questions,
     weekDate = new Date(week as string);
   return (
     <>
@@ -15,7 +14,7 @@ export const WeekCalendar = () => {
         <meta property="og:title" content="Weekly Calendar - royal Navigator" />
         <meta property="og:description" content="Beta weekly calendar" />
       </Head>
-      <Week week={weekDate} setWeek={weekHandler} events={classQs} />
+      <Week week={weekDate} setWeek={weekHandler} />
     </>
   );
 };

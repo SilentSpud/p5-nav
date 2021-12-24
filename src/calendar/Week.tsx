@@ -1,9 +1,11 @@
 import React from "react";
 import { addDays, getMonth, getDate } from "date-fns";
 import { Col, Container, Row } from "react-bootstrap";
-import { WeekNavbar, WeekController, useWeek, Events, useEvents } from ".";
+import { WeekNavbar, WeekController, useWeek } from ".";
+import { Events, useEvents } from "../events";
 
 const theWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const or = (cond: boolean, str: string) => (cond ? str : "");
 
 const WeekHeader = () => {
   const { week } = useWeek();
@@ -26,19 +28,20 @@ const WeekHeader = () => {
 
 const WeekBody = () => {
   const { week } = useWeek();
-  const { getEventsByDate } = useEvents();
+  const { getEvents } = useEvents();
   return (
     <Row className="week">
       {Array.from(Array(7)).map((_blank, index) => {
         const date = addDays(week, index);
-        const dayEvents = getEventsByDate(date);
+        const dayEvents = getEvents(date);
+        const isEvents = dayEvents.events.length > 0;
 
         return (
           <Col key={index}>
-            <div className="h-25 morning"></div>
-            <div className="h-25 afternoon">{dayEvents.events.length > 0 && <div className="bg-primary">Classroom Questions</div>}</div>
-            <div className="h-25 evening"></div>
-            <div className="h-25 night"></div>
+            <div className="morning"></div>
+            <div className={`afternoon ${or(isEvents, "bg-primary")}`}>{or(isEvents, "Classroom Questions")}</div>
+            <div className="evening"></div>
+            <div className="night"></div>
           </Col>
         );
       })}
@@ -54,8 +57,8 @@ const WeekDay = () => {
   );
 };
 
-export const Week = ({ week, setWeek, events }) => (
-  <Events events={events}>
+export const Week = ({ week, setWeek }) => (
+  <Events>
     <WeekController week={week} setWeek={setWeek}>
       <WeekNavbar />
       <Container fluid className="weekly">
