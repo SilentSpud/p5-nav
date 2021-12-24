@@ -20,14 +20,14 @@ type TimeSlot = {
   events?: any[];
   time?: FreeTime;
   weather?: (Weather | SpecialWeather)[];
-}
+};
 export type Question = {
   question: string;
   answer: string;
 };
 export type DayInfo = {
   time: number;
-  weather: string[] | (Weather | SpecialWeather)[];
+  weather: string[];
 };
 
 export enum FreeTime {
