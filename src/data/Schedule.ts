@@ -1,6 +1,6 @@
-export type DayList = {
-  [date: string]: Day;
-}
+import schedule from "../../data/schedule.json";
+export const Schedule: { [date: string]: Day; } = schedule;
+
 export type Day = {
   day: TimeSlot;
   night: TimeSlot;
