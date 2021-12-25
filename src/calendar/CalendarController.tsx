@@ -38,7 +38,7 @@ export const Calendar = ({ month, onMonthChange, children, events }: CalendarPro
 
 // extrapolate dates from strings
 export const parseYear = (dayString: string): Date => {
-  const month = parseInt(dayString.slice(0, 1));
+  const month = parseInt(dayString.slice(0, 1)) - 1;
   const day = parseInt(dayString.slice(2));
   const year = /[1-3]/g.test(month.toString()) ? 2017 : 2016;
   return new Date(year, month, day);
