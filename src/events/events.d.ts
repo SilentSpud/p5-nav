@@ -6,21 +6,29 @@ type TimeSlot<EventTypes = BaseEvent> = {
   weather?: (Weather | SpecialWeather)[];
   events?: EventTypes[];
 };
-
 export type Day = {
   afternoon?: TimeSlot<Question>;
   evening?: TimeSlot<Crossword | Quiz | Hangout>;
   night?: TimeSlot<Crossword | Hangout>;
 };
-export type DayResponse = {
+export interface DayResponse extends Day {
   date: Date;
-  afternoon?: TimeSlot<Question>;
-  evening?: TimeSlot<Crossword | Quiz | Hangout>;
-  night?: TimeSlot<Crossword | Hangout>;
 };
 export type DayInfo = {
   time: number;
   weather: string[];
+};
+
+// Primitives for JSON parsing
+export type DayPrimitive = {
+  afternoon?: TimeSlotPrimitive;
+  evening?: TimeSlotPrimitive;
+  night?: TimeSlotPrimitive;
+};
+export type TimeSlotPrimitive = {
+  time?: number;
+  weather?: string[];
+  events?: any[];
 };
 
 // Event Types
