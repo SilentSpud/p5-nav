@@ -1,7 +1,6 @@
 import React from "react";
 import { Week } from "../../calendar";
 import Head from "next/head";
-import { Events } from "../../data";
 
 export const WeekCalendar = () => {
   const [week, setWeek] = React.useState("2016-04-09T06:00:00.000Z"),
