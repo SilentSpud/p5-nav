@@ -3,13 +3,14 @@ export type Schedule = {
 };
 type TimeSlot<EventTypes = BaseEvent> = {
   time?: FreeTime;
-  weather?: (Weather | SpecialWeather)[];
+  weather?: Weather;
+  special?: SpecialWeather[];
   events?: EventTypes[];
 };
 export type Day = {
-  afternoon?: TimeSlot<Question>;
-  evening?: TimeSlot<Crossword | Quiz | Hangout>;
-  night?: TimeSlot<Crossword | Hangout>;
+  afternoon?: Noon;
+  evening?: Evening;
+  night?: Night;
 };
 export interface DayResponse extends Day {
   date: Date;
@@ -18,6 +19,11 @@ export type DayInfo = {
   time: number;
   weather: string[];
 };
+
+// Shorthands for the different time slots
+export type Noon = TimeSlot<Question>;
+export type Evening = TimeSlot<Crossword | Quiz | Hangout>;
+export type Night = TimeSlot<Crossword | Hangout>;
 
 // Primitives for JSON parsing
 export type DayPrimitive = {
