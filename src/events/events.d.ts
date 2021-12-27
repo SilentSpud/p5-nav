@@ -13,7 +13,7 @@ export type Day = {
 };
 export interface DayResponse extends Day {
   date: Date;
-};
+}
 export type DayInfo = {
   time: number;
   weather: string[];

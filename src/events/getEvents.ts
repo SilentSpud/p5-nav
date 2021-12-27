@@ -1,20 +1,30 @@
-import { DayResponse, Day, Events, FreeTime, dateToString, parseWeather, Schedule } from ".";
+import { FreeTime, dateToString, parseWeather } from ".";
 import calendarData from "../../data/calendar.json";
-const calendar: Schedule = {};
+import type { DayResponse, Day, Schedule, Question, TimeSlot, DayPrimitive, TimeSlotPrimitive, Crossword, Hangout, Quiz } from ".";
 
-for (const dateString in calendarData) {
-  const inDate = calendarData[dateString];
-  const day = {} as Day;
-}
-
-export const getEvents = (date: Date): DayResponse => {
-  const dateString = dateToString(date);
-  const day: DayResponse = { date };
-
-  const calInfo = {} as DayResponse;
-  if (calInfo.afternoon) day.afternoon = calInfo.afternoon;
-  if (calInfo.evening) day.evening = calInfo.evening;
-  if (calInfo.night) day.night = calInfo.night;
-
-  return { date };
+const parseAfternoon = (time?: TimeSlotPrimitive): TimeSlot<Question> | undefined => {
+  if (!time?.events || time.events.length == 0) return;
+  const slot: TimeSlot<Question> = { events: time.events };
+  return slot;
 };
+const parseEvening = (time?: TimeSlotPrimitive): TimeSlot<Crossword | Quiz | Hangout> | undefined => {
+  return;
+};
+const parseNight = (time?: TimeSlotPrimitive): TimeSlot<Crossword | Hangout> | undefined => {
+  return;
+};
+
+const getCalendar = () => {
+  const calendar: Schedule = {};
+  Object.entries<DayPrimitive>(calendarData).forEach(([key, value]) => {
+    calendar[key] = {
+      afternoon: parseAfternoon(value.afternoon),
+      evening: parseEvening(value.evening),
+      night: parseNight(value.night),
+    };
+  });
+  return calendar;
+};
+const calendar = getCalendar();
+
+export const getEvents = (date: Date): DayResponse => ({ date, ...calendar[dateToString(date)] });
