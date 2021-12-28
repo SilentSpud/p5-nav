@@ -9,7 +9,8 @@ export const parseDate = (dateString: string) => {
   const year = month < 4 ? 2017 : 2016;
   return new Date(year, month - 1, day);
 };
-export const dateToString = (date: Date) => `${pad(getMonth(date) + 1)}/${pad(getDate(date))}`;
+export const dateToString = (date: Date, doPad: boolean = true) =>
+  doPad ? `${pad(getMonth(date) + 1)}/${pad(getDate(date))}` : `${getMonth(date) + 1}/${getDate(date)}`;
 
 export const parseWeather = (tag: string): Weather | undefined => {
   switch (tag) {

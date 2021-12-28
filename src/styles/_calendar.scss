@@ -48,11 +48,17 @@ $day-size: calc($body-size * 0.75);
 
   .week-day {
     cursor: pointer;
+    user-select: none;
     overflow-x: hidden;
 
     &:hover {
-      border-color: teal;
-      box-shadow: inset 0 0 0 1px teal;
+      border: 1px dashed #008080;
+    }
+    &.selected {
+      border: 1px solid #dc3545;
+      &:hover {
+        border-style: dashed;
+      }
     }
 
     .vstack {
