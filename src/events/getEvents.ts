@@ -1,17 +1,21 @@
 import { FreeTime, dateToString, parseWeather } from ".";
 import calendarData from "../../data/calendar.json";
-import type { DayResponse, Day, Schedule, Question, TimeSlot, DayPrimitive, TimeSlotPrimitive, Crossword, Hangout, Quiz } from ".";
+import type { DayResponse, Schedule, DayPrimitive, TimeSlotPrimitive, Night, Evening, Noon } from ".";
 
-const parseAfternoon = (time?: TimeSlotPrimitive): TimeSlot<Question> | undefined => {
-  if (!time?.events || time.events.length == 0) return;
-  const slot: TimeSlot<Question> = { events: time.events };
+const parseAfternoon = (time?: TimeSlotPrimitive): Noon | undefined => (time?.events && time?.events?.length > 0) ? { events: time.events } : undefined;
+const parseEvening = (time?: TimeSlotPrimitive): Evening | undefined => {
+  if (!time) return;
+  const weather = (time.weather as string[]).shift() as string;
+  const slot: Evening = {
+    time: time.time as FreeTime,
+    weather: parseWeather(weather),
+  }
   return slot;
 };
-const parseEvening = (time?: TimeSlotPrimitive): TimeSlot<Crossword | Quiz | Hangout> | undefined => {
-  return;
-};
-const parseNight = (time?: TimeSlotPrimitive): TimeSlot<Crossword | Hangout> | undefined => {
-  return;
+const parseNight = (time?: TimeSlotPrimitive): Night | undefined => {
+  if (!time) return;
+  const slot: Night = {};
+  return slot;
 };
 
 const getCalendar = () => {
