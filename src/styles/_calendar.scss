@@ -51,12 +51,12 @@ $day-size: calc($body-size * 0.75);
     user-select: none;
     overflow-x: hidden;
 
-    &:hover {
+    &:hover, &:focus {
       border: 1px dashed #008080;
     }
     &.selected {
       border: 1px solid #dc3545;
-      &:hover {
+      &:hover, &:focus {
         border-style: dashed;
       }
     }
