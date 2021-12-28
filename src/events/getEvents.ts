@@ -1,22 +1,26 @@
-import { FreeTime, dateToString, parseWeather } from ".";
+import { FreeTime, dateToString, parseWeather, parseSpecial, parseEvents } from ".";
 import calendarData from "../../data/calendar.json";
 import type { DayResponse, Schedule, DayPrimitive, TimeSlotPrimitive, Night, Evening, Noon } from ".";
 
-const parseAfternoon = (time?: TimeSlotPrimitive): Noon | undefined => (time?.events && time?.events?.length > 0) ? { events: time.events } : undefined;
-const parseEvening = (time?: TimeSlotPrimitive): Evening | undefined => {
-  if (!time) return;
-  const weather = (time.weather as string[]).shift() as string;
-  const slot: Evening = {
-    time: time.time as FreeTime,
-    weather: parseWeather(weather),
-  }
-  return slot;
-};
-const parseNight = (time?: TimeSlotPrimitive): Night | undefined => {
-  if (!time) return;
-  const slot: Night = {};
-  return slot;
-};
+const parseAfternoon = (time?: TimeSlotPrimitive): Noon | undefined => (time?.events && time.events.length > 0 ? { events: time.events } : undefined);
+const parseEvening = (time?: TimeSlotPrimitive): Evening | undefined =>
+  !time
+    ? undefined
+    : {
+        time: time.time as FreeTime,
+        events: time.events ? parseEvents(time.events) : undefined,
+        weather: parseWeather(time.weather ? (time.weather.shift() as string) : ""),
+        special: time.weather && time.weather.length > 0 ? parseSpecial(time.weather) : undefined,
+      };
+const parseNight = (time?: TimeSlotPrimitive): Night | undefined =>
+  !time
+    ? undefined
+    : {
+        time: time.time as FreeTime,
+        events: time.events ? parseEvents(time.events) : undefined,
+        weather: parseWeather(time.weather ? (time.weather.shift() as string) : ""),
+        special: time.weather && time.weather.length > 0 ? parseSpecial(time.weather) : undefined,
+      };
 
 const getCalendar = () => {
   const calendar: Schedule = {};
