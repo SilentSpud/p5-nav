@@ -4,9 +4,9 @@ $calendar-size: calc($content-size - 46px);
 $head-size: calc($calendar-size * 0.05);
 $head-height: calc($head-size - 2px);
 $body-size: calc($calendar-size - $head-size);
-$week-size: calc($body-size * 0.33);
+$week-size: calc($body-size * 0.25);
 $break-size: calc($body-size * 0.005);
-$day-size: calc($body-size * 0.67);
+$day-size: calc($body-size * 0.75);
 
 .weekly {
   height: $calendar-size;
@@ -54,23 +54,23 @@ $day-size: calc($body-size * 0.67);
   }
 
   .week {
-    .col div {
-      height: 25%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    &,
-    & .col {
-      height: $week-size;
+    height: $week-size;
+
+    .col {
+      overflow: hidden;
+      div {
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 
-  .day {
+  .day-info {
     margin-top: $break-size;
 
-    &,
-    .day .col {
+    & .col {
       height: $day-size;
     }
   }
