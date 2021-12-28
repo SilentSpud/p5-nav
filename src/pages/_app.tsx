@@ -36,7 +36,7 @@ export const Main = ({ Component, pageProps }: AppProps) => (
       <NavLink href="/skill">Skills</NavLink>
       <NavLink href="/calendar">Calendar</NavLink>
       <NavLink href="/confidant">Confidants</NavLink>
-      <NavLink href="/negotiation">Negotiation Questions</NavLink>
+      <NavLink href="/negotiation">Negotiation</NavLink>
     </Nav>
     <div className="content">
       <Component {...pageProps} />
