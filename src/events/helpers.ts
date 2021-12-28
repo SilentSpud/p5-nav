@@ -1,5 +1,6 @@
 import { getDate, getMonth } from "date-fns";
-import { Crossword, Hangout, Quiz, SpecialWeather, TwinsFlags, Weather } from ".";
+import { FreeTime, SpecialWeather, TwinsFlags, Weather } from ".";
+import type { Crossword, Question, Hangout, Quiz, TimeSlot, TimeSlotPrimitive } from ".";
 
 export const pad = (data: string | number) => ("00" + data.toString()).slice(-2);
 
@@ -63,3 +64,15 @@ export const parseEvents = (events) =>
       }
     }
   });
+
+export const parseFreeTime = <EventTypes>(time?: TimeSlotPrimitive): TimeSlot<EventTypes> | undefined => {
+  if (!time) return;
+  return {
+    time: time.time as FreeTime,
+    events: time.events ? parseEvents(time.events) : undefined,
+    weather: parseWeather(time.weather ? (time.weather.shift() as string) : ""),
+    special: time.weather && time.weather.length > 0 ? parseSpecial(time.weather) : undefined,
+  };
+};
+export const parseAfternoon = (time?: TimeSlotPrimitive): TimeSlot<Question> | undefined =>
+  time?.events && time.events.length > 0 ? { events: time.events } : undefined;
