@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const NextConfig = {
   reactStrictMode: true,
-  generateBuildId: () => "build",
+  devIndicators: {
+    buildActivityPosition: 'top-left',
+  },
 };
 module.exports = NextConfig;
