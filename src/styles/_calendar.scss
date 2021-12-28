@@ -1,11 +1,10 @@
 @import "globals";
 
-$calendar-size: calc($content-size - 46px);
+$calendar-size: calc($content-size - 42px);
 $head-size: calc($calendar-size * 0.05);
 $head-height: calc($head-size - 2px);
 $body-size: calc($calendar-size - $head-size);
 $week-size: calc($body-size * 0.25);
-$break-size: calc($body-size * 0.005);
 $day-size: calc($body-size * 0.75);
 
 .weekly {
@@ -41,37 +40,65 @@ $day-size: calc($body-size * 0.75);
         font-weight: bold;
       }
     }
-
-    .left {
-      float: left;
-      padding-left: 10px;
-    }
-
-    .right {
-      float: right;
-      padding-right: 15px;
-    }
   }
-
   .week {
     height: $week-size;
+    overflow-x: hidden;
+  }
 
-    .col {
-      overflow: hidden;
-      div {
-        height: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .week-day {
+    cursor: pointer;
+    overflow-x: hidden;
+
+    &:hover {
+      border-color: teal;
+      box-shadow: inset 0 0 0 1px teal;
+    }
+
+    .vstack {
+      height: 100%;
+    }
+
+    .day {
+      height: calc(50% - 17.5px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .weekday-title {
+      height: 35px;
+      display: block;
+      font-size: 20px;
+      padding: 0;
+      overflow-x: hidden;
+      border-bottom: 1px solid #333;
+
+      .left {
+        float: left;
+        padding-left: 10px;
+      }
+
+      .right {
+        float: right;
+        padding-right: 10px;
       }
     }
   }
 
-  .day-info {
-    margin-top: $break-size;
+  .day-title .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 0;
+    overflow-x: hidden;
+  }
 
+  .day-info {
     & .col {
       height: $day-size;
+      overflow: hidden;
     }
   }
 
@@ -88,13 +115,5 @@ $day-size: calc($body-size * 0.75);
     user-select: none;
     font-family: "Fira CodeVariable", "Fira Code", monospace;
     margin-bottom: 10px;
-  }
-
-  .vstack {
-    div {
-      padding-left: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
   }
 }
