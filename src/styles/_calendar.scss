@@ -1,6 +1,7 @@
 @import "globals";
+@import "cyborg";
 
-$calendar-size: calc($content-size - 42px);
+$calendar-size: calc($content-size - 35px);
 $head-size: calc($calendar-size * 0.05);
 $head-height: calc($head-size - 2px);
 $body-size: calc($calendar-size - $head-size);
@@ -9,10 +10,10 @@ $day-size: calc($body-size * 0.75);
 
 .weekly {
   height: $calendar-size;
-  background-color: $table-head-bg;
+  background-color: $body-bg;
 
   .row {
-    background-color: $bg-color;
+    background-color: $body-bg;
   }
 
   header {
@@ -51,12 +52,14 @@ $day-size: calc($body-size * 0.75);
     user-select: none;
     overflow-x: hidden;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border: 1px dashed #008080;
     }
     &.selected {
       border: 1px solid #dc3545;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         border-style: dashed;
       }
     }
@@ -70,6 +73,13 @@ $day-size: calc($body-size * 0.75);
       display: flex;
       justify-content: center;
       align-items: center;
+      color: $gray-100;
+      &.noon {
+        background-color: $dark-primary;
+      }
+      &.night {
+        background-color: $cyan;
+      }
     }
 
     .weekday-title {
@@ -78,7 +88,7 @@ $day-size: calc($body-size * 0.75);
       font-size: 20px;
       padding: 0;
       overflow-x: hidden;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid $table-border-color;
 
       .left {
         float: left;
@@ -92,7 +102,7 @@ $day-size: calc($body-size * 0.75);
     }
   }
 
-  .day-title .col {
+  .day-title .title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,14 +112,22 @@ $day-size: calc($body-size * 0.75);
   }
 
   .day-info {
-    & .col {
+    color: $gray-100;
+    .slot {
       height: $day-size;
       overflow: hidden;
+    }
+    .slot-title {
+      font-size: 20px;
+      border-bottom: 1px solid $table-border-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
   .col {
-    border: 1px solid #333;
+    border: 1px solid $table-border-color;
     overflow: scroll;
 
     &::-webkit-scrollbar {

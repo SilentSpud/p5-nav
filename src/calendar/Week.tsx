@@ -6,9 +6,7 @@ import { dateToString, Events, useEvents } from "../events";
 
 const theWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-const Slot = ({ activeClass, className, disabled, children }) => (
-  <div className={`${className}${!disabled ? ` ${activeClass}` : ""}`}>{!disabled ? children : null}</div>
-);
+const Slot = ({ className, disabled, children }) => <div className={`${className}${disabled ? " invisible" : ""}`}>{!disabled ? children : null}</div>;
 
 const WeekBody = () => {
   const { week, setSelected, selected } = useWeek();
@@ -21,16 +19,16 @@ const WeekBody = () => {
           const isSelected = selected ? isSameDay(newDate, selected) : false;
           const { afternoon, evening, night } = getEvents(newDate);
           return (
-            <Col key={index} onClick={() => setSelected(newDate)} className={`week-day ${isSelected ? "selected" : ""}`}>
+            <Col key={index} onClick={() => setSelected(newDate)} className={`week-day${isSelected ? " selected" : ""}`}>
               <Stack gap={0}>
                 <div className="weekday-title">
                   <span className="left">{theWeek[index]}</span>
                   <span className="right">{dateToString(newDate, false)}</span>
                 </div>
-                <Slot className="day noon" activeClass="bg-primary" disabled={!afternoon?.events?.length}>
+                <Slot className="day noon" disabled={!afternoon?.events?.length}>
                   Daytime Events
                 </Slot>
-                <Slot className="day night" activeClass="bg-info" disabled={!evening?.events?.length && !night?.events?.length}>
+                <Slot className="day night" disabled={!evening?.events?.length && !night?.events?.length}>
                   Evening Events
                 </Slot>
               </Stack>

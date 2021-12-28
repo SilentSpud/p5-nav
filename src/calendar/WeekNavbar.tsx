@@ -19,7 +19,7 @@ export const WeekNavbar = () => {
   };
 
   return (
-    <Nav variant="tabs" className="bg-dark" navbar={true} justify={true} defaultActiveKey="current">
+    <Nav variant="tabs" navbar={true} justify={true} defaultActiveKey="current">
       <Nav.Item>
         <Nav.Link className="prev" disabled={isStart(week)} onClick={parseNavClick}>
           <FaAngleLeft />

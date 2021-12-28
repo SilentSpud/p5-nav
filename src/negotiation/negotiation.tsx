@@ -30,7 +30,7 @@ const Answer = (props: { value: Reaction | Reactions }) => {
 
 const QuestionTable = ({ question, answers }: { question: string; answers: NegotiationAnswer[] }) => {
   return (
-    <Table bordered variant="dark">
+    <Table bordered>
       <thead>
         <tr>
           <th colSpan={5} className="question">

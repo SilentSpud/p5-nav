@@ -31,7 +31,7 @@ export const Main = ({ Component, pageProps }: AppProps) => (
       <meta name="theme-color" content="#DC3545" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <Nav variant="tabs" className="bg-dark" navbar justify as="header">
+    <Nav variant="tabs" navbar justify as="header">
       <NavLink href="/persona">Personas</NavLink>
       <NavLink href="/skill">Skills</NavLink>
       <NavLink href="/calendar">Calendar</NavLink>

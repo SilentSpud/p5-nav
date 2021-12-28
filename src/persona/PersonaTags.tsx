@@ -34,15 +34,15 @@ export const Resistance = ({ value, element, full }: { value: string; element: s
   const inf = { key: element, className: `${full ? "" : "res-icon "}` } as ResistanceInfo;
   switch (value as Weaknesses) {
     case Weaknesses.resist:
-      inf.className += `text-warning `;
+      inf.className += `text-warning`;
       inf.children = full ? "Resist" : <GiShieldBounces title="Resist" />;
       break;
     case Weaknesses.repel:
-      inf.className += `text-danger`;
+      inf.className += `text-success`;
       inf.children = full ? "Repel" : <GiShieldReflect title="Repel" />;
       break;
     case Weaknesses.weak:
-      inf.className += `text-success`;
+      inf.className += `text-danger`;
       inf.children = full ? "Weak" : <FaExclamationTriangle title="Weak" />;
       break;
     case Weaknesses.absorb:
@@ -50,7 +50,7 @@ export const Resistance = ({ value, element, full }: { value: string; element: s
       inf.children = full ? "Absorb" : <GiArrowsShield title="Absorb" />;
       break;
     case Weaknesses.nullify:
-      inf.className += `text-light`;
+      inf.className += `text-dark`;
       inf.children = full ? "Nullify" : <FiSlash title="Nullify" />;
       break;
     case Weaknesses.none:

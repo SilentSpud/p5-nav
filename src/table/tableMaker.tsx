@@ -19,7 +19,7 @@ export const PrepareTable = ({ columns, data, rowParser, className, sortId }: Pr
   const { getTableProps, getTableBodyProps, page, prepareRow } = instance;
   return (
     <TableCtx.Provider value={instance}>
-      <section {...getTableProps({ className: `table table-dark ${className ?? ""}` })}>
+      <section {...getTableProps({ className: `table ${className ?? ""}` })}>
         <Header />
         <main {...getTableBodyProps()}>
           {page.map((row, index) => {

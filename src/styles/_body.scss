@@ -1,5 +1,6 @@
 @import "globals";
-@import "darkly";
+@import "cyborg";
+
 .content {
   height: calc(100vh - 42px);
   margin: 0;
@@ -41,26 +42,8 @@
   user-select: none;
 }
 
-.search {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 10px;
-  background-color: #222;
-  color: $body-color;
-  border: none;
-
-  &:hover {
-    background-color: $table-head-bg;
-  }
-
-  &:focus {
-    outline: none;
-    background-color: $table-bg;
-  }
-}
-
 .mono {
-  font-family: $monospace;
+  font-family: $font-family-monospace;
 }
 
 .bold {

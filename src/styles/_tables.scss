@@ -1,8 +1,9 @@
 @import "globals";
+@import "cyborg";
 
 // ----------- TABLES ----------- //
 table {
-  color: $table-text;
+  color: $body-color;
   font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
   margin-left: 0;
   margin-right: 0;
@@ -11,12 +12,12 @@ table {
   th {
     font-weight: bold;
     vertical-align: center;
-    color: $table-heading;
-    background-color: $table-head-bg;
-    border-bottom: 1px solid $table-border;
+    color: $body-color;
+    background-color: $table-accent-bg;
+    border-bottom: 1px solid $table-border-color;
 
     &:not(:last-child) {
-      border-right: 1px solid $table-border;
+      border-right: 1px solid $table-border-color;
     }
 
     &.searchbox {
@@ -30,7 +31,7 @@ table {
   }
 
   td {
-    border-bottom: 1px solid $table-border;
+    border-bottom: 1px solid $table-border-color;
     img {
       user-select: none;
     }
@@ -38,8 +39,8 @@ table {
 }
 
 section[role="table"] {
-  color: $table-text;
-  font: 14px/1.5 $sans-serif;
+  color: $body-color;
+  font: 14px/1.5 $font-family-sans-serif;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -51,7 +52,7 @@ section[role="table"] {
   }
 
   *[role="row"]:hover div[role="cell"] {
-    background-color: $form-border;
+    background-color: $table-hover-bg;
     cursor: pointer;
   }
 
@@ -94,7 +95,7 @@ section[role="table"] {
     text-align: center;
 
     div[role="cell"] .stats {
-      font-family: $monospace;
+      font-family: $font-family-monospace;
     }
   }
 
@@ -105,12 +106,12 @@ section[role="table"] {
   div[role="columnheader"] {
     font-weight: bold;
     vertical-align: center;
-    color: $table-heading;
-    background-color: $table-head-bg;
-    border-bottom: 1px solid $table-border;
+    color: $body-color;
+    background-color: $table-accent-bg;
+    border-bottom: 1px solid $table-border-color;
 
     &:not(:last-child) {
-      border-right: 1px solid $table-border;
+      border-right: 1px solid $table-border-color;
     }
 
     &.searchbox {
@@ -133,11 +134,11 @@ section[role="table"] {
   }
 
   div[role="cell"] {
-    border-bottom: 1px solid $table-border;
+    border-bottom: 1px solid $table-border-color;
   }
 
   *[role="row"]:hover div[role="cell"] {
-    background-color: $form-border;
+    background-color: $table-hover-bg;
     cursor: pointer;
   }
 
@@ -158,17 +159,16 @@ section[role="table"] {
   }
   input {
     padding-left: 10px;
-    background-color: #222;
-    color: #fff;
+    background-color: $table-accent-bg;
+    color: $body-color;
     border: none;
 
     &:hover {
-      background-color: $table-head-bg;
+      background-color: $table-hover-bg;
     }
 
     &:focus {
       outline: none;
-      background-color: $table-bg;
     }
     &::-webkit-search-cancel-button {
       display: none;
