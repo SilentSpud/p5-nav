@@ -1,12 +1,7 @@
 {
   "files.associations": {
-    ".babelrc": "jsonc",
     ".eslintrc": "jsonc",
     ".prettierrc": "jsonc",
-
-    ".stylelintrc": "json",
-
-    ".dockerignore": "ignore",
     ".eslintignore": "ignore"
   },
 
@@ -21,7 +16,8 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    ".eslintcache": true
+    ".eslintcache": true,
+    "data/*.json": true,
   },
 
   "search.exclude": {
