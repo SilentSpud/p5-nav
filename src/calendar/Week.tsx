@@ -26,22 +26,25 @@ const WeekHeader = () => {
   );
 };
 
+const Slot = ({ activeClass, className, disabled, children }) => (
+  <div className={`${className}${!disabled ? ` ${activeClass}` : ""}`}>{!disabled ? children : null}</div>
+);
+
 const WeekBody = () => {
   const { week } = useWeek();
   const { getEvents } = useEvents();
   return (
     <Row className="week">
       {Array.from(Array(7)).map((_blank, index) => {
-        const date = addDays(week, index);
-        const { afternoon } = getEvents(date);
-        const isEvents = !!afternoon?.events && afternoon.events.length > 0;
-
+        const { afternoon, evening, night } = getEvents(addDays(week, index));
         return (
-          <Col key={index}>
-            <div className="morning"></div>
-            <div className={`afternoon ${or(isEvents, "bg-primary")}`}>{or(isEvents, "Classroom Questions")}</div>
-            <div className="evening"></div>
-            <div className="night"></div>
+          <Col key={index} style={{ padding: 0 }}>
+            <Slot className="day" activeClass="bg-primary" disabled={!afternoon?.events?.length}>
+              Daytime Events
+            </Slot>
+            <Slot className="night" activeClass="bg-info" disabled={!evening?.events?.length && !night?.events?.length}>
+              Evening Events
+            </Slot>
           </Col>
         );
       })}
@@ -51,7 +54,7 @@ const WeekBody = () => {
 
 const WeekDay = () => {
   return (
-    <Row className="day">
+    <Row className="day-info">
       <Col>Nothing here yet</Col>
     </Row>
   );
