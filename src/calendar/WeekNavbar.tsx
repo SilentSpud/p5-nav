@@ -22,7 +22,7 @@ export const WeekNavbar = () => {
     <Nav variant="tabs" className="bg-dark" navbar={true} justify={true} defaultActiveKey="current">
       <Nav.Item>
         <Nav.Link className="prev" disabled={isStart(week)} onClick={parseNavClick}>
-          <FaAngleLeft /> Previous
+          <FaAngleLeft />Previous
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
@@ -32,7 +32,7 @@ export const WeekNavbar = () => {
       </Nav.Item>
       <Nav.Item>
         <Nav.Link className="next" disabled={isEnd(week)} onClick={parseNavClick}>
-          Next <FaAngleRight />
+          Next<FaAngleRight />
         </Nav.Link>
       </Nav.Item>
     </Nav>
