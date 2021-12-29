@@ -14,8 +14,6 @@ export type Day = {
 };
 export interface DayResponse extends Day {
   date: Date;
-  evening: TimeSlot<Crossword | Quiz | Hangout>;
-  night: TimeSlot<Crossword | Hangout>;
 }
 export type DayInfo = {
   time: number;

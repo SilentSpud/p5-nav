@@ -41,7 +41,7 @@ const Night = () => {
     return (
       <Stack>
         <div className="slot-title">Night</div>
-        {!night.events ? <Empty /> : ""}
+        {!night || !night.events ? <Empty /> : ""}
       </Stack>
     );
   }, [night]);
