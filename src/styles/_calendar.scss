@@ -125,6 +125,15 @@ $day-size: calc($body-size * 0.75);
     .slot {
       height: $day-size;
       overflow: hidden;
+
+      .card {
+        margin: 10px 10px 0;
+        box-sizing: content-box;
+
+        button.accordion-button:focus {
+          box-shadow: none;
+        }
+      }
     }
 
     .slot-title {

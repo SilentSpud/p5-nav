@@ -45,12 +45,13 @@ $min-contrast-ratio: 2.25 !default;
 
 $body-bg: #060606 !default;
 $body-color: $gray-100 !default;
-$accordion-button-active-bg: $purple;
-$accordion-button-active-color: $body-color;
+$accordion-button-active-bg: $purple !default;
+$accordion-button-active-color: $body-color !default;
+$accordion-button-focus-box-shadow: none !default;
 
 // Fonts
 
-$font-family-monospace: "Fira CodeVariable", "Fira Code", monospace;
+$font-family-monospace: "Fira CodeVariable", "Fira Code", monospace !default;
 $h1-font-size: 4rem !default;
 $h2-font-size: 3rem !default;
 $h3-font-size: 2.5rem !default;
