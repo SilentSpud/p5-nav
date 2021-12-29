@@ -1,7 +1,7 @@
 export type Schedule = {
   [date: string]: Day;
 };
-type TimeSlot<EventTypes = BaseEvent> = {
+type TimeSlot<EventTypes> = {
   time?: FreeTime;
   weather?: Weather;
   special?: SpecialWeather[];
@@ -14,6 +14,8 @@ export type Day = {
 };
 export interface DayResponse extends Day {
   date: Date;
+  evening: TimeSlot<Crossword | Quiz | Hangout>;
+  night: TimeSlot<Crossword | Hangout>;
 }
 export type DayInfo = {
   time: number;

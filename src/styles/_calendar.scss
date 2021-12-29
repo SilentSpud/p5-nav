@@ -1,7 +1,7 @@
 @import "globals";
 @import "cyborg";
 
-$calendar-size: calc($content-size - 35px);
+$calendar-size: calc($content-size - 43px);
 $head-size: calc($calendar-size * 0.05);
 $head-height: calc($head-size - 2px);
 $body-size: calc($calendar-size - $head-size);
@@ -11,6 +11,7 @@ $day-size: calc($body-size * 0.75);
 .weekly {
   height: $calendar-size;
   background-color: $body-bg;
+  overflow: hidden;
 
   .row {
     background-color: $body-bg;
@@ -42,25 +43,30 @@ $day-size: calc($body-size * 0.75);
       }
     }
   }
+
   .week {
     height: $week-size;
     overflow-x: hidden;
   }
 
   .week-day {
-    cursor: pointer;
     user-select: none;
     overflow-x: hidden;
+    &:not(.empty) {
+      cursor: pointer;
 
-    &:hover,
-    &:focus {
-      border: 1px dashed #008080;
-    }
-    &.selected {
-      border: 1px solid #dc3545;
       &:hover,
       &:focus {
-        border-style: dashed;
+        border: 1px dashed #008080;
+      }
+
+      &.selected {
+        border: 1px solid #dc3545;
+
+        &:hover,
+        &:focus {
+          border-style: dashed;
+        }
       }
     }
 
@@ -74,9 +80,11 @@ $day-size: calc($body-size * 0.75);
       justify-content: center;
       align-items: center;
       color: $gray-100;
+
       &.noon {
-        background-color: $dark-primary;
+        background-color: $indigo;
       }
+
       &.night {
         background-color: $cyan;
       }
@@ -113,16 +121,22 @@ $day-size: calc($body-size * 0.75);
 
   .day-info {
     color: $gray-100;
+
     .slot {
       height: $day-size;
       overflow: hidden;
     }
+
     .slot-title {
       font-size: 20px;
       border-bottom: 1px solid $table-border-color;
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    .card-question {
+      font-weight: normal;
+      color: $gray-400;
     }
   }
 

@@ -18,7 +18,17 @@ const WeekBody = () => {
           const newDate = addDays(week, index);
           const isSelected = selected ? isSameDay(newDate, selected) : false;
           const { afternoon, evening, night } = getEvents(newDate);
-          return (
+          const disabled = !afternoon && !evening && !night;
+          return disabled ? (
+            <Col key={index} className="week-day empty">
+              <Stack gap={0}>
+                <div className="weekday-title">
+                  <span className="left">{theWeek[index]}</span>
+                  <span className="right">{dateToString(newDate, false)}</span>
+                </div>
+              </Stack>
+            </Col>
+          ) : (
             <Col key={index} onClick={() => setSelected(newDate)} className={`week-day${isSelected ? " selected" : ""}`}>
               <Stack gap={0}>
                 <div className="weekday-title">

@@ -3,6 +3,7 @@ import { FreeTime, SpecialWeather, TwinsFlags, Weather } from ".";
 import type { Crossword, Question, Hangout, Quiz, TimeSlot, TimeSlotPrimitive } from ".";
 
 export const pad = (data: string | number) => ("00" + data.toString()).slice(-2);
+export const cleanObject = (data) => (Object.entries(data).forEach(([key, value]) => value == undefined && delete data[key]), data);
 
 export const parseDate = (dateString: string) => {
   const [month, day] = dateString.split("/").map((elem) => parseInt(elem));
@@ -68,12 +69,12 @@ export const parseEvents = (events) =>
 
 export const parseFreeTime = <EventTypes>(time?: TimeSlotPrimitive): TimeSlot<EventTypes> | undefined => {
   if (!time) return;
-  return {
+  return cleanObject({
     time: time.time as FreeTime,
     events: time.events ? parseEvents(time.events) : undefined,
     weather: parseWeather(time.weather ? (time.weather.shift() as string) : ""),
     special: time.weather && time.weather.length > 0 ? parseSpecial(time.weather) : undefined,
-  };
+  });
 };
 export const parseAfternoon = (time?: TimeSlotPrimitive): TimeSlot<Question> | undefined =>
   time?.events && time.events.length > 0 ? { events: time.events } : undefined;
