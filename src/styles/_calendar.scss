@@ -17,33 +17,6 @@ $day-size: calc($body-size * 0.75);
     background-color: $body-bg;
   }
 
-  header {
-    user-select: none;
-
-    &,
-    .col {
-      height: $head-size;
-    }
-
-    .col {
-      line-height: $head-height;
-      font-size: 20px;
-      text-align: center;
-      vertical-align: middle;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .nav-link {
-      font-size: 14pt;
-
-      &.active {
-        font-weight: bold;
-      }
-    }
-  }
-
   .week {
     height: $week-size;
     overflow-x: hidden;
@@ -52,6 +25,8 @@ $day-size: calc($body-size * 0.75);
   .week-day {
     user-select: none;
     overflow-x: hidden;
+    border: 1px solid $table-border-color;
+
     &:not(.empty) {
       cursor: pointer;
 
@@ -146,15 +121,6 @@ $day-size: calc($body-size * 0.75);
     .card-question {
       font-weight: normal;
       color: $gray-400;
-    }
-  }
-
-  .col {
-    border: 1px solid $table-border-color;
-    overflow: scroll;
-
-    &::-webkit-scrollbar {
-      width: 0 !important;
     }
   }
 
