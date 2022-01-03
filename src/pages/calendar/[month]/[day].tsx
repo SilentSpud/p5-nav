@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useCookies } from "react-cookie";
@@ -10,10 +10,14 @@ export const getServerSideProps: GetServerSideProps = async ({ req: { cookies } 
   return { props: { date: week } };
 };
 
-export const WeekCalendar = ({ date }: { date?: string }) => {
+export const WeekCalendar = ({ date: inDate }: { date?: string }) => {
   const [cookies, setCookie] = useCookies(["week"]);
-  const week = date ?? cookies.week ?? "2016-04-09T06:00:00.000Z";
-  const weekHandler = (date: Date) => setCookie("week", JSON.stringify(date).replace(/"/g, ""));
+  const week = inDate ?? cookies.week ?? "2016-04-09T06:00:00.000Z";
+  const [date, setDate] = useState<Date>(new Date(week));
+  const weekHandler = (date: Date) => {
+    setDate(date);
+    setCookie("week", JSON.stringify(date).replace(/"/g, ""));
+  };
 
   const router = useRouter();
   let { month, day } = router.query;
@@ -28,7 +32,7 @@ export const WeekCalendar = ({ date }: { date?: string }) => {
         <meta property="og:title" content="Weekly Calendar - royal Navigator" />
         <meta property="og:description" content="Beta weekly calendar" />
       </Head>
-      <Week week={new Date(week)} setWeek={weekHandler} selected={activeDate} />
+      <Week week={date} setWeek={weekHandler} selected={activeDate} />
     </>
   );
 };
