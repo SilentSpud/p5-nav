@@ -20,8 +20,8 @@ type WeekProps = {
   selected?: Date;
 };
 
-export const WeekController = ({ children, week, setWeek }: WeekProps) => {
-  let [selected, setSelected] = useState<Date>();
+export const WeekController = ({ children, week, setWeek, selected: selectedInput }: WeekProps) => {
+  let [selected, setSelected] = useState<Date>(selectedInput ?? ({} as Date));
 
   const weekData = {
     week: startOfWeek(week),
