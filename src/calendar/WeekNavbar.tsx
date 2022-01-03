@@ -1,17 +1,13 @@
 import React from "react";
-import { addWeeks, subWeeks, getWeekOfMonth, getMonth, getYear, getDate } from "date-fns";
+import { addWeeks, subWeeks, getMonth, getDate, isBefore, isAfter } from "date-fns";
 import { Nav } from "react-bootstrap";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useWeek } from ".";
 
 type AClickEvent = React.MouseEvent<HTMLAnchorElement, MouseEvent>;
 
-const isStart = (week: Date) => getYear(week) === 2016 && (getMonth(week) < 3 || (getMonth(week) === 3 && getWeekOfMonth(week) === 2));
-const isEnd = (week: Date) => getYear(week) === 2017 && (getMonth(week) > 2 || (getMonth(week) === 2 && getWeekOfMonth(week) === 5));
-
 export const WeekNavbar = () => {
   const { week, setWeek } = useWeek();
-  getYear(week);
 
   const parseNavClick = ({ currentTarget: { classList } }: AClickEvent) => {
     if (classList.contains("prev")) setWeek(subWeeks(week, 1));
@@ -21,7 +17,7 @@ export const WeekNavbar = () => {
   return (
     <Nav variant="tabs" navbar={true} justify={true} defaultActiveKey="current">
       <Nav.Item>
-        <Nav.Link className="prev" disabled={isStart(week)} onClick={parseNavClick}>
+        <Nav.Link className="prev" disabled={isBefore(week, new Date(2016, 3, 9))} onClick={parseNavClick}>
           <FaAngleLeft />
           Previous
         </Nav.Link>
@@ -32,7 +28,7 @@ export const WeekNavbar = () => {
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link className="next" disabled={isEnd(week)} onClick={parseNavClick}>
+        <Nav.Link className="next" disabled={isAfter(week, new Date(2017, 1, 15))} onClick={parseNavClick}>
           Next
           <FaAngleRight />
         </Nav.Link>

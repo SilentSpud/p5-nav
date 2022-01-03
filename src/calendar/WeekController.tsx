@@ -17,6 +17,7 @@ type WeekProps = {
   children: Children;
   week: Date;
   setWeek: (date: Date) => void;
+  selected?: Date;
 };
 
 export const WeekController = ({ children, week, setWeek }: WeekProps) => {

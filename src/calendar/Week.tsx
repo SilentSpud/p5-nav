@@ -44,11 +44,11 @@ const WeekDayBrief = ({ index }: { index: number }) => {
   }, [getEvents, index, selected, setSelected, week]);
 };
 
-export const Week = ({ week, setWeek }) =>
+export const Week = ({ week, setWeek, selected }: { week: Date; setWeek: (date: Date) => void; selected?: Date }) =>
   useMemo(
     () => (
       <Events>
-        <WeekController week={week} setWeek={setWeek}>
+        <WeekController week={week} setWeek={setWeek} selected={selected}>
           <WeekNavbar />
           <Container fluid className="weekly">
             <Row className="week">
@@ -61,5 +61,5 @@ export const Week = ({ week, setWeek }) =>
         </WeekController>
       </Events>
     ),
-    [setWeek, week]
+    [setWeek, week, selected]
   );
