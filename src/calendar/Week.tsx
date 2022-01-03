@@ -8,47 +8,40 @@ const theWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday
 
 const Slot = ({ className, disabled, children }) => <div className={`${className}${disabled ? " invisible" : ""}`}>{!disabled ? children : null}</div>;
 
-const WeekBody = () => {
+const WeekDayBrief = ({ index }: { index: number }) => {
   const { week, setSelected, selected } = useWeek();
   const { getEvents } = useEvents();
-  return useMemo(
-    () => (
-      <Row className="week">
-        {Array.from(Array(7)).map((_blank, index) => {
-          const newDate = addDays(week, index);
-          const isSelected = selected ? isSameDay(newDate, selected) : false;
-          const { afternoon, evening, night } = getEvents(newDate);
-          const disabled = !afternoon && !evening && !night;
-          return disabled ? (
-            <Col key={index} className="week-day empty">
-              <Stack gap={0}>
-                <div className="weekday-title">
-                  <span className="left">{theWeek[index]}</span>
-                  <span className="right">{dateToString(newDate, false)}</span>
-                </div>
-              </Stack>
-            </Col>
-          ) : (
-            <Col key={index} onClick={() => setSelected(newDate)} className={`week-day${isSelected ? " selected" : ""}`}>
-              <Stack gap={0}>
-                <div className="weekday-title">
-                  <span className="left">{theWeek[index]}</span>
-                  <span className="right">{dateToString(newDate, false)}</span>
-                </div>
-                <Slot className="day noon" disabled={!afternoon?.events?.length}>
-                  Daytime Events
-                </Slot>
-                <Slot className="day night" disabled={!evening?.events?.length && !night?.events?.length}>
-                  Evening Events
-                </Slot>
-              </Stack>
-            </Col>
-          );
-        })}
-      </Row>
-    ),
-    [getEvents, selected, setSelected, week]
-  );
+  return useMemo(() => {
+    const newDate = addDays(week, index);
+    const isSelected = selected ? isSameDay(newDate, selected) : false;
+    const { afternoon, evening, night } = getEvents(newDate);
+    const disabled = !afternoon && !evening && !night;
+    return disabled ? (
+      <Col className="week-day empty">
+        <Stack gap={0}>
+          <div className="weekday-title">
+            <span className="left">{theWeek[index]}</span>
+            <span className="right">{dateToString(newDate, false)}</span>
+          </div>
+        </Stack>
+      </Col>
+    ) : (
+      <Col onClick={() => setSelected(newDate)} className={`week-day${isSelected ? " selected" : ""}`}>
+        <Stack gap={0}>
+          <div className="weekday-title">
+            <span className="left">{theWeek[index]}</span>
+            <span className="right">{dateToString(newDate, false)}</span>
+          </div>
+          <Slot className="day noon" disabled={!afternoon?.events?.length}>
+            Daytime Events
+          </Slot>
+          <Slot className="day night" disabled={!evening?.events?.length && !night?.events?.length}>
+            Evening Events
+          </Slot>
+        </Stack>
+      </Col>
+    );
+  }, [getEvents, index, selected, setSelected, week]);
 };
 
 export const Week = ({ week, setWeek }) =>
@@ -58,7 +51,11 @@ export const Week = ({ week, setWeek }) =>
         <WeekController week={week} setWeek={setWeek}>
           <WeekNavbar />
           <Container fluid className="weekly">
-            <WeekBody />
+            <Row className="week">
+              {Array.from(Array(7)).map((_blank, index) => (
+                <WeekDayBrief key={index} index={index} />
+              ))}
+            </Row>
             <WeekDay />
           </Container>
         </WeekController>
