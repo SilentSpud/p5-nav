@@ -10,6 +10,17 @@ const theWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday
 
 const Slot = ({ className, disabled, children }) => <div className={`${className}${disabled ? " invisible" : ""}`}>{!disabled ? children : null}</div>;
 
+const BadDay = ({ index, date }) => (
+  <Col className="week-day empty">
+    <Stack gap={0}>
+      <div className="weekday-title">
+        <span className="left">{theWeek[index]}</span>
+        <span className="right">{dateToString(date, false)}</span>
+      </div>
+    </Stack>
+  </Col>
+);
+
 const WeekDayBrief = ({ index }: { index: number }) => {
   const { week, selected, setSelected } = useWeek();
   const { getEvents } = useEvents();
@@ -22,14 +33,7 @@ const WeekDayBrief = ({ index }: { index: number }) => {
     const { afternoon, evening, night } = getEvents(newDate);
     const disabled = !afternoon && !evening && !night;
     return disabled ? (
-      <Col className="week-day empty">
-        <Stack gap={0}>
-          <div className="weekday-title">
-            <span className="left">{theWeek[index]}</span>
-            <span className="right">{dateToString(newDate, false)}</span>
-          </div>
-        </Stack>
-      </Col>
+      <BadDay index={index} date={newDate} />
     ) : (
       <Col className={`week-day${isSelected ? " selected" : ""}`}>
         <Link href={`/calendar/${getMonth(newDate) + 1}/${getDate(newDate)}`} replace={!!month && !!day} passHref shallow>
