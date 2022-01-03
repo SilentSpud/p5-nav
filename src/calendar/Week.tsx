@@ -33,7 +33,7 @@ const WeekDayBrief = ({ index }: { index: number }) => {
     ) : (
       <Col className={`week-day${isSelected ? " selected" : ""}`}>
         <Link href={`/calendar/${getMonth(newDate) + 1}/${getDate(newDate)}`} replace={!!month && !!day} passHref shallow>
-          <a onClick={() => setSelected(newDate)}>
+          <a onClick={() => setSelected(newDate)} className="week-link">
             <Stack gap={0}>
               <div className="weekday-title">
                 <span className="left">{theWeek[index]}</span>

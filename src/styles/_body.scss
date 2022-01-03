@@ -11,7 +11,7 @@
   overflow: hidden;
   overflow-y: scroll;
 
-  a {
+  a:not(.week-link) {
     &:link,
     &:visited {
       color: $p5-red-light;
