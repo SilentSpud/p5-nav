@@ -3,7 +3,7 @@ import { Row, Col, Stack } from "react-bootstrap";
 import { dateToString, useEvents } from "../events";
 import { renderEvents, useWeek } from ".";
 
-const Empty: FC = () => useMemo(() => <div className="slot-empty">Nothing</div>, []);
+const Empty: FC = () => useMemo(() => <div className="slot-empty">No Events</div>, []);
 
 const Afternoon: FC = () => {
   const { selected } = useWeek();
@@ -58,7 +58,7 @@ export const WeekDay: FC = () => {
     return (
       <>
         <Row className="day-title">
-          <Col className="title">{dateToString(selected)}</Col>
+          <Col className="title">{dateToString(selected, false)}</Col>
         </Row>
         <Row className="day-info">
           <Col className="slot">
