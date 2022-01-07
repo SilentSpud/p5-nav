@@ -16,7 +16,8 @@ const TimeSlot: FC<{ slot?: FreeTime; night?: boolean }> = ({ slot, night }) => 
     text: string = "";
   switch (slot) {
     case FreeTime.None: {
-      className = "invisible";
+      className = "border-light text-muted";
+      text = (night ? "Night" : "Evening") + ": No Time";
       break;
     }
     case FreeTime.Leblanc: {
