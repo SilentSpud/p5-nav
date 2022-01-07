@@ -28,6 +28,21 @@ $day-size: calc($body-size * 0.75);
 
     * {
       user-select: none;
+      overflow-x: hidden;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px dashed #008080ff;
+    }
+
+    &.selected {
+      border: 1px solid #dc3545ff;
+
+      &:hover,
+      &:focus {
+        border-style: dashed;
+      }
     }
 
     a.week-link {
@@ -35,30 +50,13 @@ $day-size: calc($body-size * 0.75);
       text-decoration: none;
     }
 
-    &:not(.empty) {
-      cursor: pointer;
-
-      &:hover,
-      &:focus {
-        border: 1px dashed #008080;
-      }
-
-      &.selected {
-        border: 1px solid #dc3545;
-
-        &:hover,
-        &:focus {
-          border-style: dashed;
-        }
-      }
-    }
-
     .vstack {
       height: 100%;
     }
 
     .day {
-      height: calc(25% - 17.5px);
+      $rownum: 4;
+      height: calc((100% / $rownum) - (35px / $rownum));
       display: flex;
       justify-content: center;
       align-items: center;
