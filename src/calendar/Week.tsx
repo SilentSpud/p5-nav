@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, FC } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { addDays, getDate, getMonth, isSameDay } from "date-fns";
@@ -8,9 +8,11 @@ import { dateToString, Events, useEvents } from "../events";
 
 const theWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-const Slot = ({ className, disabled, children }) => <div className={`${className}${disabled ? " invisible" : ""}`}>{!disabled ? children : null}</div>;
+const Slot: FC<{ className: string; disabled?: boolean }> = ({ className, disabled, children }) => (
+  <div className={`${className}${disabled ? " invisible" : ""}`}>{!disabled ? children : null}</div>
+);
 
-const BadDay = ({ index, date }) => (
+const BadDay: FC<{ index: number; date: Date }> = ({ index, date }) => (
   <Col className="week-day empty">
     <Stack gap={0}>
       <div className="weekday-title">
@@ -21,7 +23,7 @@ const BadDay = ({ index, date }) => (
   </Col>
 );
 
-const WeekDayBrief = ({ index }: { index: number }) => {
+const WeekDayBrief: FC<{ index: number }> = ({ index }) => {
   const { week, selected, setSelected } = useWeek();
   const { getEvents } = useEvents();
   const {
@@ -57,7 +59,7 @@ const WeekDayBrief = ({ index }: { index: number }) => {
   }, [getEvents, index, day, month, selected, setSelected, week]);
 };
 
-export const Week = ({ week, setWeek, selected }: { week: Date; setWeek: (date: Date) => void; selected?: Date }) =>
+export const Week: FC<{ week: Date; setWeek: (date: Date) => void; selected?: Date }> = ({ week, setWeek, selected }) =>
   useMemo(
     () => (
       <Events>

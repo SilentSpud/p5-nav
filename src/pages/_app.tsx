@@ -5,8 +5,9 @@ import type { AppProps } from "next/app";
 import { Nav } from "react-bootstrap";
 import Head from "next/head";
 import { CookiesProvider } from "react-cookie";
+import { FC } from "react";
 
-const NavLink = ({ href, children, disabled }: { href: string; children: React.ReactNode | React.ReactNode[]; disabled?: boolean; active?: boolean }) => {
+const NavLink: FC<{ href: string; disabled?: boolean; active?: boolean }> = ({ href, children, disabled }) => {
   let { pathname } = useRouter();
   if (pathname.indexOf("/") != pathname.lastIndexOf("/")) {
     pathname = pathname.split("/").slice(0, 2).join("/");
@@ -14,7 +15,7 @@ const NavLink = ({ href, children, disabled }: { href: string; children: React.R
   return (
     <Nav.Item>
       <Link href={href} passHref>
-        <Nav.Link disabled={disabled ?? false} active={pathname == href}>
+        <Nav.Link disabled={disabled} active={pathname == href}>
           {children}
         </Nav.Link>
       </Link>

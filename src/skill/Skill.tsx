@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { getPersona, Skill as SkillInfo } from "../data";
@@ -128,6 +128,4 @@ export const PersonaTable = () => {
   );
 };
 
-export const Skill = ({ skill, children }: { skill: SkillInfo; children: React.ReactNode | React.ReactNode[] }) => (
-  <SkillCtx.Provider value={skill}>{children}</SkillCtx.Provider>
-);
+export const Skill: FC<{ skill: SkillInfo }> = ({ skill, children }) => <SkillCtx.Provider value={skill}>{children}</SkillCtx.Provider>;

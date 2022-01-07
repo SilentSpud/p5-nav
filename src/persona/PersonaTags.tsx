@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC, ChildNode } from "react";
 import { FaCrown, FaDollarSign, FaPlusCircle, FaClock, FaChevronCircleUp, FaExclamationTriangle } from "react-icons/fa";
 import { GiArrowsShield, GiShieldBounces, GiShieldReflect, GiTwinShell } from "react-icons/gi";
 import { FiSlash } from "react-icons/fi";
@@ -29,8 +29,8 @@ export const NameTags = ({ persona: persona1 }: { persona?: Persona }) => {
   );
 };
 
-type ResistanceInfo = { className: string; key: string; children: React.ReactNode | string };
-export const Resistance = ({ value, element, full }: { value: string; element: string; full?: boolean }) => {
+type ResistanceInfo = { className: string; key: string; children?: JSX.Element | string };
+export const Resistance: FC<{ value: string; element: string; full?: boolean }> = ({ value, element, full }) => {
   const inf = { key: element, className: `${full ? "" : "res-icon "}` } as ResistanceInfo;
   switch (value as Weaknesses) {
     case Weaknesses.resist:

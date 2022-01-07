@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { Accordion, Card as BsCard, ListGroup } from "react-bootstrap";
 import type { Question, Crossword, Quiz, Hangout } from "../events";
 
@@ -9,7 +9,7 @@ export interface Hangouta {
   cards: string[];
 }
 
-const Card = ({ title, header, children }) => (
+const Card: FC<{ title: string; header: string }> = ({ title, header, children }) => (
   <BsCard className="border-info">
     <BsCard.Header>{title}</BsCard.Header>
     <Accordion flush>
@@ -21,22 +21,22 @@ const Card = ({ title, header, children }) => (
   </BsCard>
 );
 
-const QuestionElement = ({ event }: { event: Question }) => (
+const QuestionElement: FC<{ event: Question }> = ({ event }) => (
   <Card title="Classroom Question" header={event.question}>
     {event.answer}
   </Card>
 );
-const CrosswordElement = ({ event }: { event: Crossword }) => (
+const CrosswordElement: FC<{ event: Crossword }> = ({ event }) => (
   <Card title="Crossword Puzzle" header={`Puzzle #${event.number}: ${event.word.hint}`}>
     {event.word.word.toUpperCase()}
   </Card>
 );
-const QuizElement = ({ event }: { event: Quiz }) => (
+const QuizElement: FC<{ event: Quiz }> = ({ event }) => (
   <Card title="TV Quiz Show" header="Show Answer">
     ${event.answer ? "B" : "A"}. ${event.text}
   </Card>
 );
-const HangoutElement = ({ event }: { event: Hangout }) => (
+const HangoutElement: FC<{ event: Hangout }> = ({ event }) => (
   <Card title="Twins Hangout" header="Show Details">
     <ListGroup variant="flush">
       <ListGroup.Item>Location: {event.location}</ListGroup.Item>

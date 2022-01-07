@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { IconType } from "react-icons/lib";
 import { FaGem, FaComments } from "react-icons/fa";
 import { GiCardJackHearts, GiGuillotine } from "react-icons/gi";
@@ -31,7 +31,7 @@ export const CostTag = ({ cost }: { cost?: number }): JSX.Element => {
   else return <>{cost} HP</>;
 };
 
-const Dummy = ({ children }) => <>{children}</>;
+const Dummy: FC = ({ children }) => <>{children}</>;
 export const StatusTag = ({ text }: { text: string }) => {
   const statusRegex = /(Down|Burn|Freeze|Shock|Dizzy|Forget|Sleep|Confuse|Fear|Despair|Rage|Brainwash|Hunger)/g;
   if (statusRegex.test(text)) {

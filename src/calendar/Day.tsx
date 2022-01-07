@@ -1,11 +1,11 @@
-import React, { useMemo } from "react";
-import { Row, Col, Stack, Alert, Card, ListGroup } from "react-bootstrap";
-import { dateToString, Question, useEvents } from "../events";
+import React, { FC, useMemo } from "react";
+import { Row, Col, Stack } from "react-bootstrap";
+import { dateToString, useEvents } from "../events";
 import { renderEvents, useWeek } from ".";
 
-const Empty = () => useMemo(() => <div className="slot-empty">Nothing</div>, []);
+const Empty: FC = () => useMemo(() => <div className="slot-empty">Nothing</div>, []);
 
-const Afternoon = () => {
+const Afternoon: FC = () => {
   const { selected } = useWeek();
   const { getEvents } = useEvents();
   const { afternoon } = getEvents(selected as Date);
@@ -19,7 +19,7 @@ const Afternoon = () => {
     [afternoon]
   );
 };
-const Evening = () => {
+const Evening: FC = () => {
   const { selected } = useWeek();
   const { getEvents } = useEvents();
   const { evening } = getEvents(selected as Date);
@@ -33,7 +33,7 @@ const Evening = () => {
     [evening]
   );
 };
-const Night = () => {
+const Night: FC = () => {
   const { selected } = useWeek();
   const { getEvents } = useEvents();
   const { night } = getEvents(selected as Date);
@@ -47,7 +47,7 @@ const Night = () => {
   }, [night]);
 };
 
-export const WeekDay = () => {
+export const WeekDay: FC = () => {
   const { selected } = useWeek();
   const { getEvents } = useEvents();
   return useMemo(() => {

@@ -1,7 +1,5 @@
-import React, { ReactNode, useContext, useState } from "react";
+import React, { FC, useContext, useState } from "react";
 import { startOfWeek } from "date-fns";
-
-type Children = ReactNode | ReactNode[];
 
 type WeekCtxProps = {
   week: Date;
@@ -14,13 +12,12 @@ const WeekCtx = React.createContext<WeekCtxProps>({} as WeekCtxProps);
 export const useWeek = () => useContext(WeekCtx);
 
 type WeekProps = {
-  children: Children;
   week: Date;
   setWeek: (date: Date) => void;
   selected?: Date;
 };
 
-export const WeekController = ({ children, week, setWeek, selected: selectedInput }: WeekProps) => {
+export const WeekController: FC<WeekProps> = ({ children, week, setWeek, selected: selectedInput }) => {
   let [selected, setSelected] = useState<Date>(selectedInput ?? ({} as Date));
 
   const weekData = {
