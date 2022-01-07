@@ -112,6 +112,10 @@ $day-size: calc($body-size * 0.75);
         margin: 10px 10px 0;
         box-sizing: content-box;
 
+        .card-header {
+          user-select: none;
+        }
+
         button.accordion-button:focus {
           box-shadow: none;
         }
@@ -121,6 +125,7 @@ $day-size: calc($body-size * 0.75);
         text-align: center;
         padding-top: 25px;
         font-size: 20px;
+        user-select: none;
       }
 
       margin: 0 25px;

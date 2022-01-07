@@ -60,7 +60,9 @@ export const WeekDay: FC = () => {
     return (
       <>
         <Row className="day-title">
-          <Col className="title">{theYear[selected.getMonth()]} {ordinal(selected.getDate())}</Col>
+          <Col className="title">
+            {theYear[selected.getMonth()]} {ordinal(selected.getDate())}
+          </Col>
         </Row>
         <Row className="day-info">
           <Col className="slot">
