@@ -5,8 +5,8 @@ $calendar-size: calc($content-size - 43px);
 $head-size: calc($calendar-size * 0.05);
 $head-height: calc($head-size - 2px);
 $body-size: calc($calendar-size - $head-size);
-$week-size: calc($body-size * 0.25);
-$day-size: calc($body-size * 0.75);
+$week-size: calc($body-size * 0.3);
+$day-size: calc($body-size * 0.7);
 
 .weekly {
   height: $calendar-size;
@@ -141,10 +141,22 @@ $day-size: calc($body-size * 0.75);
       font-size: 24px;
       border-bottom: 1px solid $table-border-color;
       padding-bottom: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: inline-block;
+      text-align: center;
       user-select: none;
+
+      .slot-weather {
+        float: left;
+        & > span {
+          vertical-align: middle;
+        }
+      }
+      .slot-special {
+        float: right;
+        & > span {
+          vertical-align: middle;
+        }
+      }
     }
 
     .card-question {

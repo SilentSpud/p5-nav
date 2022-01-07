@@ -74,6 +74,12 @@ export enum Weather {
   Rainy,
   Snowy,
 }
+export enum WeatherNames {
+  Clear = "Clear",
+  Cloudy = "Cloudy",
+  Rainy = "Rainy",
+  Snowy = "Snowy",
+}
 export enum SpecialWeather {
   Pollen = "pollen", // Pollen Warning
   Rain = "rain", // Heavy Rain
