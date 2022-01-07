@@ -1,8 +1,10 @@
 import React, { FC, useMemo } from "react";
 import { Row, Col, Stack } from "react-bootstrap";
-import { dateToString, useEvents } from "../events";
+import { useEvents } from "../events";
 import { renderEvents, useWeek } from ".";
+import ordinal from "ordinal";
 
+const theYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const Empty: FC = () => useMemo(() => <div className="slot-empty">No Events</div>, []);
 
 const Afternoon: FC = () => {
@@ -58,7 +60,7 @@ export const WeekDay: FC = () => {
     return (
       <>
         <Row className="day-title">
-          <Col className="title">{dateToString(selected, false)}</Col>
+          <Col className="title">{theYear[selected.getMonth()]} {ordinal(selected.getDate())}</Col>
         </Row>
         <Row className="day-info">
           <Col className="slot">
