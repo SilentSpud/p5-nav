@@ -1,4 +1,4 @@
-import "../styles/index.scss";
+import "../../styles/index.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
