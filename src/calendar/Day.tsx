@@ -24,12 +24,12 @@ const Timeslot: FC<{ time: string; weather?: Weather; special?: SpecialWeather[]
           <div className="slot-weather slot-hidden"></div>
         )}
         <span className="slot-date">{time}</span>
-        {typeof special == "object" && special.length > 1 ? (
+        {!!special && special.length > 0 ? (
           <div className="slot-special">
             <FaAsterisk />
           </div>
         ) : (
-          <div className="slot-weather slot-hidden"></div>
+          <div className="slot-special slot-hidden"></div>
         )}
       </div>
     ),
