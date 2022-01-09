@@ -67,11 +67,11 @@ const WeekDayBrief: FC<{ index: number }> = ({ index }) => {
                 <span className="left">{theWeek[index]}</span>
                 <span className="right">{dateToString(newDate, false)}</span>
               </div>
-              <Slot className="noon" disabled={!afternoon?.events?.length}>
-                Daytime Events
+              <Slot className="noon" disabled={!afternoon?.events?.length && !evening?.events?.length && !night?.events?.length}>
+                Special Events
               </Slot>
-              <Slot className="night" disabled={!evening?.events?.length && !night?.events?.length}>
-                Evening Events
+              <Slot className="night" disabled>
+                Weekly Events
               </Slot>
               <TimeSlot slot={evening?.time} />
               <TimeSlot slot={night?.time} night />
