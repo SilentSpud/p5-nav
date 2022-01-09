@@ -49,7 +49,7 @@ const WeekDayBrief: FC<{ index: number }> = ({ index }) => {
   const { week, selected, setSelected } = useWeek();
   const { getEvents } = useEvents();
   const {
-    query: { month, day },
+    query: { month },
   } = useRouter();
   return useMemo(() => {
     const newDate = addDays(week, index);
@@ -60,7 +60,7 @@ const WeekDayBrief: FC<{ index: number }> = ({ index }) => {
       <BadDay index={index} date={newDate} />
     ) : (
       <Col className={`week-day ${isSelected ? "selected" : ""}`}>
-        <Link href={`/calendar/${getMonth(newDate) + 1}/${getDate(newDate)}`} replace={!!month && !!day} passHref shallow>
+        <Link href={`/calendar/${getMonth(newDate) + 1}/${getDate(newDate)}`} replace={!!month} passHref shallow>
           <a onClick={() => setSelected(newDate)} className="week-link">
             <Stack gap={0}>
               <div className="weekday-title">
@@ -80,7 +80,7 @@ const WeekDayBrief: FC<{ index: number }> = ({ index }) => {
         </Link>
       </Col>
     );
-  }, [getEvents, index, day, month, selected, setSelected, week]);
+  }, [getEvents, index, month, selected, setSelected, week]);
 };
 
 export const Week: FC<{ week: Date; setWeek: (date: Date) => void; selected?: Date }> = ({ week, setWeek, selected }) =>
