@@ -1,9 +1,9 @@
 import React, { FC, useMemo } from "react";
 import { Row, Col, Stack } from "react-bootstrap";
-import { useEvents, Weather, WeatherNames } from "../events";
+import { SpecialWeather, useEvents, Weather, WeatherIcons } from "../events";
 import { renderEvents, useWeek } from ".";
-import WeatherIcons from "../events/Weather";
 import ordinal from "ordinal";
+import { FaAsterisk } from "react-icons/fa";
 
 const theYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const Empty: FC = () => useMemo(() => <div className="slot-empty">No Events</div>, []);
@@ -12,6 +12,30 @@ const Icon: FC<{ weather: Weather }> = ({ weather }) => {
   return <Elem />;
 };
 
+const Timeslot: FC<{ time: string; weather?: Weather; special?: SpecialWeather[] }> = ({ time, weather, special }) =>
+  useMemo(
+    () => (
+      <div className="slot-title">
+        {typeof weather == "number" ? (
+          <div className="slot-weather">
+            <Icon weather={weather} />
+          </div>
+        ) : (
+          <div className="slot-weather slot-hidden"></div>
+        )}
+        <span className="slot-date">{time}</span>
+        {typeof special == "object" && special.length > 1 ? (
+          <div className="slot-special">
+            <FaAsterisk />
+          </div>
+        ) : (
+          <div className="slot-weather slot-hidden"></div>
+        )}
+      </div>
+    ),
+    [special, time, weather]
+  );
+
 const Afternoon: FC = () => {
   const { selected } = useWeek();
   const { getEvents } = useEvents();
@@ -19,9 +43,7 @@ const Afternoon: FC = () => {
   return useMemo(
     () => (
       <Stack>
-        <div className="slot-title">
-          <span className="slot-date">Afternoon</span>
-        </div>
+        <Timeslot time="Afternoon" />
         {!afternoon || !afternoon.events ? <Empty /> : renderEvents(afternoon.events)}
       </Stack>
     ),
@@ -32,42 +54,34 @@ const Evening: FC = () => {
   const { selected } = useWeek();
   const { getEvents } = useEvents();
   const { evening } = getEvents(selected as Date);
+  const events = evening?.events;
+  const weather = evening?.weather;
+  const special = evening?.special;
   return useMemo(
     () => (
       <Stack>
-        <div className="slot-title">
-          {typeof evening?.weather == "number" && (
-            <span className="slot-weather">
-              <Icon weather={evening.weather} />
-            </span>
-          )}
-          <span className="slot-date">Evening</span>
-        </div>
-        {!evening || !evening.events ? <Empty /> : renderEvents(evening.events)}
+        <Timeslot time="Evening" weather={weather} special={special} />
+        {!events ? <Empty /> : renderEvents(events)}
       </Stack>
     ),
-    [evening]
+    [events, special, weather]
   );
 };
 const Night: FC = () => {
   const { selected } = useWeek();
   const { getEvents } = useEvents();
   const { night } = getEvents(selected as Date);
+  const events = night?.events;
+  const weather = night?.weather;
+  const special = night?.special;
   return useMemo(() => {
     return (
       <Stack>
-        <div className="slot-title">
-          {typeof night?.weather == "number" && (
-            <span className="slot-weather">
-              <Icon weather={night.weather} />
-            </span>
-          )}
-          <span className="slot-date">Night</span>
-        </div>
-        {!night || !night.events ? <Empty /> : ""}
+        <Timeslot time="Night" weather={weather} special={special} />
+        {!!events ? "There are no night events yet silly" : <Empty />}
       </Stack>
     );
-  }, [night]);
+  }, [events, special, weather]);
 };
 
 export const WeekDay: FC = () => {

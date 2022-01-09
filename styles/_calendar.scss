@@ -141,24 +141,34 @@ $day-size: calc($body-size * 0.7);
       font-size: 24px;
       border-bottom: 1px solid $table-border-color;
       padding-bottom: 5px;
-      display: inline-block;
       text-align: center;
       user-select: none;
 
-      .slot-weather {
-        float: left;
-        & > span {
-          vertical-align: middle;
-        }
-        svg {
-          font-size: 24px;
+      .slot-hidden {
+        width: 24px;
+        visibility: hidden;
+
+        &:before {
+          content: "&nbsp";
         }
       }
+
+      svg {
+        font-size: 24px;
+      }
+
+      display: flex;
+      justify-content: space-around;
+      .slot-date {
+        flex-basis: 90%;
+        flex-grow: 4;
+      }
+
+      .slot-weather {
+        flex-grow: 1;
+      }
       .slot-special {
-        float: right;
-        & > span {
-          vertical-align: middle;
-        }
+        flex-grow: 1;
       }
     }
 
