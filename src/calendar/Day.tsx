@@ -1,28 +1,16 @@
 import React, { FC, useMemo } from "react";
 import { Row, Col, Stack } from "react-bootstrap";
-import Image from "next/image";
 import { useEvents, Weather, WeatherNames } from "../events";
 import { renderEvents, useWeek } from ".";
-import * as WeatherImages from "../events/Weather";
+import WeatherIcons from "../events/Weather";
 import ordinal from "ordinal";
 
 const theYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const getImage = (weather: Weather) => {
-  switch (weather) {
-    case Weather.Clear:
-      return WeatherImages.Clear;
-    case Weather.Cloudy:
-      return WeatherImages.Cloudy;
-    case Weather.Rainy:
-      return WeatherImages.Rainy;
-    case Weather.Snowy:
-      return WeatherImages.Snowy;
-  }
-};
 const Empty: FC = () => useMemo(() => <div className="slot-empty">No Events</div>, []);
-const Icon: FC<{ weather: Weather }> = ({ weather }) => (
-  <Image src={getImage(weather)} title={WeatherNames[weather]} alt={WeatherNames[weather]} width="32px" height="30px" draggable={false} />
-);
+const Icon: FC<{ weather: Weather }> = ({ weather }) => {
+  const Elem = WeatherIcons[weather];
+  return <Elem />;
+};
 
 const Afternoon: FC = () => {
   const { selected } = useWeek();

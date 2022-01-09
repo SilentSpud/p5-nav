@@ -150,6 +150,9 @@ $day-size: calc($body-size * 0.7);
         & > span {
           vertical-align: middle;
         }
+        svg {
+          font-size: 16px;
+        }
       }
       .slot-special {
         float: right;
