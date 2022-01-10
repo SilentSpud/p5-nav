@@ -1,4 +1,4 @@
-import React, { FC, ChildNode } from "react";
+import React, { FC } from "react";
 import { FaCrown, FaDollarSign, FaPlusCircle, FaClock, FaChevronCircleUp, FaExclamationTriangle } from "react-icons/fa";
 import { GiArrowsShield, GiShieldBounces, GiShieldReflect, GiTwinShell } from "react-icons/gi";
 import { FiSlash } from "react-icons/fi";
