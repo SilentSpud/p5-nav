@@ -57,10 +57,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/fira-code@^4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/fira-code/-/fira-code-4.5.2.tgz#532ef612aa15b40970e696b3546348ed49512a86"
-  integrity sha512-wNUvcqmm1dZYTbJlkbFZL9Huu7p+Hwaa4CLNTPql3CG90Rh9dSi43wNg5AnVHxjAhWQOGlCpSrEswnnHu1CkxA==
+"@fontsource/fira-code@^4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-code/-/fira-code-4.5.4.tgz#a8ec2347cf7261b2bf14065e66c734dde7145432"
+  integrity sha512-VXA5wQqU8ieKD3n2wKA+0asywXXkgJc4JxR3IAfVEnRKcz93xd0UpZtmgL3sPeWZQSPc194yikIi0y2hxSGDpA==
 
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.2"
