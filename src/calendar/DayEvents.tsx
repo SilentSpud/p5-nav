@@ -33,7 +33,7 @@ const CrosswordElement: FC<{ event: Crossword }> = ({ event }) => (
 );
 const QuizElement: FC<{ event: Quiz }> = ({ event }) => (
   <Card title="TV Quiz Show" header="Show Answer">
-    ${event.answer ? "B" : "A"}. ${event.text}
+    {event.answer ? "B" : "A"}. {event.text}
   </Card>
 );
 const HangoutElement: FC<{ event: Hangout }> = ({ event }) => (
