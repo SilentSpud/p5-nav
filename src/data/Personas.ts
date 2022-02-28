@@ -3,8 +3,8 @@ export const Personas: Persona[] = personas;
 export default Personas;
 
 export const getPersona = (id: string): Persona | undefined => {
-  for (const p of Personas) {
-    if (p.name.toString() == id) return p;
+  for (const persona of Personas) {
+    if (persona.name.toString() == id) return persona;
   }
 };
 
@@ -16,23 +16,25 @@ export enum WeaknessLevels {
   repel = "rp",
   absorb = "ab",
 }
-export enum DamageTypes {
-  phy = "physical",
-  gun = "gun",
-  fir = "fire",
-  ice = "ice",
-  ele = "electric",
-  wnd = "wind",
-  psy = "psychic",
-  nuc = "nuclear",
-  ble = "bless",
-  cur = "curse",
-  alm = "almighty",
-  ail = "ailment",
-  sup = "support",
-  pas = "passive",
-  hea = "healing",
-  tra = "trait",
+export enum DamageElements {
+  phys = "Physical",
+  gun = "Gun",
+  fire = "Fire",
+  ice = "Ice",
+  elec = "Electric",
+  wind = "Wind",
+  psy = "Psychic",
+  nuke = "Nuclear",
+  bless = "Bless",
+  curse = "Curse",
+}
+export enum SpecialElements {
+  almighty = "Almighty",
+  ailment = "Ailment",
+  support = "Support",
+  passive = "Passive",
+  healing = "Healing",
+  trait = "Trait",
 }
 export interface Persona {
   name: string;

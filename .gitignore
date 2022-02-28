@@ -16,6 +16,7 @@
 # misc
 .DS_Store
 *.pem
+tsconfig.tsbuildinfo
 
 # debug
 npm-debug.log*
@@ -27,6 +28,3 @@ yarn-error.log*
 .env.local.development
 .env.local.test
 .env.local.production
-
-# typescript
-*.tsbuildinfo

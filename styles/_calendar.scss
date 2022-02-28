@@ -1,0 +1,186 @@
+@import "globals";
+@import "cyborg";
+
+$calendar-size: calc($content-size - 43px);
+$head-size: calc($calendar-size * 0.05);
+$head-height: calc($head-size - 2px);
+$body-size: calc($calendar-size - $head-size);
+$week-size: calc($body-size * 0.3);
+$day-size: calc($body-size * 0.7);
+
+.weekly {
+  height: $calendar-size;
+  background-color: $body-bg;
+  overflow: hidden;
+
+  .row {
+    background-color: $body-bg;
+  }
+
+  .week {
+    height: $week-size;
+    overflow-x: hidden;
+  }
+
+  .week-day {
+    overflow-x: hidden;
+    border: 1px solid $table-border-color;
+
+    * {
+      user-select: none;
+      overflow-x: hidden;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px dashed #008080ff;
+    }
+
+    &.selected {
+      border: 1px solid #dc3545ff;
+
+      &:hover,
+      &:focus {
+        border-style: dashed;
+      }
+    }
+
+    a.week-link {
+      color: $gray-100;
+      text-decoration: none;
+    }
+
+    .vstack {
+      height: 100%;
+    }
+
+    .day {
+      $rownum: 4;
+      height: calc((100% / $rownum) - (35px / $rownum));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $gray-100;
+
+      &.noon {
+        background-color: $indigo;
+      }
+
+      &.night {
+        background-color: $cyan;
+      }
+    }
+
+    .weekday-title {
+      height: 35px;
+      display: block;
+      font-size: 20px;
+      padding: 0;
+      overflow-x: hidden;
+      border-bottom: 1px solid $table-border-color;
+
+      .left {
+        float: left;
+        padding-left: 10px;
+      }
+
+      .right {
+        float: right;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .day-title .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 0;
+    overflow-x: hidden;
+    user-select: none;
+  }
+
+  .day-info {
+    color: $gray-100;
+
+    .slot {
+      height: $day-size;
+      overflow: hidden;
+
+      .card {
+        margin: 10px 10px 0;
+        box-sizing: content-box;
+
+        .card-header {
+          user-select: none;
+        }
+
+        button.accordion-button:focus {
+          box-shadow: none;
+        }
+      }
+
+      .slot-empty {
+        text-align: center;
+        padding-top: 25px;
+        font-size: 20px;
+        user-select: none;
+      }
+
+      margin: 0 25px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .slot-title {
+      font-size: 24px;
+      border-bottom: 1px solid $table-border-color;
+      padding-bottom: 5px;
+      text-align: center;
+      user-select: none;
+
+      .slot-hidden {
+        width: 24px;
+        visibility: hidden;
+
+        &:before {
+          content: "&nbsp";
+        }
+      }
+
+      svg {
+        font-size: 24px;
+      }
+
+      display: flex;
+      justify-content: space-around;
+      .slot-date {
+        flex-basis: 90%;
+        flex-grow: 4;
+      }
+
+      .slot-weather {
+        flex-grow: 1;
+      }
+      .slot-special {
+        flex-grow: 1;
+      }
+    }
+
+    .card-question {
+      font-weight: normal;
+      color: $gray-400;
+    }
+  }
+
+  .num {
+    user-select: none;
+    font-family: "Fira CodeVariable", "Fira Code", monospace;
+    margin-bottom: 10px;
+  }
+}

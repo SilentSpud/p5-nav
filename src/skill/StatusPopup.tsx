@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import { OverlayTrigger, Popover, Table } from "react-bootstrap";
 import { getStatus, StatusInfo } from "../data";
 
-const Row = ({ children }) => (
+const Row: FC = ({ children }) => (
   <tr>
     <td>{children}</td>
   </tr>

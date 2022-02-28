@@ -30,7 +30,7 @@ const Answer = (props: { value: Reaction | Reactions }) => {
 
 const QuestionTable = ({ question, answers }: { question: string; answers: NegotiationAnswer[] }) => {
   return (
-    <Table bordered variant="dark">
+    <Table bordered>
       <thead>
         <tr>
           <th colSpan={5} className="question">
@@ -60,10 +60,10 @@ const QuestionTable = ({ question, answers }: { question: string; answers: Negot
   );
 };
 
-export const QuestionList = ({ questions }: { questions: NegotiationList }) => {
-  const tableList: JSX.Element[] = [];
-  for (const question in questions) {
-    tableList.push(<QuestionTable key={question} question={question} answers={questions[question]} />);
-  }
-  return <>{tableList}</>;
-};
+export const QuestionList = ({ questions }: { questions: NegotiationList }) => (
+  <>
+    {Object.entries(questions).map(([key, value]) => (
+      <QuestionTable key={key} question={key} answers={value} />
+    ))}
+  </>
+);

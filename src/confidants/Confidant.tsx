@@ -1,14 +1,10 @@
-import React, { createContext, useContext } from "react";
+import React, { FC, createContext, useContext } from "react";
 import { getConfidant, Confidant as ConfidantType } from "../data";
 
-type confidantProps = {
-  children: React.ReactNode | React.ReactNode[];
-  confidant: string;
-};
 const ConfidantContext = createContext<ConfidantType>({} as ConfidantType);
 export const useConfidant = (): ConfidantType => useContext(ConfidantContext);
 
-export const Confidant = ({ confidant: confidantName, children }: confidantProps) => {
+export const Confidant: FC<{ confidant: string }> = ({ confidant: confidantName, children }) => {
   const confidant = getConfidant(confidantName);
   if (!confidant) return null;
   if ("story" in confidant) return null;

@@ -31,14 +31,14 @@
       margin-bottom: 0;
       padding-bottom: 0;
       font-weight: 500;
-      border-bottom: 2px solid #777;
+      border-bottom: 2px solid $table-accent-bg;
     }
   }
   .persona-stats {
     td {
       width: 20vw;
       &:not(:last-child) {
-        border-right: 1px solid $table-border;
+        border-right: 1px solid $table-border-color;
       }
     }
   }
@@ -49,7 +49,7 @@
   }
   .persona-skills {
     td:first-child {
-      font-family: $monospace;
+      font-family: $font-family-monospace;
       width: 3vw;
       text-align: right;
     }
@@ -59,7 +59,7 @@
 .popup {
   .arcana-popup {
     .popover-body {
-      border: 1px solid #aaa;
+      border: 1px solid $gray-400;
     }
   }
   .popover-body {

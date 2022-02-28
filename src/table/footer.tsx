@@ -1,22 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
 import { Nav } from "react-bootstrap";
 import { FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useTableInfo } from ".";
 
-const NavLink = ({
-  children,
-  disabled,
-  active,
-  onClick,
-}: {
-  children?: React.ReactNode | React.ReactNode[];
+const NavLink: FC<{
   disabled?: boolean;
   active?: boolean;
   onClick?: React.MouseEventHandler<HTMLElement>;
-}) => {
+}> = ({ children, disabled, active, onClick }) => {
   return (
     <Nav.Item as="span">
-      <Nav.Link {...{ disabled, active, onClick }}>{children}</Nav.Link>
+      <Nav.Link {...{ disabled, active, onClick, children }} />
     </Nav.Item>
   );
 };
