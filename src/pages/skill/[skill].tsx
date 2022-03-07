@@ -7,7 +7,7 @@ import { ParsedUrlQuery } from "querystring";
 import { Error404, toCamel } from "..";
 
 export const getStaticPaths = async () => ({
-  paths: Skills.map(({ name }) => ({ params: { skill: name.replace(/ /g, "_") } })),
+  paths: Skills.map(({ name }) => ({ params: { skill: name.replace(/\s/g, "_") } })),
   fallback: false,
 });
 

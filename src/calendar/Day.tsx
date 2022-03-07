@@ -48,7 +48,7 @@ const Afternoon: FC = () => {
   return useMemo(
     () => (
       <Stack>
-        <Timeslot time="Afternoon" />
+        <Timeslot time="Morning" />
         {!afternoon || !afternoon.events ? <Empty /> : renderEvents(afternoon.events)}
       </Stack>
     ),
@@ -65,7 +65,7 @@ const Evening: FC = () => {
   return useMemo(
     () => (
       <Stack>
-        <Timeslot time="Evening" weather={weather} special={special} />
+        <Timeslot time="Afternoon" weather={weather} special={special} />
         {!events ? <Empty /> : renderEvents(events)}
       </Stack>
     ),
@@ -82,8 +82,8 @@ const Night: FC = () => {
   return useMemo(() => {
     return (
       <Stack>
-        <Timeslot time="Night" weather={weather} special={special} />
-        {!!events ? "There are no night events yet silly" : <Empty />}
+        <Timeslot time="Evening" weather={weather} special={special} />
+        {!!events ? "There are no evening events yet silly" : <Empty />}
       </Stack>
     );
   }, [events, special, weather]);

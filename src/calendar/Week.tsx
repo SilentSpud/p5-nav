@@ -17,17 +17,17 @@ const TimeSlot: FC<{ slot?: FreeTime; night?: boolean }> = ({ slot, night }) => 
   switch (slot) {
     case FreeTime.None: {
       className = "border-light text-muted";
-      text = (night ? "Night" : "Evening") + ": No Time";
+      text = (night ? "Evening" : "Afternoon") + ": No Time";
       break;
     }
     case FreeTime.Leblanc: {
       className = "border-secondary";
-      text = (night ? "Night" : "Evening") + ": Leblanc Only";
+      text = (night ? "Evening" : "Afternoon") + ": Leblanc Only";
       break;
     }
     case FreeTime.Full: {
       className = "border-primary";
-      text = (night ? "Night" : "Evening") + ": Free Time";
+      text = (night ? "Evening" : "Afternoon") + ": Free Time";
       break;
     }
   }
