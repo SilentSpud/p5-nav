@@ -11,7 +11,7 @@ export const SearchForm = ({ filter }: { filter: (filterValue: string | undefine
         <input
           type="search"
           placeholder="Search"
-          className="text-light w-100 h-100"
+          className="w-100 h-100"
           ref={searchRef}
           onChange={({ currentTarget: { value } }) => filter(value || undefined)}
         />

@@ -6,14 +6,13 @@ $table-content-height: calc(100vh - 166px);
 // ----------- TABLES ----------- //
 table {
   color: $body-color;
-  font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
 
   th {
     font-weight: bold;
-    vertical-align: center;
+    vertical-align: middle;
     color: $body-color;
     background-color: $table-accent-bg;
     border-bottom: 1px solid $table-border-color;
@@ -42,7 +41,6 @@ table {
 
 section[role="table"] {
   color: $body-color;
-  font: 14px/1.5;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -110,7 +108,7 @@ section[role="table"] {
 
   div[role="columnheader"] {
     font-weight: bold;
-    vertical-align: center;
+    vertical-align: middle;
     color: $body-color;
     background-color: $table-accent-bg;
     border-bottom: 1px solid $table-border-color;
