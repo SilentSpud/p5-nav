@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import chariot from "../../public/confidants/chariot.webp";
 import councillor from "../../public/confidants/councillor.webp";
 import death from "../../public/confidants/death.webp";

@@ -16,8 +16,7 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    ".eslintcache": true,
-    "data/*.json": true
+    ".eslintcache": true
   },
 
   "search.exclude": {

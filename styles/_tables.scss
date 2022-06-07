@@ -1,17 +1,18 @@
 @import "globals";
 @import "cyborg";
 
+$table-content-height: calc(100vh - 166px);
+
 // ----------- TABLES ----------- //
 table {
   color: $body-color;
-  font: 14px/1.5 "Ubuntu", Helvetica, Arial, sans-serif;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
 
   th {
     font-weight: bold;
-    vertical-align: center;
+    vertical-align: middle;
     color: $body-color;
     background-color: $table-accent-bg;
     border-bottom: 1px solid $table-border-color;
@@ -40,7 +41,6 @@ table {
 
 section[role="table"] {
   color: $body-color;
-  font: 14px/1.5;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -66,13 +66,16 @@ section[role="table"] {
     padding: 0;
     .nav-item {
       padding: 0;
+      svg {
+        vertical-align: top;
+      }
     }
   }
 
   main {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: calc(100vh - 120px - 40px);
+    height: $table-content-height;
 
     &::-webkit-scrollbar {
       width: 0 !important;
@@ -105,7 +108,7 @@ section[role="table"] {
 
   div[role="columnheader"] {
     font-weight: bold;
-    vertical-align: center;
+    vertical-align: middle;
     color: $body-color;
     background-color: $table-accent-bg;
     border-bottom: 1px solid $table-border-color;
